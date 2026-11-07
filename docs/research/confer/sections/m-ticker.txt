@@ -1,0 +1,56 @@
+<div [Ticker Strip Container]> 0,1702 390x89 flex(row,gap=50,jc=center,ai=center) pad=12 0 bgi=radial-gradient(38% 200%, rgb(36, 143, 75) 0%, rgb(8, 102, 46) 100%) size=auto rep=repeat shadow=rgba(255, 255, 255, 0.27) 0px 0px 4px 4px inset ovf=clip
+  <div> 0,15186 0x0
+    <figure [Noise Image]> 0,1701 390x89 pos=absolute op=0.14 z=0
+      <div> 0,1701 390x89 pos=absolute bgi=url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256") size=158.5px auto rep=repeat
+  <div> 0,1714 390x65 flex(row,gap=32,jc=flex-start,ai=center) ovf=clip
+    <ul> -113,1714 390x65 flex(row,gap=32,jc=flex-start,ai=center) tf=matrix(1, 0, 0, 1, -112.845, 0)
+      <li> -113,1714 294x65
+        <div> 0,15186 0x0
+          <div> -113,1714 294x65
+            <div [Pills]> -113,1714 294x65 flex(row,gap=16,jc=center,ai=center) ovf=clip
+              <div [Icon Wrapper]> -113,1714 65x65 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Icon Image]> -113,1714 65x65 ovf=clip
+                  <div> -113,1714 65x65 pos=absolute
+                    <img> -113,1714 65x65 ovf=clip img=l5oS50tlfdU2Xa94mrcalDDwoQQ.png fit=cover alt=""
+              <div> -32,1717 213x58 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h3> -32,1717 213x58 "FOUNDER" [Clash Grotesk Variable Variable Bold 48px/57.6px w700 ls=normal rgb(255, 255, 255) start]
+      <li> 213,1714 340x65
+        <div> 0,15186 0x0
+          <div> 213,1714 340x65
+            <div [Pills]> 213,1714 340x65 flex(row,gap=16,jc=center,ai=center) ovf=clip
+              <div [Icon Wrapper]> 213,1714 65x65 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Icon Image]> 213,1714 65x65 ovf=clip
+                  <div> 213,1714 65x65 pos=absolute
+                    <img> 213,1714 65x65 ovf=clip img=ifqIZ96lubzM5w815wc9vTcE218.png fit=cover alt=""
+              <div> 294,1717 259x58 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h3> 294,1717 259x58 "DEVELOPER" [Clash Grotesk Variable Variable Bold 48px/57.6px w700 ls=normal rgb(255, 255, 255) start]
+      <li> 586,1714 301x65
+        <div> 0,15186 0x0
+          <div> 586,1714 301x65
+            <div [Pills]> 586,1714 301x65 flex(row,gap=16,jc=center,ai=center) ovf=clip
+              <div [Icon Wrapper]> 586,1714 65x65 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Icon Image]> 586,1714 65x65 ovf=clip
+                  <div> 586,1714 65x65 pos=absolute
+                    <img> 586,1714 65x65 ovf=clip img=awyevmq6eqzL0GnLjeBbfrKE8.png fit=cover alt=""
+              <div> 667,1717 220x58 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h3> 667,1717 220x58 "DESIGNER" [Clash Grotesk Variable Variable Bold 48px/57.6px w700 ls=normal rgb(255, 255, 255) start]
+      <li> 919,1714 377x65
+        <div> 0,15186 0x0
+          <div> 919,1714 377x65
+            <div [Pills]> 919,1714 377x65 flex(row,gap=16,jc=center,ai=center) ovf=clip
+              <div [Icon Wrapper]> 919,1714 65x65 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Icon Image]> 919,1714 65x65 ovf=clip
+                  <div> 919,1714 65x65 pos=absolute
+                    <img> 919,1714 65x65 ovf=clip img=j1DKSZUgUZvQEdgHEjWZ5r7yMFk.png fit=cover alt=""
+              <div> 1000,1717 296x58 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h3> 1000,1717 296x58 "VIBE BUILDER" [Clash Grotesk Variable Variable Bold 48px/57.6px w700 ls=normal rgb(255, 255, 255) start]
+      <li> 1328,1714 322x65
+        <div> 0,15186 0x0
+          <div> 1328,1714 322x65
+            <div [Pills]> 1328,1714 322x65 flex(row,gap=16,jc=center,ai=center) ovf=clip
+              <div [Icon Wrapper]> 1328,1714 65x65 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Icon Image]> 1328,1714 65x65 ovf=clip
+                  <div> 1328,1714 65x65 pos=absolute
+                    <img> 1328,1714 65x65 ovf=clip img=j1DKSZUgUZvQEdgHEjWZ5r7yMFk.png fit=cover alt=""
+              <div> 1409,1717 241x58 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h3> 1409,1717 241x58 "MARKETER" [Clash Grotesk Variable Variable Bold 48px/57.6px w700 ls=normal rgb(255, 255, 255) start]

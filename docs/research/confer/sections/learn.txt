@@ -1,0 +1,126 @@
+<section [Learn Container]> 0,2599 1440x1619 flex(row,gap=10,jc=center,ai=center) pad=100 ovf=clip
+  <div [Content]> 120,2699 1200x1419 flex(column,gap=56,jc=center,ai=center) ovf=clip z=1
+    <div [Title + Tag]> 120,2699 1200x154 pos=sticky flex(column,gap=16,jc=center,ai=center) ovf=clip z=1
+      <div> 0,320 0x0
+        <div> 622,2699 195x22
+          <div [Tag]> 622,2699 195x22 flex(row,gap=10,jc=center,ai=center)
+            <figure [Pattern]> 622,2700 55x20 ovf=clip
+              <div> 622,2700 55x20 pos=absolute
+                <img> 622,2700 55x20 ovf=clip img=GY5GLhNlPMo1EpaduJk0nuQJ6xU.png fit=contain alt=""
+            <div> 687,2699 67x22
+              <p> 687,2699 67x22
+                <span> 687,2700 67x20 op=0 "LEAARN" [Inter Display 16px/22.4px w500 ls=0.96px rgb(69, 255, 134) left]
+            <figure [Pattern]> 765,2700 53x20 ovf=clip
+              <div> 765,2700 53x20 pos=absolute
+                <img> 765,2700 53x20 ovf=clip img=ot4ExbWeGPVzYrtOfK5g6NrJQ5o.png fit=contain alt=""
+      <div> 440,2747 560x115 flex(column,gap=normal,jc=flex-start,ai=normal) op=0 tf=matrix(1, 0, 0, 1, 0, 10)
+        <h2> 440,2747 560x115
+          <span> 519,2757 124x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "Three" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 652,2757 152x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "Perfect" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 813,2757 108x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "Days." [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 480,2815 84x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "One" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 573,2815 162x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "Mission." [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 744,2815 159x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "Endless" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 912,2815 48x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "AI." [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+    <div [Wrapper1]> 120,2908 1200x366 pos=sticky flex(row,gap=0,jc=center,ai=center) ovf=clip z=1
+      <div> 0,320 0x0
+        <div> 120,2908 400x366 z=1
+          <div [Card]> 120,2908 400x366 flex(column,gap=20,jc=center,ai=center) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <figure [Image]> 120,2908 400x211 ovf=clip
+              <div> 120,2908 400x211 pos=absolute
+                <img> 120,2908 400x211 ovf=clip img=kIXIyZvahpWuSIhJxVx6ClvkfNc.png fit=cover alt=""
+            <div [Title + Description]> 120,3139 400x111 flex(column,gap=10,jc=center,ai=center) pad=0 24 ovf=clip
+              <div> 144,3139 352x34 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h5> 144,3139 352x34 "Get to Know AI" [Clash Grotesk Variable Variable Bold 28px/33.6px w700 ls=normal rgb(255, 255, 255) start]
+              <div> 144,3183 352x67 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 144,3183 352x67 "The First AI Summit is the ultimate gathering for tech enthusiasts and industry expert level leaders." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+      <div> 0,320 0x0
+        <div [Empty]> 520,2920 400x343 op=0 z=1
+          <div [Card]> 520,2920 400x343 flex(column,gap=20,jc=center,ai=center) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <figure [Image]> 520,2920 400x211 ovf=clip
+              <div> 520,2920 400x211 pos=absolute
+                <img> 520,2920 400x211 ovf=clip img=SwNoYIjLp4T5olOGRjBb8Xng4.png fit=cover alt=""
+            <div [Title + Description]> 520,3151 400x88 flex(column,gap=10,jc=center,ai=center) pad=0 24 ovf=clip
+              <div> 544,3151 352x34 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h5> 544,3151 352x34 "Ideate on It" [Clash Grotesk Variable Variable Bold 28px/33.6px w700 ls=normal rgb(255, 255, 255) start]
+              <div> 544,3194 352x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 544,3194 352x45 "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+      <div> 0,320 0x0
+        <div [Empty]> 920,2920 400x343 op=0 z=1
+          <div [Card]> 920,2920 400x343 flex(column,gap=20,jc=center,ai=center) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <figure [Image]> 920,2920 400x211 ovf=clip
+              <div> 920,2920 400x211 pos=absolute
+                <img> 920,2920 400x211 ovf=clip img=axgrS3KJETGNSu5rnSqvvC7FHOg.png fit=cover alt=""
+            <div [Title + Description]> 920,3151 400x88 flex(column,gap=10,jc=center,ai=center) pad=0 24 ovf=clip
+              <div> 944,3151 352x34 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h5> 944,3151 352x34 "Connect with People" [Clash Grotesk Variable Variable Bold 28px/33.6px w700 ls=normal rgb(255, 255, 255) start]
+              <div> 944,3194 352x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 944,3194 352x45 "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+    <div [Wrapper2]> 120,3330 1200x366 pos=sticky flex(row,gap=0,jc=center,ai=center) ovf=clip z=1
+      <div> 0,320 0x0
+        <div [Empty]> 120,3341 400x343 op=0 z=1
+          <div [Card]> 120,3341 400x343 flex(column,gap=20,jc=center,ai=center) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <figure [Image]> 120,3341 400x211 ovf=clip
+              <div> 120,3341 400x211 pos=absolute
+                <img> 120,3341 400x211 ovf=clip img=kIXIyZvahpWuSIhJxVx6ClvkfNc.png fit=cover alt=""
+            <div [Title + Description]> 120,3572 400x88 flex(column,gap=10,jc=center,ai=center) pad=0 24 ovf=clip
+              <div> 144,3572 352x34 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h5> 144,3572 352x34 "Get to Know AI" [Clash Grotesk Variable Variable Bold 28px/33.6px w700 ls=normal rgb(255, 255, 255) start]
+              <div> 144,3616 352x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 144,3616 352x45 "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+      <div> 0,320 0x0
+        <div> 520,3330 400x366 z=1
+          <div [Card]> 520,3330 400x366 flex(column,gap=20,jc=center,ai=center) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <figure [Image]> 520,3330 400x211 ovf=clip
+              <div> 520,3330 400x211 pos=absolute
+                <img> 520,3330 400x211 ovf=clip img=SwNoYIjLp4T5olOGRjBb8Xng4.png fit=cover alt=""
+            <div [Title + Description]> 520,3561 400x111 flex(column,gap=10,jc=center,ai=center) pad=0 24 ovf=clip
+              <div> 544,3561 352x34 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h5> 544,3561 352x34 "Ideate on It" [Clash Grotesk Variable Variable Bold 28px/33.6px w700 ls=normal rgb(255, 255, 255) start]
+              <div> 544,3605 352x67 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 544,3605 352x67 "Join engaging discussions with tech enthusiasts, industry experts, and visionaries." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+      <div> 0,320 0x0
+        <div [Empty]> 920,3341 400x343 op=0 z=1
+          <div [Card]> 920,3341 400x343 flex(column,gap=20,jc=center,ai=center) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <figure [Image]> 920,3341 400x211 ovf=clip
+              <div> 920,3341 400x211 pos=absolute
+                <img> 920,3341 400x211 ovf=clip img=axgrS3KJETGNSu5rnSqvvC7FHOg.png fit=cover alt=""
+            <div [Title + Description]> 920,3572 400x88 flex(column,gap=10,jc=center,ai=center) pad=0 24 ovf=clip
+              <div> 944,3572 352x34 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h5> 944,3572 352x34 "Connect with People" [Clash Grotesk Variable Variable Bold 28px/33.6px w700 ls=normal rgb(255, 255, 255) start]
+              <div> 944,3616 352x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 944,3616 352x45 "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+    <div [Wrapper3]> 120,3752 1200x366 pos=sticky flex(row,gap=0,jc=center,ai=center) ovf=clip z=1
+      <div> 0,320 0x0
+        <div [Empty]> 120,3763 400x343 op=0 z=1
+          <div [Card]> 120,3763 400x343 flex(column,gap=20,jc=center,ai=center) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <figure [Image]> 120,3763 400x211 ovf=clip
+              <div> 120,3763 400x211 pos=absolute
+                <img> 120,3763 400x211 ovf=clip img=kIXIyZvahpWuSIhJxVx6ClvkfNc.png fit=cover alt=""
+            <div [Title + Description]> 120,3994 400x88 flex(column,gap=10,jc=center,ai=center) pad=0 24 ovf=clip
+              <div> 144,3994 352x34 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h5> 144,3994 352x34 "Get to Know AI" [Clash Grotesk Variable Variable Bold 28px/33.6px w700 ls=normal rgb(255, 255, 255) start]
+              <div> 144,4038 352x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 144,4038 352x45 "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+      <div> 0,320 0x0
+        <div [Empty]> 520,3763 400x343 op=0 z=1
+          <div [Card]> 520,3763 400x343 flex(column,gap=20,jc=center,ai=center) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <figure [Image]> 520,3763 400x211 ovf=clip
+              <div> 520,3763 400x211 pos=absolute
+                <img> 520,3763 400x211 ovf=clip img=SwNoYIjLp4T5olOGRjBb8Xng4.png fit=cover alt=""
+            <div [Title + Description]> 520,3994 400x88 flex(column,gap=10,jc=center,ai=center) pad=0 24 ovf=clip
+              <div> 544,3994 352x34 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h5> 544,3994 352x34 "Ideate on It" [Clash Grotesk Variable Variable Bold 28px/33.6px w700 ls=normal rgb(255, 255, 255) start]
+              <div> 544,4038 352x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 544,4038 352x45 "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+      <div> 0,320 0x0
+        <div> 920,3752 400x366 z=1
+          <div [Card]> 920,3752 400x366 flex(column,gap=20,jc=center,ai=center) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <figure [Image]> 920,3752 400x211 ovf=clip
+              <div> 920,3752 400x211 pos=absolute
+                <img> 920,3752 400x211 ovf=clip img=axgrS3KJETGNSu5rnSqvvC7FHOg.png fit=cover alt=""
+            <div [Title + Description]> 920,3983 400x111 flex(column,gap=10,jc=center,ai=center) pad=0 24 ovf=clip
+              <div> 944,3983 352x34 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <h5> 944,3983 352x34 "Connect with People" [Clash Grotesk Variable Variable Bold 28px/33.6px w700 ls=normal rgb(255, 255, 255) start]
+              <div> 944,4027 352x67 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 944,4027 352x67 "Network with experts, exchange ideas, and build valuable relationships that drive innovation." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]

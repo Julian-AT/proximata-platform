@@ -1,0 +1,35 @@
+<header [Hero Container]> 0,0 390x844 flex(column,gap=53,jc=center,ai=center) pad=10 0 60 ovf=clip z=1
+  <div [Content]> 0,147 390x500 flex(column,gap=86,jc=center,ai=center) ovf=clip
+    <div [Titles]> 51,147 289x134 flex(column,gap=0,jc=center,ai=center)
+      <div> 51,147 289x58
+        <div> 0,15186 0x0
+          <div> 51,147 289x58 pos=absolute ovf=hidden
+      <div> 0,15186 0x0
+        <div> 51,205 289x77 flex(column,gap=normal,jc=flex-start,ai=normal)
+          <h1> 51,205 289x77 "The Premier In-Person AI Event" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+    <div [Info Cards Wrapper] #info-tile> 0,368 390x279 flex(column,gap=10,jc=center,ai=center) ovf=clip
+      <div [Info Cards]> 0,368 390x279 flex(column,gap=19,jc=center,ai=center) ovf=clip
+        <div> 0,15186 0x0
+          <div> 0,368 390x80
+            <div [V2]> 0,368 390x80 flex(row,gap=0,jc=center,ai=flex-start) pad=16 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px bdf=blur(5px) ovf=clip
+              <div [Label + Info]> 16,384 358x48 flex(column,gap=10,jc=center,ai=center) ovf=clip
+                <div> 16,384 358x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 16,384 358x19 "DATE" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=1.6px rgba(255, 255, 255, 0.6) uppercase center]
+                <div> 16,413 358x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 16,413 358x19 "18th November 2026" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) center]
+        <div> 0,15186 0x0
+          <div> 0,467 390x80
+            <div [V2]> 0,467 390x80 flex(row,gap=0,jc=center,ai=flex-start) pad=16 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px bdf=blur(5px) ovf=clip
+              <div [Label + Info]> 16,483 358x48 flex(column,gap=10,jc=center,ai=center) ovf=clip
+                <div> 16,483 358x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 16,483 358x19 "CITY" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=1.6px rgba(255, 255, 255, 0.6) uppercase center]
+                <div> 16,512 358x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 16,512 358x19 "San Francisco, USA" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) center]
+        <div> 0,15186 0x0
+          <div> 0,566 390x80
+            <div [V2]> 0,566 390x80 flex(row,gap=0,jc=center,ai=flex-start) pad=16 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px bdf=blur(5px) ovf=clip
+              <div [Label + Info]> 16,582 358x48 flex(column,gap=10,jc=center,ai=center) ovf=clip
+                <div> 16,582 358x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 16,582 358x19 "VENUE" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=1.6px rgba(255, 255, 255, 0.6) uppercase center]
+                <div> 16,612 358x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 16,612 358x19 "Moscone Center, SF" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) center]

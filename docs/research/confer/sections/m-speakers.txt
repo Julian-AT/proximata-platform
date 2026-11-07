@@ -1,0 +1,159 @@
+<section [Speakers Container]> 0,3437 390x1024 flex(column,gap=10,jc=center,ai=center) pad=100 0 ovf=clip
+  <div [Content]> 0,3537 390x824 flex(column,gap=56,jc=center,ai=center)
+    <div [Tag + Title]> 0,3537 390x115 flex(column,gap=16,jc=center,ai=center) pad=0 32 ovf=clip
+      <div> 0,15186 0x0
+        <div> 87,3537 216x22
+          <div [Tag]> 87,3537 216x22 flex(row,gap=10,jc=center,ai=center)
+            <figure [Pattern]> 87,3539 55x20 ovf=clip
+              <div> 87,3539 55x20 pos=absolute
+                <img> 87,3539 55x20 ovf=clip img=GY5GLhNlPMo1EpaduJk0nuQJ6xU.png fit=contain alt=""
+            <div> 152,3537 88x22
+              <p> 152,3537 88x22 "SPEAKERS" [Inter Display 16px/22.4px w500 ls=0.96px rgb(69, 255, 134) left]
+            <figure [Pattern]> 250,3539 53x20 ovf=clip
+              <div> 250,3539 53x20 pos=absolute
+                <img> 250,3539 53x20 ovf=clip img=ot4ExbWeGPVzYrtOfK5g6NrJQ5o.png fit=contain alt=""
+      <div> 32,3576 326x77 flex(column,gap=normal,jc=flex-start,ai=normal)
+        <h2> 32,3576 326x77
+          <span> 44,3576 52x38 filter=blur(0px) "The" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 102,3576 91x38 filter=blur(0px) "Voices" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 199,3576 96x38 filter=blur(0px) "Driving" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 301,3576 45x38 filter=blur(0px) "the" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 42,3614 27x38 filter=blur(0px) "AI" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 75,3614 148x38 filter=blur(0px) "Movement" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 229,3614 119x38 filter=blur(0px) "Forward" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+    <div [Speaker Cards Carousel]> 0,3709 390x438 flex(column,gap=10,jc=center,ai=center) ovf=clip
+      <div> 0,3709 390x438
+        <div> 0,15186 0x0
+          <section> 0,3709 390x438 flex(row,gap=normal,jc=normal,ai=normal) pad=10 32 ovf=hidden
+            <ul> 32,3719 326x418 flex(row,gap=40,jc=normal,ai=center) ovf=auto hidden mask=linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)
+              <li> 32,3735 319x385
+                <div> 32,3735 319x385
+                  <div [Desktop]> 32,3735 319x385 flex(column,gap=0,jc=center,ai=center) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+                    <figure [Image + Socials]> 32,3735 319x292 ovf=clip
+                      <div> 32,3735 319x292 pos=absolute
+                        <img> 32,3735 319x292 ovf=clip img=jWsanDSxrink1xRHEad1iV885Uo.png fit=cover alt=""
+                      <div [Socials Wrapper]> 146,4054 92x45 pos=absolute flex(row,gap=10,jc=center,ai=center) pad=4 bg=rgb(0, 0, 0) tf=matrix(1, 0, 0, 1, -46, 0) ovf=clip
+                        <a [Instagram]> 150,4058 37x37 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.instagram.com/jitu.ux/ target=
+                          <svg> 150,4058 37x37 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                        <a [LinkedIn]> 197,4060 37x33 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.linkedin.com/in/jitendra-raut/ target=
+                          <svg> 197,4060 37x33 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                    <div [Name + Desigation]> 32,4027 319x94 flex(column,gap=4,jc=center,ai=center) pad=24 bg=rgba(0, 0, 0, 0.8) ovf=clip
+                      <div> 56,4051 271x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <h6> 56,4051 271x19 "Reggie Watts" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=normal rgb(255, 255, 255) center]
+                      <div> 56,4074 271x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 56,4074 271x22 "Chief AI Officer, Nexa" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) center]
+              <li> 391,3736 318x384
+                <div> 391,3736 318x384
+                  <div [Desktop]> 391,3756 318x384 flex(column,gap=0,jc=center,ai=center) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px op=0 tf=matrix(1, 0, 0, 1, 0, 20) ovf=clip
+                    <figure [Image + Socials]> 391,3756 318x291 ovf=clip
+                      <div> 391,3756 318x291 pos=absolute
+                        <img> 391,3756 318x291 ovf=clip img=CaCV6YpEx2vrsLOFJiWdq1TUU.png fit=cover alt=""
+                      <div [Socials Wrapper]> 504,4073 92x45 pos=absolute flex(row,gap=10,jc=center,ai=center) pad=4 bg=rgb(0, 0, 0) tf=matrix(1, 0, 0, 1, -46, 0) ovf=clip
+                        <a [Instagram]> 508,4077 37x37 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.instagram.com/jitu.ux/ target=
+                          <svg> 508,4077 37x37 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                        <a [LinkedIn]> 555,4079 37x33 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.linkedin.com/in/jitendra-raut/ target=
+                          <svg> 555,4079 37x33 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                    <div [Name + Desigation]> 391,4046 318x94 flex(column,gap=4,jc=center,ai=center) pad=24 bg=rgba(0, 0, 0, 0.8) ovf=clip
+                      <div> 415,4070 270x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <h6> 415,4070 270x19 "Diana Nyad" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=normal rgb(255, 255, 255) center]
+                      <div> 415,4093 270x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 415,4093 270x22 "VP of Product Design, QNTM Labs" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) center]
+              <li> 749,3736 318x384
+                <div> 749,3736 318x384
+                  <div [Desktop]> 749,3756 318x384 flex(column,gap=0,jc=center,ai=center) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px op=0 tf=matrix(1, 0, 0, 1, 0, 20) ovf=clip
+                    <figure [Image + Socials]> 749,3756 318x291 ovf=clip
+                      <div> 749,3756 318x291 pos=absolute
+                        <img> 749,3756 318x291 ovf=clip img=SfaF7szushMlRSfvDfUg5cwgXuA.png fit=cover alt=""
+                      <div [Socials Wrapper]> 862,4073 92x45 pos=absolute flex(row,gap=10,jc=center,ai=center) pad=4 bg=rgb(0, 0, 0) tf=matrix(1, 0, 0, 1, -46, 0) ovf=clip
+                        <a [Instagram]> 866,4077 37x37 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.instagram.com/jitu.ux/ target=
+                          <svg> 866,4077 37x37 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                        <a [LinkedIn]> 913,4079 37x33 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.linkedin.com/in/jitendra-raut/ target=
+                          <svg> 913,4079 37x33 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                    <div [Name + Desigation]> 749,4046 318x94 flex(column,gap=4,jc=center,ai=center) pad=24 bg=rgba(0, 0, 0, 0.8) ovf=clip
+                      <div> 773,4070 270x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <h6> 773,4070 270x19 "Dr. Mark Hyman" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=normal rgb(255, 255, 255) center]
+                      <div> 773,4093 270x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 773,4093 270x22 "VP of Innovation, Horizon Ventures" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) center]
+              <li> 1107,3735 319x385
+                <div> 1107,3735 319x385
+                  <div [Desktop]> 1107,3755 319x385 flex(column,gap=0,jc=center,ai=center) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px op=0 tf=matrix(1, 0, 0, 1, 0, 20) ovf=clip
+                    <figure [Image + Socials]> 1107,3755 319x292 ovf=clip
+                      <div> 1107,3755 319x292 pos=absolute
+                        <img> 1107,3755 319x292 ovf=clip img=gHZBcD6jRf2QfQCYUYbTzs5kwWM.png fit=cover alt=""
+                      <div [Socials Wrapper]> 1221,4074 92x45 pos=absolute flex(row,gap=10,jc=center,ai=center) pad=4 bg=rgb(0, 0, 0) tf=matrix(1, 0, 0, 1, -46, 0) ovf=clip
+                        <a [Instagram]> 1225,4078 37x37 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.instagram.com/jitu.ux/ target=
+                          <svg> 1225,4078 37x37 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                        <a [LinkedIn]> 1272,4080 37x33 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.linkedin.com/in/jitendra-raut/ target=
+                          <svg> 1272,4080 37x33 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                    <div [Name + Desigation]> 1107,4047 319x94 flex(column,gap=4,jc=center,ai=center) pad=24 bg=rgba(0, 0, 0, 0.8) ovf=clip
+                      <div> 1131,4071 271x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <h6> 1131,4071 271x19 "Valarie Kaur" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=normal rgb(255, 255, 255) center]
+                      <div> 1131,4094 271x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 1131,4094 271x22 "Founder & CEO, NeuralSphere" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) center]
+              <li> 1466,3736 318x384
+                <div> 1466,3736 318x384
+                  <div [Desktop]> 1466,3756 318x384 flex(column,gap=0,jc=center,ai=center) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px op=0 tf=matrix(1, 0, 0, 1, 0, 20) ovf=clip
+                    <figure [Image + Socials]> 1466,3756 318x291 ovf=clip
+                      <div> 1466,3756 318x291 pos=absolute
+                        <img> 1466,3756 318x291 ovf=clip img=xmfZRdFnDt2dm1ChOxcaazTMk.png fit=cover alt=""
+                      <div [Socials Wrapper]> 1579,4073 92x45 pos=absolute flex(row,gap=10,jc=center,ai=center) pad=4 bg=rgb(0, 0, 0) tf=matrix(1, 0, 0, 1, -46, 0) ovf=clip
+                        <a [Instagram]> 1583,4077 37x37 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.instagram.com/jitu.ux/ target=
+                          <svg> 1583,4077 37x37 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                        <a [LinkedIn]> 1630,4079 37x33 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.linkedin.com/in/jitendra-raut/ target=
+                          <svg> 1630,4079 37x33 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                    <div [Name + Desigation]> 1466,4046 318x94 flex(column,gap=4,jc=center,ai=center) pad=24 bg=rgba(0, 0, 0, 0.8) ovf=clip
+                      <div> 1490,4070 270x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <h6> 1490,4070 270x19 "Tristan Harris" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=normal rgb(255, 255, 255) center]
+                      <div> 1490,4093 270x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 1490,4093 270x22 "Founder & CEO, InnovateX" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) center]
+              <li> 1824,3736 318x384
+                <div> 1824,3736 318x384
+                  <div [Desktop]> 1824,3756 318x384 flex(column,gap=0,jc=center,ai=center) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px op=0 tf=matrix(1, 0, 0, 1, 0, 20) ovf=clip
+                    <figure [Image + Socials]> 1824,3756 318x291 ovf=clip
+                      <div> 1824,3756 318x291 pos=absolute
+                        <img> 1824,3756 318x291 ovf=clip img=KsUCNnQ63A0Fxs1lJVGqKK6A1Q.png fit=cover alt=""
+                      <div [Socials Wrapper]> 1937,4073 92x45 pos=absolute flex(row,gap=10,jc=center,ai=center) pad=4 bg=rgb(0, 0, 0) tf=matrix(1, 0, 0, 1, -46, 0) ovf=clip
+                        <a [Instagram]> 1941,4077 37x37 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.instagram.com/jitu.ux/ target=
+                          <svg> 1941,4077 37x37 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                        <a [LinkedIn]> 1988,4079 37x33 flex(row,gap=10,jc=center,ai=center) ptr href=https://www.linkedin.com/in/jitendra-raut/ target=
+                          <svg> 1988,4079 37x33 ovf=hidden ptr svg viewBox=0 0 24 24 fill=rgb(0, 0, 0) color=rgb(0, 0, 238)
+                    <div [Name + Desigation]> 1824,4046 318x94 flex(column,gap=4,jc=center,ai=center) pad=24 bg=rgba(0, 0, 0, 0.8) ovf=clip
+                      <div> 1848,4070 270x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <h6> 1848,4070 270x19 "Donick Cary" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=normal rgb(255, 255, 255) center]
+                      <div> 1848,4093 270x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 1848,4093 270x22 "Head of AI Research, Synth Labs" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) center]
+            <fieldset> 0,3709 390x438 pos=absolute flex(row,gap=normal,jc=space-between,ai=center) pad=72
+              <button> 72,3908 40x40 bg=rgba(0, 0, 0, 0.2) rad=40 op=0 ovf=hidden
+                <img> 72,3908 40x40 ovf=clip img=6tTbkXggWgQCAJ4DO2QEdXXmgM.svg fit=fill alt=""
+              <button> 278,3908 40x40 bg=rgba(0, 0, 0, 0.2) rad=40 ovf=hidden ptr
+                <img> 278,3908 40x40 ovf=clip ptr img=11KSGbIZoRSg4pjdnUoif6MKHI.svg fit=fill alt=""
+            <div> 358,3719 0x418
+    <div [Metrics]> 0,4203 390x159 grid(163px 163px,gap=24 0) pad=0 32
+      <div> 0,15186 0x0
+        <div> 32,4203 163x68
+          <div [Metric Start]> 32,4203 163x68 flex(column,gap=10,jc=center,ai=center) ovf=clip
+            <div> 32,4203 163x38 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <h2> 32,4203 163x38 "24" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+            <div> 32,4251 163x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <p> 32,4251 163x19 "Speakers" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgba(255, 255, 255, 0.6) center]
+      <div> 0,15186 0x0
+        <div> 195,4203 163x68
+          <div [Metric End]> 195,4203 163x68 flex(column,gap=10,jc=center,ai=center) ovf=clip
+            <div> 195,4203 163x38 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <h2> 195,4203 163x38 "30" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+            <div> 195,4251 163x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <p> 195,4251 163x19 "Sessions" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgba(255, 255, 255, 0.6) center]
+      <div> 0,15186 0x0
+        <div> 32,4294 163x68
+          <div [Metric Start]> 32,4294 163x68 flex(column,gap=10,jc=center,ai=center) ovf=clip
+            <div> 32,4294 163x38 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <h2> 32,4294 163x38 "600+" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+            <div> 32,4343 163x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <p> 32,4343 163x19 "Attendees" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgba(255, 255, 255, 0.6) center]
+      <div> 0,15186 0x0
+        <div> 195,4294 163x68
+          <div [Metric End]> 195,4294 163x68 flex(column,gap=10,jc=center,ai=center) ovf=clip
+            <div> 195,4294 163x38 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <h2> 195,4294 163x38 "10" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+            <div> 195,4343 163x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <p> 195,4343 163x19 "Panels" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgba(255, 255, 255, 0.6) center]

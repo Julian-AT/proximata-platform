@@ -1,0 +1,98 @@
+<section [FAQ Container]> 0,10425 390x948 flex(column,gap=10,jc=center,ai=center) pad=100 32 ovf=clip
+  <div [Content]> 32,10525 326x748 flex(column,gap=56,jc=flex-start,ai=center) ovf=clip z=1
+    <div [Tag + Title]> 32,10525 326x115 flex(column,gap=16,jc=center,ai=center) ovf=clip z=1
+      <div> 0,15186 0x0
+        <div> 115,10525 161x22
+          <div [Tag]> 115,10525 161x22 flex(row,gap=10,jc=center,ai=center)
+            <figure [Pattern]> 115,10526 55x20 ovf=clip
+              <div> 115,10526 55x20 pos=absolute
+                <img> 115,10526 55x20 ovf=clip img=GY5GLhNlPMo1EpaduJk0nuQJ6xU.png fit=contain alt=""
+            <div> 180,10525 33x22
+              <p> 180,10525 33x22 "FAQ" [Inter Display 16px/22.4px w500 ls=0.96px rgb(69, 255, 134) left]
+            <figure [Pattern]> 222,10526 53x20 ovf=clip
+              <div> 222,10526 53x20 pos=absolute
+                <img> 222,10526 53x20 ovf=clip img=ot4ExbWeGPVzYrtOfK5g6NrJQ5o.png fit=contain alt=""
+      <div> 32,10563 326x77 flex(column,gap=normal,jc=flex-start,ai=normal)
+        <h2> 32,10563 326x77
+          <span> 109,10563 74x38 filter=blur(0px) "FAQs" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 189,10563 92x38 filter=blur(0px) "Before" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 120,10601 52x38 filter=blur(0px) "You" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 178,10601 92x38 filter=blur(0px) "Attend" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+    <div [Accordion Wrapper]> 32,10696 326x577 flex(column,gap=21,jc=center,ai=center) ovf=clip
+      <div> 0,15186 0x0
+        <div> 32,10696 326x70
+          <div [Closed]> 32,10696 326x70 flex(column,gap=32,jc=flex-start,ai=flex-start) pad=16 24 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip ptr
+            <div [QNA + Switch]> 56,10712 278x38 flex(row,gap=10,jc=center,ai=center) ptr
+              <div [QnA]> 56,10712 238x38 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip ptr
+                <div> 56,10712 238x38 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 56,10712 238x38 ptr "What is this AI conference about?" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+              <div> 304,10716 30x30 ptr
+                <figure [Default]> 304,10716 30x30 filter=brightness(0.92) ovf=clip ptr
+                  <div> 304,10716 30x30 pos=absolute ptr
+                    <img> 304,10716 30x30 ovf=clip ptr img=BPqmmRcLPEI9giYCffKPK3KYsw.png fit=cover alt=""
+      <div> 0,15186 0x0
+        <div> 32,10787 326x62
+          <div [Closed]> 32,10787 326x62 flex(column,gap=32,jc=flex-start,ai=flex-start) pad=16 24 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip ptr
+            <div [QNA + Switch]> 56,10803 278x30 flex(row,gap=10,jc=center,ai=center) ptr
+              <div [QnA]> 56,10809 238x19 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip ptr
+                <div> 56,10809 238x19 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 56,10809 238x19 ptr "Who should attend this event?" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+              <div> 304,10803 30x30 ptr
+                <figure [Default]> 304,10803 30x30 filter=brightness(0.92) ovf=clip ptr
+                  <div> 304,10803 30x30 pos=absolute ptr
+                    <img> 304,10803 30x30 ovf=clip ptr img=BPqmmRcLPEI9giYCffKPK3KYsw.png fit=cover alt=""
+      <div> 0,15186 0x0
+        <div> 32,10870 326x62
+          <div [Closed]> 32,10870 326x62 flex(column,gap=32,jc=flex-start,ai=flex-start) pad=16 24 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip ptr
+            <div [QNA + Switch]> 56,10886 278x30 flex(row,gap=10,jc=center,ai=center) ptr
+              <div [QnA]> 56,10892 238x19 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip ptr
+                <div> 56,10892 238x19 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 56,10892 238x19 ptr "Will sessions be recorded?" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+              <div> 304,10886 30x30 ptr
+                <figure [Default]> 304,10886 30x30 filter=brightness(0.92) ovf=clip ptr
+                  <div> 304,10886 30x30 pos=absolute ptr
+                    <img> 304,10886 30x30 ovf=clip ptr img=BPqmmRcLPEI9giYCffKPK3KYsw.png fit=cover alt=""
+      <div> 0,15186 0x0
+        <div> 32,10953 326x62
+          <div [Closed]> 32,10953 326x62 flex(column,gap=32,jc=flex-start,ai=flex-start) pad=16 24 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip ptr
+            <div [QNA + Switch]> 56,10969 278x30 flex(row,gap=10,jc=center,ai=center) ptr
+              <div [QnA]> 56,10975 238x19 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip ptr
+                <div> 56,10975 238x19 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 56,10975 238x19 ptr "Do I need prior AI knowledge?" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+              <div> 304,10969 30x30 ptr
+                <figure [Default]> 304,10969 30x30 filter=brightness(0.92) ovf=clip ptr
+                  <div> 304,10969 30x30 pos=absolute ptr
+                    <img> 304,10969 30x30 ovf=clip ptr img=BPqmmRcLPEI9giYCffKPK3KYsw.png fit=cover alt=""
+      <div> 0,15186 0x0
+        <div> 32,11036 326x62
+          <div [Closed]> 32,11036 326x62 flex(column,gap=32,jc=flex-start,ai=flex-start) pad=16 24 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip ptr
+            <div [QNA + Switch]> 56,11052 278x30 flex(row,gap=10,jc=center,ai=center) ptr
+              <div [QnA]> 56,11058 238x19 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip ptr
+                <div> 56,11058 238x19 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 56,11058 238x19 ptr "Can I upgrade my ticket later?" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+              <div> 304,11052 30x30 ptr
+                <figure [Default]> 304,11052 30x30 filter=brightness(0.92) ovf=clip ptr
+                  <div> 304,11052 30x30 pos=absolute ptr
+                    <img> 304,11052 30x30 ovf=clip ptr img=BPqmmRcLPEI9giYCffKPK3KYsw.png fit=cover alt=""
+      <div> 0,15186 0x0
+        <div> 32,11119 326x70
+          <div [Closed]> 32,11119 326x70 flex(column,gap=32,jc=flex-start,ai=flex-start) pad=16 24 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip ptr
+            <div [QNA + Switch]> 56,11135 278x38 flex(row,gap=10,jc=center,ai=center) ptr
+              <div [QnA]> 56,11135 238x38 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip ptr
+                <div> 56,11135 238x38 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 56,11135 238x38 ptr "Will there be networking opportunities?" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+              <div> 304,11139 30x30 ptr
+                <figure [Default]> 304,11139 30x30 filter=brightness(0.92) ovf=clip ptr
+                  <div> 304,11139 30x30 pos=absolute ptr
+                    <img> 304,11139 30x30 ovf=clip ptr img=BPqmmRcLPEI9giYCffKPK3KYsw.png fit=cover alt=""
+      <div> 0,15186 0x0
+        <div> 32,11211 326x62
+          <div [Closed]> 32,11211 326x62 flex(column,gap=32,jc=flex-start,ai=flex-start) pad=16 24 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip ptr
+            <div [QNA + Switch]> 56,11227 278x30 flex(row,gap=10,jc=center,ai=center) ptr
+              <div [QnA]> 56,11232 238x19 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip ptr
+                <div> 56,11232 238x19 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 56,11232 238x19 ptr "Is there a refund policy?" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+              <div> 304,11227 30x30 ptr
+                <figure [Default]> 304,11227 30x30 filter=brightness(0.92) ovf=clip ptr
+                  <div> 304,11227 30x30 pos=absolute ptr
+                    <img> 304,11227 30x30 ovf=clip ptr img=BPqmmRcLPEI9giYCffKPK3KYsw.png fit=cover alt=""

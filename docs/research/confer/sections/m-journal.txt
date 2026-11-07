@@ -1,0 +1,69 @@
+<section [Journal Highlights]> 0,11373 390x1768 flex(column,gap=56,jc=flex-start,ai=center) pad=100 32 ovf=clip
+  <div [Tag + Title]> 32,11473 326x115 flex(column,gap=16,jc=center,ai=center) ovf=clip z=1
+    <div> 0,15186 0x0
+      <div> 103,11473 185x22
+        <div [Tag]> 103,11473 185x22 flex(row,gap=10,jc=center,ai=center)
+          <figure [Pattern]> 103,11474 55x20 ovf=clip
+            <div> 103,11474 55x20 pos=absolute
+              <img> 103,11474 55x20 ovf=clip img=GY5GLhNlPMo1EpaduJk0nuQJ6xU.png fit=contain alt=""
+          <div> 168,11473 57x22
+            <p> 168,11473 57x22 "BLOGS" [Inter Display 16px/22.4px w500 ls=0.96px rgb(69, 255, 134) left]
+          <figure [Pattern]> 235,11474 53x20 ovf=clip
+            <div> 235,11474 53x20 pos=absolute
+              <img> 235,11474 53x20 ovf=clip img=ot4ExbWeGPVzYrtOfK5g6NrJQ5o.png fit=contain alt=""
+    <div> 32,11511 326x77 flex(column,gap=normal,jc=flex-start,ai=normal)
+      <h2> 32,11511 326x77
+        <span> 114,11511 72x38 filter=blur(0px) "Ideas" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+        <span> 192,11511 83x38 filter=blur(0px) "worth" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+        <span> 79,11549 116x38 filter=blur(0px) "carrying" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+        <span> 201,11549 111x38 filter=blur(0px) "forward" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+  <div [Latest Journal Stories]> 32,11644 326x1301 flex(column,gap=24,jc=center,ai=center) ovf=clip
+    <div> 0,15186 0x0
+      <div [Journal Article]> 32,11644 326x411
+        <div [Article Card]> 32,11644 326x411 flex(column,gap=16,jc=flex-start,ai=flex-start) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+          <figure [Article Image]> 32,11644 326x220 ovf=clip
+            <div> 32,11644 326x220 pos=absolute
+              <img> 32,11644 326x220 ovf=clip img=bg0Ig1MtAotSs4OYtyhSE18M5Qo.jpg fit=cover alt="Hand illuminated by green LED light"
+          <div [Article Copy]> 32,11880 326x151 flex(column,gap=10,jc=flex-start,ai=flex-start) pad=0 24 ovf=clip
+            <div [Category]> 56,11880 278x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <p> 56,11880 278x22 "Perspectives" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(69, 255, 134) start]
+            <div [Title]> 56,11912 278x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <h6> 56,11912 278x19
+                <a> 56,11912 271x18 ptr href=./blog/the-human-signals-behind-the-ai-hype target= "The Human Signals Behind the AI Hype" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=normal rgb(255, 255, 255) start]
+            <div [Excerpt]> 56,11941 278x90 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <p> 56,11941 278x90 "The most useful AI conversations start where the headlines end: with people, practice, and the hard questions." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+    <div> 0,15186 0x0
+      <div [Journal Article]> 32,12079 326x411
+        <div [Article Card]> 32,12079 326x411 flex(column,gap=16,jc=flex-start,ai=flex-start) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+          <figure [Article Image]> 32,12079 326x220 ovf=clip
+            <div> 32,12079 326x220 pos=absolute
+              <img> 32,12079 326x220 ovf=clip img=k3ZmcN9FQRBR2gkRgTLAo8bkug.jpg fit=cover alt="AI concept lightbulb"
+          <div [Article Copy]> 32,12315 326x151 flex(column,gap=10,jc=flex-start,ai=flex-start) pad=0 24 ovf=clip
+            <div [Category]> 56,12315 278x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <p> 56,12315 278x22 "Field Notes" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(69, 255, 134) start]
+            <div [Title]> 56,12347 278x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <h6> 56,12347 278x19
+                <a> 56,12347 262x18 ptr href=./blog/why-the-next-ai-breakthrough-needs-better-rooms target= "Why the Next AI Needs Better Rooms" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=normal rgb(255, 255, 255) start]
+            <div [Excerpt]> 56,12377 278x90 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <p> 56,12377 278x90 "A summit is more than a stage. It is a temporary lab for the ideas that need context, friction, and collaboration." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+    <div> 0,15186 0x0
+      <div [Journal Article]> 32,12514 326x430
+        <div [Article Card]> 32,12514 326x430 flex(column,gap=16,jc=flex-start,ai=flex-start) pad=0 0 24 bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+          <figure [Article Image]> 32,12514 326x220 ovf=clip
+            <div> 32,12514 326x220 pos=absolute
+              <img> 32,12514 326x220 ovf=clip img=7Q2vfqHwpm1Sy0DBNsDeJS798.jpg fit=cover alt="Computer motherboard in darkness"
+          <div [Article Copy]> 32,12750 326x170 flex(column,gap=10,jc=flex-start,ai=flex-start) pad=0 24 ovf=clip
+            <div [Category]> 56,12750 278x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <p> 56,12750 278x22 "Summit Brief" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(69, 255, 134) start]
+            <div [Title]> 56,12783 278x38 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <h6> 56,12783 278x38
+                <a> 56,12783 230x37 ptr href=./blog/the-builders’-brief-what-to-watch-in-san-francisco target= "The Builders’ Brief: Watch in San Francisco" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=normal rgb(255, 255, 255) start]
+            <div [Excerpt]> 56,12831 278x90 flex(column,gap=normal,jc=flex-start,ai=normal)
+              <p> 56,12831 278x90 "From embodied intelligence to creative tooling, these are the ideas likely to animate the rooms this November." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) start]
+  <div> 0,15186 0x0
+    <div> 126,13001 138x40
+      <a [Unfilled]> 126,13001 138x40 flex(row,gap=14,jc=center,ai=center) pad=16 24 ::after-border=1px dashed rgba(69, 255, 134, 0.37) inset=0px ovf=clip ptr href=./blog target=
+        <figure [Noise]> 126,13001 138x40 pos=absolute op=0.11 z=0 ptr
+          <div> 126,13001 138x40 pos=absolute bgi=url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256") size=158.5px auto rep=repeat ptr
+        <div> 154,13010 82x22 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+          <p> 154,13010 82x22 ptr "Explore All" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(69, 255, 134) center]

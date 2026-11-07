@@ -1,0 +1,411 @@
+<section [Agenda Container]> 0,4462 390x4901 flex(column,gap=10,jc=center,ai=center) pad=100 32 ovf=clip
+  <div [Content]> 32,4562 326x4701 flex(column,gap=56,jc=center,ai=center) ovf=clip
+    <div [Title + Tag]> 32,4562 326x115 flex(column,gap=16,jc=center,ai=center) ovf=clip
+      <div> 0,15186 0x0
+        <div> 96,4562 198x22
+          <div [Tag]> 96,4562 198x22 flex(row,gap=10,jc=center,ai=center)
+            <figure [Pattern]> 96,4563 55x20 ovf=clip
+              <div> 96,4563 55x20 pos=absolute
+                <img> 96,4563 55x20 ovf=clip img=GY5GLhNlPMo1EpaduJk0nuQJ6xU.png fit=contain alt=""
+            <div> 161,4562 70x22
+              <p> 161,4562 70x22 "AGENDA" [Inter Display 16px/22.4px w500 ls=0.96px rgb(69, 255, 134) left]
+            <figure [Pattern]> 241,4563 53x20 ovf=clip
+              <div> 241,4563 53x20 pos=absolute
+                <img> 241,4563 53x20 ovf=clip img=ot4ExbWeGPVzYrtOfK5g6NrJQ5o.png fit=contain alt=""
+      <div> 32,4600 326x77 flex(column,gap=normal,jc=flex-start,ai=normal)
+        <h2> 32,4600 326x77
+          <span> 48,4600 104x38 filter=blur(0px) "Explore" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 158,4600 45x38 filter=blur(0px) "the" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 209,4600 133x38 filter=blur(0px) "Complete" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 34,4639 63x38 filter=blur(0px) "First" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 103,4639 27x38 filter=blur(0px) "AI" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 136,4639 109x38 filter=blur(0px) "Summit" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 250,4639 106x38 filter=blur(0px) "Agenda" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+    <div [Schedule Wrapper]> 32,4733 326x4530 flex(column,gap=72,jc=center,ai=center) ovf=clip
+      <div [Day 1]> 32,4733 326x1455 flex(column,gap=0,jc=center,ai=center) ovf=clip
+        <div [Day]> 32,6132 326x56 pos=sticky flex(row,gap=0,jc=flex-start,ai=center) ovf=clip z=1
+          <div> 0,15186 0x0
+            <div> 32,6132 326x56
+              <div [Active]> 32,6132 326x56 flex(row,gap=14,jc=center,ai=center) pad=16 bg=rgb(10, 28, 10) shadow=rgba(32, 179, 147, 0.73) 0px 0px 8px 4px inset ovf=clip
+                <figure [Noise ]> 32,6132 326x56 pos=absolute op=0.11 z=0
+                  <div> 32,6132 326x56 pos=absolute bgi=url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256") size=158.5px auto rep=repeat
+                <div> 73,6148 52x24 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <h4> 73,6148 52x24 "Day : 1" [Clash Grotesk Variable Variable Bold 20px/24px w700 ls=normal rgb(69, 255, 134) start]
+                <div [Divider]> 139,6148 1x24 bg=rgb(255, 255, 255) op=0.29 ovf=clip
+                <div> 154,6149 163x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 154,6149 163x22 "Foundations & Vision" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) start]
+        <div [Schedule]> 32,4789 326x1399 flex(column,gap=24,jc=center,ai=center) ovf=clip
+          <div [1]> 32,5834 326x354 pos=sticky flex(column,gap=0,jc=center,ai=flex-start) bg=rgb(0, 0, 0) ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip z=1
+            <div [Timing]> 32,5834 326x46 flex(column,gap=10,jc=flex-start,ai=center) pad=12 0 12 24 ovf=clip
+              <div> 56,5846 302x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 56,5846 302x22 "11:00 – 11:45" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+            <div [Info]> 32,5880 326x308 flex(column,gap=10,jc=center,ai=flex-start) pad=24 ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip
+              <div [Event + Speaker]> 56,5904 278x260 flex(column,gap=32,jc=flex-start,ai=flex-start) ovf=clip
+                <div [Event]> 56,5904 278x144 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+                  <div> 56,5904 278x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <h5> 56,5904 278x22 "Opening Remarks" [Clash Grotesk Variable Variable Bold 18px/21.6px w700 ls=normal rgb(255, 255, 255) left]
+                  <div> 56,5936 278x112 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 56,5936 278x112 "A warm welcome from the First AI Summit team. We’ll walk you through the three days ahead—the speakers, the sessions, an" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                <div> 0,15186 0x0
+                  <div> 56,6080 278x84
+                    <div [Small]> 56,6080 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                      <div [Image Wrapper]> 56,6080 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                        <figure [Bg Pattern]> 56,6080 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                          <div> 56,6080 84x84 pos=absolute
+                            <img> 56,6080 84x84 ovf=clip img=sQhM3HU8ThmfrCUbzNOFibuJFX0.png fit=cover alt=""
+                        <figure [Person Image]> 56,6080 84x84 ovf=clip
+                          <div> 56,6080 84x84 pos=absolute
+                            <img> 56,6080 84x84 ovf=clip img=ALFulH33o4tnIVq1jOk9pLqC0Gw.png fit=cover alt=""
+                      <div [Name + Designation]> 152,6091 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                        <div> 152,6099 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,6099 170x19 "Arjun Mehta" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                        <div> 152,6122 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,6122 170x22 "AI Head" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+          <div [2]> 32,5835 326x353 pos=sticky flex(column,gap=0,jc=center,ai=flex-start) bg=rgb(0, 0, 0) ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip z=1
+            <div [Timing]> 32,5835 326x46 flex(column,gap=10,jc=flex-start,ai=center) pad=12 0 12 24 ovf=clip
+              <div> 56,5847 302x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 56,5847 302x22 "11:45 – 01:30" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+            <div [Info]> 32,5881 326x307 flex(column,gap=10,jc=center,ai=flex-start) pad=24 ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip
+              <div [Event + Speaker]> 56,5905 278x259 flex(column,gap=32,jc=flex-start,ai=flex-start) ovf=clip
+                <div [Event]> 56,5905 278x143 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+                  <div> 56,5905 278x43 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <h5> 56,5905 278x43 "Keynote: Shaping the Future with AI" [Clash Grotesk Variable Variable Bold 18px/21.6px w700 ls=normal rgb(255, 255, 255) left]
+                  <div> 56,5958 278x90 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 56,5958 278x90 "Our keynote speaker opens the event with a bold vision of where AI is heading — the shifts already happening and what’s " [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                <div> 0,15186 0x0
+                  <div> 56,6080 278x84
+                    <div [Small]> 56,6080 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                      <div [Image Wrapper]> 56,6080 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                        <figure [Bg Pattern]> 56,6080 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                          <div> 56,6080 84x84 pos=absolute
+                            <img> 56,6080 84x84 ovf=clip img=sQhM3HU8ThmfrCUbzNOFibuJFX0.png fit=cover alt=""
+                        <figure [Person Image]> 56,6080 84x84 ovf=clip
+                          <div> 56,6080 84x84 pos=absolute
+                            <img> 56,6080 84x84 ovf=clip img=Q93bBlKgn8lqvAWR80TTxRnM.png fit=cover alt=""
+                      <div [Name + Designation]> 152,6091 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                        <div> 152,6099 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,6099 170x19 "Lucy Morgan" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                        <div> 152,6122 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,6122 170x22 "CEO - X AI" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+          <div [3]> 32,5544 326x644 pos=sticky flex(column,gap=0,jc=center,ai=flex-start) bg=rgb(0, 0, 0) ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip z=1
+            <div [Timing]> 32,5544 326x46 flex(column,gap=10,jc=flex-start,ai=center) pad=12 0 12 24 ovf=clip
+              <div> 56,5556 302x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 56,5556 302x22 "03:00 – 05:00" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+            <div [Info]> 32,5591 326x597 flex(column,gap=10,jc=center,ai=flex-start) pad=24 ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip
+              <div [Event + Speaker]> 56,5615 278x549 flex(column,gap=32,jc=flex-start,ai=flex-start) ovf=clip
+                <div [Event]> 56,5615 278x121 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+                  <div> 56,5615 278x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <h5> 56,5615 278x22 "Panel: The State of AI in 2026" [Clash Grotesk Variable Variable Bold 18px/21.6px w700 ls=normal rgb(255, 255, 255) left]
+                  <div> 56,5646 278x90 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 56,5646 278x90 "Top founders and researchers explore where AI truly stands today — beyond the hype, beyond the headlines." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                <div [Speakers]> 56,5768 278x396 flex(column,gap=20,jc=flex-start,ai=center,wrap) ovf=clip
+                  <div> 0,15186 0x0
+                    <div> 56,5768 278x84
+                      <div [Small]> 56,5768 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,5768 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,5768 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,5768 84x84 pos=absolute
+                          <figure [Person Image]> 56,5768 84x84 ovf=clip
+                            <div> 56,5768 84x84 pos=absolute
+                        <div [Name + Designation]> 152,5779 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,5787 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,5787 170x19 "Rohan Kapoor" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,5810 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,5810 170x22 "Founder, SynthMind" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                  <div> 0,15186 0x0
+                    <div> 56,5872 278x84
+                      <div [Small]> 56,5872 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,5872 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,5872 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,5872 84x84 pos=absolute
+                          <figure [Person Image]> 56,5872 84x84 ovf=clip
+                            <div> 56,5872 84x84 pos=absolute
+                        <div [Name + Designation]> 152,5872 182x84 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,5880 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,5880 170x19 "Elena Garcia" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,5903 170x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,5903 170x45 "ML Director, DataForge" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                  <div> 0,15186 0x0
+                    <div> 56,5976 278x84
+                      <div [Small]> 56,5976 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,5976 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,5976 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,5976 84x84 pos=absolute
+                          <figure [Person Image]> 56,5976 84x84 ovf=clip
+                            <div> 56,5976 84x84 pos=absolute
+                        <div [Name + Designation]> 152,5976 182x84 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,5984 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,5984 170x19 "David Kim" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,6007 170x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,6007 170x45 "AI Strategist, NexaTech" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                  <div> 0,15186 0x0
+                    <div> 56,6080 278x84
+                      <div [Small]> 56,6080 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,6080 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,6080 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,6080 84x84 pos=absolute
+                          <figure [Person Image]> 56,6080 84x84 ovf=clip
+                            <div> 56,6080 84x84 pos=absolute
+                        <div [Name + Designation]> 152,6080 182x84 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,6088 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,6088 170x19 "Priya Nair" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,6111 170x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,6111 170x45 "Innovation Head, DeepGrid" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+      <div [Day 2]> 32,6260 326x1498 flex(column,gap=0,jc=center,ai=center) ovf=clip
+        <div [Day]> 32,7702 326x56 pos=sticky flex(row,gap=0,jc=flex-start,ai=center) ovf=clip z=1
+          <div> 0,15186 0x0
+            <div> 32,7702 326x56
+              <div [Active]> 32,7702 326x56 flex(row,gap=14,jc=center,ai=center) pad=16 bg=rgb(10, 28, 10) shadow=rgba(32, 179, 147, 0.73) 0px 0px 8px 4px inset ovf=clip
+                <figure [Noise ]> 32,7702 326x56 pos=absolute op=0.11 z=0
+                  <div> 32,7702 326x56 pos=absolute bgi=url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256") size=158.5px auto rep=repeat
+                <div> 62,7718 58x24 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <h4> 62,7718 58x24 "Day : 2" [Clash Grotesk Variable Variable Bold 20px/24px w700 ls=normal rgb(69, 255, 134) start]
+                <div [Divider]> 134,7718 1x24 bg=rgb(255, 255, 255) op=0.29 ovf=clip
+                <div> 149,7719 178x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 149,7719 178x22 "Innovation & Execution" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) start]
+        <div [Schedule]> 32,6316 326x1442 flex(column,gap=24,jc=center,ai=center) ovf=clip
+          <div [1]> 32,7382 326x376 pos=sticky flex(column,gap=0,jc=center,ai=flex-start) bg=rgb(0, 0, 0) ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip z=1
+            <div [Timing]> 32,7382 326x46 flex(column,gap=10,jc=flex-start,ai=center) pad=12 0 12 24 ovf=clip
+              <div> 56,7394 302x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 56,7394 302x22 "10:00 – 11:30" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+            <div [info]> 32,7429 326x329 flex(column,gap=10,jc=center,ai=flex-start) pad=24 ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip
+              <div [Event + Speaker]> 56,7453 278x281 flex(column,gap=32,jc=flex-start,ai=flex-start) ovf=clip
+                <div [Event]> 56,7453 278x165 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+                  <div> 56,7453 278x43 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <h5> 56,7453 278x43 "Workshop: Building AI-First Products" [Clash Grotesk Variable Variable Bold 18px/21.6px w700 ls=normal rgb(255, 255, 255) left]
+                  <div> 56,7506 278x112 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 56,7506 278x112 "A hands-on session focused on turning ideas into AI-powered products. Learn how to design, build, and launch scalable so" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                <div> 0,15186 0x0
+                  <div> 56,7650 278x84
+                    <div [Small]> 56,7650 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                      <div [Image Wrapper]> 56,7650 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                        <figure [Bg Pattern]> 56,7650 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                          <div> 56,7650 84x84 pos=absolute
+                            <img> 56,7650 84x84 ovf=clip img=sQhM3HU8ThmfrCUbzNOFibuJFX0.png fit=cover alt=""
+                        <figure [Person Image]> 56,7650 84x84 ovf=clip
+                          <div> 56,7650 84x84 pos=absolute
+                            <img> 56,7650 84x84 ovf=clip img=rdOrUPZERDMj3cNdzVuc3rhQ.png fit=cover alt=""
+                      <div [Name + Designation]> 152,7650 182x84 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                        <div> 152,7658 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,7658 170x19 "Neha Sharma" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                        <div> 152,7681 170x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,7681 170x45 "Product Lead, AIVerse" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+          <div [2]> 32,7405 326x353 pos=sticky flex(column,gap=0,jc=center,ai=flex-start) bg=rgb(0, 0, 0) ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip z=1
+            <div [Timing]> 32,7405 326x46 flex(column,gap=10,jc=flex-start,ai=center) pad=12 0 12 24 ovf=clip
+              <div> 56,7417 302x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 56,7417 302x22 "11:45 – 01:00" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+            <div [Info]> 32,7451 326x307 flex(column,gap=10,jc=center,ai=flex-start) pad=24 ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip
+              <div [Event + Speaker]> 56,7475 278x259 flex(column,gap=32,jc=flex-start,ai=flex-start) ovf=clip
+                <div [Event]> 56,7475 278x143 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+                  <div> 56,7475 278x43 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <h5> 56,7475 278x43 "Talk: Designing Human-Centered AI" [Clash Grotesk Variable Variable Bold 18px/21.6px w700 ls=normal rgb(255, 255, 255) left]
+                  <div> 56,7528 278x90 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 56,7528 278x90 "Explore how to create AI experiences that feel intuitive, ethical, and user-first — balancing technology with real human" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                <div> 0,15186 0x0
+                  <div> 56,7650 278x84
+                    <div [Small]> 56,7650 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                      <div [Image Wrapper]> 56,7650 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                        <figure [Bg Pattern]> 56,7650 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                          <div> 56,7650 84x84 pos=absolute
+                            <img> 56,7650 84x84 ovf=clip img=sQhM3HU8ThmfrCUbzNOFibuJFX0.png fit=cover alt=""
+                        <figure [Person Image]> 56,7650 84x84 ovf=clip
+                          <div> 56,7650 84x84 pos=absolute
+                            <img> 56,7650 84x84 ovf=clip img=kWLzjCP0QH5hITDshQZ2ZezD1nU.png fit=cover alt=""
+                      <div [Name + Designation]> 152,7650 182x84 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                        <div> 152,7658 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,7658 170x19 "Daniel Ross" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                        <div> 152,7681 170x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,7681 170x45 "UX Director, FutureLab" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+          <div [3]> 32,7093 326x665 pos=sticky flex(column,gap=0,jc=center,ai=flex-start) bg=rgb(0, 0, 0) ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip z=1
+            <div [Timing]> 32,7093 326x46 flex(column,gap=10,jc=flex-start,ai=center) pad=12 0 12 24 ovf=clip
+              <div> 56,7105 302x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 56,7105 302x22 "02:00 – 03:30" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+            <div [Info]> 32,7139 326x619 flex(column,gap=10,jc=center,ai=flex-start) pad=24 ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip
+              <div [Event + Speaker]> 56,7163 278x571 flex(column,gap=32,jc=flex-start,ai=flex-start) ovf=clip
+                <div [Event]> 56,7163 278x143 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+                  <div> 56,7163 278x43 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <h5> 56,7163 278x43 "Case Study: Scaling AI in Real-World Systems" [Clash Grotesk Variable Variable Bold 18px/21.6px w700 ls=normal rgb(255, 255, 255) left]
+                  <div> 56,7216 278x90 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 56,7216 278x90 "A deep dive into how companies are successfully integrating AI into real-world products — challenges, learnings, and out" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                <div [Speakers]> 56,7338 278x396 flex(column,gap=20,jc=flex-start,ai=center,wrap) ovf=clip
+                  <div> 0,15186 0x0
+                    <div> 56,7338 278x84
+                      <div [Small]> 56,7338 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,7338 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,7338 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,7338 84x84 pos=absolute
+                          <figure [Person Image]> 56,7338 84x84 ovf=clip
+                            <div> 56,7338 84x84 pos=absolute
+                        <div [Name + Designation]> 152,7349 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,7357 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,7357 170x19 "Amelia Scott" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,7380 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,7380 170x22 "AI Product Lead" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                  <div> 0,15186 0x0
+                    <div> 56,7442 278x84
+                      <div [Small]> 56,7442 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,7442 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,7442 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,7442 84x84 pos=absolute
+                          <figure [Person Image]> 56,7442 84x84 ovf=clip
+                            <div> 56,7442 84x84 pos=absolute
+                        <div [Name + Designation]> 152,7453 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,7461 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,7461 170x19 "Henry Collins" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,7484 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,7484 170x22 "AI Architect" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                  <div> 0,15186 0x0
+                    <div> 56,7546 278x84
+                      <div [Small]> 56,7546 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,7546 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,7546 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,7546 84x84 pos=absolute
+                          <figure [Person Image]> 56,7546 84x84 ovf=clip
+                            <div> 56,7546 84x84 pos=absolute
+                        <div [Name + Designation]> 152,7546 182x84 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,7554 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,7554 170x19 "Lisa Wong" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,7577 170x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,7577 170x45 "AI Consultant, GlobalEdge" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                  <div> 0,15186 0x0
+                    <div> 56,7650 278x84
+                      <div [Small]> 56,7650 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,7650 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,7650 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,7650 84x84 pos=absolute
+                          <figure [Person Image]> 56,7650 84x84 ovf=clip
+                            <div> 56,7650 84x84 pos=absolute
+                        <div [Name + Designation]> 152,7650 182x84 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,7658 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,7658 170x19 "Karan Rao" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,7681 170x45 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,7681 170x45 "Director of AI, NexGen" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+      <div [Day 3]> 32,7830 326x1432 flex(column,gap=0,jc=center,ai=center) ovf=clip
+        <div [Day]> 32,9207 326x56 pos=sticky flex(row,gap=0,jc=flex-start,ai=center) ovf=clip z=1
+          <div> 0,15186 0x0
+            <div> 32,9207 326x56
+              <div [Active]> 32,9207 326x56 flex(row,gap=14,jc=center,ai=center) pad=16 bg=rgb(10, 28, 10) shadow=rgba(32, 179, 147, 0.73) 0px 0px 8px 4px inset ovf=clip
+                <figure [Noise ]> 32,9206 326x56 pos=absolute op=0.11 z=0
+                  <div> 32,9206 326x56 pos=absolute bgi=url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256") size=158.5px auto rep=repeat
+                <div> 67,9223 58x24 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <h4> 67,9223 58x24 "Day : 3" [Clash Grotesk Variable Variable Bold 20px/24px w700 ls=normal rgb(69, 255, 134) start]
+                <div [Divider]> 139,9223 1x24 bg=rgb(255, 255, 255) op=0.29 ovf=clip
+                <div> 154,9223 168x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 154,9223 168x22 "Future & Connections" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) start]
+        <div [Schedule]> 32,7886 326x1376 flex(column,gap=24,jc=center,ai=center) ovf=clip
+          <div [1]> 32,8931 326x332 pos=sticky flex(column,gap=0,jc=center,ai=flex-start) bg=rgb(0, 0, 0) ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip z=1
+            <div [Timing]> 32,8931 326x46 flex(column,gap=10,jc=flex-start,ai=center) pad=12 0 12 24 ovf=clip
+              <div> 56,8943 302x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 56,8943 302x22 "10:00 – 11:15" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+            <div [Info]> 32,8977 326x285 flex(column,gap=10,jc=center,ai=flex-start) pad=24 ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip
+              <div [Event + Speaker]> 56,9001 278x237 flex(column,gap=32,jc=flex-start,ai=flex-start) ovf=clip
+                <div [Event]> 56,9001 278x121 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+                  <div> 56,9001 278x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <h5> 56,9001 278x22 "Talk: The Next Era of AI Innovation" [Clash Grotesk Variable Variable Bold 18px/21.6px w700 ls=normal rgb(255, 255, 255) left]
+                  <div> 56,9033 278x90 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 56,9033 278x90 "Explore what’s next for AI — from emerging breakthroughs to the long-term impact on industries, creativity, and everyday" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                <div> 0,15186 0x0
+                  <div> 56,9155 278x84
+                    <div [Small]> 56,9155 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                      <div [Image Wrapper]> 56,9155 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                        <figure [Bg Pattern]> 56,9155 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                          <div> 56,9155 84x84 pos=absolute
+                            <img> 56,9155 84x84 ovf=clip img=sQhM3HU8ThmfrCUbzNOFibuJFX0.png fit=cover alt=""
+                        <figure [Person Image]> 56,9155 84x84 ovf=clip
+                          <div> 56,9155 84x84 pos=absolute
+                            <img> 56,9155 84x84 ovf=clip img=wpAu8SJxKfWx2rXUEOeR46fAAY8.png fit=cover alt=""
+                      <div [Name + Designation]> 152,9166 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                        <div> 152,9174 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,9174 170x19 "Daniel Brooks" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                        <div> 152,9197 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,9197 170x22 "Data Scientist" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+          <div [2]> 32,8931 326x332 pos=sticky flex(column,gap=0,jc=center,ai=flex-start) bg=rgb(0, 0, 0) ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip z=1
+            <div [Timing]> 32,8931 326x46 flex(column,gap=10,jc=flex-start,ai=center) pad=12 0 12 24 ovf=clip
+              <div> 56,8943 302x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 56,8943 302x22 "11:30 – 01:00" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+            <div [Info]> 32,8977 326x285 flex(column,gap=10,jc=center,ai=flex-start) pad=24 ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip
+              <div [Event + Speaker]> 56,9001 278x237 flex(column,gap=32,jc=flex-start,ai=flex-start) ovf=clip
+                <div [Event]> 56,9001 278x121 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+                  <div> 56,9001 278x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <h5> 56,9001 278x22 "Workshop: From Idea to AI Startup" [Clash Grotesk Variable Variable Bold 18px/21.6px w700 ls=normal rgb(255, 255, 255) left]
+                  <div> 56,9033 278x90 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 56,9033 278x90 "Learn how to turn your AI ideas into real startups — covering validation, product building, and go-to-market strategies." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                <div> 0,15186 0x0
+                  <div> 56,9155 278x84
+                    <div [Small]> 56,9155 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                      <div [Image Wrapper]> 56,9155 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                        <figure [Bg Pattern]> 56,9155 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                          <div> 56,9155 84x84 pos=absolute
+                            <img> 56,9155 84x84 ovf=clip img=sQhM3HU8ThmfrCUbzNOFibuJFX0.png fit=cover alt=""
+                        <figure [Person Image]> 56,9155 84x84 ovf=clip
+                          <div> 56,9155 84x84 pos=absolute
+                            <img> 56,9155 84x84 ovf=clip img=q1C9hjZ5ksa7UZcWDGcLSkxYLAQ.png fit=cover alt=""
+                      <div [Name + Designation]> 152,9166 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                        <div> 152,9174 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,9174 170x19 "Charlotte Reed" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                        <div> 152,9197 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                          <p> 152,9197 170x22 "AI Ethics Lead" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+          <div [3]> 32,8597 326x665 pos=sticky flex(column,gap=0,jc=center,ai=flex-start) bg=rgb(0, 0, 0) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip z=1
+            <div [Timing]> 32,8597 326x46 flex(column,gap=10,jc=flex-start,ai=center) pad=12 0 12 24 ovf=clip
+              <div> 56,8609 302x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                <p> 56,8609 302x22 "02:00 – 03:30" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+            <div [Info]> 32,8644 326x619 flex(column,gap=10,jc=center,ai=flex-start) pad=24 ::after-border=1px dashed rgb(40, 40, 40) inset=0px ovf=clip
+              <div [Event + Speaker]> 56,8668 278x571 flex(column,gap=32,jc=flex-start,ai=flex-start) ovf=clip
+                <div [Event]> 56,8668 278x143 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+                  <div> 56,8668 278x43 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <h5> 56,8668 278x43 "Fireside Chat: Building in the Age of AI" [Clash Grotesk Variable Variable Bold 18px/21.6px w700 ls=normal rgb(255, 255, 255) left]
+                  <div> 56,8721 278x90 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 56,8721 278x90 "An honest conversation with industry leaders on lessons, failures, and opportunities while building in the AI-driven wor" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                <div [speakers]> 56,8843 278x396 flex(column,gap=20,jc=flex-start,ai=flex-start,wrap) ovf=clip
+                  <div> 0,15186 0x0
+                    <div> 56,8843 278x84
+                      <div [Small]> 56,8843 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,8843 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,8843 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,8843 84x84 pos=absolute
+                          <figure [Person Image]> 56,8843 84x84 ovf=clip
+                            <div> 56,8843 84x84 pos=absolute
+                        <div [Name + Designation]> 152,8854 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,8862 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,8862 170x19 "James Walker" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,8885 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,8885 170x22 "AI Scientist" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                  <div> 0,15186 0x0
+                    <div> 56,8947 278x84
+                      <div [Small]> 56,8947 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,8947 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,8947 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,8947 84x84 pos=absolute
+                          <figure [Person Image]> 56,8947 84x84 ovf=clip
+                            <div> 56,8947 84x84 pos=absolute
+                        <div [Name + Designation]> 152,8958 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,8966 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,8966 170x19 "Oliva Bennett" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,8989 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,8989 170x22 "ML Engineer" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                  <div> 0,15186 0x0
+                    <div> 56,9051 278x84
+                      <div [Small]> 56,9051 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,9051 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,9051 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,9051 84x84 pos=absolute
+                          <figure [Person Image]> 56,9051 84x84 ovf=clip
+                            <div> 56,9051 84x84 pos=absolute
+                        <div [Name + Designation]> 152,9062 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,9070 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,9070 170x19 "Sophia Turner" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,9093 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,9093 170x22 "AI Strategist" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+                  <div> 0,15186 0x0
+                    <div> 56,9155 278x84
+                      <div [Small]> 56,9155 278x84 flex(row,gap=12,jc=center,ai=center) ::after-border=1px solid rgb(10, 28, 10) inset=0px ovf=clip
+                        <div [Image Wrapper]> 56,9155 84x84 flex(column,gap=10,jc=center,ai=center) bgi=radial-gradient(50% 50%, rgb(46, 184, 94) 0%, rgb(18, 105, 64) 100%) size=auto rep=repeat
+                          <figure [Bg Pattern]> 56,9155 84x84 pos=absolute op=0.34 ovf=clip blend=overlay z=0
+                            <div> 56,9155 84x84 pos=absolute
+                          <figure [Person Image]> 56,9155 84x84 ovf=clip
+                            <div> 56,9155 84x84 pos=absolute
+                        <div [Name + Designation]> 152,9166 182x62 flex(column,gap=4,jc=center,ai=flex-start) pad=8 12 8 0 ovf=clip
+                          <div> 152,9174 170x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,9174 170x19 "William Hayes" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) left]
+                          <div> 152,9197 170x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                            <p> 152,9197 170x22 "Chief AI Officer" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]

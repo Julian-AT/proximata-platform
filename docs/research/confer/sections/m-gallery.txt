@@ -1,0 +1,81 @@
+<section [Gallery Container]> 0,9822 390x603 flex(column,gap=10,jc=center,ai=center) pad=100 0 ovf=clip
+  <div [Content]> 0,9922 390x403 flex(column,gap=56,jc=center,ai=center) ovf=clip z=1
+    <div [Tag + Title]> 0,9922 390x154 flex(column,gap=16,jc=center,ai=center) pad=0 32 ovf=clip z=1
+      <div> 0,15186 0x0
+        <div> 93,9922 204x22
+          <div [Tag]> 93,9922 204x22 flex(row,gap=10,jc=center,ai=center)
+            <figure [Pattern]> 93,9923 55x20 ovf=clip
+              <div> 93,9923 55x20 pos=absolute
+                <img> 93,9923 55x20 ovf=clip img=GY5GLhNlPMo1EpaduJk0nuQJ6xU.png fit=contain alt=""
+            <div> 158,9922 76x22
+              <p> 158,9922 76x22 "GALLERY" [Inter Display 16px/22.4px w500 ls=0.96px rgb(69, 255, 134) left]
+            <figure [Pattern]> 244,9923 53x20 ovf=clip
+              <div> 244,9923 53x20 pos=absolute
+                <img> 244,9923 53x20 ovf=clip img=ot4ExbWeGPVzYrtOfK5g6NrJQ5o.png fit=contain alt=""
+      <div> 32,9960 326x115 flex(column,gap=normal,jc=flex-start,ai=normal)
+        <h2> 32,9960 326x115
+          <span> 88,9960 131x38 filter=blur(0px) "Moments" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 226,9960 76x38 filter=blur(0px) "From" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 82,9999 60x38 filter=blur(0px) "Past" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 148,9999 92x38 filter=blur(0px) "Events" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 246,9999 62x38 filter=blur(0px) "That" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 106,10037 115x38 filter=blur(0px) "Sparked" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 228,10037 17x38 filter=blur(0px) "It" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 251,10037 33x38 filter=blur(0px) "All" [Clash Grotesk 32px/38.4px w400 ls=normal rgb(255, 255, 255) center]
+    <div> 0,15186 0x0
+      <div> -714,10131 1818x193 flex(row,gap=20,jc=flex-start,ai=center) ovf=clip z=1
+        <ul> -788,10131 1818x193 flex(row,gap=20,jc=flex-start,ai=center) tf=matrix(1, 0, 0, 1, -74.2587, 0)
+          <li> -788,10133 285x190
+            <div> -774,10142 257x171 op=0 tf=matrix(0.9, 0, 0, 0.9, 0, 0)
+              <div [Image Wrapper]> -774,10142 257x171 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Main Image] #undefined-1o92wym> -750,10166 208x125 pos=absolute tf=matrix(1, 0, 0, 1, -115.422, -69.3984) ovf=clip z=2
+                  <div> -750,10166 208x125 pos=absolute
+                    <img> -750,10166 208x125 ovf=clip img=01w7mAM6vDns0xgML4Xj9XCzU.jpg fit=cover alt="four person hands wrap around shoulders while looking at sunset"
+                <figure [Image Frame]> -774,10142 257x171 ovf=clip
+                  <div> -774,10142 257x171 pos=absolute
+                    <img> -774,10142 257x171 ovf=clip img=UDKd33Yw4ORO4oXSSxesyG8.png fit=contain alt=""
+          <li> -483,10131 289x193
+            <div> -469,10141 260x174 op=0 tf=matrix(0.9, 0, 0, 0.9, 0, 0)
+              <div [Image Wrapper]> -469,10141 260x174 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Main Image] #undefined-1o92wym> -444,10165 211x127 pos=absolute tf=matrix(1, 0, 0, 1, -117.039, -70.3672) ovf=clip z=2
+                  <div> -444,10165 211x127 pos=absolute
+                    <img> -444,10165 211x127 ovf=clip img=KWUOD4KXxwpy4NI46hLk8uOHdk.jpg fit=cover alt="laughing people in party"
+                <figure [Image Frame]> -469,10141 260x174 ovf=clip
+                  <div> -469,10141 260x174 pos=absolute
+                    <img> -469,10141 260x174 ovf=clip img=UDKd33Yw4ORO4oXSSxesyG8.png fit=contain alt=""
+          <li> -174,10133 285x190
+            <div> -174,10133 285x190
+              <div [Image Wrapper]> -174,10133 285x190 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Main Image] #undefined-1o92wym> -147,10159 231x139 pos=absolute tf=matrix(1, 0, 0, 1, -115.422, -69.3984) ovf=clip z=2
+                  <div> -147,10159 231x139 pos=absolute
+                    <img> -147,10159 231x139 ovf=clip img=GlAe4K36imZt6cRf73r7YrZIo0.jpg fit=cover alt="people holding clear glass bottles during daytime"
+                <figure [Image Frame]> -174,10133 285x190 ovf=clip
+                  <div> -174,10133 285x190 pos=absolute
+                    <img> -174,10133 285x190 ovf=clip img=UDKd33Yw4ORO4oXSSxesyG8.png fit=contain alt=""
+          <li> 131,10133 285x190
+            <div> 131,10133 285x190
+              <div [Image Wrapper]> 131,10133 285x190 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Main Image] #undefined-1o92wym> 158,10159 231x139 pos=absolute tf=matrix(1, 0, 0, 1, -115.422, -69.3984) ovf=clip z=2
+                  <div> 158,10159 231x139 pos=absolute
+                    <img> 158,10159 231x139 ovf=clip img=Qf2UnvS4bB9CPog6bu1Dx7Lp1rs.jpg fit=cover alt="people laughing and talking outside during daytime"
+                <figure [Image Frame]> 131,10133 285x190 ovf=clip
+                  <div> 131,10133 285x190 pos=absolute
+                    <img> 131,10133 285x190 ovf=clip img=UDKd33Yw4ORO4oXSSxesyG8.png fit=contain alt=""
+          <li> 436,10131 289x193
+            <div> 450,10141 260x174 op=0 tf=matrix(0.9, 0, 0, 0.9, 0, 0)
+              <div [Image Wrapper]> 450,10141 260x174 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Main Image] #undefined-1o92wym> 475,10165 211x127 pos=absolute tf=matrix(1, 0, 0, 1, -117.039, -70.3672) ovf=clip z=2
+                  <div> 475,10165 211x127 pos=absolute
+                    <img> 475,10165 211x127 ovf=clip img=o1GezXjXUsr4zyr1SCQqrpjt8.jpg fit=cover alt="several people standing on field under blue sky"
+                <figure [Image Frame]> 450,10141 260x174 ovf=clip
+                  <div> 450,10141 260x174 pos=absolute
+                    <img> 450,10141 260x174 ovf=clip img=UDKd33Yw4ORO4oXSSxesyG8.png fit=contain alt=""
+          <li> 745,10133 285x190
+            <div> 759,10142 257x171 op=0 tf=matrix(0.9, 0, 0, 0.9, 0, 0)
+              <div [Image Wrapper]> 759,10142 257x171 flex(row,gap=10,jc=center,ai=center) ovf=clip
+                <figure [Main Image] #undefined-1o92wym> 783,10166 208x125 pos=absolute tf=matrix(1, 0, 0, 1, -115.422, -69.3984) ovf=clip z=2
+                  <div> 783,10166 208x125 pos=absolute
+                    <img> 783,10166 208x125 ovf=clip img=wuJGSf8WODQxIC7whxpJzB3uHE.jpg fit=cover alt="four women holding drinks while laughing together during daytime"
+                <figure [Image Frame]> 759,10142 257x171 ovf=clip
+                  <div> 759,10142 257x171 pos=absolute
+                    <img> 759,10142 257x171 ovf=clip img=UDKd33Yw4ORO4oXSSxesyG8.png fit=contain alt=""

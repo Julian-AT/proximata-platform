@@ -40,7 +40,7 @@ Fonts are local in `public/sites/confer/fonts/` and exposed as CSS vars (see `sr
 
 ## Page-wide layers and behavior
 - Lenis smooth scroll, `duration: 1.7`.
-- Fixed BG (z 0): animated grain canvas (800×600, pixelated, rgb(87,87,87), opacity .07, new frame every 16.7ms); hero glow image (base opacity .22, ×1→×0.1 as hero info cards cross 50% viewport); left/right flowers (opacity 1 → .1 while About title crosses viewport bottom → .6 while footer enters).
+- Fixed BG (z 0): animated grain canvas (800×600, pixelated, rgb(87,87,87), opacity .07, new frame every 16.7ms); hero glow image (base opacity .22, ×1→×0.1 as hero info cards cross 50% viewport); left/right flowers (opacity 1 → .1 while About title crosses viewport bottom → .6 while the pricing section crosses the viewport bottom).
 - Fixed pillars (z 4) at left −68px / right edge, 205×900 contain; translate ±50px outward while About title crosses viewport bottom. Load-in: from ±110px, opacity 0, delay .3 dur .8 ease [.12,.23,.5,1]. Flowers load-in delay .5 dur .7.
 - Fixed nav (z 8) centered; template badge fixed bottom 63 right 20 (desktop/tablet only). Framer's own "Made in Framer" badge is not reproduced.
 

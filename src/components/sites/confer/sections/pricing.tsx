@@ -1,4 +1,5 @@
 import { passes } from "../data";
+import { SCROLL_TARGETS } from "../scroll-targets";
 import { SectionTitle } from "../motion";
 import { SectionTag } from "../section-tag";
 import { PricingCard } from "./pricing-card";
@@ -8,7 +9,7 @@ export function Pricing() {
     // No z-index here: the eagle's `lighten` blend has to reach the fixed
     // background, which a stacking context on the section would cut off.
     <section
-      id="ticket"
+      id={SCROLL_TARGETS.pricing}
       aria-label="Passes"
       className="relative flex justify-center overflow-clip px-8 py-[100px] tablet:px-0"
     >

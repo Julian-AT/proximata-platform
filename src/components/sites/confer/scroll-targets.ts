@@ -6,5 +6,7 @@
 export const SCROLL_TARGETS = {
   heroInfo: "info-tile",
   aboutTitle: "about-title",
+  /** Pricing section; also the #ticket anchor the Register buttons use. */
+  pricing: "ticket",
   footer: "site-footer",
 } as const;

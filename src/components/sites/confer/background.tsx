@@ -148,7 +148,8 @@ function Pillar({ side }: { side: "left" | "right" }) {
 function Flower({ side }: { side: "left" | "right" }) {
   const opacity = useScrollKeyframes(1, [
     { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: 0.1 },
-    { target: SCROLL_TARGETS.footer, threshold: 1, value: 0.6 },
+    // Back up to 0.6 while the pricing section crosses the viewport bottom.
+    { target: SCROLL_TARGETS.pricing, threshold: 1, value: 0.6 },
   ]);
   const left = side === "left";
 

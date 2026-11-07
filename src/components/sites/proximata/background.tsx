@@ -1,63 +1,16 @@
 "use client";
 
-import { motion, useMotionValue, type MotionValue } from "motion/react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { Globe } from "./globe";
 import { EASE_OUT } from "./motion";
+import { useScrollKeyframes } from "./scroll-keyframes";
 import { SCROLL_TARGETS } from "./scroll-targets";
 
 // Re-exported for client components that already import it from here.
 export { SCROLL_TARGETS };
 
-type Keyframe = { target: string; threshold: number; value: number };
-
-/**
- * Framer "scroll transform" with section targets: the value moves from the
- * previous keyframe to the next while the target element crosses the line at
- * `threshold` × viewport height (from its top edge to its bottom edge).
- */
-function useScrollKeyframes(
-  initial: number,
-  keyframes: Keyframe[],
-  responsive?: (width: number) => Keyframe[],
-): MotionValue<number> {
-  const value = useMotionValue(initial);
-  const keyframesRef = useRef(keyframes);
-  const responsiveRef = useRef(responsive);
-
-  useEffect(() => {
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const frames = responsiveRef.current?.(window.innerWidth) ?? keyframesRef.current;
-      let current = initial;
-      let previous = initial;
-      for (const { target, threshold, value: next } of frames) {
-        const element = document.getElementById(target);
-        if (!element) continue;
-        const rect = element.getBoundingClientRect();
-        const line = window.innerHeight * threshold;
-        const progress = Math.min(Math.max((line - rect.top) / (rect.height || 1), 0), 1);
-        current += (next - previous) * progress;
-        previous = next;
-      }
-      value.set(current);
-    };
-    const schedule = () => {
-      if (!frame) frame = requestAnimationFrame(update);
-    };
-    update();
-    window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule);
-    return () => {
-      cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
-    };
-  }, [initial, value]);
-
-  return value;
-}
 
 /** Grain overlay: random grey pixels redrawn every frame (Framer AnimatedNoise). */
 /** Grey of the grain specks. 87 on the template's black; lifted for ink so
@@ -121,73 +74,82 @@ function AnimatedNoise() {
 }
 
 /** Outward slide (px) once the About title scrolls in, per breakpoint. */
-function pillarShift(side: "left" | "right", width: number) {
-  if (width >= 1200) return side === "left" ? -50 : 50;
-  if (width >= 810) return side === "left" ? -32 : 30;
-  return side === "left" ? -32 : 32;
+function rulerShift(side: "left" | "right", width: number) {
+  const distance = width >= 1200 ? 18 : width >= 810 ? 12 : 8;
+  return side === "left" ? -distance : distance;
 }
 
-function Pillar({ side }: { side: "left" | "right" }) {
-  const direction = side === "left" ? -1 : 1;
-  const x = useScrollKeyframes(0, [], (width) => [
-    { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: pillarShift(side, width) },
-  ]);
-
-  return (
-    <motion.div
-      aria-hidden="true"
-      className={
-        side === "left"
-          ? "pointer-events-none fixed top-px -bottom-px left-[-100px] z-[4] aspect-[0.2278] tablet:left-[-108px] desktop:left-[-68px]"
-          : "pointer-events-none fixed top-px -bottom-px right-[-105px] z-[4] aspect-[0.2278] tablet:right-[-111px] desktop:right-[-75px]"
-      }
-      initial={{ opacity: 0.001, x: direction * 110 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.3, duration: 0.8, ease: EASE_OUT }}
-    >
-      <motion.div className="relative size-full" style={{ x }}>
-        <Image
-          src="/sites/confer/images/bg/pillar.png"
-          alt="Decorative classical column"
-          fill
-          priority
-          sizes="246px"
-          className="object-contain"
-        />
-      </motion.div>
-    </motion.div>
-  );
-}
-
-function Flower({ side }: { side: "left" | "right" }) {
-  const opacity = useScrollKeyframes(1, [
-    { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: 0.1 },
-    // Back up to 0.6 while the pricing section crosses the viewport bottom.
-    { target: SCROLL_TARGETS.pricing, threshold: 1, value: 0.6 },
-  ]);
+/**
+ * Thin measuring scale along a viewport edge (replaces the template's
+ * pillars): a tick every 8px, a long tick every 40px, in faint ice. It slides
+ * in on load and eases outward once the About title scrolls into view.
+ */
+function EdgeRuler({ side }: { side: "left" | "right" }) {
   const left = side === "left";
+  const patternId = `edge-ruler-${side}`;
+  const x = useScrollKeyframes(0, [], (width) => [
+    { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: rulerShift(side, width) },
+  ]);
 
   return (
     <motion.div
       aria-hidden="true"
       className={
         left
-          ? "absolute bottom-[-54px] left-[-290px] z-[1] h-[560px] w-[457px] tablet:bottom-[-230px] tablet:left-[-210px] tablet:h-[696px] tablet:w-[568px] desktop:bottom-[-140px]"
-          : "absolute right-[-200px] bottom-[-50px] z-[1] h-[527px] w-[349px] tablet:right-[-120px] tablet:bottom-[-270px] tablet:h-[697px] tablet:w-[461px] desktop:bottom-[-170px]"
+          ? "pointer-events-none fixed inset-y-0 left-1 z-[4] w-4 tablet:left-3 tablet:w-7 desktop:left-5"
+          : "pointer-events-none fixed inset-y-0 right-1 z-[4] w-4 tablet:right-3 tablet:w-7 desktop:right-5"
       }
       initial={{ opacity: 0.001, x: left ? -110 : 110 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.5, duration: 0.7, ease: EASE_OUT }}
+      transition={{ delay: 0.3, duration: 0.8, ease: EASE_OUT }}
     >
-      <motion.div className="relative size-full" style={{ opacity }}>
-        <Image
-          src={left ? "/sites/confer/images/bg/flower-left.png" : "/sites/confer/images/bg/flower-right.png"}
-          alt=""
-          fill
-          priority
-          sizes={left ? "568px" : "461px"}
-          className="object-cover"
+      <motion.svg className="size-full text-ice/30" style={{ x }}>
+        <defs>
+          <pattern id={patternId} width="100%" height="40" patternUnits="userSpaceOnUse">
+            {[0, 8, 16, 24, 32].map((y) => (
+              <line
+                key={y}
+                x1={left ? 0 : "100%"}
+                x2={left ? (y === 0 ? "100%" : "45%") : y === 0 ? 0 : "55%"}
+                y1={y + 0.5}
+                y2={y + 0.5}
+                stroke="currentColor"
+                strokeWidth={1}
+              />
+            ))}
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill={`url(#${patternId})`} />
+        <line
+          x1={left ? 0.5 : "100%"}
+          x2={left ? 0.5 : "100%"}
+          y1={0}
+          y2="100%"
+          stroke="currentColor"
+          strokeWidth={1}
         />
+      </motion.svg>
+    </motion.div>
+  );
+}
+
+/** Rotating globe behind the hero; dims as the page scrolls and returns near the end. */
+function GlobeLayer() {
+  const opacity = useScrollKeyframes(1, [
+    { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: 0.2 },
+    { target: SCROLL_TARGETS.pricing, threshold: 1, value: 0.45 },
+  ]);
+
+  return (
+    <motion.div
+      aria-hidden="true"
+      className="absolute top-[48%] left-1/2 aspect-square w-[125vw] -translate-x-1/2 -translate-y-1/2 tablet:w-[min(96vh,880px)]"
+      initial={{ opacity: 0.001, scale: 0.96 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.3, duration: 1.2, ease: EASE_OUT }}
+    >
+      <motion.div className="size-full" style={{ opacity }}>
+        <Globe className="size-full" />
       </motion.div>
     </motion.div>
   );
@@ -202,7 +164,7 @@ function HeroGlow() {
     <motion.div aria-hidden="true" className="absolute inset-0 opacity-[0.22]">
       <motion.div className="relative size-full" style={{ opacity: factor }}>
         <Image
-          src="/sites/confer/images/bg/hero-glow.png"
+          src="/sites/proximata/images/bg/hero-glow.png"
           alt=""
           fill
           priority
@@ -214,17 +176,16 @@ function HeroGlow() {
   );
 }
 
-/** Fixed layers behind the page: glow, grain, flowers, and edge pillars. */
+/** Fixed layers behind the page: brand glow, globe, grain, and edge rulers. */
 export function Background() {
   return (
     <>
-      <Pillar side="left" />
-      <Pillar side="right" />
+      <EdgeRuler side="left" />
+      <EdgeRuler side="right" />
       <div className="pointer-events-none fixed inset-0 z-0 overflow-clip">
         <HeroGlow />
+        <GlobeLayer />
         <AnimatedNoise />
-        <Flower side="left" />
-        <Flower side="right" />
       </div>
     </>
   );

@@ -1,0 +1,51 @@
+<header [Hero Container]> 0,0 1024x768 flex(column,gap=53,jc=center,ai=center) pad=0 0 60 ovf=clip z=1
+  <div [Content]> 0,77 1024x554 flex(column,gap=86,jc=center,ai=center) ovf=clip
+    <div [Titles]> 0,77 1024x187 flex(column,gap=0,jc=center,ai=center)
+      <div> 159,77 707x141
+        <div> 0,0 0x0
+          <div> 159,77 707x141 pos=absolute ovf=hidden
+            <div> 159,77 707x141 pos=absolute
+              <canvas> 159,77 707x141 ovf=clip
+      <div> 0,0 0x0
+        <div> 259,218 506x46 flex(column,gap=normal,jc=flex-start,ai=normal)
+          <h1> 259,218 506x46 "The Premier In-Person AI Event" [Clash Grotesk 38px/45.6px w400 ls=normal rgb(255, 255, 255) start]
+    <div [Info Cards Wrapper] #info-tile> 0,350 1024x281 flex(column,gap=10,jc=center,ai=center) ovf=clip
+      <div [Info Cards]> 42,350 940x281 flex(column,gap=20,jc=center,ai=center) ovf=clip
+        <div> 0,0 0x0
+          <div> 42,350 940x80
+            <div [V2]> 42,350 940x80 flex(row,gap=0,jc=center,ai=flex-start) pad=16 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px bdf=blur(5px) ovf=clip
+              <div [Label + Info]> 58,366 908x48 flex(column,gap=10,jc=center,ai=center) ovf=clip
+                <div> 242,366 540x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 242,366 540x19 "DATE" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=1.6px rgba(255, 255, 255, 0.6) uppercase center]
+                <div> 242,395 540x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 242,395 540x19 "18th November 2026" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) center]
+        <div> 0,0 0x0
+          <div> 42,450 940x80
+            <div [V2]> 42,450 940x80 flex(row,gap=0,jc=center,ai=flex-start) pad=16 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px bdf=blur(5px) ovf=clip
+              <div [Label + Info]> 58,466 908x48 flex(column,gap=10,jc=center,ai=center) ovf=clip
+                <div> 242,466 540x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 242,466 540x19 "CITY" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=1.6px rgba(255, 255, 255, 0.6) uppercase center]
+                <div> 242,495 540x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 242,495 540x19 "San Francisco, USA" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) center]
+        <div> 0,0 0x0
+          <div> 42,550 940x80
+            <div [V2]> 42,550 940x80 flex(row,gap=0,jc=center,ai=flex-start) pad=16 bg=rgba(0, 0, 0, 0.8) ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px bdf=blur(5px) ovf=clip
+              <div [Label + Info]> 58,566 908x48 flex(column,gap=10,jc=center,ai=center) ovf=clip
+                <div> 242,566 540x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 242,566 540x19 "VENUE" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=1.6px rgba(255, 255, 255, 0.6) uppercase center]
+                <div> 242,596 540x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+                  <p> 242,596 540x19 "Moscone Center, SF" [Be Vietnam Pro 16px/19.2px w400 ls=normal rgb(255, 255, 255) center]
+  <div [Scroll More Wrapper]> 426,704 172x47 pos=absolute flex(row,gap=4,jc=center,ai=center) tf=matrix(1, 0, 0, 1, -86.1797, 0) z=1
+    <div [Unlock your full potential and achieve greatness.]> 426,718 67x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+      <p> 426,718 67x19 "Scroll" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=1.6px rgba(255, 255, 255, 0.6) uppercase start]
+    <div> 497,704 47x47
+      <div [Scroll]> 497,704 47x47 flex(row,gap=0,jc=center,ai=center)
+        <div> 496,703 49x49 op=0.66
+          <div> 496,703 49x49
+            <svg> 486,693 69x69 pos=absolute tf=matrix(0.661547, 0.749903, -0.749903, 0.661547, 0, 0) svg viewBox=0 0 100 100 fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+        <div [Arrow-up-right]> 509,716 23x23 pos=absolute op=0.78 tf=matrix(-0.707107, 0.707107, -0.707107, -0.707107, 0, 0) z=1
+          <div [Arrow-up-right]> 509,716 23x23 pos=absolute
+            <div> 509,716 23x23
+              <svg> 509,716 23x23 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+    <div [Unlock your full potential and achieve greatness.]> 548,718 50x19 flex(column,gap=normal,jc=flex-start,ai=normal)
+      <p> 548,718 50x19 "More" [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=1.6px rgba(255, 255, 255, 0.6) uppercase start]

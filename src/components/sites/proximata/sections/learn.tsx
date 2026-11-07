@@ -48,6 +48,7 @@ function LearnCard({ title, body, image, className }: LearnCardProps) {
 export function Learn() {
   return (
     <section
+      id="tracks"
       aria-label="Learn"
       className="relative z-[1] flex justify-center overflow-clip px-8 py-[100px] tablet:px-[60px] desktop:px-[100px]"
     >

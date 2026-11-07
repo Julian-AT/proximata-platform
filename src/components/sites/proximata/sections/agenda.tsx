@@ -87,6 +87,7 @@ function SessionRow({ session, last }: { session: AgendaSession; last: boolean }
 export function Agenda() {
   return (
     <section
+      id="agenda"
       aria-label="Agenda"
       className="relative z-[1] flex justify-center overflow-clip px-8 py-[100px] tablet:px-[100px]"
     >

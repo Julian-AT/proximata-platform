@@ -1,22 +1,35 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { navLinks } from "./data";
+import { navLinks, registerLink } from "./content/navigation";
 import { ButtonLink } from "./framer-button";
+import { ProximataWordmark } from "./logo";
 import { EASE_FRAMER } from "./motion";
 import { NavPill } from "./nav-pill";
 
-const LOGO = "/sites/confer/images/brand/confer-logo.svg";
-
-function Logo({ className }: { className: string }) {
+/** Wordmark home link; widths stay at or above the brand book's 120px minimum. */
+function Logo({ width }: { width: number }) {
   return (
-    <Link href="/" aria-label="Confer home" className={cn("relative block shrink-0", className)}>
-      <Image src={LOGO} alt="" fill priority sizes="141px" className="object-contain" />
+    <Link href="/" aria-label="Proximata home" className="block shrink-0">
+      <ProximataWordmark width={width} priority />
     </Link>
+  );
+}
+
+function RegisterButton({ className, onClick }: { className: string; onClick?: () => void }) {
+  return (
+    <ButtonLink
+      href={registerLink.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+      onClick={onClick}
+    >
+      {registerLink.label}
+    </ButtonLink>
   );
 }
 
@@ -67,8 +80,8 @@ function MenuIcon({ open, onToggle }: { open: boolean; onToggle: () => void }) {
 function DesktopNav() {
   return (
     <nav aria-label="Primary" className="flex justify-center px-10 pb-2">
-      <div className="relative flex items-center justify-center gap-[52px] px-4 py-[10px] backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-t-0 after:border-dashed after:border-white/[0.14] after:content-['']">
-        <Logo className="h-[34px] w-[131px]" />
+      <div className="relative flex items-center justify-center gap-[52px] bg-ink/70 px-4 py-[10px] backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-t-0 after:border-dashed after:border-white/[0.14] after:content-['']">
+        <Logo width={150} />
         <ul className="flex items-center gap-2">
           {navLinks.map((link) => (
             <li key={link.label}>
@@ -76,9 +89,7 @@ function DesktopNav() {
             </li>
           ))}
         </ul>
-        <ButtonLink href="#ticket" className="h-10 w-[138px] px-0">
-          Register Now
-        </ButtonLink>
+        <RegisterButton className="h-10 w-[138px] px-0" />
       </div>
     </nav>
   );
@@ -98,7 +109,7 @@ function CompactNav({ variant }: { variant: "phone" | "tablet" }) {
     >
       <div
         className={cn(
-          "relative flex backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-dashed after:border-white/[0.14] after:content-['']",
+          "relative flex bg-ink/70 backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-dashed after:border-white/[0.14] after:content-['']",
           open
             ? "w-full flex-col items-start gap-6 px-4 pt-[10px] pb-4"
             : variant === "phone"
@@ -112,15 +123,7 @@ function CompactNav({ variant }: { variant: "phone" | "tablet" }) {
             open ? "w-full justify-between" : variant === "phone" ? "gap-3" : "gap-[15px]",
           )}
         >
-          <Logo
-            className={
-              open
-                ? "h-[38px] w-[141px]"
-                : variant === "phone"
-                  ? "h-8 w-[102px]"
-                  : "h-7 w-[92px]"
-            }
-          />
+          <Logo width={open ? 150 : 120} />
           <MenuIcon open={open} onToggle={() => setOpen((value) => !value)} />
         </div>
         <AnimatePresence initial={false}>
@@ -140,9 +143,7 @@ function CompactNav({ variant }: { variant: "phone" | "tablet" }) {
                   </li>
                 ))}
               </ul>
-              <ButtonLink href="#ticket" className="h-[54px] w-full" onClick={() => setOpen(false)}>
-                Register Now
-              </ButtonLink>
+              <RegisterButton className="h-[54px] w-full" onClick={() => setOpen(false)} />
             </motion.div>
           ) : null}
         </AnimatePresence>

@@ -6,6 +6,7 @@ import { FaqItem } from "./faq-item";
 export function Faq() {
   return (
     <section
+      id="faq"
       aria-label="FAQ"
       className="relative z-[1] flex w-full flex-col items-center justify-center overflow-clip px-8 py-[100px] tablet:p-[100px]"
     >

@@ -5,7 +5,7 @@ import { Ticker } from "../ticker";
 /** Green marquee band listing who the summit is for. */
 export function TickerStrip() {
   return (
-    <div className="relative z-[1] flex w-full items-center justify-center overflow-clip bg-[radial-gradient(38%_200%,rgb(36,143,75)_0%,rgb(8,102,46)_100%)] py-3 shadow-[inset_0_0_4px_4px_rgba(255,255,255,0.27)]">
+    <div className="relative z-[1] flex w-full items-center justify-center overflow-clip bg-[radial-gradient(38%_200%,#2f3fa6_0%,#202d85_100%)] py-3 shadow-[inset_0_0_4px_4px_rgba(255,255,255,0.27)]">
       <div aria-hidden="true" className="noise-overlay z-0 opacity-[0.14]" />
       <Ticker velocity={50} gap={32} hoverFactor={1} className="relative w-full">
         {tickerItems.map((item) => (

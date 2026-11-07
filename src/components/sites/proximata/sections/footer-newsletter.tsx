@@ -23,7 +23,7 @@ export function FooterNewsletter() {
         aria-live="polite"
         className={cn(
           "font-vietnam text-[16px] leading-[1.4]",
-          submitted ? "text-confer-green" : "text-white/90",
+          submitted ? "text-highlight" : "text-white/90",
         )}
       >
         {submitted ? "Thanks! You’re on the list." : "Get summit updates"}
@@ -31,7 +31,7 @@ export function FooterNewsletter() {
       <form onSubmit={onSubmit} className="flex shrink-0 items-start gap-5 overflow-hidden">
         <label
           htmlFor={inputId}
-          className="relative flex h-[50px] w-[199px] shrink-0 cursor-text items-center bg-confer-panel p-3 after:pointer-events-none after:absolute after:inset-0 after:border after:border-dashed after:border-white/20 focus-within:after:border-solid focus-within:after:border-confer-green"
+          className="relative flex h-[50px] w-[199px] shrink-0 cursor-text items-center bg-panel p-3 after:pointer-events-none after:absolute after:inset-0 after:border after:border-dashed after:border-white/20 focus-within:after:border-solid focus-within:after:border-ice"
         >
           <span className="sr-only">Email</span>
           <input
@@ -47,7 +47,7 @@ export function FooterNewsletter() {
         </label>
         <button
           type="submit"
-          className="relative flex h-[50px] w-[124px] shrink-0 cursor-pointer items-center justify-center bg-confer-button px-6 font-vietnam text-[16px] leading-[1.4] text-confer-green shadow-[inset_0_0_8px_4px_rgba(32,179,147,0.73)] after:pointer-events-none after:absolute after:inset-0 after:border after:border-white/20 focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-confer-green"
+          className="relative flex h-[50px] w-[124px] shrink-0 cursor-pointer items-center justify-center bg-brand px-6 font-vietnam text-[16px] leading-[1.4] text-white shadow-[inset_0_0_8px_4px_rgba(200,241,255,0.3)] after:pointer-events-none after:absolute after:inset-0 after:border after:border-white/20 focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-ice"
         >
           Submit
         </button>

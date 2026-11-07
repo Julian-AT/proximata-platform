@@ -18,7 +18,7 @@ import { TemplateBadge } from "@/components/sites/proximata/template-badge";
 
 export default function Home() {
   return (
-    <div className="relative overflow-x-clip bg-black">
+    <div className="relative overflow-x-clip bg-ink">
       <SmoothScroll />
       <Background />
       <Header />

@@ -139,14 +139,26 @@
   --font-inter: var(--nf-inter), "Inter", sans-serif;
 }
 
+/* Proximata brand palette (brand book, section 05). */
 @theme {
-  --color-confer-green: rgb(69 255 134);
-  --color-confer-green-dim: rgb(69 255 134 / 0.37);
-  --color-confer-muted: rgb(255 255 255 / 0.6);
-  --color-confer-list: rgb(255 255 255 / 0.7);
-  --color-confer-button: rgb(10 28 10);
-  --color-confer-panel: rgb(17 17 20);
-  --color-confer-rule: rgb(40 40 40);
+  /* Main body text and the dark page background. */
+  --color-ink: #23201e;
+  /* Main light background. */
+  --color-paper: #f4f7f8;
+  /* Main accent: buttons, bands, highlighted cards. */
+  --color-brand: #202d85;
+  /* Secondary accent and secondary text on dark or blue. */
+  --color-ice: #c8f1ff;
+  /* Tertiary accent: small labels and graphic elements only. */
+  --color-highlight: #9de146;
+  /* Signal colour: icons, status, small accents only. */
+  --color-signal: #d82434;
+  /* Supporting text on ink. */
+  --color-soft: rgb(255 255 255 / 0.6);
+  /* Dashed rules and dividers on ink. */
+  --color-rule: rgb(255 255 255 / 0.12);
+  /* Raised surface on ink (menus, inputs). */
+  --color-panel: #2d2a27;
 
   --ease-framer: cubic-bezier(0.44, 0, 0.56, 1);
   --ease-framer-out: cubic-bezier(0.12, 0.23, 0.5, 1);

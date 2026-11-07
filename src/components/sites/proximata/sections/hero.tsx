@@ -80,7 +80,7 @@ export function Hero() {
             {heroInfo.map((item, i) => (
               <motion.li
                 key={item.label}
-                className="dashed-frame w-full bg-black/80 p-4 backdrop-blur-[5px] [--frame-color:rgb(255_255_255/0.14)] desktop:w-[300px] desktop:after:hidden"
+                className="dashed-frame w-full bg-ink/80 p-4 backdrop-blur-[5px] [--frame-color:rgb(255_255_255/0.14)] desktop:w-[300px] desktop:after:hidden"
                 initial={cardEntrance[i]}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1, duration: 0.4, ease: EASE_FRAMER }}

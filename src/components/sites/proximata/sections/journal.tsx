@@ -9,7 +9,7 @@ type Article = (typeof articles)[number];
 /** Black card with a dashed outline: cover image, then category, title link, and excerpt. */
 function ArticleCard({ article }: { article: Article }) {
   return (
-    <article className="dashed-frame flex h-full flex-col items-start gap-4 overflow-clip bg-black pb-6">
+    <article className="dashed-frame flex h-full flex-col items-start gap-4 overflow-clip bg-ink pb-6">
       <figure className="relative h-[220px] w-full shrink-0 overflow-clip">
         <Image
           src={article.image}
@@ -20,13 +20,13 @@ function ArticleCard({ article }: { article: Article }) {
         />
       </figure>
       <div className="flex w-full flex-col items-start gap-[10px] overflow-clip px-6">
-        <p className="font-vietnam text-[16px] leading-[1.4] text-confer-green">
+        <p className="font-vietnam text-[16px] leading-[1.4] text-highlight">
           {article.category}
         </p>
         <h6 className="font-clash-bold text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
           <a href={article.href}>{article.title}</a>
         </h6>
-        <p className="font-vietnam text-[16px] leading-[1.4] text-balance text-confer-muted">
+        <p className="font-vietnam text-[16px] leading-[1.4] text-balance text-soft">
           {article.excerpt}
         </p>
       </div>

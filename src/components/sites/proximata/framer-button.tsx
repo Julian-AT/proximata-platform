@@ -7,12 +7,12 @@ const base =
   "dashed-frame group/button relative isolate flex items-center justify-center gap-[14px] overflow-clip px-6 font-vietnam text-[16px] leading-[1.4] whitespace-nowrap transition-[background-color,box-shadow,color] duration-300 ease-[var(--ease-framer)]";
 
 const variants: Record<Variant, string> = {
-  // Dark green fill, inset teal glow; hover dims the fill and tightens the glow.
+  // Brand-blue fill, inset ice glow; hover dims the fill and tightens the glow.
   filled:
-    "bg-confer-button text-confer-green shadow-[inset_0_0_8px_4px_rgba(32,179,147,0.73)] [--frame-color:rgb(255_255_255/0.2)] hover:bg-black/40 hover:shadow-[inset_0_0_3px_1px_rgba(32,179,147,0.73)]",
-  // Transparent with a green dashed outline; hover fades the label.
+    "bg-brand text-white shadow-[inset_0_0_8px_4px_rgba(200,241,255,0.3)] [--frame-color:rgb(200_241_255/0.35)] hover:bg-brand/60 hover:shadow-[inset_0_0_3px_1px_rgba(200,241,255,0.3)]",
+  // Transparent with an ice dashed outline; hover fades the label.
   unfilled:
-    "bg-transparent text-confer-green [--frame-color:rgb(69_255_134/0.37)] hover:text-confer-green-dim",
+    "bg-transparent text-ice [--frame-color:rgb(200_241_255/0.4)] hover:text-ice/50",
 };
 
 function Content({ children }: { children: ReactNode }) {

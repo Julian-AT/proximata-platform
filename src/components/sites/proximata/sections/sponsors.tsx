@@ -15,7 +15,7 @@ function SponsorTile({ sponsor }: { sponsor: Sponsor }) {
   const mask = logoMask(sponsor.svg);
 
   return (
-    <div className="dashed-frame flex w-[254px] items-center justify-center overflow-clip bg-black/25 px-6 py-7 [--frame-color:rgb(255_255_255/0.2)]">
+    <div className="dashed-frame flex w-[254px] items-center justify-center overflow-clip bg-ink/25 px-6 py-7 [--frame-color:rgb(255_255_255/0.2)]">
       <div
         role="img"
         aria-label={sponsor.name}

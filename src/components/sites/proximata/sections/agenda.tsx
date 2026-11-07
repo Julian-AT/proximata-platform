@@ -8,9 +8,9 @@ import { AgendaSpeakerChip } from "./agenda-speaker-chip";
 function DayPill({ day }: { day: AgendaDay }) {
   return (
     <div className="sticky top-[100px] z-[1] flex w-full items-center">
-      <div className="relative flex w-full items-center justify-center gap-[14px] overflow-clip bg-confer-button p-4 shadow-[inset_0_0_8px_4px_rgba(32,179,147,0.73)] tablet:w-auto">
+      <div className="relative flex w-full items-center justify-center gap-[14px] overflow-clip bg-brand p-4 shadow-[inset_0_0_8px_4px_rgba(200,241,255,0.3)] tablet:w-auto">
         <span aria-hidden="true" className="noise-overlay z-0 opacity-[0.11]" />
-        <h3 className="relative font-clash-bold text-[20px] leading-[1.2] whitespace-nowrap text-confer-green tablet:text-[26px] desktop:text-[32px]">
+        <h3 className="relative font-clash-bold text-[20px] leading-[1.2] whitespace-nowrap text-white tablet:text-[26px] desktop:text-[32px]">
           {day.day}
         </h3>
         <span aria-hidden="true" className="relative w-px self-stretch bg-white opacity-[0.29]" />
@@ -30,7 +30,7 @@ function SessionRow({ session, last }: { session: AgendaSession; last: boolean }
   const beside = session.layout === "row";
 
   return (
-    <article className="sticky top-[200px] z-[1] flex w-full flex-col overflow-clip bg-black tablet:flex-row tablet:items-start tablet:pl-6">
+    <article className="sticky top-[200px] z-[1] flex w-full flex-col overflow-clip bg-ink tablet:flex-row tablet:items-start tablet:pl-6">
       <div className="flex w-full shrink-0 flex-col py-3 pl-6 tablet:w-[150px] tablet:pt-6 tablet:pb-0 tablet:pl-0 desktop:w-[226px]">
         <p className="font-vietnam text-[16px] leading-[1.4] text-balance text-white">{session.time}</p>
       </div>
@@ -38,7 +38,7 @@ function SessionRow({ session, last }: { session: AgendaSession; last: boolean }
       <div className="relative flex w-full min-w-0 flex-col p-6 tablet:flex-1 tablet:self-stretch">
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 border-t border-dashed border-confer-rule tablet:border-t-0 tablet:border-l"
+          className="pointer-events-none absolute inset-0 border-t border-dashed border-rule tablet:border-t-0 tablet:border-l"
         />
         <div className={cn("flex w-full flex-col items-start gap-8", beside && "desktop:flex-row")}>
           <div className={cn("flex w-full flex-col gap-[10px]", beside && "desktop:min-w-0 desktop:flex-1")}>
@@ -52,7 +52,7 @@ function SessionRow({ session, last }: { session: AgendaSession; last: boolean }
             </h4>
             <p
               className={cn(
-                "w-full font-vietnam text-[16px] leading-[1.4] text-balance text-confer-muted",
+                "w-full font-vietnam text-[16px] leading-[1.4] text-balance text-soft",
                 beside ? "max-w-[540px]" : "max-w-[550px]",
               )}
             >
@@ -77,7 +77,7 @@ function SessionRow({ session, last }: { session: AgendaSession; last: boolean }
         className={cn(
           "pointer-events-none absolute inset-0 z-[2] border border-dashed",
           // The source's very last row uses the lighter card border.
-          last ? "border-white/20" : "border-confer-rule",
+          last ? "border-white/20" : "border-rule",
         )}
       />
     </article>

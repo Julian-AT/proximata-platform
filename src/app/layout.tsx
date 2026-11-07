@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${conferFontVariables} antialiased`}>
-      <body className="min-h-full bg-black font-vietnam text-white">{children}</body>
+      <body className="min-h-full bg-ink font-vietnam text-white">{children}</body>
     </html>
   );
 }

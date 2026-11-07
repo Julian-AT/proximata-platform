@@ -23,7 +23,7 @@ export function NavPill({
         className,
       )}
     >
-      <span aria-hidden="true" className="absolute inset-0 bg-black/25" />
+      <span aria-hidden="true" className="absolute inset-0 bg-ink/25" />
       <span
         className={cn(
           "relative block font-vietnam text-[14px] leading-[21px] tracking-[-0.42px] text-white/60 group-hover/pill:-translate-y-9",
@@ -35,7 +35,7 @@ export function NavPill({
       <span
         aria-hidden="true"
         className={cn(
-          "absolute -inset-x-px -top-[3px] z-[1] h-[45px] translate-y-8 bg-confer-green group-hover/pill:translate-y-0",
+          "absolute -inset-x-px -top-[3px] z-[1] h-[45px] translate-y-8 bg-ice group-hover/pill:translate-y-0",
           roll,
         )}
       />

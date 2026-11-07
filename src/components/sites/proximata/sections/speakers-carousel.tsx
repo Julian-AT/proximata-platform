@@ -46,14 +46,14 @@ function SpeakerCard({ speaker, index }: { speaker: Speaker; index: number }) {
           if (!event.currentTarget.contains(event.relatedTarget)) setActive(false);
         }}
         className={cn(
-          "dashed-frame flex flex-col items-center overflow-clip data-[active=true]:[--frame-color:rgb(69_255_134)]",
+          "dashed-frame flex flex-col items-center overflow-clip data-[active=true]:[--frame-color:rgb(200_241_255)]",
           CARD_WIDTHS[index % CARD_WIDTHS.length],
         )}
       >
         <figure className="relative aspect-[319/291.5] w-full overflow-clip">
           <Image src={speaker.image} alt={speaker.name} fill sizes="319px" className="object-cover" />
           <motion.div
-            className="absolute bottom-[-72px] left-1/2 z-[1] flex items-center justify-center gap-[10px] overflow-clip bg-black p-1"
+            className="absolute bottom-[-72px] left-1/2 z-[1] flex items-center justify-center gap-[10px] overflow-clip bg-ink p-1"
             style={{ x: "-50%" }}
             initial={false}
             animate={{ y: active ? -SOCIALS_RISE : 0 }}
@@ -67,11 +67,11 @@ function SpeakerCard({ speaker, index }: { speaker: Speaker; index: number }) {
             </SocialLink>
           </motion.div>
         </figure>
-        <div className="flex w-full flex-col items-center gap-1 bg-black/80 p-6 text-center">
+        <div className="flex w-full flex-col items-center gap-1 bg-ink/80 p-6 text-center">
           <h3 className="font-clash-bold text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
             {speaker.name}
           </h3>
-          <p className="font-vietnam text-[16px] leading-[1.4] text-confer-muted">{speaker.role}</p>
+          <p className="font-vietnam text-[16px] leading-[1.4] text-soft">{speaker.role}</p>
         </div>
       </motion.div>
     </Reveal>
@@ -97,7 +97,7 @@ function ArrowButton({
       animate={{ opacity: hidden ? 0 : 1 }}
       transition={{ duration: 0.2 }}
       className={cn(
-        "flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-black/20 text-white",
+        "flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-ink/20 text-white",
         hidden ? "pointer-events-none" : "pointer-events-auto",
       )}
     >

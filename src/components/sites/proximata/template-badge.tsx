@@ -18,7 +18,7 @@ export function TemplateBadge() {
       >
         <span
           aria-hidden="true"
-          className={`absolute top-[18.5px] left-[120.5px] z-[1] size-[17px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-confer-green transition-transform group-hover/badge:scale-[16.5] ${ease}`}
+          className={`absolute top-[18.5px] left-[120.5px] z-[1] size-[17px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-ice transition-transform group-hover/badge:scale-[16.5] ${ease}`}
         />
         <span
           className={`relative z-[2] text-black transition-[transform,color] group-hover/badge:translate-y-7 group-hover/badge:text-black/25 ${ease}`}

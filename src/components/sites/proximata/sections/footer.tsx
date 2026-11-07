@@ -10,13 +10,13 @@ const topRule =
   "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:border-t before:border-dashed before:border-white/20";
 
 const rightsText =
-  "w-full text-center font-vietnam text-[14px] leading-[1.5] tracking-[-0.42px] text-confer-muted tablet:flex-1";
+  "w-full text-center font-vietnam text-[14px] leading-[1.5] tracking-[-0.42px] text-soft tablet:flex-1";
 
 export function Footer() {
   return (
     <footer
       id={SCROLL_TARGETS.footer}
-      className={`relative z-[1] flex flex-col items-center overflow-clip bg-[linear-gradient(rgb(0_0_0/0)_0%,rgb(0_0_0/0.8)_100%)] px-7 pt-10 backdrop-blur-[10px] tablet:px-0 ${topRule}`}
+      className={`relative z-[1] flex flex-col items-center overflow-clip bg-[linear-gradient(rgb(35_32_30/0)_0%,rgb(35_32_30/0.8)_100%)] px-7 pt-10 backdrop-blur-[10px] tablet:px-0 ${topRule}`}
     >
       <div className="flex w-full flex-col items-center gap-3 overflow-clip tablet:gap-0 tablet:px-6">
         <Reveal

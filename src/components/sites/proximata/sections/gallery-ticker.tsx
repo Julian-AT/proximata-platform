@@ -102,7 +102,7 @@ function Lightbox({ active, onClose }: { active: ActivePhoto; onClose: () => voi
     <>
       <motion.div
         aria-hidden="true"
-        className="fixed inset-0 z-10 bg-black/80"
+        className="fixed inset-0 z-10 bg-ink/80"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

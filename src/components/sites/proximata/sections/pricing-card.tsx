@@ -51,9 +51,9 @@ function FadeUp({
 function Perforation() {
   return (
     <div aria-hidden="true" className="relative z-[3] flex h-[25px] w-full items-center">
-      <span className="h-[25px] w-[14px] shrink-0 rounded-r-[20px] border-y-2 border-r-2 border-dashed border-white/14 bg-black" />
+      <span className="h-[25px] w-[14px] shrink-0 rounded-r-[20px] border-y-2 border-r-2 border-dashed border-white/14 bg-ink" />
       <span className="h-0.5 flex-1 border-t-2 border-dashed border-white/14" />
-      <span className="h-[25px] w-[14px] shrink-0 rounded-l-[20px] border-y-2 border-l-2 border-dashed border-white/20 bg-black" />
+      <span className="h-[25px] w-[14px] shrink-0 rounded-l-[20px] border-y-2 border-l-2 border-dashed border-white/20 bg-ink" />
     </div>
   );
 }
@@ -86,7 +86,7 @@ export function PricingCard({ pass, index }: { pass: Pass; index: number }) {
     <motion.div
       className={cn(
         "dashed-frame relative flex h-full flex-col items-start justify-center gap-8 backdrop-blur-[8px] [--frame-color:rgb(255_255_255/0.2)] [--frame-width:2px]",
-        featured ? "bg-black" : "bg-black/40",
+        featured ? "bg-ink" : "bg-ink/40",
       )}
       initial={{ opacity: 0, y: 40 }}
       whileInView={SHOWN}
@@ -112,7 +112,7 @@ export function PricingCard({ pass, index }: { pass: Pass; index: number }) {
             <h3 className="font-vietnam text-[16px] leading-[1.2] text-white desktop:text-[20px]">
               {pass.name}
             </h3>
-            <p className="font-vietnam text-[16px] leading-[1.4] text-confer-muted">
+            <p className="font-vietnam text-[16px] leading-[1.4] text-soft">
               {pass.description}
             </p>
           </FadeUp>
@@ -125,7 +125,7 @@ export function PricingCard({ pass, index }: { pass: Pass; index: number }) {
           <p
             className={cn(
               "translate-y-10 font-vietnam text-[16px] leading-[1.4] tracking-[-0.4px] opacity-0 desktop:text-[18px]",
-              featured ? "text-white" : "text-confer-muted",
+              featured ? "text-white" : "text-soft",
             )}
           >
             What&apos;s included:
@@ -140,11 +140,11 @@ export function PricingCard({ pass, index }: { pass: Pass; index: number }) {
                 className="flex h-6 w-full items-center gap-3"
                 transition={{ delay: 0.05 * i, duration: 0.7, ease: EASE_OUT }}
               >
-                <CheckIcon className="size-6 shrink-0 text-confer-green" />
+                <CheckIcon className="size-6 shrink-0 text-highlight" />
                 <span
                   className={cn(
                     "font-vietnam text-[16px] leading-[1.4]",
-                    featured ? "text-white" : "text-confer-list",
+                    featured ? "text-white" : "text-white/70",
                   )}
                 >
                   {feature}

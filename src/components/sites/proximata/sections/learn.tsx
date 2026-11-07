@@ -22,7 +22,7 @@ type LearnCardProps = {
 function LearnCard({ title, body, image, className }: LearnCardProps) {
   return (
     <article
-      className={cn("dashed-frame flex flex-col items-center gap-5 overflow-clip bg-black pb-6", className)}
+      className={cn("dashed-frame flex flex-col items-center gap-5 overflow-clip bg-ink pb-6", className)}
     >
       <figure className="relative aspect-[400/211] w-full overflow-clip">
         {image ? (
@@ -39,7 +39,7 @@ function LearnCard({ title, body, image, className }: LearnCardProps) {
         <h5 className="text-balance font-clash-bold text-[18px] leading-[1.2] text-white tablet:text-[22px] desktop:text-[28px]">
           {title}
         </h5>
-        <p className="text-balance font-vietnam text-[16px] leading-[1.4] text-confer-muted">{body}</p>
+        <p className="text-balance font-vietnam text-[16px] leading-[1.4] text-soft">{body}</p>
       </div>
     </article>
   );

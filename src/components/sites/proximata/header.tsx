@@ -93,7 +93,7 @@ function CompactNav({ variant }: { variant: "phone" | "tablet" }) {
       className={cn(
         "flex flex-col items-center transition-colors duration-300",
         variant === "phone" ? "px-5 pb-4" : "px-10 py-4",
-        open && "bg-confer-panel pt-4",
+        open && "bg-panel pt-4",
       )}
     >
       <div

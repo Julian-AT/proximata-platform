@@ -32,14 +32,14 @@ export function Speakers() {
           <Reveal
             key={metric.label}
             className={cn(
-              "flex min-w-0 flex-col items-center gap-[10px] overflow-clip border-l border-dashed border-confer-rule tablet:flex-1",
+              "flex min-w-0 flex-col items-center gap-[10px] overflow-clip border-l border-dashed border-rule tablet:flex-1",
               rightRule(i),
             )}
           >
             <p className="text-center text-balance font-clash text-[32px] leading-[1.2] font-normal text-white [-webkit-text-stroke:1px_white] tablet:text-[38px] desktop:text-[48px]">
               {metric.value}
             </p>
-            <p className="text-center text-balance font-vietnam text-[16px] leading-[1.2] text-confer-muted desktop:text-[20px]">
+            <p className="text-center text-balance font-vietnam text-[16px] leading-[1.2] text-soft desktop:text-[20px]">
               {metric.label}
             </p>
           </Reveal>

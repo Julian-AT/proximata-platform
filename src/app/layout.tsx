@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { conferFontVariables } from "@/components/sites/confer/fonts";
+import { conferFontVariables } from "@/components/sites/proximata/fonts";
 import "./globals.css";
 
 const description =

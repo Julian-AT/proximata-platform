@@ -2,28 +2,41 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { brandColors, hexToRgb01 } from "./brand-colors";
 import { loadHeightmap } from "./logo-glass-heightmap";
 import { LOGO_GLASS_FRAGMENT, LOGO_GLASS_VERTEX } from "./logo-glass-shader";
 
 type Rgba = [number, number, number, number];
 
-const GREEN: Rgba = [69 / 255, 255 / 255, 134 / 255, 1];
+/** Shader colours: `low`/`high` tint the liquid, `highlight`/`shadow` light it. */
+export type GlassPalette = { low: string; high: string; highlight: string; shadow: string };
 
-// Uniform values from the source instance; only seed and speed differ
-// between the hero and footer wordmarks.
+/** Brand tint: brand blue in the depths, ice in the light. */
+const BRAND_PALETTE: GlassPalette = {
+  low: brandColors.brand,
+  high: brandColors.ice,
+  highlight: brandColors.white,
+  shadow: brandColors.ink,
+};
+
+/**
+ * Hex → RGBA uniform. Channels are squared because the shader finishes with
+ * a square-root gamma step; squaring lets brand hex values come back out.
+ */
+function shaderColor(hex: string): Rgba {
+  const [r, g, b] = hexToRgb01(hex);
+  return [r * r, g * g, b * b, 1];
+}
+
+// Shape and motion uniforms from the Framer "Logo Glass" instance. Colour,
+// contrast and brightness are set per instance (see LogoGlassProps).
 const BASE_UNIFORMS: Record<string, number | Rgba> = {
   u_ambient: 0,
   u_bend: 0.65,
-  u_brightness: 0.7,
   u_bumpDist: 10,
   u_bumpStrength: 0.7,
-  u_colorA: [0, 0, 0, 1],
-  u_colorB: GREEN,
   u_colorBack: [0, 0, 0, 0],
-  u_colorHighlight: [1, 1, 1, 1],
-  u_colorShadow: [51 / 255, 51 / 255, 51 / 255, 1],
   u_contour: 0.05,
-  u_contrast: 3,
   u_direction: 0,
   u_dispersion: 0,
   u_falloff: 2,
@@ -40,8 +53,6 @@ const BASE_UNIFORMS: Record<string, number | Rgba> = {
   u_warp: 0.5,
   u_warpDepth: 2,
 };
-
-const WORDMARK_SVG = "/sites/confer/images/brand/first-ai-summit.svg";
 
 function compile(gl: WebGL2RenderingContext, type: number, source: string) {
   const shader = gl.createShader(type);
@@ -88,8 +99,13 @@ function bindQuad(gl: WebGL2RenderingContext, program: WebGLProgram) {
 }
 
 type LogoGlassProps = {
-  /** Static render shown until the shader draws (and if WebGL2 is missing). */
-  fallbackSrc: string;
+  /** Artwork whose alpha becomes the glass heightmap (SVG with width/height). */
+  src: string;
+  /** Static image shown until the shader draws or if WebGL2 is missing; defaults to `src`. */
+  fallbackSrc?: string;
+  palette?: Partial<GlassPalette>;
+  contrast?: number;
+  brightness?: number;
   seed?: number;
   speed?: number;
   className?: string;
@@ -97,16 +113,23 @@ type LogoGlassProps = {
 };
 
 /**
- * "First AI Summit" wordmark rendered with Framer's Logo Glass shader:
- * a heightmap of the SVG drives liquid-metal noise inside the letters.
+ * Artwork rendered with Framer's Logo Glass shader: a heightmap of the
+ * image's alpha drives liquid-metal noise inside its shapes. Used for the
+ * event title only; the Proximata logo always stays flat.
  */
 export function LogoGlass({
+  src,
   fallbackSrc,
+  palette,
+  contrast = 3.2,
+  brightness = 0.7,
   seed = 55,
   speed = 0.3,
   className,
-  label = "First AI Summit",
+  label = "Building Better Worlds",
 }: LogoGlassProps) {
+  const colors = { ...BRAND_PALETTE, ...palette };
+  const colorKey = `${colors.low}|${colors.high}|${colors.highlight}|${colors.shadow}`;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [ready, setReady] = useState(false);
 
@@ -164,7 +187,7 @@ export function LogoGlass({
     });
     observer.observe(canvas);
 
-    loadHeightmap(WORDMARK_SVG)
+    loadHeightmap(src)
       .then((heightmap) => {
         if (disposed || !heightmap) return;
         program = createProgram(gl);
@@ -173,6 +196,12 @@ export function LogoGlass({
 
         const names = [
           ...Object.keys(BASE_UNIFORMS),
+          "u_colorA",
+          "u_colorB",
+          "u_colorHighlight",
+          "u_colorShadow",
+          "u_contrast",
+          "u_brightness",
           "u_seed",
           "u_speed",
           "u_time",
@@ -188,6 +217,13 @@ export function LogoGlass({
           if (Array.isArray(value)) gl.uniform4fv(locations[name], value);
           else gl.uniform1f(locations[name], value);
         }
+        const [low, high, highlight, shadow] = colorKey.split("|");
+        gl.uniform4fv(locations.u_colorA, shaderColor(low));
+        gl.uniform4fv(locations.u_colorB, shaderColor(high));
+        gl.uniform4fv(locations.u_colorHighlight, shaderColor(highlight));
+        gl.uniform4fv(locations.u_colorShadow, shaderColor(shadow));
+        gl.uniform1f(locations.u_contrast, contrast);
+        gl.uniform1f(locations.u_brightness, brightness);
         gl.uniform1f(locations.u_seed, seed);
         gl.uniform1f(locations.u_speed, speed);
         gl.uniform1f(locations.u_deltaTime, 1 / 60);
@@ -218,14 +254,14 @@ export function LogoGlass({
       observer.disconnect();
       if (program) gl.deleteProgram(program);
     };
-  }, [seed, speed]);
+  }, [src, colorKey, contrast, brightness, seed, speed]);
 
   return (
     <div className={cn("relative", className)} role="img" aria-label={label}>
       <canvas ref={canvasRef} className="absolute inset-0 block size-full" aria-hidden="true" />
       {/* eslint-disable-next-line @next/next/no-img-element -- static stand-in that fades once WebGL draws */}
       <img
-        src={fallbackSrc}
+        src={fallbackSrc ?? src}
         alt=""
         aria-hidden="true"
         className={cn(

@@ -58,8 +58,8 @@ export function Hero() {
             transition={{ delay: 0.8, duration: 0.5, ease: EASE_OUT }}
           >
             <LogoGlass
-              fallbackSrc="/sites/confer/images/brand/first-ai-summit-hero.png"
-              className="aspect-[850/169] w-full"
+              src="/sites/proximata/images/brand/title-2-line.svg"
+              className="aspect-[2067/350] w-full"
             />
           </motion.div>
           <motion.h1

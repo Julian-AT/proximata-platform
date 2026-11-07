@@ -26,8 +26,8 @@ export function Footer() {
           <LogoGlass
             seed={11}
             speed={0.34}
-            fallbackSrc="/sites/confer/images/brand/first-ai-summit-footer.png"
-            className="aspect-[1392/278] w-full"
+            src="/sites/proximata/images/brand/title-2-line.svg"
+            className="aspect-[2067/350] w-full"
           />
         </Reveal>
 

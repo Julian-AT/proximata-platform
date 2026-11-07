@@ -50,6 +50,9 @@ The pixel clone is tagged `confer-clone-baseline` for reference.
 - **Hero title:** keep the liquid-glass shader, applied to "BUILDING BETTER WORLDS" in Archivo Black, tinted ice blue/blue. The Proximata logo stays flat everywhere.
 - **Pricing section:** becomes Prizes (1st / 2nd / 3rd, middle card highlighted).
 - **Register link:** public Luma URL without the personal `tk` invite token.
+- **START Vienna:** "in cooperation with START Vienna" lockups in the hero and footer, START first among partners, and in the page title / link preview. The nav stays Proximata-only.
+- **Missing content:** on-brand "Announced soon" / "TBA" placeholders for mentors, agenda and prizes; gallery and aftermovie hidden until media exist; Journal kept in code but not rendered. No fictional people or facts from the confer template on the live site.
+- **Implementation plan:** phased task list approved on 2026-11-07 (branch `feat/proximata-hackathon`).
 
 ## Still needed from the organisers
 - Logo files as SVG: Proximata wordmark and mark (the brand book only embeds raster versions; tracing them is the fallback).

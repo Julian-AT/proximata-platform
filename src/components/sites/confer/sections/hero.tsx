@@ -63,7 +63,7 @@ export function Hero() {
             />
           </motion.div>
           <motion.h1
-            className="w-[289px] text-center font-clash text-[32px] leading-[1.2] font-normal tablet:w-auto tablet:text-[38px] desktop:text-[48px]"
+            className="w-[289px] text-center font-clash text-[32px] leading-[1.2] font-normal [-webkit-text-stroke:1px_white] tablet:w-auto tablet:text-[38px] desktop:text-[48px]"
             initial={{ opacity: 0.001, y: 4 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.6, ease: EASE_FRAMER }}

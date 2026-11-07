@@ -23,7 +23,7 @@ Desktop ≥1200 · Tablet 810–1199 · Phone <810. Max content width 1200 (sect
 ## Typography (desktop → phone)
 | Role | Family | Size/LH | Notes |
 |---|---|---|---|
-| h1/h2 section titles, metrics | Clash Grotesk 400 | 48/57.6 → 32/38.4 | white, centered, title box max-width 560 |
+| h1/h2 section titles, metrics | Clash Grotesk 400 | 48/57.6 → 38/45.6 → 32/38.4 | white, centered, title box max-width 560, `-webkit-text-stroke: 1px white` |
 | Ticker words | Clash Grotesk Variable, wght 500 | 72/86.4 → 48/57.6 | white, uppercase |
 | Card titles h5 (learn, agenda) | Clash Variable wght 500 | 28/33.6 → 18/21.6 | |
 | h6 (speaker name, journal title, footer blurb) | Clash Variable wght 500 | 24/28.8 → 16/19.2 | |

@@ -81,7 +81,7 @@ export function SectionTitle({ text, className, as = "h2" }: SectionTitleProps) 
       animate={inView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.5, ease: EASE_FRAMER }}
     >
-      <Heading className="text-center font-clash text-[32px] leading-[1.2] font-normal text-white [-webkit-text-stroke:1px_white] tablet:text-[38px] desktop:text-[48px]">
+      <Heading className="text-center text-balance font-clash text-[32px] leading-[1.2] font-normal text-white [-webkit-text-stroke:1px_white] tablet:text-[38px] desktop:text-[48px]">
         {words.map((word, i) => (
           <span key={`${word}-${i}`}>
             <motion.span

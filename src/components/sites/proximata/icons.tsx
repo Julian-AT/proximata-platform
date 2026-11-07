@@ -109,3 +109,93 @@ export function ChevronIcon({
     </svg>
   );
 }
+
+// ---------------------------------------------------------------------------
+// Proximata HUD glyphs (brand book, section 07 "Visual elements"). Thin,
+// technical marks; use at most two per composition, small or in corners.
+// ---------------------------------------------------------------------------
+
+/** "[+]" bracketed plus. */
+export function BracketPlusIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 34 20" fill="none" aria-hidden="true" {...props}>
+      <path d="M6 2H2v16h4M28 2h4v16h-4" stroke="currentColor" strokeWidth={2.2} />
+      <path d="M17 5v10M12 10h10" stroke="currentColor" strokeWidth={2.6} />
+    </svg>
+  );
+}
+
+/** Thin crosshair plus, as used in the brand book's page corners. */
+export function CrosshairIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path d="M12 0v24M0 12h24" stroke="currentColor" strokeWidth={1} />
+    </svg>
+  );
+}
+
+/** Ring of dots ("loading" mark). */
+export function DottedRingIcon(props: IconProps) {
+  const dots = Array.from({ length: 12 }, (_, i) => {
+    const a = (i / 12) * Math.PI * 2;
+    return [12 + Math.cos(a) * 9, 12 + Math.sin(a) * 9] as const;
+  });
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      {dots.map(([cx, cy], i) => (
+        <circle key={i} cx={cx} cy={cy} r={1.4} fill="currentColor" />
+      ))}
+    </svg>
+  );
+}
+
+/** Wireframe globe glyph (sphere with meridians and parallels). */
+export function GlobeIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <g stroke="currentColor" strokeWidth={1}>
+        <circle cx={12} cy={12} r={11} />
+        <ellipse cx={12} cy={12} rx={5} ry={11} />
+        <ellipse cx={12} cy={12} rx={11} ry={4.5} />
+        <path d="M12 1v22M1 12h22" />
+      </g>
+    </svg>
+  );
+}
+
+/** Square with a cut-out X ("box" mark). */
+export function XBoxIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        fillRule="evenodd"
+        d="M2 2h20v20H2Zm2.5 1.5L12 10.2l7.5-6.7Zm0 17L12 13.8l7.5 6.7Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+/** Eight-point asterisk / spark. */
+export function AsteriskIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M12 0v24M0 12h24M3.5 3.5l17 17M20.5 3.5l-17 17"
+        stroke="currentColor"
+        strokeWidth={1.4}
+      />
+    </svg>
+  );
+}
+
+/** Horizontal rule with round terminals ("•———•"). */
+export function DotRuleIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 48 6" fill="none" aria-hidden="true" {...props}>
+      <path d="M3 3h42" stroke="currentColor" strokeWidth={1} />
+      <circle cx={3} cy={3} r={2} fill="currentColor" />
+      <circle cx={45} cy={3} r={2} fill="currentColor" />
+    </svg>
+  );
+}

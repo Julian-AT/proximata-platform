@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, useInView } from "motion/react";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { BracketPlusIcon, DotRuleIcon } from "./icons";
 import { EASE_OUT } from "./motion";
 
 const CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:,.<>?~";
@@ -106,38 +106,29 @@ function ScrambleText({ text }: { text: string }) {
   );
 }
 
-/** Green section label flanked by laurel sprigs, e.g. "ABOUT". */
+/**
+ * Section label in the brand's HUD style: a bracketed plus, the scrambled
+ * green label, and a dot-terminated rule, e.g. "[+] ABOUT •——•".
+ */
 export function SectionTag({ label }: { label: string }) {
   return (
     <div className="flex items-center justify-center gap-[10px]">
       <motion.span
-        className="relative block h-5 w-[55px]"
+        className="block text-ice"
         initial={{ opacity: 0.001, x: -10 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: EASE_OUT }}
       >
-        <Image
-          src="/sites/confer/images/tags/laurel-left.png"
-          alt=""
-          fill
-          sizes="55px"
-          className="object-contain"
-        />
+        <BracketPlusIcon className="h-[14px] w-6" />
       </motion.span>
       <ScrambleText text={label} />
       <motion.span
-        className="relative block h-5 w-[53px]"
+        className="block text-ice/60"
         initial={{ opacity: 0.001, x: 10 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: EASE_OUT }}
       >
-        <Image
-          src="/sites/confer/images/tags/laurel-right.png"
-          alt=""
-          fill
-          sizes="53px"
-          className="object-contain"
-        />
+        <DotRuleIcon className="h-[6px] w-12" />
       </motion.span>
     </div>
   );

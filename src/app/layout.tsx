@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { conferFontVariables } from "@/components/sites/confer/fonts";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const description =
+  "Join First AI Summit 2026 for three days of talks, workshops, and connections in San Francisco.";
 
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: "First AI Summit 2026 | San Francisco",
+  description,
+  openGraph: {
+    type: "website",
+    title: "First AI Summit 2026 | San Francisco",
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "First AI Summit 2026 | San Francisco",
+    description,
+  },
 };
 
 export default function RootLayout({
@@ -23,11 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${conferFontVariables} antialiased`}>
+      <body className="min-h-full bg-black font-vietnam text-white">{children}</body>
     </html>
   );
 }

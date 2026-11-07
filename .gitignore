@@ -51,3 +51,6 @@ temp/
 # Clone research evidence kept locally (large screenshots, third-party bundles)
 docs/research/*/raw/
 docs/research/*/screens/
+
+# Organiser material (brand book PDF, internal planning and sponsor docs) — keep out of git
+brand-book/

@@ -63,7 +63,7 @@ export function Hero() {
             />
           </motion.div>
           <motion.h1
-            className="w-[289px] text-center font-display text-[32px] leading-[1.2] font-normal [-webkit-text-stroke:1px_white] tablet:w-auto tablet:text-[38px] desktop:text-[48px]"
+            className="w-[289px] text-center font-display text-[32px] leading-[1.2] font-normal tablet:w-auto tablet:text-[38px] desktop:text-[48px]"
             initial={{ opacity: 0.001, y: 4 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.6, ease: EASE_FRAMER }}
@@ -85,7 +85,7 @@ export function Hero() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1, duration: 0.4, ease: EASE_FRAMER }}
               >
-                <p className="text-center font-display text-[16px] leading-[1.2] tracking-[1.6px] text-white/60 uppercase">
+                <p className="text-center font-display text-[16px] leading-[1.2] text-white/60 uppercase">
                   {item.label}
                 </p>
                 <p className="mt-[10px] text-center font-mono text-[16px] leading-[1.2] text-white desktop:text-[20px]">
@@ -103,11 +103,11 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.4, ease: EASE_FRAMER }}
       >
-        <span className="font-display text-[16px] leading-[1.2] tracking-[1.6px] text-white/60 uppercase">
+        <span className="font-display text-[16px] leading-[1.2] text-white/60 uppercase">
           Scroll
         </span>
         <ScrollBadge />
-        <span className="font-display text-[16px] leading-[1.2] tracking-[1.6px] text-white/60 uppercase">
+        <span className="font-display text-[16px] leading-[1.2] text-white/60 uppercase">
           More
         </span>
       </motion.div>

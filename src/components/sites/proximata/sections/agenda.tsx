@@ -95,7 +95,7 @@ export function Agenda() {
           <SectionTag label="AGENDA" />
           <SectionTitle
             text="Explore the Complete First AI Summit Agenda"
-            className="w-full max-w-[560px] [&_h2]:text-balance"
+            className="w-full max-w-[720px] [&_h2]:text-balance"
           />
         </div>
 

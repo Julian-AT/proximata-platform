@@ -42,7 +42,7 @@ export function Sponsors() {
           <SectionTag label="SPONSORS" />
           <SectionTitle
             text="The Partners Powering the First AI Summit"
-            className="w-full max-w-[560px] [&_h2]:text-balance"
+            className="w-full max-w-[720px] [&_h2]:text-balance"
           />
         </div>
 

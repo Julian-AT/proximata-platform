@@ -40,7 +40,7 @@ export function Journal() {
       aria-label="Journal Highlights"
       className="relative z-[1] flex flex-col items-center gap-14 overflow-clip px-8 py-[100px] tablet:p-[100px]"
     >
-      <div className="flex w-full max-w-[400px] flex-col items-center gap-4 overflow-clip">
+      <div className="flex w-full max-w-[560px] flex-col items-center gap-4 overflow-clip">
         <SectionTag label="BLOGS" />
         <SectionTitle text="Ideas worth carrying forward" className="w-full [&_h2]:text-balance" />
       </div>

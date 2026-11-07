@@ -99,7 +99,7 @@ export function PricingCard({ pass, index }: { pass: Pass; index: number }) {
       <div className="relative flex w-full flex-col items-start gap-8">
         <div className="relative z-[1] flex w-full flex-col items-start gap-4 px-6 pt-6">
           <FadeUp y={16} transition={{ duration: 0.5, ease: EASE_OUT }}>
-            <p className="flex items-end font-display text-[24px] leading-[1.2] tracking-[-0.04em] text-white [font-feature-settings:'blwf','cv03','cv04','cv09','cv11'] tablet:text-[32px] desktop:text-[40px]">
+            <p className="flex items-end font-display text-[24px] leading-[1.2] text-white [font-feature-settings:'blwf','cv03','cv04','cv09','cv11'] tablet:text-[32px] desktop:text-[40px]">
               <span>$</span>
               <span>{pass.price}</span>
             </p>
@@ -124,7 +124,7 @@ export function PricingCard({ pass, index }: { pass: Pass; index: number }) {
           {/* The source never plays this line's appear effect, so it keeps its space while invisible. */}
           <p
             className={cn(
-              "translate-y-10 font-mono text-[16px] leading-[1.4] tracking-[-0.4px] opacity-0 desktop:text-[18px]",
+              "translate-y-10 font-mono text-[16px] leading-[1.4] opacity-0 desktop:text-[18px]",
               featured ? "text-white" : "text-soft",
             )}
           >

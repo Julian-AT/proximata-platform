@@ -28,7 +28,7 @@ export function Pricing() {
           <SectionTag label="PASSES" />
           <SectionTitle
             text="Pick the Pass That Fits Your First AI Summit"
-            className="w-full max-w-[560px] [&_h2]:text-balance"
+            className="w-full max-w-[720px] [&_h2]:text-balance"
           />
         </div>
 

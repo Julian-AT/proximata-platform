@@ -10,7 +10,7 @@ const topRule =
   "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:border-t before:border-dashed before:border-white/20";
 
 const rightsText =
-  "w-full text-center font-mono text-[14px] leading-[1.5] tracking-[-0.42px] text-soft tablet:flex-1";
+  "w-full text-center font-mono text-[14px] leading-[1.5] text-soft tablet:flex-1";
 
 export function Footer() {
   return (

@@ -22,7 +22,7 @@ export function Speakers() {
     >
       <div className="flex w-full flex-col items-center gap-4 overflow-clip px-8 tablet:px-0">
         <SectionTag label="SPEAKERS" />
-        <SectionTitle text="The Voices Driving the AI Movement Forward" className="w-full max-w-[560px] text-balance" />
+        <SectionTitle text="The Voices Driving the AI Movement Forward" className="w-full max-w-[720px] text-balance" />
       </div>
 
       <SpeakersCarousel />
@@ -36,7 +36,7 @@ export function Speakers() {
               rightRule(i),
             )}
           >
-            <p className="text-center text-balance font-display text-[32px] leading-[1.2] font-normal text-white [-webkit-text-stroke:1px_white] tablet:text-[38px] desktop:text-[48px]">
+            <p className="text-center text-balance font-display text-[32px] leading-[1.2] font-normal text-white tablet:text-[38px] desktop:text-[48px]">
               {metric.value}
             </p>
             <p className="text-center text-balance font-mono text-[16px] leading-[1.2] text-soft desktop:text-[20px]">

@@ -56,7 +56,7 @@ export function Learn() {
           <SectionTag label="LEARN" />
           <SectionTitle
             text="Three Perfect Days. One Mission. Endless AI."
-            className="w-full max-w-[560px] text-balance"
+            className="w-full max-w-[720px] text-balance"
           />
         </div>
 

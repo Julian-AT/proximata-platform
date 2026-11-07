@@ -50,7 +50,7 @@ function ScrollRevealParagraph() {
   return (
     <p
       ref={ref}
-      className="relative m-0 text-center font-mono text-[24px] leading-[1.2] font-normal tracking-[-1.2px] whitespace-pre-wrap text-white tablet:text-[32px]"
+      className="relative m-0 text-center font-mono text-[24px] leading-[1.2] font-normal whitespace-pre-wrap text-white tablet:text-[32px]"
     >
       {WORDS.map((word, i) => (
         <span key={`${word}-${i}`}>
@@ -79,7 +79,7 @@ export function About() {
             id={SCROLL_TARGETS.aboutTitle}
             className="relative flex w-full flex-col items-center justify-center gap-[10px] overflow-clip"
           >
-            <SectionTitle text={TITLE} className="w-full max-w-[560px] [&_h2]:text-balance" />
+            <SectionTitle text={TITLE} className="w-full max-w-[720px] [&_h2]:text-balance" />
           </div>
 
           <figure className="absolute top-[-179px] left-[-86px] z-[1] h-[265px] w-[204px] -rotate-3 overflow-clip [mask-image:linear-gradient(#000_0%,transparent_80%)] tablet:top-[-60px] tablet:left-[-55px] tablet:h-[284px] tablet:w-[216px] desktop:top-[-43px] desktop:left-[-51px] desktop:h-[445px] desktop:w-[338px]">

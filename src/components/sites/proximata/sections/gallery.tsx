@@ -13,7 +13,7 @@ export function Gallery() {
           <SectionTag label="GALLERY" />
           <SectionTitle
             text="Moments From Past Events That Sparked It All"
-            className="w-full max-w-[560px] [&_h2]:text-balance"
+            className="w-full max-w-[720px] [&_h2]:text-balance"
           />
         </div>
 

@@ -1,8 +1,6 @@
-import { cn } from "@/lib/utils";
 import { footerCopy, footerExternalLinks } from "../content/footer";
 import { navLinks } from "../content/navigation";
 import { ButtonLink } from "../framer-button";
-import { ArrowUpRightIcon } from "../icons";
 import { CoopLockup, ProximataWordmark } from "../logo";
 import { LogoGlass } from "../logo-glass";
 import { Reveal } from "../motion";
@@ -15,49 +13,6 @@ const topRule =
 
 const rightsText =
   "w-full text-center font-mono text-[14px] leading-[1.5] text-soft tablet:flex-1";
-
-const roll = "transition-transform duration-[400ms] ease-[var(--ease-framer)]";
-const pillLabel = "flex items-center gap-[6px] font-mono text-[14px] leading-[21px]";
-
-/**
- * NavPill for external links: same dashed pill and rising ice fill, plus an
- * arrow, and it opens in a new tab (NavPill itself can't take target/rel).
- */
-function ExternalPill({ href, label }: { href: string; label: string }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="dashed-frame group/pill relative inline-flex overflow-hidden px-4 py-1 [--frame-color:rgb(255_255_255/0.14)]"
-    >
-      <span aria-hidden="true" className="absolute inset-0 bg-ink/25" />
-      <span className={cn("relative text-white/60 group-hover/pill:-translate-y-9", pillLabel, roll)}>
-        {label}
-        <ArrowUpRightIcon className="size-3" />
-        <span className="sr-only"> (opens in a new tab)</span>
-      </span>
-      <span
-        aria-hidden="true"
-        className={cn(
-          "absolute -inset-x-px -top-[3px] z-[1] h-[45px] translate-y-8 bg-ice group-hover/pill:translate-y-0",
-          roll,
-        )}
-      />
-      <span
-        aria-hidden="true"
-        className={cn(
-          "absolute top-1 left-4 z-[1] translate-y-9 text-ink group-hover/pill:translate-y-0",
-          pillLabel,
-          roll,
-        )}
-      >
-        {label}
-        <ArrowUpRightIcon className="size-3" />
-      </span>
-    </a>
-  );
-}
 
 const detailLink =
   "text-white/90 underline decoration-white/25 underline-offset-4 transition-colors duration-300 hover:decoration-ice focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-ice";
@@ -140,7 +95,7 @@ export function Footer() {
                   </nav>
                   <div className="flex flex-1 flex-col items-start gap-[10px] tablet:flex-none">
                     {footerExternalLinks.map((link) => (
-                      <ExternalPill key={link.label} href={link.href} label={link.label} />
+                      <NavPill key={link.label} href={link.href} label={link.label} external />
                     ))}
                   </div>
                 </div>

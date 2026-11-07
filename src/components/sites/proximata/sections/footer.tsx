@@ -10,7 +10,7 @@ const topRule =
   "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:border-t before:border-dashed before:border-white/20";
 
 const rightsText =
-  "w-full text-center font-vietnam text-[14px] leading-[1.5] tracking-[-0.42px] text-soft tablet:flex-1";
+  "w-full text-center font-mono text-[14px] leading-[1.5] tracking-[-0.42px] text-soft tablet:flex-1";
 
 export function Footer() {
   return (
@@ -34,7 +34,7 @@ export function Footer() {
         <div className="flex w-full justify-center overflow-clip pb-10 desktop:px-10">
           <div className="flex w-full max-w-[1200px] flex-col items-start gap-14 tablet:flex-row tablet:gap-[10px]">
             <div className="flex w-full flex-col items-start gap-12 tablet:flex-1 tablet:gap-[100px] desktop:gap-12">
-              <h6 className="max-w-[425px] font-clash-bold text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
+              <h6 className="max-w-[425px] font-display text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
                 {footerBlurb}
               </h6>
               <FooterNewsletter />

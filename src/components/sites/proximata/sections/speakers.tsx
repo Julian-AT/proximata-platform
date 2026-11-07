@@ -36,10 +36,10 @@ export function Speakers() {
               rightRule(i),
             )}
           >
-            <p className="text-center text-balance font-clash text-[32px] leading-[1.2] font-normal text-white [-webkit-text-stroke:1px_white] tablet:text-[38px] desktop:text-[48px]">
+            <p className="text-center text-balance font-display text-[32px] leading-[1.2] font-normal text-white [-webkit-text-stroke:1px_white] tablet:text-[38px] desktop:text-[48px]">
               {metric.value}
             </p>
-            <p className="text-center text-balance font-vietnam text-[16px] leading-[1.2] text-soft desktop:text-[20px]">
+            <p className="text-center text-balance font-mono text-[16px] leading-[1.2] text-soft desktop:text-[20px]">
               {metric.label}
             </p>
           </Reveal>

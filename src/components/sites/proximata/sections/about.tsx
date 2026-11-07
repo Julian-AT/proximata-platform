@@ -50,7 +50,7 @@ function ScrollRevealParagraph() {
   return (
     <p
       ref={ref}
-      className="relative m-0 text-center font-vietnam text-[24px] leading-[1.2] font-normal tracking-[-1.2px] whitespace-pre-wrap text-white tablet:text-[32px]"
+      className="relative m-0 text-center font-mono text-[24px] leading-[1.2] font-normal tracking-[-1.2px] whitespace-pre-wrap text-white tablet:text-[32px]"
     >
       {WORDS.map((word, i) => (
         <span key={`${word}-${i}`}>

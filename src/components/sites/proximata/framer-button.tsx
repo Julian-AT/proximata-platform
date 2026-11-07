@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 type Variant = "filled" | "unfilled";
 
 const base =
-  "dashed-frame group/button relative isolate flex items-center justify-center gap-[14px] overflow-clip px-6 font-vietnam text-[16px] leading-[1.4] whitespace-nowrap transition-[background-color,box-shadow,color] duration-300 ease-[var(--ease-framer)]";
+  "dashed-frame group/button relative isolate flex items-center justify-center gap-[14px] overflow-clip px-6 font-mono text-[16px] leading-[1.4] whitespace-nowrap transition-[background-color,box-shadow,color] duration-300 ease-[var(--ease-framer)]";
 
 const variants: Record<Variant, string> = {
   // Brand-blue fill, inset ice glow; hover dims the fill and tightens the glow.

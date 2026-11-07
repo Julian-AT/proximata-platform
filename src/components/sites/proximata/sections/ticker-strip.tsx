@@ -13,7 +13,7 @@ export function TickerStrip() {
             <span className="relative block size-[65px] shrink-0 overflow-clip">
               <Image src={item.icon} alt="" fill sizes="65px" className="object-cover" />
             </span>
-            <h3 className="font-clash-bold text-[48px] leading-[1.2] whitespace-pre text-white tablet:text-[58px] desktop:text-[72px]">
+            <h3 className="font-display text-[48px] leading-[1.2] whitespace-pre text-white tablet:text-[58px] desktop:text-[72px]">
               {item.label}
             </h3>
           </div>

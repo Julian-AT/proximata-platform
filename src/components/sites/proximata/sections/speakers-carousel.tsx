@@ -68,10 +68,10 @@ function SpeakerCard({ speaker, index }: { speaker: Speaker; index: number }) {
           </motion.div>
         </figure>
         <div className="flex w-full flex-col items-center gap-1 bg-ink/80 p-6 text-center">
-          <h3 className="font-clash-bold text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
+          <h3 className="font-display text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
             {speaker.name}
           </h3>
-          <p className="font-vietnam text-[16px] leading-[1.4] text-soft">{speaker.role}</p>
+          <p className="font-mono text-[16px] leading-[1.4] text-soft">{speaker.role}</p>
         </div>
       </motion.div>
     </Reveal>

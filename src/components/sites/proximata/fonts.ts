@@ -1,62 +1,20 @@
-import localFont from "next/font/local";
+import { Archivo_Black, JetBrains_Mono } from "next/font/google";
 
-// Fonts served by confer.framer.website, self-hosted from public/sites/confer/fonts.
+// Proximata brand fonts (brand book, section 06), self-hosted by next/font.
 
-export const clashGrotesk = localFont({
-  src: "../../../../public/sites/confer/fonts/clash-grotesk-400.woff2",
+/** Titles, headlines, and short high-impact statements only. */
+export const archivoBlack = Archivo_Black({
   weight: "400",
-  style: "normal",
-  variable: "--nf-clash",
+  subsets: ["latin", "latin-ext"],
+  variable: "--nf-archivo",
   display: "swap",
 });
 
-// Variable file (wght 200–700). The source renders it at "wght" 500.
-export const clashGroteskVariable = localFont({
-  src: "../../../../public/sites/confer/fonts/clash-grotesk-variable.woff2",
-  weight: "200 700",
-  style: "normal",
-  variable: "--nf-clash-variable",
+/** Body text and every other label (Regular and Medium). */
+export const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin", "latin-ext"],
+  variable: "--nf-mono",
   display: "swap",
 });
 
-export const beVietnamPro = localFont({
-  src: "../../../../public/sites/confer/fonts/be-vietnam-pro-400.woff2",
-  weight: "400",
-  style: "normal",
-  variable: "--nf-vietnam",
-  display: "swap",
-});
-
-// Latin subset covers every glyph on the page (incl. U+2019).
-export const interDisplay = localFont({
-  src: "../../../../public/sites/confer/fonts/inter-display-500-latin.woff2",
-  weight: "500",
-  style: "normal",
-  variable: "--nf-inter-display",
-  display: "swap",
-});
-
-export const inter = localFont({
-  src: [
-    {
-      path: "../../../../public/sites/confer/fonts/inter-600-latin.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../../../../public/sites/confer/fonts/inter-900-latin.woff2",
-      weight: "900",
-      style: "normal",
-    },
-  ],
-  variable: "--nf-inter",
-  display: "swap",
-});
-
-export const conferFontVariables = [
-  clashGrotesk.variable,
-  clashGroteskVariable.variable,
-  beVietnamPro.variable,
-  interDisplay.variable,
-  inter.variable,
-].join(" ");
+export const fontVariables = [archivoBlack.variable, jetBrainsMono.variable].join(" ");

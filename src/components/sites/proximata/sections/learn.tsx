@@ -36,10 +36,10 @@ function LearnCard({ title, body, image, className }: LearnCardProps) {
         ) : null}
       </figure>
       <div className="flex w-full flex-col gap-[10px] px-6">
-        <h5 className="text-balance font-clash-bold text-[18px] leading-[1.2] text-white tablet:text-[22px] desktop:text-[28px]">
+        <h5 className="text-balance font-display text-[18px] leading-[1.2] text-white tablet:text-[22px] desktop:text-[28px]">
           {title}
         </h5>
-        <p className="text-balance font-vietnam text-[16px] leading-[1.4] text-soft">{body}</p>
+        <p className="text-balance font-mono text-[16px] leading-[1.4] text-soft">{body}</p>
       </div>
     </article>
   );

@@ -43,7 +43,7 @@ export function FaqItem({ question, answer }: FaqItemProps) {
               type="button"
               aria-expanded={open}
               aria-controls={open ? answerId : undefined}
-              className="w-full cursor-pointer text-left font-vietnam text-[16px] leading-[1.2] font-normal text-balance text-white desktop:text-[20px]"
+              className="w-full cursor-pointer text-left font-mono text-[16px] leading-[1.2] font-normal text-balance text-white desktop:text-[20px]"
             >
               {question}
             </button>
@@ -63,7 +63,7 @@ export function FaqItem({ question, answer }: FaqItemProps) {
                   }}
                   transition={TOGGLE}
                 >
-                  <p className="m-0 max-w-[540px] pt-[10px] font-vietnam text-[16px] leading-[1.4] font-normal text-balance text-white/60">
+                  <p className="m-0 max-w-[540px] pt-[10px] font-mono text-[16px] leading-[1.4] font-normal text-balance text-white/60">
                     {answer}
                   </p>
                 </motion.div>

@@ -14,7 +14,7 @@ export function TemplateBadge() {
         href={templateLink}
         target="_blank"
         rel="noopener"
-        className="group/badge relative flex h-9 w-[140px] items-center overflow-hidden rounded-[10px] bg-white py-2 pr-2 pl-[13px] font-inter text-[14px] leading-[14px] font-semibold tracking-[-0.7px] shadow-[0_0.6px_0.6px_-1.25px_rgba(0,0,0,0.26),0_2.29px_2.29px_-2.5px_rgba(0,0,0,0.23),0_10px_10px_-3.75px_rgba(0,0,0,0.09)]"
+        className="group/badge relative flex h-9 w-[140px] items-center overflow-hidden rounded-[10px] bg-white py-2 pr-2 pl-[13px] font-mono text-[14px] leading-[14px] font-semibold tracking-[-0.7px] shadow-[0_0.6px_0.6px_-1.25px_rgba(0,0,0,0.26),0_2.29px_2.29px_-2.5px_rgba(0,0,0,0.23),0_10px_10px_-3.75px_rgba(0,0,0,0.09)]"
       >
         <span
           aria-hidden="true"

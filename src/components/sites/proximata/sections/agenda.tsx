@@ -10,11 +10,11 @@ function DayPill({ day }: { day: AgendaDay }) {
     <div className="sticky top-[100px] z-[1] flex w-full items-center">
       <div className="relative flex w-full items-center justify-center gap-[14px] overflow-clip bg-brand p-4 shadow-[inset_0_0_8px_4px_rgba(200,241,255,0.3)] tablet:w-auto">
         <span aria-hidden="true" className="noise-overlay z-0 opacity-[0.11]" />
-        <h3 className="relative font-clash-bold text-[20px] leading-[1.2] whitespace-nowrap text-white tablet:text-[26px] desktop:text-[32px]">
+        <h3 className="relative font-display text-[20px] leading-[1.2] whitespace-nowrap text-white tablet:text-[26px] desktop:text-[32px]">
           {day.day}
         </h3>
         <span aria-hidden="true" className="relative w-px self-stretch bg-white opacity-[0.29]" />
-        <p className="relative font-vietnam text-[16px] leading-[1.4] whitespace-nowrap text-white">
+        <p className="relative font-mono text-[16px] leading-[1.4] whitespace-nowrap text-white">
           {day.theme}
         </p>
       </div>
@@ -32,7 +32,7 @@ function SessionRow({ session, last }: { session: AgendaSession; last: boolean }
   return (
     <article className="sticky top-[200px] z-[1] flex w-full flex-col overflow-clip bg-ink tablet:flex-row tablet:items-start tablet:pl-6">
       <div className="flex w-full shrink-0 flex-col py-3 pl-6 tablet:w-[150px] tablet:pt-6 tablet:pb-0 tablet:pl-0 desktop:w-[226px]">
-        <p className="font-vietnam text-[16px] leading-[1.4] text-balance text-white">{session.time}</p>
+        <p className="font-mono text-[16px] leading-[1.4] text-balance text-white">{session.time}</p>
       </div>
 
       <div className="relative flex w-full min-w-0 flex-col p-6 tablet:flex-1 tablet:self-stretch">
@@ -44,7 +44,7 @@ function SessionRow({ session, last }: { session: AgendaSession; last: boolean }
           <div className={cn("flex w-full flex-col gap-[10px]", beside && "desktop:min-w-0 desktop:flex-1")}>
             <h4
               className={cn(
-                "w-full font-clash-bold text-[18px] leading-[1.2] text-balance text-white tablet:text-[22px] desktop:text-[28px]",
+                "w-full font-display text-[18px] leading-[1.2] text-balance text-white tablet:text-[22px] desktop:text-[28px]",
                 beside && "max-w-[540px]",
               )}
             >
@@ -52,7 +52,7 @@ function SessionRow({ session, last }: { session: AgendaSession; last: boolean }
             </h4>
             <p
               className={cn(
-                "w-full font-vietnam text-[16px] leading-[1.4] text-balance text-soft",
+                "w-full font-mono text-[16px] leading-[1.4] text-balance text-soft",
                 beside ? "max-w-[540px]" : "max-w-[550px]",
               )}
             >

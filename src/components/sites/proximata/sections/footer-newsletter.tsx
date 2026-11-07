@@ -22,7 +22,7 @@ export function FooterNewsletter() {
       <p
         aria-live="polite"
         className={cn(
-          "font-vietnam text-[16px] leading-[1.4]",
+          "font-mono text-[16px] leading-[1.4]",
           submitted ? "text-highlight" : "text-white/90",
         )}
       >
@@ -42,12 +42,12 @@ export function FooterNewsletter() {
             autoComplete="email"
             placeholder="you@example.com"
             onChange={() => setSubmitted(false)}
-            className="h-[26px] w-full min-w-0 bg-transparent font-vietnam text-[16px] leading-[1.6] text-white caret-white outline-none placeholder:text-white/14"
+            className="h-[26px] w-full min-w-0 bg-transparent font-mono text-[16px] leading-[1.6] text-white caret-white outline-none placeholder:text-white/14"
           />
         </label>
         <button
           type="submit"
-          className="relative flex h-[50px] w-[124px] shrink-0 cursor-pointer items-center justify-center bg-brand px-6 font-vietnam text-[16px] leading-[1.4] text-white shadow-[inset_0_0_8px_4px_rgba(200,241,255,0.3)] after:pointer-events-none after:absolute after:inset-0 after:border after:border-white/20 focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-ice"
+          className="relative flex h-[50px] w-[124px] shrink-0 cursor-pointer items-center justify-center bg-brand px-6 font-mono text-[16px] leading-[1.4] text-white shadow-[inset_0_0_8px_4px_rgba(200,241,255,0.3)] after:pointer-events-none after:absolute after:inset-0 after:border after:border-white/20 focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-ice"
         >
           Submit
         </button>

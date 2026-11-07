@@ -26,10 +26,10 @@ export function AgendaSpeakerChip({ speaker }: { speaker: AgendaSpeaker }) {
         />
       </div>
       <div className="flex min-w-0 flex-1 flex-col justify-center gap-1 py-2 pr-3">
-        <p className="font-vietnam text-[16px] leading-[1.2] text-balance text-white desktop:text-[20px]">
+        <p className="font-mono text-[16px] leading-[1.2] text-balance text-white desktop:text-[20px]">
           {speaker.name}
         </p>
-        <p className="font-vietnam text-[16px] leading-[1.4] text-balance text-soft">
+        <p className="font-mono text-[16px] leading-[1.4] text-balance text-soft">
           {speaker.role}
         </p>
       </div>

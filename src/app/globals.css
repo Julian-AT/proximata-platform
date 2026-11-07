@@ -129,14 +129,13 @@
   }
 }
 /* ---------------------------------------------------------------------------
- * confer.framer.website clone — tokens and shared utilities
+ * Proximata — brand tokens and shared utilities
  * ------------------------------------------------------------------------- */
+/* Archivo Black for headlines, JetBrains Mono for everything else. */
 @theme inline {
-  --font-clash: var(--nf-clash), "Clash Grotesk", sans-serif;
-  --font-clash-variable: var(--nf-clash-variable), "Clash Grotesk", sans-serif;
-  --font-vietnam: var(--nf-vietnam), "Be Vietnam Pro", sans-serif;
-  --font-inter-display: var(--nf-inter-display), "Inter Display", sans-serif;
-  --font-inter: var(--nf-inter), "Inter", sans-serif;
+  --font-display: var(--nf-archivo), "Archivo Black", sans-serif;
+  --font-mono: var(--nf-mono), "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: var(--nf-mono), "JetBrains Mono", ui-monospace, monospace;
 }
 
 /* Proximata brand palette (brand book, section 05). */
@@ -165,13 +164,6 @@
 
   --breakpoint-tablet: 810px;
   --breakpoint-desktop: 1200px;
-}
-
-/* Clash Grotesk Variable rendered at the source's "wght" 500. */
-@utility font-clash-bold {
-  font-family: var(--nf-clash-variable), "Clash Grotesk", sans-serif;
-  font-weight: 700;
-  font-variation-settings: "wght" 500;
 }
 
 /* Framer-style dashed border drawn as an overlay so it never affects layout. */

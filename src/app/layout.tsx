@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { conferFontVariables } from "@/components/sites/proximata/fonts";
+import { fontVariables } from "@/components/sites/proximata/fonts";
 import "./globals.css";
 
 const description =
@@ -26,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${conferFontVariables} antialiased`}>
-      <body className="min-h-full bg-ink font-vietnam text-white">{children}</body>
+    <html lang="en" className={`${fontVariables} antialiased`}>
+      <body className="min-h-full bg-ink font-mono text-white">{children}</body>
     </html>
   );
 }

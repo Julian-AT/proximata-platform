@@ -78,9 +78,9 @@ function ScrambleText({ text }: { text: string }) {
   return (
     <p
       ref={ref}
-      aria-label={text}
       className="m-0 whitespace-nowrap font-mono text-[16px] leading-[1.4] font-medium text-highlight select-none"
     >
+      <span className="sr-only">{text}</span>
       {centerSegments(text, scrambled, progress).map(([run, kind], i) => {
         if (kind === HIDDEN) {
           return (

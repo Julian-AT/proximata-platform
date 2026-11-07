@@ -1,9 +1,13 @@
-import { footerBlurb, footerOtherLinks, navLinks } from "../data";
+import { cn } from "@/lib/utils";
+import { footerCopy, footerExternalLinks } from "../content/footer";
+import { navLinks } from "../content/navigation";
+import { ButtonLink } from "../framer-button";
+import { ArrowUpRightIcon } from "../icons";
+import { CoopLockup, ProximataWordmark } from "../logo";
 import { LogoGlass } from "../logo-glass";
 import { Reveal } from "../motion";
 import { NavPill } from "../nav-pill";
 import { SCROLL_TARGETS } from "../scroll-targets";
-import { FooterNewsletter } from "./footer-newsletter";
 
 /** Dashed rule along the top edge, drawn as an overlay so it takes no space. */
 const topRule =
@@ -12,7 +16,55 @@ const topRule =
 const rightsText =
   "w-full text-center font-mono text-[14px] leading-[1.5] text-soft tablet:flex-1";
 
+const roll = "transition-transform duration-[400ms] ease-[var(--ease-framer)]";
+const pillLabel = "flex items-center gap-[6px] font-mono text-[14px] leading-[21px]";
+
+/**
+ * NavPill for external links: same dashed pill and rising ice fill, plus an
+ * arrow, and it opens in a new tab (NavPill itself can't take target/rel).
+ */
+function ExternalPill({ href, label }: { href: string; label: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="dashed-frame group/pill relative inline-flex overflow-hidden px-4 py-1 [--frame-color:rgb(255_255_255/0.14)]"
+    >
+      <span aria-hidden="true" className="absolute inset-0 bg-ink/25" />
+      <span className={cn("relative text-white/60 group-hover/pill:-translate-y-9", pillLabel, roll)}>
+        {label}
+        <ArrowUpRightIcon className="size-3" />
+        <span className="sr-only"> (opens in a new tab)</span>
+      </span>
+      <span
+        aria-hidden="true"
+        className={cn(
+          "absolute -inset-x-px -top-[3px] z-[1] h-[45px] translate-y-8 bg-ice group-hover/pill:translate-y-0",
+          roll,
+        )}
+      />
+      <span
+        aria-hidden="true"
+        className={cn(
+          "absolute top-1 left-4 z-[1] translate-y-9 text-ink group-hover/pill:translate-y-0",
+          pillLabel,
+          roll,
+        )}
+      >
+        {label}
+        <ArrowUpRightIcon className="size-3" />
+      </span>
+    </a>
+  );
+}
+
+const detailLink =
+  "text-white/90 underline decoration-white/25 underline-offset-4 transition-colors duration-300 hover:decoration-ice focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-ice";
+
 export function Footer() {
+  const { venue, contact } = footerCopy;
+
   return (
     <footer
       id={SCROLL_TARGETS.footer}
@@ -31,28 +83,91 @@ export function Footer() {
           />
         </Reveal>
 
-        <div className="flex w-full justify-center overflow-clip pb-10 desktop:px-10">
-          <div className="flex w-full max-w-[1200px] flex-col items-start gap-14 tablet:flex-row tablet:gap-[10px]">
-            <div className="flex w-full flex-col items-start gap-12 tablet:flex-1 tablet:gap-[100px] desktop:gap-12">
-              <h6 className="max-w-[425px] font-display text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
-                {footerBlurb}
-              </h6>
-              <FooterNewsletter />
+        <div className="flex w-full justify-center overflow-clip pt-4 pb-10 tablet:pt-0 desktop:px-10">
+          <div className="flex w-full max-w-[1200px] flex-col items-start gap-14 tablet:flex-row tablet:gap-10">
+            <div className="flex w-full flex-col items-start gap-10 tablet:flex-1">
+              {/* Wordmark clear space (height of its "o") is kept by the gaps around it. */}
+              <div className="flex flex-col items-start gap-6">
+                <ProximataWordmark width={180} />
+                <CoopLockup />
+              </div>
+
+              <div className="flex max-w-[460px] flex-col gap-3">
+                <p className="font-display text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
+                  {footerCopy.tagline}
+                </p>
+                <p className="font-mono text-[14px] leading-[1.5] font-medium text-soft tablet:text-[16px]">
+                  {footerCopy.about}
+                </p>
+              </div>
+
+              <div className="flex w-full flex-col items-start gap-4">
+                <p className="font-mono text-[14px] leading-[1.5] text-balance text-soft">
+                  {footerCopy.ctaNote}
+                </p>
+                <div className="flex w-full flex-col gap-4 tablet:max-w-[300px] desktop:max-w-none desktop:flex-row">
+                  <ButtonLink
+                    href={footerCopy.register.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="h-[50px] w-full desktop:w-auto"
+                  >
+                    {footerCopy.register.label}
+                  </ButtonLink>
+                  <ButtonLink
+                    variant="unfilled"
+                    href={footerCopy.follow.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="h-[50px] w-full desktop:w-auto"
+                  >
+                    {footerCopy.follow.label}
+                  </ButtonLink>
+                </div>
+              </div>
             </div>
 
-            <div className="flex w-full items-start gap-8 overflow-clip tablet:flex-1 tablet:justify-end">
-              <nav
-                aria-label="Footer"
-                className="flex flex-1 flex-col items-start gap-[10px] tablet:flex-none"
-              >
-                {navLinks.map((link) => (
-                  <NavPill key={link.label} href={link.href} label={link.label} />
-                ))}
-              </nav>
-              <div className="flex flex-1 flex-col items-start gap-[10px] tablet:flex-none">
-                {footerOtherLinks.map((link) => (
-                  <NavPill key={link.label} href={link.href} label={link.label} />
-                ))}
+            <div className="flex w-full tablet:flex-1 tablet:justify-end">
+              <div className="flex w-full flex-col items-start gap-10 tablet:w-auto tablet:max-w-full">
+                <div className="flex w-full items-start gap-8 tablet:w-auto">
+                  <nav
+                    aria-label="Footer"
+                    className="flex flex-1 flex-col items-start gap-[10px] tablet:flex-none"
+                  >
+                    {navLinks.map((link) => (
+                      <NavPill key={link.label} href={link.href} label={link.label} />
+                    ))}
+                  </nav>
+                  <div className="flex flex-1 flex-col items-start gap-[10px] tablet:flex-none">
+                    {footerExternalLinks.map((link) => (
+                      <ExternalPill key={link.label} href={link.href} label={link.label} />
+                    ))}
+                  </div>
+                </div>
+
+                <dl className="m-0 flex flex-col gap-4 font-mono text-[14px] leading-[1.5]">
+                  <div className="flex flex-col gap-1">
+                    <dt className="font-medium text-highlight">{venue.label}</dt>
+                    <dd className="m-0">
+                      <a
+                        href={venue.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={detailLink}
+                      >
+                        {venue.value}
+                      </a>
+                    </dd>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <dt className="font-medium text-highlight">{contact.label}</dt>
+                    <dd className="m-0">
+                      <a href={contact.href} className={detailLink}>
+                        {contact.value}
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
               </div>
             </div>
           </div>
@@ -60,10 +175,8 @@ export function Footer() {
 
         <div className={`relative flex w-full justify-center py-[14px] tablet:py-6 desktop:px-10 ${topRule}`}>
           <div className="flex w-full max-w-[1200px] flex-col items-center gap-[6px] tablet:flex-row tablet:items-start tablet:gap-6">
-            <p className={`${rightsText} tablet:text-left`}>
-              © 2026 First AI Summit. All rights reserved.
-            </p>
-            <p className={`${rightsText} tablet:text-right`}>Built for the future of AI.</p>
+            <p className={`${rightsText} tablet:text-left`}>{footerCopy.rights}</p>
+            <p className={`${rightsText} tablet:text-right`}>{footerCopy.poweredBy}</p>
           </div>
         </div>
       </div>

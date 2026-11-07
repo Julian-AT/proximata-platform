@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { articles, SOURCE_ORIGIN } from "../data";
+import { type Article, articles, journalCopy, journalUrl } from "../content/journal";
 import { ButtonLink } from "../framer-button";
 import { SectionTitle } from "../motion";
 import { SectionTag } from "../section-tag";
-
-type Article = (typeof articles)[number];
 
 /** Black card with a dashed outline: cover image, then category, title link, and excerpt. */
 function ArticleCard({ article }: { article: Article }) {
@@ -34,15 +32,18 @@ function ArticleCard({ article }: { article: Article }) {
   );
 }
 
+/** Recaps and write-ups; renders nothing until content/journal.ts lists some. */
 export function Journal() {
+  if (articles.length === 0) return null;
+
   return (
     <section
       aria-label="Journal Highlights"
       className="relative z-[1] flex flex-col items-center gap-14 overflow-clip px-8 py-[100px] tablet:p-[100px]"
     >
       <div className="flex w-full max-w-[560px] flex-col items-center gap-4 overflow-clip">
-        <SectionTag label="BLOGS" />
-        <SectionTitle text="Ideas worth carrying forward" className="w-full [&_h2]:text-balance" />
+        <SectionTag label={journalCopy.tag} />
+        <SectionTitle text={journalCopy.title} className="w-full [&_h2]:text-balance" />
       </div>
 
       <div className="grid w-full grid-cols-1 gap-6 overflow-clip tablet:auto-rows-fr tablet:grid-cols-2 desktop:grid-cols-3">
@@ -51,9 +52,11 @@ export function Journal() {
         ))}
       </div>
 
-      <ButtonLink variant="unfilled" href={`${SOURCE_ORIGIN}/blog`} className="h-10 w-[138px] px-0">
-        Explore All
-      </ButtonLink>
+      {journalUrl ? (
+        <ButtonLink variant="unfilled" href={journalUrl} className="h-10 w-[138px] px-0">
+          {journalCopy.moreLabel}
+        </ButtonLink>
+      ) : null}
     </section>
   );
 }

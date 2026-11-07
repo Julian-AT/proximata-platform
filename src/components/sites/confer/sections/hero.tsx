@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { SCROLL_TARGETS } from "../background";
+import { SCROLL_TARGETS } from "../scroll-targets";
 import { heroInfo } from "../data";
 import { ArrowUpRightIcon } from "../icons";
 import { LogoGlass } from "../logo-glass";

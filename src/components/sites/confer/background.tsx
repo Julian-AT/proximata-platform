@@ -4,13 +4,10 @@ import { motion, useMotionValue, type MotionValue } from "motion/react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { EASE_OUT } from "./motion";
+import { SCROLL_TARGETS } from "./scroll-targets";
 
-/** Element ids the background reacts to; sections render these ids. */
-export const SCROLL_TARGETS = {
-  heroInfo: "info-tile",
-  aboutTitle: "about-title",
-  footer: "site-footer",
-} as const;
+// Re-exported for client components that already import it from here.
+export { SCROLL_TARGETS };
 
 type Keyframe = { target: string; threshold: number; value: number };
 

@@ -1,4 +1,4 @@
-import { SCROLL_TARGETS } from "../background";
+import { SCROLL_TARGETS } from "../scroll-targets";
 
 // Placeholder until the Footer section is built.
 export function Footer() {

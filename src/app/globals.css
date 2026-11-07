@@ -185,7 +185,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: url("/sites/confer/images/bg/noise.png");
+  background-image: url("/sites/proximata/images/bg/noise.png");
   background-repeat: repeat;
   background-size: 158.5px auto;
 }
@@ -201,7 +201,7 @@ html.lenis body {
   overflow: hidden;
 }
 
-@keyframes confer-spin {
+@keyframes hud-spin {
   to {
     transform: rotate(360deg);
   }

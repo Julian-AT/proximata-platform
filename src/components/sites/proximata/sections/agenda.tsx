@@ -140,7 +140,7 @@ export function Agenda() {
         </div>
 
         <Reveal className="flex items-center justify-center gap-3">
-          <DottedRingIcon className="size-5 shrink-0 text-ice motion-safe:animate-[confer-spin_8s_linear_infinite]" />
+          <DottedRingIcon className="size-5 shrink-0 text-ice motion-safe:animate-[hud-spin_8s_linear_infinite]" />
           <p className="font-mono text-[16px] leading-[1.4] font-medium text-soft">
             {agendaSection.note}
           </p>

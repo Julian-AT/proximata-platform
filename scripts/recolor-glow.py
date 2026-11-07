@@ -14,7 +14,7 @@ import pathlib
 from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SOURCE = ROOT / "public/sites/confer/images/bg/hero-glow.png"
+SOURCE = ROOT / "assets/source/template-hero-glow.png"
 TARGET = ROOT / "public/sites/proximata/images/bg/hero-glow.png"
 
 # (position on the ramp, colour)

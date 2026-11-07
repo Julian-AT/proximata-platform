@@ -60,6 +60,15 @@ function useScrollKeyframes(
 }
 
 /** Grain overlay: random grey pixels redrawn every frame (Framer AnimatedNoise). */
+/** Grey of the grain specks. 87 on the template's black; lifted for ink so
+ * the specks keep the same contrast against #23201E. */
+const GRAIN_GREY = 122;
+const GRAIN_OPACITY = 0.18;
+/** Share of pixels left empty (0.5 + 0.4 * (1 - min(scale 1.3, 1))). */
+const GRAIN_THRESHOLD = 0.5;
+/** Pre-rendered frames cycled at 60fps instead of regenerating every frame. */
+const GRAIN_FRAMES = 8;
+
 function AnimatedNoise() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -68,26 +77,31 @@ function AnimatedNoise() {
     const ctx = canvas?.getContext("2d");
     if (!canvas || !ctx) return;
     const { width, height } = canvas;
-    const image = ctx.createImageData(width, height);
-    const data = image.data;
-    const opacity = 0.07;
-    const threshold = 0.5; // 0.5 + 0.4 * (1 - min(scale 1.3, 1))
-    const draw = () => {
+
+    const frames = Array.from({ length: GRAIN_FRAMES }, () => {
+      const image = ctx.createImageData(width, height);
+      const data = image.data;
       for (let i = 0; i < data.length; i += 4) {
         const n = Math.random();
-        data[i] = 87;
-        data[i + 1] = 87;
-        data[i + 2] = 87;
-        data[i + 3] = n > threshold ? ((n - threshold) / (1 - threshold)) * opacity * 255 : 0;
+        data[i] = GRAIN_GREY;
+        data[i + 1] = GRAIN_GREY;
+        data[i + 2] = GRAIN_GREY;
+        data[i + 3] =
+          n > GRAIN_THRESHOLD
+            ? ((n - GRAIN_THRESHOLD) / (1 - GRAIN_THRESHOLD)) * GRAIN_OPACITY * 255
+            : 0;
       }
-      ctx.putImageData(image, 0, 0);
-    };
-    draw();
+      return image;
+    });
+
+    let index = 0;
+    ctx.putImageData(frames[0], 0, 0);
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     let last = 0;
     let frame = requestAnimationFrame(function tick(now) {
-      if (now - last >= 1000 / 60) {
-        draw();
+      if (now - last >= 1000 / 60 && !document.hidden) {
+        index = (index + 1) % frames.length;
+        ctx.putImageData(frames[index], 0, 0);
         last = now;
       }
       frame = requestAnimationFrame(tick);

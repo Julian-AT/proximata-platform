@@ -1,23 +1,46 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { brandColors } from "@/components/sites/proximata/brand-colors";
+import { event } from "@/components/sites/proximata/content/event";
 import { fontVariables } from "@/components/sites/proximata/fonts";
 import "./globals.css";
 
-const description =
-  "Join First AI Summit 2026 for three days of talks, workshops, and connections in San Francisco.";
+const title = `${event.fullName} · Proximata × START Vienna`;
+
+/** Absolute base for link previews; set NEXT_PUBLIC_SITE_URL once the domain is known. */
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
+const ogImage = {
+  url: "/sites/proximata/images/og/building-better-worlds.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Building Better Worlds hackathon poster: Proximata jointly with START Vienna, powered by HOIV",
+};
 
 export const metadata: Metadata = {
-  title: "First AI Summit 2026 | San Francisco",
-  description,
+  metadataBase: new URL(siteUrl),
+  title,
+  description: event.description,
   openGraph: {
     type: "website",
-    title: "First AI Summit 2026 | San Francisco",
-    description,
+    title,
+    description: event.description,
+    images: [ogImage],
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "First AI Summit 2026 | San Francisco",
-    description,
+    title,
+    description: event.description,
+    images: [ogImage.url],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: brandColors.ink,
 };
 
 export default function RootLayout({

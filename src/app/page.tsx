@@ -14,7 +14,6 @@ import { Sponsors } from "@/components/sites/proximata/sections/sponsors";
 import { TickerStrip } from "@/components/sites/proximata/sections/ticker-strip";
 import { VideoSection } from "@/components/sites/proximata/sections/video-section";
 import { SmoothScroll } from "@/components/sites/proximata/smooth-scroll";
-import { TemplateBadge } from "@/components/sites/proximata/template-badge";
 
 export default function Home() {
   return (
@@ -37,7 +36,6 @@ export default function Home() {
         <Pricing />
       </main>
       <Footer />
-      <TemplateBadge />
     </div>
   );
 }

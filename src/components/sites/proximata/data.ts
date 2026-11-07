@@ -18,9 +18,6 @@ export const footerOtherLinks = [
   { label: "404", href: `${SOURCE_ORIGIN}/venue` },
 ] as const;
 
-export const templateLink =
-  "https://contra.com/payment-link/WkmTzPpt-confer-conferences-summits-and-events-framer-template";
-
 export const heroInfo = [
   { label: "Date", value: "18th November 2026" },
   { label: "City", value: "San Francisco, USA" },

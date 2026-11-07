@@ -1,5 +1,6 @@
 import { Background } from "@/components/sites/proximata/background";
 import { Header } from "@/components/sites/proximata/header";
+import { Hud } from "@/components/sites/proximata/hud";
 import { About } from "@/components/sites/proximata/sections/about";
 import { Agenda } from "@/components/sites/proximata/sections/agenda";
 import { Faq } from "@/components/sites/proximata/sections/faq";
@@ -22,6 +23,7 @@ export default function Home() {
         <SmoothScroll />
         <Background />
         <Header />
+        <Hud />
         <main className="relative">
           <Hero />
           <About />

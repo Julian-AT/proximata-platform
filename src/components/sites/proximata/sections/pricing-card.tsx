@@ -1,15 +1,13 @@
 "use client";
 
 import { motion, type TargetAndTransition, type Transition } from "motion/react";
-import Image from "next/image";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import type { passes } from "../data";
+import { LUMA_URL } from "../content/event";
+import { prizesSection, type Prize } from "../content/prizes";
 import { ButtonLink } from "../framer-button";
 import { CheckIcon } from "../icons";
 import { EASE_OUT } from "../motion";
-
-type Pass = (typeof passes)[number];
 
 const SHOWN: TargetAndTransition = { opacity: 1, y: 0 };
 
@@ -44,64 +42,54 @@ function FadeUp({
 }
 
 /**
- * Ticket perforation between the price block and the feature list: a
+ * Ticket perforation between the place block and the feature list: a
  * half-pill notch bites into each edge (covering the card's own outline)
  * with a dashed rule running between them.
  */
-function Perforation() {
+function Perforation({ featured }: { featured: boolean }) {
   return (
     <div aria-hidden="true" className="relative z-[3] flex h-[25px] w-full items-center">
       <span className="h-[25px] w-[14px] shrink-0 rounded-r-[20px] border-y-2 border-r-2 border-dashed border-white/14 bg-ink" />
-      <span className="h-0.5 flex-1 border-t-2 border-dashed border-white/14" />
+      <span
+        className={cn(
+          "h-0.5 flex-1 border-t-2 border-dashed",
+          featured ? "border-ice/30" : "border-white/14",
+        )}
+      />
       <span className="h-[25px] w-[14px] shrink-0 rounded-l-[20px] border-y-2 border-l-2 border-dashed border-white/20 bg-ink" />
     </div>
   );
 }
 
-/** Green silk + grain behind the featured (Pro) card, fading out toward the bottom. */
-function FeaturedBackdrop() {
-  return (
-    <>
-      <span aria-hidden="true" className="noise-overlay opacity-[0.11]" />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(0deg,rgb(0_0_0/0)_0%,rgb(0_0_0/0.337)_23%,rgb(0_0_0)_100%)]"
-      >
-        <Image
-          src="/sites/confer/images/pricing/green-silk.png"
-          alt=""
-          fill
-          sizes="(min-width: 1200px) 379px, (min-width: 810px) 396px, calc(100vw - 64px)"
-          className="object-cover"
-        />
-      </div>
-    </>
-  );
-}
-
-export function PricingCard({ pass, index }: { pass: Pass; index: number }) {
-  const featured = pass.featured;
+/**
+ * One podium ticket. The featured (1st place) card is a flat brand-blue panel
+ * with grain and an ice inset glow, so its copy follows the blue pairing
+ * (white + ice); the others sit on translucent ink (white + green).
+ */
+export function PricingCard({ prize }: { prize: Prize }) {
+  const featured = prize.featured;
 
   return (
     <motion.div
       className={cn(
-        "dashed-frame relative flex h-full flex-col items-start justify-center gap-8 backdrop-blur-[8px] [--frame-color:rgb(255_255_255/0.2)] [--frame-width:2px]",
-        featured ? "bg-ink" : "bg-ink/40",
+        "dashed-frame relative flex h-full flex-col items-start justify-center gap-8 backdrop-blur-[8px] [--frame-width:2px]",
+        featured
+          ? "bg-brand shadow-[inset_0_0_24px_6px_rgba(200,241,255,0.22)] [--frame-color:rgb(200_241_255/0.35)]"
+          : "bg-ink/40 [--frame-color:rgb(255_255_255/0.2)]",
       )}
       initial={{ opacity: 0, y: 40 }}
       whileInView={SHOWN}
       viewport={{ once: true, amount: 0.3 }}
-      // The source staggers the middle card behind its neighbours.
-      transition={{ delay: index === 1 ? 0.15 : 0, duration: 0.7, ease: EASE_OUT }}
+      // The source staggers the middle podium card behind its neighbours.
+      transition={{ delay: featured ? 0.15 : 0, duration: 0.7, ease: EASE_OUT }}
     >
-      {featured ? <FeaturedBackdrop /> : null}
+      {featured ? <span aria-hidden="true" className="noise-overlay opacity-[0.11]" /> : null}
 
       <div className="relative flex w-full flex-col items-start gap-8">
         <div className="relative z-[1] flex w-full flex-col items-start gap-4 px-6 pt-6">
           <FadeUp y={16} transition={{ duration: 0.5, ease: EASE_OUT }}>
-            <p className="flex items-end font-display text-[24px] leading-[1.2] text-white [font-feature-settings:'blwf','cv03','cv04','cv09','cv11'] tablet:text-[32px] desktop:text-[40px]">
-              <span>$</span>
-              <span>{pass.price}</span>
+            <p className="font-display text-[24px] leading-[1.2] text-white tablet:text-[32px] desktop:text-[40px]">
+              {prize.place}
             </p>
           </FadeUp>
           <FadeUp
@@ -109,38 +97,41 @@ export function PricingCard({ pass, index }: { pass: Pass; index: number }) {
             className="flex w-full flex-col items-start gap-2"
             transition={{ delay: 0.1, type: "spring", stiffness: 260, damping: 26, mass: 1 }}
           >
-            <h3 className="font-mono text-[16px] leading-[1.2] text-white desktop:text-[20px]">
-              {pass.name}
+            <h3 className="font-mono text-[16px] leading-[1.2] font-medium text-white desktop:text-[20px]">
+              {prize.title}
             </h3>
-            <p className="font-mono text-[16px] leading-[1.4] text-soft">
-              {pass.description}
+            <p className={cn("font-mono text-[16px] leading-[1.4]", featured ? "text-ice" : "text-soft")}>
+              {prize.description}
             </p>
           </FadeUp>
         </div>
 
-        <Perforation />
+        <Perforation featured={featured} />
 
         <div className="flex w-full flex-col items-start gap-5 px-6">
-          {/* The source never plays this line's appear effect, so it keeps its space while invisible. */}
-          <p
-            className={cn(
-              "translate-y-10 font-mono text-[16px] leading-[1.4] opacity-0 desktop:text-[18px]",
-              featured ? "text-white" : "text-soft",
-            )}
-          >
-            What&apos;s included:
-          </p>
+          <FadeUp y={40} transition={{ duration: 0.7, ease: EASE_OUT }}>
+            <p
+              className={cn(
+                "font-mono text-[16px] leading-[1.4] desktop:text-[18px]",
+                featured ? "text-ice" : "text-soft",
+              )}
+            >
+              {prizesSection.featuresLabel}
+            </p>
+          </FadeUp>
           <ul className="flex w-full flex-col items-start gap-4">
-            {pass.features.map((feature, i) => (
+            {prize.features.map((feature, i) => (
               <FadeUp
                 key={feature}
                 as="li"
                 y={40}
                 amount={1}
-                className="flex h-6 w-full items-center gap-3"
+                className="flex min-h-6 w-full items-start gap-3"
                 transition={{ delay: 0.05 * i, duration: 0.7, ease: EASE_OUT }}
               >
-                <CheckIcon className="size-6 shrink-0 text-highlight" />
+                <CheckIcon
+                  className={cn("size-6 shrink-0", featured ? "text-ice" : "text-highlight")}
+                />
                 <span
                   className={cn(
                     "font-mono text-[16px] leading-[1.4]",
@@ -156,8 +147,18 @@ export function PricingCard({ pass, index }: { pass: Pass; index: number }) {
       </div>
 
       <div className="relative flex w-full flex-col items-center px-6 pb-6">
-        <ButtonLink href="#ticket" className="h-[54px] w-full">
-          Secure Your Spot
+        <ButtonLink
+          href={LUMA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            "h-[54px] w-full",
+            // Blue on blue would vanish: the featured card takes the ice/blue pairing.
+            featured &&
+              "bg-ice text-brand shadow-none [--frame-color:rgb(32_45_133/0.35)] hover:bg-ice/80 hover:shadow-none",
+          )}
+        >
+          {prizesSection.cta}
         </ButtonLink>
       </div>
     </motion.div>

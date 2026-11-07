@@ -1,42 +1,48 @@
-import { passes } from "../data";
+import { prizes, prizesSection } from "../content/prizes";
 import { SCROLL_TARGETS } from "../scroll-targets";
 import { SectionTitle } from "../motion";
 import { SectionTag } from "../section-tag";
 import { PricingCard } from "./pricing-card";
 
+/**
+ * Per place (1st, 2nd, 3rd): desktop podium columns 2nd · 1st · 3rd; phone and
+ * tablet keep place order, with the lone 3rd card centred on tablet.
+ */
+const PODIUM_CLASSES = [
+  "desktop:order-2",
+  "desktop:order-1",
+  "tablet:col-span-2 tablet:mx-auto tablet:w-[calc(50%-16px)] desktop:order-3 desktop:col-span-1 desktop:w-full",
+] as const;
+
+/**
+ * Prizes podium (formerly the template's passes). The root keeps the "ticket"
+ * scroll target the fixed background fades on; `#prizes` is the public anchor.
+ */
 export function Pricing() {
   return (
-    // No z-index here: the eagle's `lighten` blend has to reach the fixed
-    // background, which a stacking context on the section would cut off.
     <section
       id={SCROLL_TARGETS.pricing}
-      aria-label="Passes"
+      aria-label="Prizes"
       className="relative flex justify-center overflow-clip px-8 py-[100px] tablet:px-0"
     >
-      <video
-        aria-hidden="true"
-        className="pointer-events-none absolute top-[-13px] left-[calc(18.5%-114px)] z-[1] h-[166px] w-[228px] object-cover mix-blend-lighten tablet:top-[-21px] tablet:left-[calc(12.3%-151px)] tablet:h-[219px] tablet:w-[302px] desktop:top-[38px] desktop:left-[calc(15.5%-186px)] desktop:h-[270px] desktop:w-[372px]"
-        src="/sites/confer/video/eagle.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-      />
+      <span id={prizesSection.anchor} aria-hidden="true" className="absolute inset-x-0 top-0" />
 
       <div className="relative z-[1] flex w-full flex-col items-center gap-14 tablet:px-[100px]">
         <div className="flex w-full flex-col items-center gap-4 overflow-clip">
-          <SectionTag label="PASSES" />
+          <SectionTag label={prizesSection.tag} />
           <SectionTitle
-            text="Pick the Pass That Fits Your First AI Summit"
+            text={prizesSection.title}
             className="w-full max-w-[720px] [&_h2]:text-balance"
           />
         </div>
 
-        <div className="grid w-full max-w-[1200px] grid-cols-1 gap-8 tablet:grid-cols-2 desktop:grid-cols-3">
-          {passes.map((pass, i) => (
-            <PricingCard key={pass.name} pass={pass} index={i} />
+        <ol className="grid w-full max-w-[1200px] grid-cols-1 gap-8 tablet:grid-cols-2 desktop:grid-cols-3">
+          {prizes.map((prize, i) => (
+            <li key={prize.place} className={PODIUM_CLASSES[i]}>
+              <PricingCard prize={prize} />
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

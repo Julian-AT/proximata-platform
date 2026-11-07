@@ -124,8 +124,8 @@ function Pillar({ side }: { side: "left" | "right" }) {
       aria-hidden="true"
       className={
         side === "left"
-          ? "fixed top-px -bottom-px left-[-100px] z-[4] aspect-[0.2278] tablet:left-[-108px] desktop:left-[-68px]"
-          : "fixed top-px -bottom-px right-[-105px] z-[4] aspect-[0.2278] tablet:right-[-111px] desktop:right-[-75px]"
+          ? "pointer-events-none fixed top-px -bottom-px left-[-100px] z-[4] aspect-[0.2278] tablet:left-[-108px] desktop:left-[-68px]"
+          : "pointer-events-none fixed top-px -bottom-px right-[-105px] z-[4] aspect-[0.2278] tablet:right-[-111px] desktop:right-[-75px]"
       }
       initial={{ opacity: 0.001, x: direction * 110 }}
       animate={{ opacity: 1, x: 0 }}

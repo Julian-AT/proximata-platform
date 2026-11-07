@@ -101,7 +101,9 @@ function CompactNav({ variant }: { variant: "phone" | "tablet" }) {
           "relative flex backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-dashed after:border-white/[0.14] after:content-['']",
           open
             ? "w-full flex-col items-start gap-6 px-4 pt-[10px] pb-4"
-            : "items-center gap-9 py-[6px] pr-2 pl-4 after:border-t-0",
+            : variant === "phone"
+              ? "items-center gap-9 py-[6px] pr-2 pl-4 after:border-t-0"
+              : "items-center px-4 py-[10px] after:border-t-0",
         )}
       >
         <div

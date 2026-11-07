@@ -44,5 +44,19 @@ The pixel clone is tagged `confer-clone-baseline` for reference.
 | Footer | Flat Proximata wordmark, tagline "A new generation of innovation.", HOIV address, socials, Luma CTA | brand book | ready |
 | Template badge | Floating "Register on Luma" pill, or removed | Luma | open |
 
-## Open questions
-Tracked in the conversation; answers will be recorded here.
+## Decisions (2026-11-07)
+- **Colour mode:** dark ink `#23201E` base with the glow recoloured to brand blue/ice; white headlines, green only for small labels, ice blue as secondary text.
+- **Background:** slowly rotating wireframe globe (the brand's sphere icon) behind the hero with a Vienna marker, HUD corner labels (HOIV coordinates, live countdown, status micro-copy), and thin ruler/scale marks sliding out at the edges where the pillars were. Flowers removed.
+- **Hero title:** keep the liquid-glass shader, applied to "BUILDING BETTER WORLDS" in Archivo Black, tinted ice blue/blue. The Proximata logo stays flat everywhere.
+- **Pricing section:** becomes Prizes (1st / 2nd / 3rd, middle card highlighted).
+- **Register link:** public Luma URL without the personal `tk` invite token.
+
+## Still needed from the organisers
+- Logo files as SVG: Proximata wordmark and mark (the brand book only embeds raster versions; tracing them is the fallback).
+- Partner logos (SVG preferred): START Vienna, HOIV, Hackathonhub, Rhomberg, Kicks Vienna, plus the others on the poster.
+- Prize pool: amounts or prizes for 1st/2nd/3rd.
+- Agenda: the Fri/Sat timeline.
+- Hosts, mentors, jury: names, roles, photos, links.
+- Last-event photos and aftermovie (gallery, about images, video band).
+- FAQ facts: cost, team size, what to bring, sleeping, eligibility.
+- Deployment target and domain.

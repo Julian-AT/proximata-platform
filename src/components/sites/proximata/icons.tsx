@@ -138,7 +138,8 @@ export function CrosshairIcon(props: IconProps) {
 export function DottedRingIcon(props: IconProps) {
   const dots = Array.from({ length: 12 }, (_, i) => {
     const a = (i / 12) * Math.PI * 2;
-    return [12 + Math.cos(a) * 9, 12 + Math.sin(a) * 9] as const;
+    // Rounded so server and browser render identical coordinates (no hydration mismatch).
+    return [+(12 + Math.cos(a) * 9).toFixed(3), +(12 + Math.sin(a) * 9).toFixed(3)] as const;
   });
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>

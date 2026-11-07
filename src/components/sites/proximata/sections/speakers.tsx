@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
-import { metrics } from "../data";
+import { metrics } from "../content/metrics";
 import { Reveal, SectionTitle } from "../motion";
 import { SectionTag } from "../section-tag";
-import { SpeakersCarousel } from "./speakers-carousel";
+import { MentorsCarousel } from "./speakers-carousel";
 
 /**
  * Every metric cell has a dashed left rule; the cell closing a row also gets a
@@ -14,18 +14,20 @@ function rightRule(index: number) {
   return null;
 }
 
+/** Mentors & Jury carousel followed by the key-figures row. */
 export function Speakers() {
   return (
     <section
-      aria-label="Speakers"
+      id="mentors"
+      aria-label="Mentors and jury"
       className="relative z-[1] flex flex-col items-center gap-14 overflow-clip py-[100px]"
     >
       <div className="flex w-full flex-col items-center gap-4 overflow-clip px-8 tablet:px-0">
-        <SectionTag label="SPEAKERS" />
-        <SectionTitle text="The Voices Driving the AI Movement Forward" className="w-full max-w-[720px] text-balance" />
+        <SectionTag label="MENTORS" />
+        <SectionTitle text="The People Behind Your Build" className="w-full max-w-[720px] text-balance" />
       </div>
 
-      <SpeakersCarousel />
+      <MentorsCarousel />
 
       <div className="grid w-full grid-cols-2 gap-y-6 px-8 tablet:flex tablet:items-start tablet:px-[100px]">
         {metrics.map((metric, i) => (

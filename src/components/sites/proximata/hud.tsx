@@ -14,15 +14,23 @@ const pill =
 /**
  * Fixed HUD micro-copy in the bottom corners (tablet and up): venue
  * coordinates while the hero is in view, and a persistent countdown.
- * Two elements per composition, per the brand book.
+ * Two elements per composition, per the brand book; hidden over the footer.
  */
 export function Hud() {
   const coordinatesOpacity = useScrollKeyframes(1, [
     { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: 0 },
   ]);
+  // Fade the whole HUD out as the footer (with its own Register CTA) scrolls in,
+  // so the countdown never covers the footer's bottom row.
+  const hudOpacity = useScrollKeyframes(1, [
+    { target: SCROLL_TARGETS.footer, threshold: 1, value: 0 },
+  ]);
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-5 z-[6] hidden px-12 tablet:block desktop:px-16">
+    <motion.div
+      style={{ opacity: hudOpacity }}
+      className="pointer-events-none fixed inset-x-0 bottom-5 z-[6] hidden px-12 tablet:block desktop:px-16"
+    >
       <motion.div
         className="flex items-end justify-between"
         initial={{ opacity: 0.001, y: 8 }}
@@ -42,6 +50,6 @@ export function Hud() {
         </motion.a>
         <Countdown className={pill} />
       </motion.div>
-    </div>
+    </motion.div>
   );
 }

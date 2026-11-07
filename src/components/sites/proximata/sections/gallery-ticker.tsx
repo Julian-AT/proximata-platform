@@ -4,28 +4,18 @@ import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useCallback, useEffect, useId, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import { galleryFrame, galleryPhotos } from "../data";
+import { cn } from "@/lib/utils";
+import type { GalleryPhoto } from "../content/gallery";
 import { EASE_OUT, Reveal } from "../motion";
 import { Ticker } from "../ticker";
 
-type Photo = (typeof galleryPhotos)[number];
-type ActivePhoto = { layoutId: string; photo: Photo };
+type ActivePhoto = { layoutId: string; photo: GalleryPhoto };
 
 /** Framer's lightbox tween (0.4s, template ease-out). */
 const LIGHTBOX_TRANSITION = { duration: 0.4, ease: EASE_OUT } as const;
 
-/** Photo aspect inside the frame (Framer: 81% wide, 1.6631:1). */
+/** Photo aspect inside the frame (kept from the template, 1.6631:1). */
 const PHOTO_ASPECT = "aspect-[1.6631016042780749]";
-
-/** The source sizes each frame individually; phone widths alternate too. */
-const ITEM_WIDTHS = [
-  "w-[285.0088px] tablet:w-[570.0094px]",
-  "w-[289.2267px] tablet:w-[569.3837px]",
-  "w-[285.0088px] tablet:w-[570.0094px]",
-  "w-[285.0088px] tablet:w-[570.0094px]",
-  "w-[289.2267px] tablet:w-[570.0094px]",
-  "w-[285.0088px] tablet:w-[569.3837px]",
-];
 
 const TABLET_QUERY = "(min-width: 810px)";
 
@@ -37,15 +27,29 @@ function subscribeTablet(onChange: () => void) {
 
 const noopSubscribe = () => () => {};
 
+const corner =
+  "absolute size-5 border-ice/40 transition-colors duration-300 ease-framer group-hover:border-ice/80 tablet:size-8";
+
+/** HUD corner brackets around the photo (replaces the template's ornate frame). */
+function CornerBrackets() {
+  return (
+    <span aria-hidden="true" className="pointer-events-none absolute inset-0">
+      <span className={cn(corner, "top-0 left-0 border-t-[1.5px] border-l-[1.5px]")} />
+      <span className={cn(corner, "top-0 right-0 border-t-[1.5px] border-r-[1.5px]")} />
+      <span className={cn(corner, "bottom-0 left-0 border-b-[1.5px] border-l-[1.5px]")} />
+      <span className={cn(corner, "right-0 bottom-0 border-r-[1.5px] border-b-[1.5px]")} />
+    </span>
+  );
+}
+
 type GalleryItemProps = {
-  photo: Photo;
-  widthClass: string;
+  photo: GalleryPhoto;
   activeId: string | null;
   onOpen: (active: ActivePhoto) => void;
 };
 
-/** Ornate frame with the photo laid over its opening; scales in when it enters view. */
-function GalleryItem({ photo, widthClass, activeId, onOpen }: GalleryItemProps) {
+/** Bracket-framed photo; scales in when it enters view, click opens the lightbox. */
+function GalleryItem({ photo, activeId, onOpen }: GalleryItemProps) {
   const layoutId = useId();
 
   return (
@@ -53,36 +57,29 @@ function GalleryItem({ photo, widthClass, activeId, onOpen }: GalleryItemProps) 
       from={{ opacity: 0, scale: 0.9 }}
       delay={0.1}
       duration={0.6}
-      className={widthClass}
+      className="w-[285px] tablet:w-[570px]"
     >
-      <div className="relative flex w-full items-center justify-center overflow-clip">
-        <div className="absolute inset-0 z-[2] flex items-center justify-center">
+      {/* Percentage padding resolves against the width, so the inset is even on all sides. */}
+      <div className="group relative w-full p-[5%]">
+        <CornerBrackets />
+        <div className={`relative w-full ${PHOTO_ASPECT}`}>
           {activeId !== layoutId && (
             <motion.figure
               layoutId={layoutId}
               transition={LIGHTBOX_TRANSITION}
-              className={`relative m-0 w-[81%] overflow-clip ${PHOTO_ASPECT}`}
+              className="absolute inset-0 m-0 cursor-pointer overflow-clip"
               onClick={() => onOpen({ layoutId, photo })}
             >
               <Image
                 src={photo.src}
                 alt={photo.alt}
                 fill
-                sizes="(max-width: 809px) 235px, 462px"
+                sizes="(max-width: 809px) 257px, 513px"
                 className="object-cover"
               />
             </motion.figure>
           )}
         </div>
-        <figure className="relative m-0 aspect-[1.49609375] w-full overflow-clip">
-          <Image
-            src={galleryFrame}
-            alt=""
-            fill
-            sizes="(max-width: 809px) 290px, 570px"
-            className="object-contain"
-          />
-        </figure>
       </div>
     </Reveal>
   );
@@ -137,7 +134,7 @@ function Lightbox({ active, onClose }: { active: ActivePhoto; onClose: () => voi
 }
 
 /** Endless row of framed photos (30px/s, pauses on hover); a click opens the lightbox. */
-export function GalleryTicker() {
+export function GalleryTicker({ photos }: { photos: readonly GalleryPhoto[] }) {
   const tabletUp = useSyncExternalStore(
     subscribeTablet,
     () => window.matchMedia(TABLET_QUERY).matches,
@@ -155,11 +152,10 @@ export function GalleryTicker() {
         hoverFactor={0}
         className="relative z-[1] w-full"
       >
-        {galleryPhotos.map((photo, i) => (
+        {photos.map((photo) => (
           <GalleryItem
             key={photo.src}
             photo={photo}
-            widthClass={ITEM_WIDTHS[i % ITEM_WIDTHS.length]}
             activeId={active?.layoutId ?? null}
             onOpen={setActive}
           />

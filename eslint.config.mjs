@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Downloaded source bundles kept locally as clone research evidence.
+    "docs/research/**/raw/**",
   ]),
 ]);
 

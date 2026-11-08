@@ -78,7 +78,7 @@ function ScrambleText({ text }: { text: string }) {
   return (
     <p
       ref={ref}
-      className="m-0 whitespace-nowrap font-mono text-[16px] leading-[1.4] font-medium text-highlight select-none"
+      className="m-0 whitespace-nowrap font-mono text-[16px] leading-[1.4] font-medium text-soft select-none"
     >
       <span className="sr-only">{text}</span>
       {centerSegments(text, scrambled, progress).map(([run, kind], i) => {
@@ -91,7 +91,7 @@ function ScrambleText({ text }: { text: string }) {
         }
         if (kind === SCRAMBLED) {
           return (
-            <span key={i} aria-hidden="true" className="text-highlight/40">
+            <span key={i} aria-hidden="true" className="text-white/25">
               {run}
             </span>
           );
@@ -108,7 +108,7 @@ function ScrambleText({ text }: { text: string }) {
 
 /**
  * Section label in the brand's HUD style: a bracketed plus, the scrambled
- * green label, and a dot-terminated rule, e.g. "[+] ABOUT •——•".
+ * label, and a dot-terminated rule, e.g. "[+] ABOUT •——•".
  */
 export function SectionTag({ label }: { label: string }) {
   return (

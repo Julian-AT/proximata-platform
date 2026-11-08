@@ -148,13 +148,11 @@
   --color-brand: #202d85;
   /* Secondary accent and secondary text on dark or blue. */
   --color-ice: #c8f1ff;
-  /* Tertiary accent: small labels and graphic elements only. */
-  --color-highlight: #9de146;
   /* Signal colour: icons, status, small accents only. */
   --color-signal: #d82434;
   /* Supporting text on ink. */
   --color-soft: rgb(255 255 255 / 0.6);
-  /* Dashed rules and dividers on ink. */
+  /* Hairline rules and dividers on ink. */
   --color-rule: rgb(255 255 255 / 0.12);
   /* Raised surface on ink (menus, inputs). */
   --color-panel: #2d2a27;

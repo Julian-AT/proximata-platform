@@ -102,7 +102,7 @@ export function Footer() {
 
                 <dl className="m-0 flex flex-col gap-4 font-mono text-[14px] leading-[1.5]">
                   <div className="flex flex-col gap-1">
-                    <dt className="font-medium text-highlight">{venue.label}</dt>
+                    <dt className="font-medium text-soft">{venue.label}</dt>
                     <dd className="m-0">
                       <a
                         href={venue.href}
@@ -115,7 +115,7 @@ export function Footer() {
                     </dd>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <dt className="font-medium text-highlight">{contact.label}</dt>
+                    <dt className="font-medium text-soft">{contact.label}</dt>
                     <dd className="m-0">
                       <a href={contact.href} className={detailLink}>
                         {contact.value}

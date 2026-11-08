@@ -43,7 +43,7 @@ function TrackCard({ track, className }: { track: Track; className?: string }) {
           {track.name}
         </h3>
         <p className="font-mono text-[16px] leading-[1.4] text-soft">{track.description}</p>
-        <p className="mt-auto flex items-start gap-2 pt-[6px] font-mono text-[12px] leading-[1.4] font-medium text-highlight uppercase">
+        <p className="mt-auto flex items-start gap-2 pt-[6px] font-mono text-[12px] leading-[1.4] font-medium text-soft uppercase">
           <span aria-hidden="true" className="mt-[5.5px] size-[6px] shrink-0 rounded-full bg-signal" />
           <span>Challenge partner: {track.partner ?? "announced soon"}</span>
         </p>

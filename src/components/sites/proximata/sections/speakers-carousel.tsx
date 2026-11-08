@@ -136,7 +136,7 @@ function PlaceholderCard({ kind, number, index }: { kind: MentorRole; number: nu
             <p className="font-display text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
               Announced soon
             </p>
-            <p className="font-mono text-[14px] leading-[1.4] font-medium text-highlight uppercase">
+            <p className="font-mono text-[14px] leading-[1.4] font-medium text-soft uppercase">
               <span aria-hidden="true">
                 {`${kind} // ${code}`}
               </span>

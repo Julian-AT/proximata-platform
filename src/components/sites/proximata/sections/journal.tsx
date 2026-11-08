@@ -18,7 +18,7 @@ function ArticleCard({ article }: { article: Article }) {
         />
       </figure>
       <div className="flex w-full flex-col items-start gap-[10px] overflow-clip px-6">
-        <p className="font-mono text-[16px] leading-[1.4] text-highlight">
+        <p className="font-mono text-[16px] leading-[1.4] text-soft">
           {article.category}
         </p>
         <h6 className="font-display text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">

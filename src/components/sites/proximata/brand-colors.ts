@@ -7,7 +7,6 @@ export const brandColors = {
   paper: "#F4F7F8",
   brand: "#202D85",
   ice: "#C8F1FF",
-  highlight: "#9DE146",
   signal: "#D82434",
   white: "#FFFFFF",
 } as const;

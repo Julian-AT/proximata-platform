@@ -65,7 +65,7 @@ export function Countdown({ className }: { className?: string }) {
         aria-hidden="true"
         className={cn(
           "size-1.5 shrink-0 rounded-full",
-          state?.phase === "live" ? "animate-pulse bg-signal" : "bg-highlight",
+          state?.phase === "live" ? "animate-pulse bg-signal" : "bg-ice",
         )}
       />
       <span aria-hidden="true">{label}</span>

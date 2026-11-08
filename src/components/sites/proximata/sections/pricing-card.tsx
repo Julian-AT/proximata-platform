@@ -64,7 +64,7 @@ function Perforation({ featured }: { featured: boolean }) {
 /**
  * One podium ticket. The featured (1st place) card is a flat brand-blue panel
  * with grain and an ice inset glow, so its copy follows the blue pairing
- * (white + ice); the others sit on translucent ink (white + green).
+ * (white + ice); the others sit on translucent ink (white + ice).
  */
 export function PricingCard({ prize }: { prize: Prize }) {
   const featured = prize.featured;
@@ -129,9 +129,7 @@ export function PricingCard({ prize }: { prize: Prize }) {
                 className="flex min-h-6 w-full items-start gap-3"
                 transition={{ delay: 0.05 * i, duration: 0.7, ease: EASE_OUT }}
               >
-                <CheckIcon
-                  className={cn("size-6 shrink-0", featured ? "text-ice" : "text-highlight")}
-                />
+                <CheckIcon className="size-6 shrink-0 text-ice" />
                 <span
                   className={cn(
                     "font-mono text-[16px] leading-[1.4]",

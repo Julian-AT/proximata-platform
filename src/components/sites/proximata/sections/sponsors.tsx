@@ -9,7 +9,7 @@ import { Ticker } from "../ticker";
 /** Logo height inside a partner tile; width follows the artwork. */
 const TILE_LOGO_HEIGHT = 40;
 
-const roleLabel = "font-mono text-[12px] leading-none font-medium text-highlight";
+const roleLabel = "font-mono text-[12px] leading-none font-medium text-soft";
 
 /**
  * Partner tile: the white logo when we have one, otherwise a mono wordmark

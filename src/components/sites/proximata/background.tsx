@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { Globe } from "./globe";
+import { MARK_PATHS, MARK_VIEWBOX } from "./mark-paths";
 import { EASE_OUT } from "./motion";
 import { useScrollKeyframes } from "./scroll-keyframes";
 import { SCROLL_TARGETS } from "./scroll-targets";
@@ -93,6 +94,63 @@ function GlobeLayer() {
   );
 }
 
+/**
+ * The Proximata mark at supergraphic scale (as on the brand book's Logo page),
+ * one copy just off each edge so only its inner column shows: the lower-left
+ * cross's vertical blades on the left, the upper-right cross's on the right.
+ * They take the template pillars' place, fade out before the content and
+ * slide outward once the About title arrives.
+ *
+ * Geometry, with the mark 135vh tall (1 source px = 135/1024 vh):
+ * - left: source x 340 (desktop) / 395 (tablet) sits on the left edge, and the
+ *   lower-left cross's centre (y 636) at 60vh;
+ * - right: source x 680 (desktop) / 625 (tablet) sits on the right edge, and
+ *   the upper-right cross's centre (y 388) at 38vh.
+ */
+function MarkEdge({ side }: { side: "left" | "right" }) {
+  const left = side === "left";
+  const x = useScrollKeyframes(0, [
+    { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: left ? -24 : 24 },
+  ]);
+
+  return (
+    <motion.div
+      className="absolute inset-0"
+      initial={{ opacity: 0.001, x: left ? -48 : 48 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.4, duration: 1.2, ease: EASE_OUT }}
+    >
+      <motion.svg
+        viewBox={MARK_VIEWBOX}
+        aria-hidden="true"
+        style={{ x }}
+        className={
+          left
+            ? "absolute -top-[23.85vh] -left-[52.08vh] h-[135vh] w-[133.95vh] fill-brand desktop:-left-[44.82vh]"
+            : "absolute -top-[13.15vh] -right-[51.55vh] h-[135vh] w-[133.95vh] fill-brand desktop:-right-[44.3vh]"
+        }
+      >
+        {MARK_PATHS.map((d) => (
+          <path key={d} d={d} />
+        ))}
+      </motion.svg>
+    </motion.div>
+  );
+}
+
+/** Both mark edges, faded out towards the content column (tablet and up). */
+function MarkEdges() {
+  return (
+    <div
+      aria-hidden="true"
+      className="absolute inset-0 hidden opacity-80 [mask-image:linear-gradient(90deg,#000_0,#000_7vw,transparent_15vw,transparent_85vw,#000_93vw,#000_100%)] tablet:block"
+    >
+      <MarkEdge side="left" />
+      <MarkEdge side="right" />
+    </div>
+  );
+}
+
 function HeroGlow() {
   const factor = useScrollKeyframes(1, [
     { target: SCROLL_TARGETS.heroInfo, threshold: 0.5, value: 0.1 },
@@ -114,12 +172,13 @@ function HeroGlow() {
   );
 }
 
-/** Fixed layers behind the page: brand glow, globe (hero only), and grain. */
+/** Fixed layers behind the page: brand glow, globe (hero only), mark edges, and grain. */
 export function Background() {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-clip">
       <HeroGlow />
       <GlobeLayer />
+      <MarkEdges />
       <AnimatedNoise />
     </div>
   );

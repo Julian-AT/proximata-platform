@@ -1,52 +1,64 @@
-import type { ComponentType, SVGProps } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { tracks, type Track, type TrackGlyph } from "../content/tracks";
-import { AsteriskIcon, CrosshairIcon, DottedRingIcon, XBoxIcon } from "../icons";
+import { tracks, type Track } from "../content/tracks";
 import { SectionTitle } from "../motion";
 import { SectionTag } from "../section-tag";
 
-const GLYPHS: Record<TrackGlyph, ComponentType<SVGProps<SVGSVGElement>>> = {
-  xbox: XBoxIcon,
-  crosshair: CrosshairIcon,
-  "dotted-ring": DottedRingIcon,
-  asterisk: AsteriskIcon,
-};
+/** One picture of two reaching hands, split across the four track panels
+ * (built by scripts/build-hands.py; the fingertips meet at its centre). */
+const HANDS_SRC = "/sites/proximata/images/tracks/hands.png";
 
-/** Brand-blue panel with the track numeral and one HUD glyph (replaces the template's photo). */
-function TrackVisual({ track }: { track: Track }) {
-  const Glyph = GLYPHS[track.glyph];
+/** Shifts the 4×-wide picture so panel `i` shows its quarter `i`. */
+const QUARTER_OFFSET = ["left-0", "-left-full", "-left-[200%]", "-left-[300%]"] as const;
 
+/** The inner picture is 4 panels wide: phone 1 column, tablet 2, desktop 4. */
+const HANDS_SIZES =
+  "(min-width: 1400px) 1200px, (min-width: 1200px) calc(100vw - 200px), (min-width: 810px) calc(200vw - 280px), calc(400vw - 256px)";
+
+/** Brand-blue panel showing quarter `quarter` of the hands picture, so the
+ * four cards side by side form the whole image (replaces the template's photo). */
+function TrackVisual({ track, quarter }: { track: Track; quarter: number }) {
   return (
     <div
       aria-hidden="true"
-      className="relative aspect-[400/211] w-full shrink-0 overflow-clip bg-brand shadow-[inset_0_0_24px_rgba(200,241,255,0.18)]"
+      // One quarter of hands.png (2880×535), so neighbouring panels line up.
+      className="relative aspect-[720/535] w-full shrink-0 overflow-clip bg-brand shadow-[inset_0_0_24px_rgba(200,241,255,0.18)]"
     >
       <span className="noise-overlay opacity-[0.11]" />
-      <span className="absolute top-4 left-5 font-mono text-[12px] leading-[1.4] font-medium text-ice uppercase">
-        Track
-      </span>
-      <Glyph className="absolute top-4 right-4 size-6 text-ice tablet:size-8" />
-      <span className="absolute bottom-3 left-5 font-display text-[56px] leading-none text-white tablet:text-[72px] desktop:text-[64px]">
+      <div className={cn("absolute inset-y-0 w-[400%]", QUARTER_OFFSET[quarter])}>
+        <Image src={HANDS_SRC} alt="" fill sizes={HANDS_SIZES} className="object-cover" />
+      </div>
+      <span className="absolute top-4 left-5 font-mono text-[12px] leading-[1.4] font-medium text-ice">
         {track.number}
       </span>
     </div>
   );
 }
 
-function TrackCard({ track, className }: { track: Track; className?: string }) {
+function TrackCard({
+  track,
+  quarter,
+  className,
+}: {
+  track: Track;
+  quarter: number;
+  className?: string;
+}) {
   return (
     <article className={cn("frame flex flex-col gap-5 overflow-clip bg-ink pb-6", className)}>
-      <TrackVisual track={track} />
+      <TrackVisual track={track} quarter={quarter} />
       <div className="flex w-full flex-1 flex-col gap-[10px] px-6">
         <h3 className="text-balance font-display text-[18px] leading-[1.2] text-white tablet:text-[22px] desktop:text-[24px]">
           <span className="sr-only">Track {track.number}: </span>
           {track.name}
         </h3>
         <p className="font-mono text-[16px] leading-[1.4] text-soft">{track.description}</p>
-        <p className="mt-auto flex items-start gap-2 pt-[6px] font-mono text-[12px] leading-[1.4] font-medium text-soft uppercase">
-          <span aria-hidden="true" className="mt-[5.5px] size-[6px] shrink-0 rounded-full bg-signal" />
-          <span>Challenge partner: {track.partner ?? "announced soon"}</span>
-        </p>
+        {track.partner && (
+          <p className="mt-auto flex items-start gap-2 pt-[6px] font-mono text-[12px] leading-[1.4] font-medium text-soft uppercase">
+            <span aria-hidden="true" className="mt-[5.5px] size-[6px] shrink-0 rounded-full bg-signal" />
+            <span>Challenge partner: {track.partner}</span>
+          </p>
+        )}
       </div>
     </article>
   );
@@ -69,7 +81,8 @@ export function Learn() {
             Desktop: one sticky row per track; each shows its card in its own
             column so the rows settle into a single row of four as they stack.
             The invisible copies in the other columns give every row the same
-            height, so the settled cards line up. */}
+            height, so the settled cards line up. The columns have no gap, so
+            the settled row shows the hands picture as one image. */}
         <div className="grid w-full grid-cols-1 gap-14 tablet:grid-cols-2 tablet:gap-5 desktop:flex desktop:flex-col desktop:gap-14">
           {tracks.map((track, row) => (
             <div
@@ -78,11 +91,12 @@ export function Learn() {
             >
               {tracks.map((slot, column) =>
                 column === row ? (
-                  <TrackCard key={slot.number} track={slot} />
+                  <TrackCard key={slot.number} track={slot} quarter={column} />
                 ) : (
                   <TrackCard
                     key={slot.number}
                     track={slot}
+                    quarter={column}
                     className="pointer-events-none invisible hidden desktop:flex"
                   />
                 ),

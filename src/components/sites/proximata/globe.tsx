@@ -20,7 +20,7 @@ const markerOpacity = (z: number) => Math.min(Math.max(z * 4, 0), 1);
 
 /**
  * Slowly rotating wireframe globe (the brand's sphere glyph) with a signal
- * marker on HOIV, Vienna. The first frame is server-rendered; reduced motion
+ * marker (a pulsing dot) on HOIV, Vienna. The first frame is server-rendered; reduced motion
  * keeps it static.
  */
 export function Globe({ className }: { className?: string }) {
@@ -96,9 +96,6 @@ export function Globe({ className }: { className?: string }) {
           <animate attributeName="opacity" values="0.9;0" dur="2.4s" repeatCount="indefinite" />
         </circle>
         <circle r={6} className="fill-signal" />
-        <text x={20} y={6} className="fill-ice font-mono text-[18px] font-medium">
-          VIE
-        </text>
       </g>
     </svg>
   );

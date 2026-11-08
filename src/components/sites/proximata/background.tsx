@@ -11,7 +11,6 @@ import { SCROLL_TARGETS } from "./scroll-targets";
 // Re-exported for client components that already import it from here.
 export { SCROLL_TARGETS };
 
-
 /** Grain overlay: random grey pixels redrawn every frame (Framer AnimatedNoise). */
 /** Grey of the grain specks. 87 on the template's black; lifted for ink so
  * the specks keep the same contrast against #23201E. */
@@ -73,71 +72,10 @@ function AnimatedNoise() {
   );
 }
 
-/** Outward slide (px) once the About title scrolls in, per breakpoint. */
-function rulerShift(side: "left" | "right", width: number) {
-  const distance = width >= 1200 ? 18 : width >= 810 ? 12 : 8;
-  return side === "left" ? -distance : distance;
-}
-
-/**
- * Thin measuring scale along a viewport edge (replaces the template's
- * pillars): a tick every 8px, a long tick every 40px, in faint ice. It slides
- * in on load and eases outward once the About title scrolls into view.
- */
-function EdgeRuler({ side }: { side: "left" | "right" }) {
-  const left = side === "left";
-  const patternId = `edge-ruler-${side}`;
-  const x = useScrollKeyframes(0, [], (width) => [
-    { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: rulerShift(side, width) },
-  ]);
-
-  return (
-    <motion.div
-      aria-hidden="true"
-      className={
-        left
-          ? "pointer-events-none fixed inset-y-0 left-1 z-[4] w-4 tablet:left-3 tablet:w-7 desktop:left-5"
-          : "pointer-events-none fixed inset-y-0 right-1 z-[4] w-4 tablet:right-3 tablet:w-7 desktop:right-5"
-      }
-      initial={{ opacity: 0.001, x: left ? -110 : 110 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.3, duration: 0.8, ease: EASE_OUT }}
-    >
-      <motion.svg className="size-full text-ice/30" style={{ x }}>
-        <defs>
-          <pattern id={patternId} width="100%" height="40" patternUnits="userSpaceOnUse">
-            {[0, 8, 16, 24, 32].map((y) => (
-              <line
-                key={y}
-                x1={left ? 0 : "100%"}
-                x2={left ? (y === 0 ? "100%" : "45%") : y === 0 ? 0 : "55%"}
-                y1={y + 0.5}
-                y2={y + 0.5}
-                stroke="currentColor"
-                strokeWidth={1}
-              />
-            ))}
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill={`url(#${patternId})`} />
-        <line
-          x1={left ? 0.5 : "100%"}
-          x2={left ? 0.5 : "100%"}
-          y1={0}
-          y2="100%"
-          stroke="currentColor"
-          strokeWidth={1}
-        />
-      </motion.svg>
-    </motion.div>
-  );
-}
-
-/** Rotating globe behind the hero; dims as the page scrolls and returns near the end. */
+/** Rotating globe behind the hero; fades out as the About title scrolls in. */
 function GlobeLayer() {
   const opacity = useScrollKeyframes(1, [
-    { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: 0.2 },
-    { target: SCROLL_TARGETS.pricing, threshold: 1, value: 0.45 },
+    { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: 0 },
   ]);
 
   return (
@@ -176,17 +114,13 @@ function HeroGlow() {
   );
 }
 
-/** Fixed layers behind the page: brand glow, globe, grain, and edge rulers. */
+/** Fixed layers behind the page: brand glow, globe (hero only), and grain. */
 export function Background() {
   return (
-    <>
-      <EdgeRuler side="left" />
-      <EdgeRuler side="right" />
-      <div className="pointer-events-none fixed inset-0 z-0 overflow-clip">
-        <HeroGlow />
-        <GlobeLayer />
-        <AnimatedNoise />
-      </div>
-    </>
+    <div className="pointer-events-none fixed inset-0 z-0 overflow-clip">
+      <HeroGlow />
+      <GlobeLayer />
+      <AnimatedNoise />
+    </div>
   );
 }

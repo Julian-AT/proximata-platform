@@ -1,0 +1,17 @@
+<div> 0,15186 390x64 pos=fixed tf=matrix(1, 0, 0, 1, -195, 0) z=8
+  <div> 0,15186 0x0
+    <nav [Phone Close]> 0,15186 390x64 flex(column,gap=20,jc=center,ai=center) pad=0 20 16 ovf=hidden
+      <div [Content]> 108,15186 174x48 flex(row,gap=36,jc=flex-start,ai=center) pad=6 8 6 16 bdf=blur(10px)
+        <div [Logo]> 124,15192 150x36 flex(row,gap=12,jc=flex-start,ai=center)
+          <div> 124,15194 102x32
+            <a [Company Logo]> 124,15194 102x32 ovf=hidden ptr href=./ target=
+              <div> 124,15194 102x32 pos=absolute ptr
+                <img> 124,15194 102x32 ovf=clip ptr img=W0jUgbUpx1o8WwkKrQVJw6nY3ww.svg fit=contain alt=""
+          <div [Phone Menu Icon]> 238,15192 36x36 flex(row,gap=10,jc=center,ai=center)
+            <div> 238,15192 36x36
+              <div [Closed]> 238,15192 36x36 flex(row,gap=10,jc=center,ai=center) ptr
+                <div [Menu]> 238,15192 36x36 rad=60 ovf=hidden z=1 ptr
+                  <div> 249,15203 6x6 pos=absolute bg=rgb(255, 255, 255) rad=3 tf=matrix(1, 0, 0, 1, -3.05469, -3.05469) ptr
+                  <div> 249,15212 6x6 pos=absolute bg=rgb(255, 255, 255) rad=3 tf=matrix(1, 0, 0, 1, -3.05469, -3.05469) ptr
+                  <div> 258,15203 6x6 pos=absolute bg=rgb(255, 255, 255) rad=3 tf=matrix(1, 0, 0, 1, -3.05469, -3.05469) ptr
+                  <div> 258,15212 6x6 pos=absolute bg=rgb(255, 255, 255) rad=3 tf=matrix(1, 0, 0, 1, -3.05469, -3.05469) ptr

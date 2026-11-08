@@ -1,0 +1,10 @@
+<div> 1280,1121 140x36 pos=fixed z=10
+  <a [Desktop]> 1280,1121 140x36 flex(row,gap=13,jc=flex-start,ai=center) pad=8 8 8 13 bg=rgb(255, 255, 255) rad=10 shadow=rgba(0, 0, 0, 0.26) 0px 0.602187px 0.602187px -1.25px, rgba(0, 0, 0, 0.23) 0px 2.28853px 2.28853px -2.5px, rgba(0, 0, 0, 0.09) 0px 10px 10px -3.75px ovf=hidden ptr href=https://contra.com/payment-link/WkmTzPpt-confer-conferences-summits-and-events-framer-template target=_blank
+    <div> 1293,1132 92x14 flex(column,gap=normal,jc=flex-start,ai=normal) z=2 ptr
+      <p> 1293,1132 92x14 ptr "Get a Template" [Inter 14px/14px w600 ls=-0.7px rgb(0, 0, 0) start]
+    <div> 1292,1105 61x14 pos=absolute flex(column,gap=normal,jc=flex-start,ai=normal) z=2 ptr
+      <p> 1292,1105 61x14 ptr "Grab Now" [Inter 14px/14px w600 ls=-0.7px rgb(255, 255, 255) start]
+    <div [Icon]> 1392,1131 17x17 pos=absolute flex(row,gap=10,jc=center,ai=center) bg=rgb(69, 255, 134) rad=50 tf=matrix(1, 0, 0, 1, 0, -8.5) z=1 ptr
+      <div [SVG]> 1395,1134 11x11 ptr
+        <div> 1395,1134 11x11 ptr
+          <svg> 1395,1134 11x11 ovf=hidden ptr svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 238)

@@ -1,0 +1,511 @@
+{
+ "agenda": [
+  {
+   "day": "Day : 1",
+   "theme": "Foundations & Vision",
+   "sessions": [
+    {
+     "time": "11:00 – 11:45",
+     "title": "Opening Remarks",
+     "desc": "A warm welcome from the First AI Summit team. We’ll walk you through the three days ahead—the speakers, the sessions, and the moments worth showing up for.",
+     "layout": "row",
+     "speakers": [
+      {
+       "name": "Arjun Mehta",
+       "role": "AI Head",
+       "img": "ALFulH33o4tnIVq1jOk9pLqC0Gw.png"
+      }
+     ]
+    },
+    {
+     "time": "11:45 – 01:30",
+     "title": "Keynote: Shaping the Future with AI",
+     "desc": "Our keynote speaker opens the event with a bold vision of where AI is heading — the shifts already happening and what’s coming next.",
+     "layout": "column",
+     "speakers": [
+      {
+       "name": "Lucy Morgan",
+       "role": "CEO - X AI",
+       "img": "Q93bBlKgn8lqvAWR80TTxRnM.png"
+      }
+     ]
+    },
+    {
+     "time": "03:00 – 05:00",
+     "title": "Panel: The State of AI in 2026",
+     "desc": "Top founders and researchers explore where AI truly stands today — beyond the hype, beyond the headlines.",
+     "layout": "column",
+     "speakers": [
+      {
+       "name": "Rohan Kapoor",
+       "role": "Founder, SynthMind",
+       "img": "x7jRF1XdCn9rQ2qQpn8bH2WboWc.png"
+      },
+      {
+       "name": "Elena Garcia",
+       "role": "ML Director, DataForge",
+       "img": "pYu8mLCPTGciPj59JfmUdanWRs.png"
+      },
+      {
+       "name": "David Kim",
+       "role": "AI Strategist, NexaTech",
+       "img": "jhpPb3bEvWtJ5xjKQzXshqWTWs.png"
+      },
+      {
+       "name": "Priya Nair",
+       "role": "Innovation Head, DeepGrid",
+       "img": "nmZhfxasieIft4j0QmWfiaitlI.png"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "Day : 2",
+   "theme": "Innovation & Execution",
+   "sessions": [
+    {
+     "time": "10:00 – 11:30",
+     "title": "Workshop: Building AI-First Products",
+     "desc": "A hands-on session focused on turning ideas into AI-powered products. Learn how to design, build, and launch scalable solutions using modern AI tools.",
+     "layout": "row",
+     "speakers": [
+      {
+       "name": "Neha Sharma",
+       "role": "Product Lead, AIVerse",
+       "img": "rdOrUPZERDMj3cNdzVuc3rhQ.png"
+      }
+     ]
+    },
+    {
+     "time": "11:45 – 01:00",
+     "title": "Talk: Designing Human-Centered AI",
+     "desc": "Explore how to create AI experiences that feel intuitive, ethical, and user-first — balancing technology with real human needs.",
+     "layout": "column",
+     "speakers": [
+      {
+       "name": "Daniel Ross",
+       "role": "UX Director, FutureLab",
+       "img": "kWLzjCP0QH5hITDshQZ2ZezD1nU.png"
+      }
+     ]
+    },
+    {
+     "time": "02:00 – 03:30",
+     "title": "Case Study: Scaling AI in Real-World Systems",
+     "desc": "A deep dive into how companies are successfully integrating AI into real-world products — challenges, learnings, and outcomes.",
+     "layout": "column",
+     "speakers": [
+      {
+       "name": "Amelia Scott",
+       "role": "AI Product Lead",
+       "img": "jHvB6tdWamZ4dDl6iqaokJvO6Yw.png"
+      },
+      {
+       "name": "Henry Collins",
+       "role": "AI Architect",
+       "img": "WQNaXb1YgQaoDTWWNukcnZhKI.png"
+      },
+      {
+       "name": "Lisa Wong",
+       "role": "AI Consultant, GlobalEdge",
+       "img": "JCUUXbNLazO8Ycgvt6usFyXPOYc.png"
+      },
+      {
+       "name": "Karan Rao",
+       "role": "Director of AI, NexGen",
+       "img": "EgTTRXQIl4XKoUDDONqVf3Vijlc.png"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "Day : 3",
+   "theme": "Future & Connections",
+   "sessions": [
+    {
+     "time": "10:00 – 11:15",
+     "title": "Talk: The Next Era of AI Innovation",
+     "desc": "Explore what’s next for AI — from emerging breakthroughs to the long-term impact on industries, creativity, and everyday life.",
+     "layout": "row",
+     "speakers": [
+      {
+       "name": "Daniel Brooks",
+       "role": "Data Scientist",
+       "img": "wpAu8SJxKfWx2rXUEOeR46fAAY8.png"
+      }
+     ]
+    },
+    {
+     "time": "11:30 – 01:00",
+     "title": "Workshop: From Idea to AI Startup",
+     "desc": "Learn how to turn your AI ideas into real startups — covering validation, product building, and go-to-market strategies.",
+     "layout": "column",
+     "speakers": [
+      {
+       "name": "Charlotte Reed",
+       "role": "AI Ethics Lead",
+       "img": "q1C9hjZ5ksa7UZcWDGcLSkxYLAQ.png"
+      }
+     ]
+    },
+    {
+     "time": "02:00 – 03:30",
+     "title": "Fireside Chat: Building in the Age of AI",
+     "desc": "An honest conversation with industry leaders on lessons, failures, and opportunities while building in the AI-driven world.",
+     "layout": "column",
+     "speakers": [
+      {
+       "name": "James Walker",
+       "role": "AI Scientist",
+       "img": "nlp33fFkeJUrxSnuzbYbtSGu7Rg.png"
+      },
+      {
+       "name": "Oliva Bennett",
+       "role": "ML Engineer",
+       "img": "6ez78R63bkOeQKvXOuZhUsRPns.png"
+      },
+      {
+       "name": "Sophia Turner",
+       "role": "AI Strategist",
+       "img": "q1C9hjZ5ksa7UZcWDGcLSkxYLAQ.png"
+      },
+      {
+       "name": "William Hayes",
+       "role": "Chief AI Officer",
+       "img": "NvwTUshlsCGlcZF5TF6XlA0oUPk.png"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "speakers": [
+  {
+   "name": "Reggie Watts",
+   "role": "Chief AI Officer, Nexa",
+   "img": "jWsanDSxrink1xRHEad1iV885Uo.png",
+   "links": [
+    "https://www.instagram.com/jitu.ux/",
+    "https://www.linkedin.com/in/jitendra-raut/"
+   ]
+  },
+  {
+   "name": "Diana Nyad",
+   "role": "VP of Product Design, QNTM Labs",
+   "img": "CaCV6YpEx2vrsLOFJiWdq1TUU.png",
+   "links": [
+    "https://www.instagram.com/jitu.ux/",
+    "https://www.linkedin.com/in/jitendra-raut/"
+   ]
+  },
+  {
+   "name": "Dr. Mark Hyman",
+   "role": "VP of Innovation, Horizon Ventures",
+   "img": "SfaF7szushMlRSfvDfUg5cwgXuA.png",
+   "links": [
+    "https://www.instagram.com/jitu.ux/",
+    "https://www.linkedin.com/in/jitendra-raut/"
+   ]
+  },
+  {
+   "name": "Valarie Kaur",
+   "role": "Founder & CEO, NeuralSphere",
+   "img": "gHZBcD6jRf2QfQCYUYbTzs5kwWM.png",
+   "links": [
+    "https://www.instagram.com/jitu.ux/",
+    "https://www.linkedin.com/in/jitendra-raut/"
+   ]
+  },
+  {
+   "name": "Tristan Harris",
+   "role": "Founder & CEO, InnovateX",
+   "img": "xmfZRdFnDt2dm1ChOxcaazTMk.png",
+   "links": [
+    "https://www.instagram.com/jitu.ux/",
+    "https://www.linkedin.com/in/jitendra-raut/"
+   ]
+  },
+  {
+   "name": "Donick Cary",
+   "role": "Head of AI Research, Synth Labs",
+   "img": "KsUCNnQ63A0Fxs1lJVGqKK6A1Q.png",
+   "links": [
+    "https://www.instagram.com/jitu.ux/",
+    "https://www.linkedin.com/in/jitendra-raut/"
+   ]
+  }
+ ],
+ "metrics": [
+  {
+   "v": "24",
+   "l": "Speakers"
+  },
+  {
+   "v": "30",
+   "l": "Sessions"
+  },
+  {
+   "v": "600+",
+   "l": "Attendees"
+  },
+  {
+   "v": "10",
+   "l": "Panels"
+  }
+ ],
+ "learn": [
+  {
+   "title": "Get to Know AI",
+   "desc": "The First AI Summit is the ultimate gathering for tech enthusiasts and industry expert level leaders.",
+   "img": "kIXIyZvahpWuSIhJxVx6ClvkfNc.png",
+   "visible": "1"
+  },
+  {
+   "title": "Ideate on It",
+   "desc": "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders.",
+   "img": "SwNoYIjLp4T5olOGRjBb8Xng4.png",
+   "visible": "0"
+  },
+  {
+   "title": "Connect with People",
+   "desc": "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders.",
+   "img": "axgrS3KJETGNSu5rnSqvvC7FHOg.png",
+   "visible": "0"
+  },
+  {
+   "title": "Get to Know AI",
+   "desc": "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders.",
+   "img": "kIXIyZvahpWuSIhJxVx6ClvkfNc.png",
+   "visible": "0"
+  },
+  {
+   "title": "Ideate on It",
+   "desc": "Join engaging discussions with tech enthusiasts, industry experts, and visionaries.",
+   "img": "SwNoYIjLp4T5olOGRjBb8Xng4.png",
+   "visible": "1"
+  },
+  {
+   "title": "Connect with People",
+   "desc": "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders.",
+   "img": "axgrS3KJETGNSu5rnSqvvC7FHOg.png",
+   "visible": "0"
+  },
+  {
+   "title": "Get to Know AI",
+   "desc": "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders.",
+   "img": "kIXIyZvahpWuSIhJxVx6ClvkfNc.png",
+   "visible": "0"
+  },
+  {
+   "title": "Ideate on It",
+   "desc": "The First AI Summit is the ultimate gathering for tech enthusiasts and industry leaders.",
+   "img": "SwNoYIjLp4T5olOGRjBb8Xng4.png",
+   "visible": "0"
+  },
+  {
+   "title": "Connect with People",
+   "desc": "Network with experts, exchange ideas, and build valuable relationships that drive innovation.",
+   "img": "axgrS3KJETGNSu5rnSqvvC7FHOg.png",
+   "visible": "1"
+  }
+ ],
+ "faq": [
+  {
+   "q": "What is this AI conference about?",
+   "a": "This is a three-day AI conference focused on innovation, design, and real-world applications. It brings together industry leaders, creators, and professionals to explore how AI is transforming products, businesses, and everyday experiences through talks, panels, and hands-on sessions."
+  },
+  {
+   "q": "Who should attend this event?",
+   "a": "This event is designed for designers, developers, founders, product managers, and anyone curious about AI. Whether you're just starting out or already working in the field, you'll find valuable insights, practical knowledge, and meaningful connections."
+  },
+  {
+   "q": "Will sessions be recorded?",
+   "a": "Yes, all major sessions including keynotes, panels, and selected workshops will be recorded. Recordings will be available to Pro and VIP pass holders after the event so you can revisit key learnings anytime."
+  },
+  {
+   "q": "Do I need prior AI knowledge?",
+   "a": "No prior experience is required. The conference is structured to cater to all levels, with beginner-friendly sessions as well as advanced discussions for professionals already working with AI."
+  },
+  {
+   "q": "Can I upgrade my ticket later?",
+   "a": "Yes, you can upgrade your ticket before the event, subject to availability and payment of the price difference."
+  },
+  {
+   "q": "Will there be networking opportunities?",
+   "a": "Absolutely. The event includes dedicated networking sessions, informal meetups, and open interaction spaces where you can connect with speakers, founders, and fellow attendees."
+  },
+  {
+   "q": "Is there a refund policy?",
+   "a": "Yes, refunds are available within a limited time after purchase. Please check the event policy for specific timelines and eligibility details."
+  }
+ ],
+ "journal": [
+  {
+   "cat": "Perspectives",
+   "title": "The Human Signals Behind the AI Hype",
+   "href": "./blog/the-human-signals-behind-the-ai-hype",
+   "excerpt": "The most useful AI conversations start where the headlines end: with people, practice, and the hard questions.",
+   "img": "bg0Ig1MtAotSs4OYtyhSE18M5Qo.jpg",
+   "alt": "Hand illuminated by green LED light"
+  },
+  {
+   "cat": "Field Notes",
+   "title": "Why the Next AI Needs Better Rooms",
+   "href": "./blog/why-the-next-ai-breakthrough-needs-better-rooms",
+   "excerpt": "A summit is more than a stage. It is a temporary lab for the ideas that need context, friction, and collaboration.",
+   "img": "k3ZmcN9FQRBR2gkRgTLAo8bkug.jpg",
+   "alt": "AI concept lightbulb"
+  },
+  {
+   "cat": "Summit Brief",
+   "title": "The Builders’ Brief: Watch in San Francisco",
+   "href": "./blog/the-builders’-brief-what-to-watch-in-san-francisco",
+   "excerpt": "From embodied intelligence to creative tooling, these are the ideas likely to animate the rooms this November.",
+   "img": "7Q2vfqHwpm1Sy0DBNsDeJS798.jpg",
+   "alt": "Computer motherboard in darkness"
+  }
+ ],
+ "gallery": [
+  {
+   "img": "01w7mAM6vDns0xgML4Xj9XCzU.jpg",
+   "alt": "four person hands wrap around shoulders while looking at sunset"
+  },
+  {
+   "img": "KWUOD4KXxwpy4NI46hLk8uOHdk.jpg",
+   "alt": "laughing people in party"
+  },
+  {
+   "img": "GlAe4K36imZt6cRf73r7YrZIo0.jpg",
+   "alt": "people holding clear glass bottles during daytime"
+  },
+  {
+   "img": "Qf2UnvS4bB9CPog6bu1Dx7Lp1rs.jpg",
+   "alt": "people laughing and talking outside during daytime"
+  },
+  {
+   "img": "o1GezXjXUsr4zyr1SCQqrpjt8.jpg",
+   "alt": "several people standing on field under blue sky"
+  },
+  {
+   "img": "wuJGSf8WODQxIC7whxpJzB3uHE.jpg",
+   "alt": "four women holding drinks while laughing together during daytime"
+  }
+ ],
+ "pricing": [
+  {
+   "name": "Pricing Card Wrappers",
+   "text": [
+    "$",
+    "149",
+    "GENERAL PASS",
+    "Access to all main stage talks and sessions. Perfect for attendees looking to learn, explore, network.",
+    "What's included:",
+    "Access to all keynotes",
+    "Entry to panel discussions",
+    "Networking sessions",
+    "Event swag kit",
+    "Community access",
+    "Secure Your Spot",
+    "$",
+    "249",
+    "PRO PASS",
+    "For those who want deeper learning and hands-on experience with AI tools, workflows, and expert guidance.",
+    "What's included:",
+    "Everything in General",
+    "Access to workshops",
+    "Session recordings",
+    "Priority seating",
+    "Exclusive resources",
+    "Secure Your Spot",
+    "$",
+    "399",
+    "VIP PASS",
+    "The ultimate experience with exclusive access, premium networking, direct interaction, and reserved privileges.",
+    "What's included:",
+    "Everything in Pro",
+    "VIP lounge access",
+    "Speaker meet & greet",
+    "Front row seating",
+    "Premium swag & perks",
+    "Secure Your Spot"
+   ]
+  },
+  {
+   "name": "Pricing Card 1",
+   "text": [
+    "$",
+    "149",
+    "GENERAL PASS",
+    "Access to all main stage talks and sessions. Perfect for attendees looking to learn, explore, network.",
+    "What's included:",
+    "Access to all keynotes",
+    "Entry to panel discussions",
+    "Networking sessions",
+    "Event swag kit",
+    "Community access",
+    "Secure Your Spot"
+   ]
+  },
+  {
+   "name": "Pricing Card 2",
+   "text": [
+    "$",
+    "249",
+    "PRO PASS",
+    "For those who want deeper learning and hands-on experience with AI tools, workflows, and expert guidance.",
+    "What's included:",
+    "Everything in General",
+    "Access to workshops",
+    "Session recordings",
+    "Priority seating",
+    "Exclusive resources",
+    "Secure Your Spot"
+   ]
+  },
+  {
+   "name": "Pricing Card 3",
+   "text": [
+    "$",
+    "399",
+    "VIP PASS",
+    "The ultimate experience with exclusive access, premium networking, direct interaction, and reserved privileges.",
+    "What's included:",
+    "Everything in Pro",
+    "VIP lounge access",
+    "Speaker meet & greet",
+    "Front row seating",
+    "Premium swag & perks",
+    "Secure Your Spot"
+   ]
+  }
+ ],
+ "aboutPara": "First AI Summit brings together builders, thinkers, and pioneers shaping the next chapter of artificial intelligence. Spend the day with founders decoding real breakthroughs, engineers sharing hard-won lessons, and creators pushing what’s possible with machine intelligence. From hands-on demos to candid panel talks, this is where ideas turn into momentum. Come curious, leave inspired.",
+ "footer": [
+  "H6: San Francisco’s premier AI summit for founders, builders, and industry expert level leaders.",
+  "P: Get summit updates",
+  "INPUT: you@example.com",
+  "P: Submit",
+  "A: AboutAbout -> ./about",
+  "P: About",
+  "P: About",
+  "A: SpeakersSpeakers -> ./speakers",
+  "P: Speakers",
+  "P: Speakers",
+  "A: VenueVenue -> ./venue",
+  "P: Venue",
+  "P: Venue",
+  "A: ContactContact -> ./contact",
+  "P: Contact",
+  "P: Contact",
+  "A: PoliciesPolicies -> ./policies",
+  "P: Policies",
+  "P: Policies",
+  "A: 404404 -> ./venue",
+  "P: 404",
+  "P: 404",
+  "P: © 2026 First AI Summit. All rights reserved.",
+  "P: Built for the future of AI."
+ ]
+}

@@ -1,0 +1,3 @@
+<div [Video]> 0,1844 1440x755 flex(row,gap=10,jc=center,ai=center) ovf=clip z=1
+  <div> 0,1844 1440x755
+    <video> 0,1844 1440x755 ovf=clip video=https://framerusercontent.com/assets/PUbXTcMM9aTXRLRGUcto6mEGRRE.mp4

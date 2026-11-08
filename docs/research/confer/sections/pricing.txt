@@ -1,0 +1,233 @@
+<section [Desktop]> 0,11623 1440x1025 flex(row,gap=10,jc=center,ai=center) pad=100 0 ovf=clip
+  <div> 37,11661 372x270 pos=absolute blend=lighten z=1
+    <video> 37,11661 372x270 ovf=clip video=https://framerusercontent.com/assets/E9Ipdzzy4jIIo05GiF5F99nVQ.mp4
+  <div [Content]> 0,11723 1440x825 flex(column,gap=56,jc=center,ai=center) pad=0 100 z=1
+    <div [Tag + Title]> 100,11723 1240x154 flex(column,gap=16,jc=center,ai=center) ovf=clip z=1
+      <div> 624,11723 193x22
+        <div [Tag]> 624,11723 193x22 flex(row,gap=10,jc=center,ai=center)
+          <figure [Pattern]> 624,11725 55x20 ovf=clip
+            <div> 624,11725 55x20 pos=absolute
+              <img> 624,11725 55x20 ovf=clip img=GY5GLhNlPMo1EpaduJk0nuQJ6xU.png fit=contain alt=""
+          <div> 689,11723 65x22
+            <p> 689,11723 65x22 "PASSES" [Inter Display 16px/22.4px w500 ls=0.96px rgb(69, 255, 134) left]
+          <figure [Pattern]> 763,11724 53x20 ovf=clip
+            <div> 763,11724 53x20 pos=absolute
+              <img> 763,11724 53x20 ovf=clip img=ot4ExbWeGPVzYrtOfK5g6NrJQ5o.png fit=contain alt=""
+      <div> 440,11762 560x115 flex(column,gap=normal,jc=flex-start,ai=normal)
+        <h2> 440,11762 560x115
+          <span> 494,11762 85x58 filter=blur(0px) "Pick" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 588,11762 68x58 filter=blur(0px) "the" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 665,11762 97x58 filter=blur(0px) "Pass" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 771,11762 93x58 filter=blur(0px) "That" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 873,11762 73x58 filter=blur(0px) "Fits" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 509,11819 98x58 filter=blur(0px) "Your" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 615,11819 94x58 filter=blur(0px) "First" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 718,11819 41x58 filter=blur(0px) "AI" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 768,11819 163x58 filter=blur(0px) "Summit" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+    <div [Pricing Card Wrappers]> 120,11933 1200x616 flex(row,gap=32,jc=center,ai=center) ovf=clip
+      <div [Pricing Card 1]> 120,11933 379x616
+        <div [Desktop General]> 120,11933 379x616 flex(column,gap=32,jc=center,ai=flex-start) bg=rgba(0, 0, 0, 0.4) ::after-border=2px dashed rgba(255, 255, 255, 0.2) inset=0px bdf=blur(8px)
+          <div [Content]> 120,11933 379x505 flex(column,gap=32,jc=flex-start,ai=flex-start)
+            <div [Top Content]> 120,11933 379x187 flex(row,gap=32,jc=flex-start,ai=center)
+              <div [Price Title]> 120,11933 379x187 flex(column,gap=16,jc=flex-start,ai=flex-start) pad=24 24 0
+                <div [Content]> 144,11957 82x48 flex(column,gap=8,jc=flex-start,ai=flex-start)
+                  <div [Price]> 144,11957 82x48 flex(row,gap=0,jc=flex-end,ai=flex-end)
+                    <div [Symbol]> 144,11957 23x48 flex(column,gap=normal,jc=flex-start,ai=normal)
+                      <h4> 144,11957 23x48 "$" [Clash Grotesk Variable Variable Bold 40px/48px w700 ls=-1.6px rgb(255, 255, 255) start]
+                    <div [Price]> 167,11957 59x48 flex(column,gap=normal,jc=flex-start,ai=normal)
+                      <h4> 167,11957 59x48 "149" [Clash Grotesk Variable Variable Bold 40px/48px w700 ls=-1.6px rgb(255, 255, 255) start]
+                <div [Title & Details]> 144,12021 331x99 flex(column,gap=8,jc=flex-start,ai=flex-start)
+                  <div [Title]> 144,12021 331x24 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 144,12021 331x24 "GENERAL PASS" [Be Vietnam Pro 20px/24px w400 ls=normal rgb(255, 255, 255) left]
+                  <div [Details]> 144,12053 331x67 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 144,12053 331x67 "Access to all main stage talks and sessions. Perfect for attendees looking to learn, explore, network." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+            <div [Divider]> 120,12152 379x25 flex(row,gap=0,jc=center,ai=center) z=1
+              <div [Cut]> 120,12152 14x25 bg=rgb(0, 0, 0) ::after-border=2px dashed rgba(255, 255, 255, 0.14) inset=0px rad=20 0 0 20 tf=matrix(-1, 0, 0, -1, 0, 0) ovf=clip
+              <div [Divider]> 134,12164 351x2 ::after-border=2px dashed rgba(255, 255, 255, 0.14) inset=0px 0px -2px ovf=clip
+              <div [Cut]> 485,12152 14x25 bg=rgb(0, 0, 0) ::after-border=2px dashed rgba(255, 255, 255, 0.2) inset=0px rad=20 0 0 20 ovf=clip
+            <div [Bottom Content]> 120,12209 379x229 flex(column,gap=20,jc=flex-start,ai=flex-start) pad=0 24
+              <div [Text]> 144,12249 331x25 flex(column,gap=normal,jc=flex-start,ai=normal) op=0 tf=matrix(1, 0, 0, 1, 0, 40)
+                <p> 144,12249 331x25 "What's included:" [Be Vietnam Pro 18px/25.2px w400 ls=-0.4px rgba(255, 255, 255, 0.6) start]
+              <div [Features Points ]> 144,12254 331x184 flex(row,gap=0,jc=flex-start,ai=flex-start)
+                <div [List]> 144,12254 331x184 flex(column,gap=16,jc=flex-start,ai=flex-start)
+                  <div [Features Point 1]> 144,12254 331x24
+                    <div [Desktop]> 144,12254 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 144,12254 24x24
+                        <div> 144,12254 24x24
+                          <svg> 144,12254 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 180,12255 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 180,12255 295x22 "Access to all keynotes" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.7) left]
+                  <div [Features Point 2]> 144,12294 331x24
+                    <div [Desktop]> 144,12294 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 144,12294 24x24
+                        <div> 144,12294 24x24
+                          <svg> 144,12294 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 180,12295 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 180,12295 295x22 "Entry to panel discussions" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.7) left]
+                  <div [Features Point 3]> 144,12334 331x24
+                    <div [Desktop]> 144,12334 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 144,12334 24x24
+                        <div> 144,12334 24x24
+                          <svg> 144,12334 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 180,12335 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 180,12335 295x22 "Networking sessions" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.7) left]
+                  <div [Features Point 4]> 144,12374 331x24
+                    <div [Desktop]> 144,12374 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 144,12374 24x24
+                        <div> 144,12374 24x24
+                          <svg> 144,12374 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 180,12375 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 180,12375 295x22 "Event swag kit" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.7) left]
+                  <div [Features Point 5]> 144,12414 331x24
+                    <div [Desktop]> 144,12414 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 144,12414 24x24
+                        <div> 144,12414 24x24
+                          <svg> 144,12414 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 180,12415 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 180,12415 295x22 "Community access" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.7) left]
+          <div [Button]> 120,12470 379x78 flex(column,gap=10,jc=flex-start,ai=center) pad=0 24 24
+            <div> 144,12470 331x54
+              <a [Filled]> 144,12470 331x54 flex(row,gap=14,jc=center,ai=center) pad=16 24 bg=rgb(10, 28, 10) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px shadow=rgba(32, 179, 147, 0.73) 0px 0px 8px 4px inset ovf=clip ptr href=null target=
+                <figure [Noise]> 144,12470 331x54 pos=absolute op=0.11 z=0 ptr
+                  <div> 144,12470 331x54 pos=absolute bgi=url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256") size=158.5px auto rep=repeat ptr
+                <div> 243,12486 133x22 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 243,12486 133x22 ptr "Secure Your Spot" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(69, 255, 134) center]
+      <div [Pricing Card 2]> 531,11933 379x616
+        <div [Desktop VIP Pass]> 531,11933 379x616 flex(column,gap=32,jc=center,ai=flex-start) bg=rgb(0, 0, 0) ::after-border=2px dashed rgba(255, 255, 255, 0.2) inset=0px bdf=blur(8px)
+          <div [Content]> 531,11933 379x505 flex(column,gap=32,jc=flex-start,ai=flex-start)
+            <div [Top Content]> 531,11933 379x187 flex(row,gap=32,jc=flex-start,ai=center)
+              <div [Price Title]> 531,11933 379x187 flex(column,gap=16,jc=flex-start,ai=flex-start) pad=24 24 0 z=1
+                <div [Content]> 555,11957 92x48 flex(column,gap=8,jc=flex-start,ai=flex-start)
+                  <div [Price]> 555,11957 92x48 flex(row,gap=0,jc=flex-end,ai=flex-end)
+                    <div [Symbol]> 555,11957 23x48 flex(column,gap=normal,jc=flex-start,ai=normal)
+                      <h4> 555,11957 23x48 "$" [Clash Grotesk Variable Variable Bold 40px/48px w700 ls=-1.6px rgb(255, 255, 255) start]
+                    <div [Price]> 577,11957 69x48 flex(column,gap=normal,jc=flex-start,ai=normal)
+                      <h4> 577,11957 69x48 "249" [Clash Grotesk Variable Variable Bold 40px/48px w700 ls=-1.6px rgb(255, 255, 255) start]
+                <div [Title & Details]> 555,12021 331x99 flex(column,gap=8,jc=flex-start,ai=flex-start)
+                  <div [Title]> 555,12021 331x24 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 555,12021 331x24 "PRO PASS" [Be Vietnam Pro 20px/24px w400 ls=normal rgb(255, 255, 255) left]
+                  <div [Details]> 555,12053 331x67 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 555,12053 331x67 "For those who want deeper learning and hands-on experience with AI tools, workflows, and expert guidance." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+            <div [Divider]> 531,12152 379x25 flex(row,gap=0,jc=center,ai=center) z=1
+              <div [Cut]> 531,12152 14x25 bg=rgb(0, 0, 0) ::after-border=2px dashed rgba(255, 255, 255, 0.14) inset=0px rad=20 0 0 20 tf=matrix(-1, 0, 0, -1, 0, 0) ovf=clip
+              <div [Divider]> 545,12164 351x2 ::after-border=2px dashed rgba(255, 255, 255, 0.14) inset=0px 0px -2px ovf=clip
+              <div [Cut]> 895,12152 14x25 bg=rgb(0, 0, 0) ::after-border=2px dashed rgba(255, 255, 255, 0.2) inset=0px rad=20 0 0 20 ovf=clip
+            <div [Bottom Content]> 531,12209 379x229 flex(column,gap=20,jc=flex-start,ai=flex-start) pad=0 24
+              <div [Text]> 555,12249 331x25 flex(column,gap=normal,jc=flex-start,ai=normal) op=0 tf=matrix(1, 0, 0, 1, 0, 40)
+                <p> 555,12249 331x25 "What's included:" [Be Vietnam Pro 18px/25.2px w400 ls=-0.4px rgb(255, 255, 255) start]
+              <div [Features Points ]> 555,12254 331x184 flex(row,gap=0,jc=flex-start,ai=flex-start)
+                <div [List]> 555,12254 331x184 flex(column,gap=16,jc=flex-start,ai=flex-start)
+                  <div [Features Point 1]> 555,12254 331x24
+                    <div [Desktop]> 555,12254 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 555,12254 24x24
+                        <div> 555,12254 24x24
+                          <svg> 555,12254 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 591,12255 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 591,12255 295x22 "Everything in General" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+                  <div [Features Point 2]> 555,12294 331x24
+                    <div [Desktop]> 555,12294 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 555,12294 24x24
+                        <div> 555,12294 24x24
+                          <svg> 555,12294 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 591,12295 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 591,12295 295x22 "Access to workshops" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+                  <div [Features Point 3]> 555,12334 331x24
+                    <div [Desktop]> 555,12334 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 555,12334 24x24
+                        <div> 555,12334 24x24
+                          <svg> 555,12334 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 591,12335 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 591,12335 295x22 "Session recordings" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+                  <div [Features Point 4]> 555,12374 331x24
+                    <div [Desktop]> 555,12374 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 555,12374 24x24
+                        <div> 555,12374 24x24
+                          <svg> 555,12374 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 591,12375 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 591,12375 295x22 "Priority seating" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+                  <div [Features Point 5]> 555,12414 331x24
+                    <div [Desktop]> 555,12414 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 555,12414 24x24
+                        <div> 555,12414 24x24
+                          <svg> 555,12414 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 591,12415 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 591,12415 295x22 "Exclusive resources" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+          <div [Button]> 531,12470 379x78 flex(column,gap=10,jc=flex-start,ai=center) pad=0 24 24
+            <div> 555,12470 331x54
+              <a [Filled]> 555,12470 331x54 flex(row,gap=14,jc=center,ai=center) pad=16 24 bg=rgb(10, 28, 10) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px shadow=rgba(32, 179, 147, 0.73) 0px 0px 8px 4px inset ovf=clip ptr href=null target=
+                <figure [Noise]> 555,12470 331x54 pos=absolute op=0.11 z=0 ptr
+                  <div> 555,12470 331x54 pos=absolute bgi=url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256") size=158.5px auto rep=repeat ptr
+                <div> 653,12486 133x22 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 653,12486 133x22 ptr "Secure Your Spot" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(69, 255, 134) center]
+          <figure [Noise]> 531,11932 379x616 pos=absolute op=0.11 z=0
+            <div> 531,11932 379x616 pos=absolute bgi=url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256") size=158.5px auto rep=repeat
+          <div [Image]> 531,11933 379x616 pos=absolute flex(column,gap=32,jc=center,ai=flex-start) bdf=blur(8px) z=0 mask=linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.337) 23%, rgb(0, 0, 0) 100%)
+            <div> 531,11933 379x616 pos=absolute
+              <img> 531,11933 379x616 ovf=clip img=EjjMfIOD2VOCLAocX0BnlSyZsqY.png fit=cover alt=""
+      <div [Pricing Card 3]> 941,11933 379x616
+        <div [Desktop General]> 941,11933 379x616 flex(column,gap=32,jc=center,ai=flex-start) bg=rgba(0, 0, 0, 0.4) ::after-border=2px dashed rgba(255, 255, 255, 0.2) inset=0px bdf=blur(8px)
+          <div [Content]> 941,11933 379x505 flex(column,gap=32,jc=flex-start,ai=flex-start)
+            <div [Top Content]> 941,11933 379x187 flex(row,gap=32,jc=flex-start,ai=center)
+              <div [Price Title]> 941,11933 379x187 flex(column,gap=16,jc=flex-start,ai=flex-start) pad=24 24 0
+                <div [Content]> 965,11957 94x48 flex(column,gap=8,jc=flex-start,ai=flex-start)
+                  <div [Price]> 965,11957 94x48 flex(row,gap=0,jc=flex-end,ai=flex-end)
+                    <div [Symbol]> 965,11957 23x48 flex(column,gap=normal,jc=flex-start,ai=normal)
+                      <h4> 965,11957 23x48 "$" [Clash Grotesk Variable Variable Bold 40px/48px w700 ls=-1.6px rgb(255, 255, 255) start]
+                    <div [Price]> 988,11957 71x48 flex(column,gap=normal,jc=flex-start,ai=normal)
+                      <h4> 988,11957 71x48 "399" [Clash Grotesk Variable Variable Bold 40px/48px w700 ls=-1.6px rgb(255, 255, 255) start]
+                <div [Title & Details]> 965,12021 331x99 flex(column,gap=8,jc=flex-start,ai=flex-start)
+                  <div [Title]> 965,12021 331x24 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 965,12021 331x24 "VIP PASS" [Be Vietnam Pro 20px/24px w400 ls=normal rgb(255, 255, 255) left]
+                  <div [Details]> 965,12053 331x67 flex(column,gap=normal,jc=flex-start,ai=normal)
+                    <p> 965,12053 331x67 "The ultimate experience with exclusive access, premium networking, direct interaction, and reserved privileges." [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.6) left]
+            <div [Divider]> 941,12152 379x25 flex(row,gap=0,jc=center,ai=center) z=1
+              <div [Cut]> 941,12152 14x25 bg=rgb(0, 0, 0) ::after-border=2px dashed rgba(255, 255, 255, 0.14) inset=0px rad=20 0 0 20 tf=matrix(-1, 0, 0, -1, 0, 0) ovf=clip
+              <div [Divider]> 955,12164 351x2 ::after-border=2px dashed rgba(255, 255, 255, 0.14) inset=0px 0px -2px ovf=clip
+              <div [Cut]> 1306,12152 14x25 bg=rgb(0, 0, 0) ::after-border=2px dashed rgba(255, 255, 255, 0.2) inset=0px rad=20 0 0 20 ovf=clip
+            <div [Bottom Content]> 941,12209 379x229 flex(column,gap=20,jc=flex-start,ai=flex-start) pad=0 24
+              <div [Text]> 965,12249 331x25 flex(column,gap=normal,jc=flex-start,ai=normal) op=0 tf=matrix(1, 0, 0, 1, 0, 40)
+                <p> 965,12249 331x25 "What's included:" [Be Vietnam Pro 18px/25.2px w400 ls=-0.4px rgba(255, 255, 255, 0.6) start]
+              <div [Features Points ]> 965,12254 331x184 flex(row,gap=0,jc=flex-start,ai=flex-start)
+                <div [List]> 965,12254 331x184 flex(column,gap=16,jc=flex-start,ai=flex-start)
+                  <div [Features Point 1]> 965,12254 331x24
+                    <div [Desktop]> 965,12254 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 965,12254 24x24
+                        <div> 965,12254 24x24
+                          <svg> 965,12254 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 1001,12255 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 1001,12255 295x22 "Everything in Pro" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.7) left]
+                  <div [Features Point 2]> 965,12294 331x24
+                    <div [Desktop]> 965,12294 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 965,12294 24x24
+                        <div> 965,12294 24x24
+                          <svg> 965,12294 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 1001,12295 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 1001,12295 295x22 "VIP lounge access" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.7) left]
+                  <div [Features Point 3]> 965,12334 331x24
+                    <div [Desktop]> 965,12334 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 965,12334 24x24
+                        <div> 965,12334 24x24
+                          <svg> 965,12334 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 1001,12335 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 1001,12335 295x22 "Speaker meet & greet" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.7) left]
+                  <div [Features Point 4]> 965,12374 331x24
+                    <div [Desktop]> 965,12374 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 965,12374 24x24
+                        <div> 965,12374 24x24
+                          <svg> 965,12374 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 1001,12375 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 1001,12375 295x22 "Front row seating" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.7) left]
+                  <div [Features Point 5]> 965,12414 331x24
+                    <div [Desktop]> 965,12414 331x24 flex(row,gap=12,jc=flex-start,ai=center)
+                      <div [Check]> 965,12414 24x24
+                        <div> 965,12414 24x24
+                          <svg> 965,12414 24x24 ovf=hidden svg viewBox=null fill=rgb(0, 0, 0) color=rgb(0, 0, 0)
+                      <div [Title]> 1001,12415 295x22 flex(column,gap=normal,jc=flex-start,ai=normal)
+                        <p> 1001,12415 295x22 "Premium swag & perks" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgba(255, 255, 255, 0.7) left]
+          <div [Button]> 941,12470 379x78 flex(column,gap=10,jc=flex-start,ai=center) pad=0 24 24
+            <div> 965,12470 331x54
+              <a [Filled]> 965,12470 331x54 flex(row,gap=14,jc=center,ai=center) pad=16 24 bg=rgb(10, 28, 10) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px shadow=rgba(32, 179, 147, 0.73) 0px 0px 8px 4px inset ovf=clip ptr href=null target=
+                <figure [Noise]> 965,12470 331x54 pos=absolute op=0.11 z=0 ptr
+                  <div> 965,12470 331x54 pos=absolute bgi=url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256") size=158.5px auto rep=repeat ptr
+                <div> 1064,12486 133x22 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 1064,12486 133x22 ptr "Secure Your Spot" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(69, 255, 134) center]

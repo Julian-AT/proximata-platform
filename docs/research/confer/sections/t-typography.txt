@@ -1,0 +1,58 @@
+== Hero Container y=0 h=768 pad=0px 0px 60px
+   h1 Clash Grotesk 38px/45.6px ls=normal x=259 w=506 "The Premier In-Person AI"
+   p Clash Grotesk Variable 16px/19.2px ls=1.6px x=242 w=540 "DATE"
+   p Be Vietnam Pro 16px/19.2px ls=normal x=242 w=540 "18th November 2026"
+== About Container y=768 h=810 pad=100px 0px
+   span Inter Display 16px/22.4px ls=0.96px x=477 w=72 "ABOOUT"
+   span Clash Grotesk 38px/45.6px ls=normal x=315 w=76 "Why"
+   span Be Vietnam Pro 32px/38.4px ls=-1.2px x=224 w=65 "First"
+== Ticker Strip Container y=1578 h=94 pad=12px 0px
+   h3 Clash Grotesk Variable 58px/69.6px ls=normal x=49 w=258 "FOUNDER"
+== Video y=1671 h=537 pad=0px
+== Learn Container y=2208 h=1484 pad=100px 60px
+   span Inter Display 16px/22.4px ls=0.96px x=479 w=67 "LEAARN"
+   span Clash Grotesk 38px/45.6px ls=normal x=353 w=98 "Three"
+   h5 Clash Grotesk Variable 22px/26.4px ls=normal x=84 w=253 "Get to Know AI"
+   p Be Vietnam Pro 16px/22.4px ls=normal x=84 w=253 "The First AI Summit is t"
+== Speakers Container y=3692 h=954 pad=100px 0px
+   span Inter Display 16px/22.4px ls=0.96px x=469 w=88 "SPEAKERS"
+   span Clash Grotesk 38px/45.6px ls=normal x=333 w=62 "The"
+   h6 Clash Grotesk Variable 19px/22.8px ls=normal x=64 w=271 "Reggie Watts"
+   p Be Vietnam Pro 16px/22.4px ls=normal x=64 w=271 "Chief AI Officer, Nexa"
+   p Be Vietnam Pro 16px/19.2px ls=normal x=100 w=206 "Speakers"
+== Agenda Container y=4647 h=3427 pad=100px
+   span Inter Display 16px/22.4px ls=0.96px x=478 w=70 "AGENDA"
+   span Clash Grotesk 38px/45.6px ls=normal x=337 w=124 "Explore"
+   h4 Clash Grotesk Variable 26px/31.2px ls=normal x=116 w=68 "Day : 1"
+   p Be Vietnam Pro 16px/22.4px ls=normal x=213 w=163 "Foundations & Vision"
+   h5 Clash Grotesk Variable 22px/26.4px ls=normal x=298 w=540 "Opening Remarks"
+   p Be Vietnam Pro 16px/22.4px ls=normal x=298 w=540 "A warm welcome from the "
+   p Be Vietnam Pro 16px/19.2px ls=normal x=394 w=146 "Arjun Mehta"
+== Sponsors Container y=8074 h=474 pad=100px 0px
+   span Inter Display 16px/22.4px ls=0.96px x=466 w=93 "SPONSORS"
+   span Clash Grotesk 38px/45.6px ls=normal x=325 w=62 "The"
+== Gallery Container y=8548 h=767 pad=100px 0px
+   span Inter Display 16px/22.4px ls=0.96px x=470 w=86 "GALLLERY"
+   span Clash Grotesk 38px/45.6px ls=normal x=346 w=156 "Moments"
+== FAQ Container y=9314 h=900 pad=100px
+   span Inter Display 16px/22.4px ls=0.96px x=491 w=45 "FAAQ"
+   span Clash Grotesk 38px/45.6px ls=normal x=318 w=87 "FAQs"
+   p Be Vietnam Pro 16px/19.2px ls=normal x=136 w=712 "What is this AI conferen"
+== Journal Highlights y=10214 h=1336 pad=100px
+   span Inter Display 16px/22.4px ls=0.96px x=478 w=70 "BLOOGS"
+   span Clash Grotesk 38px/45.6px ls=normal x=416 w=85 "Ideas"
+   p Be Vietnam Pro 16px/22.4px ls=normal x=124 w=352 "Perspectives"
+   a Clash Grotesk Variable 19px/22.8px ls=normal x=124 w=322 "The Human Signals Behind"
+   p Be Vietnam Pro 16px/22.4px ls=normal x=124 w=352 "The most useful AI conve"
+== Tablet y=11550 h=1615 pad=100px 0px
+   span Inter Display 16px/22.4px ls=0.96px x=481 w=65 "PASSES"
+   span Clash Grotesk 38px/45.6px ls=normal x=333 w=68 "Pick"
+   h4 Clash Grotesk Variable 32px/38.4px ls=-1.28px x=124 w=18 "$"
+   p Be Vietnam Pro 16px/19.2px ls=normal x=124 w=348 "GENERAL PASS"
+   p Be Vietnam Pro 16px/22.4px ls=normal x=124 w=348 "Access to all main stage"
+   p Be Vietnam Pro 16px/22.4px ls=normal x=160 w=312 "Access to all keynotes"
+   p Be Vietnam Pro 16px/22.4px ls=normal x=231 w=133 "Secure Your Spot"
+   p Be Vietnam Pro 16px/22.4px ls=-0.4px x=552 w=348 "What's included:"
+== Tablet y=13165 h=578 pad=40px 0px 0px
+   h6 Clash Grotesk Variable 19px/22.8px ls=normal x=24 w=425 "San Francisco’s premier "
+   p Be Vietnam Pro 14px/21px ls=-0.42px x=811 w=40 "About"

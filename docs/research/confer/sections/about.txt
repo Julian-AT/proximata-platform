@@ -1,0 +1,144 @@
+<section [About Container] #about> 0,900 1440x834 flex(row,gap=10,jc=center,ai=center) pad=100 0 ovf=clip z=1
+  <div [Content]> 120,1000 1200x634 flex(column,gap=56,jc=center,ai=center) pad=0 40
+    <div> 0,320 0x0
+      <div #about-tag> 627,1000 187x22
+        <div [Tag]> 627,1000 187x22 flex(row,gap=10,jc=center,ai=center)
+          <figure [Pattern]> 627,1001 55x20 ovf=clip
+            <div> 627,1001 55x20 pos=absolute
+              <img> 627,1001 55x20 ovf=clip img=GY5GLhNlPMo1EpaduJk0nuQJ6xU.png fit=contain alt=""
+          <div> 692,1000 59x22
+            <p> 692,1000 59x22 "ABOUT" [Inter Display 16px/22.4px w500 ls=0.96px rgb(69, 255, 134) left]
+          <figure [Pattern]> 760,1001 53x20 ovf=clip
+            <div> 760,1001 53x20 pos=absolute
+              <img> 760,1001 53x20 ovf=clip img=ot4ExbWeGPVzYrtOfK5g6NrJQ5o.png fit=contain alt=""
+    <div [Title + Description]> 160,1078 1120x555 flex(column,gap=56,jc=center,ai=center)
+      <div [Title] #about-title> 160,1078 1120x115 flex(column,gap=10,jc=center,ai=center) ovf=clip
+        <div> 440,1078 560x115 flex(column,gap=normal,jc=flex-start,ai=normal)
+          <h2> 440,1078 560x115
+            <span> 471,1078 96x58 filter=blur(0px) "Why" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+            <span> 576,1078 68x58 filter=blur(0px) "the" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+            <span> 653,1078 94x58 filter=blur(0px) "First" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+            <span> 756,1078 41x58 filter=blur(0px) "AI" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+            <span> 806,1078 163x58 filter=blur(0px) "Summit" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+            <span> 457,1136 164x58 filter=blur(0px) "Belongs" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+            <span> 630,1136 52x58 filter=blur(0px) "on" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+            <span> 690,1136 98x58 filter=blur(0px) "Your" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+            <span> 797,1136 186x58 filter=blur(0px) "Calendar" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+      <div> 0,320 0x0
+        <figure [Image 1]> 98,1027 361x462 pos=absolute tf=matrix(0.99863, -0.052336, 0.052336, 0.99863, 0, 0) ovf=clip z=1 mask=linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%)
+          <div> 98,1027 361x462 pos=absolute
+            <img> 98,1027 361x462 ovf=clip img=CPs6trZafLfrHLmtW8d4w8dK2cg.png fit=contain alt="First AI Summit event moment"
+      <div> 0,320 0x0
+        <figure [Image 2]> 1021,1044 348x428 pos=absolute tf=matrix(0.990268, 0.139173, -0.139173, 0.990268, 0, 0) ovf=clip z=1 mask=linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 86%)
+          <div> 1021,1044 348x428 pos=absolute
+            <img> 1021,1044 348x428 ovf=clip img=bHuonY8MsO7NfNUsz1mS2DIH7m0.png fit=contain alt="First AI Summit audience gathering"
+      <div [Text Animation]> 390,1250 660x384
+        <div> 0,320 0x0
+          <p> 390,1250 660x384
+            <span> 432,1249 65x40 op=0.15 "First" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 497,1249 6x40
+            <span> 503,1249 29x40 op=0.15 "AI" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 532,1249 6x40
+            <span> 539,1249 111x40 op=0.15 "Summit" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 649,1249 6x40
+            <span> 655,1249 90x40 op=0.15 "brings" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 746,1249 6x40
+            <span> 752,1249 127x40 op=0.15 "together" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 879,1249 6x40
+            <span> 885,1249 123x40 op=0.15 "builders," [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 1008,1249 6x40
+            <span> 439,1287 122x40 op=0.15 "thinkers," [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 562,1287 6x40
+            <span> 568,1287 56x40 op=0.15 "and" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 624,1287 6x40
+            <span> 630,1287 126x40 op=0.15 "pioneers" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 756,1287 6x40
+            <span> 762,1287 115x40 op=0.15 "shaping" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 877,1287 6x40
+            <span> 883,1287 48x40 op=0.15 "the" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 931,1287 6x40
+            <span> 937,1287 63x40 op=0.15 "next" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 1001,1287 6x40
+            <span> 414,1325 116x40 op=0.15 "chapter" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 530,1325 6x40
+            <span> 536,1325 31x40 op=0.15 "of" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 566,1325 6x40
+            <span> 573,1325 121x40 op=0.15 "artificial" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 693,1325 6x40
+            <span> 699,1325 173x40 op=0.15 "intelligence." [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 872,1325 6x40
+            <span> 879,1325 93x40 op=0.15 "Spend" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 972,1325 6x40
+            <span> 978,1325 48x40 op=0.15 "the" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 1026,1325 6x40
+            <span> 488,1364 56x40 op=0.15 "day" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 544,1364 6x40
+            <span> 550,1364 64x40 op=0.15 "with" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 614,1364 6x40
+            <span> 620,1364 128x40 op=0.15 "founders" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 747,1364 6x40
+            <span> 754,1364 139x40 op=0.15 "decoding" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 892,1364 6x40
+            <span> 898,1364 54x40 op=0.15 "real" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 952,1364 6x40
+            <span> 403,1402 220x40 op=0.15 "breakthroughs," [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 623,1402 6x40
+            <span> 629,1402 141x40 op=0.15 "engineers" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 770,1402 6x40
+            <span> 776,1402 108x40 op=0.15 "sharing" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 884,1402 6x40
+            <span> 890,1402 147x40 op=0.15 "hard-won" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 1037,1402 6x40
+            <span> 393,1441 115x40 op=0.15 "lessons," [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 508,1441 6x40
+            <span> 514,1441 56x40 op=0.15 "and" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 570,1441 6x40
+            <span> 577,1441 123x40 op=0.15 "creators" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 699,1441 6x40
+            <span> 705,1441 113x40 op=0.15 "pushing" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 818,1441 6x40
+            <span> 824,1441 95x40 op=0.15 "what’s" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 920,1441 6x40
+            <span> 926,1441 121x40 op=0.15 "possible" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 1047,1441 6x40
+            <span> 418,1479 64x40 op=0.15 "with" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 482,1479 6x40
+            <span> 488,1479 125x40 op=0.15 "machine" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 613,1479 6x40
+            <span> 619,1479 173x40 op=0.15 "intelligence." [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 792,1479 6x40
+            <span> 798,1479 74x40 op=0.15 "From" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 872,1479 6x40
+            <span> 879,1479 143x40 op=0.15 "hands-on" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 1022,1479 6x40
+            <span> 421,1517 99x40 op=0.15 "demos" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 520,1517 6x40
+            <span> 526,1517 31x40 op=0.15 "to" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 558,1517 6x40
+            <span> 564,1517 101x40 op=0.15 "candid" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 665,1517 6x40
+            <span> 671,1517 81x40 op=0.15 "panel" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 752,1517 6x40
+            <span> 758,1517 78x40 op=0.15 "talks," [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 836,1517 6x40
+            <span> 842,1517 52x40 op=0.15 "this" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 895,1517 6x40
+            <span> 901,1517 22x40 op=0.15 "is" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 923,1517 6x40
+            <span> 929,1517 90x40 op=0.15 "where" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 1019,1517 6x40
+            <span> 421,1556 79x40 op=0.15 "ideas" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 500,1556 6x40
+            <span> 506,1556 58x40 op=0.15 "turn" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 564,1556 6x40
+            <span> 570,1556 55x40 op=0.15 "into" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 625,1556 6x40
+            <span> 631,1556 173x40 op=0.15 "momentum." [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 804,1556 6x40
+            <span> 811,1556 88x40 op=0.15 "Come" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 899,1556 6x40
+            <span> 905,1556 114x40 op=0.15 "curious," [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 1019,1556 6x40
+            <span> 617,1594 78x40 op=0.15 "leave" [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]
+            <span> 695,1594 6x40
+            <span> 701,1594 122x40 op=0.15 "inspired." [Be Vietnam Pro 32px/38.4px w400 ls=-1.2px rgb(255, 255, 255) center]

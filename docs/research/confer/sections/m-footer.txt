@@ -1,0 +1,79 @@
+<footer [Phone]> 0,15388 390x642 flex(column,gap=10,jc=center,ai=center) pad=40 28 0 bgi=linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%) size=auto rep=repeat ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px bdf=blur(10px) ovf=clip
+  <div [Content]> 28,15428 334x602 flex(column,gap=12,jc=center,ai=center) ovf=clip
+    <div> 28,15428 334x67 mask=linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)
+      <div> 28,15428 334x67 pos=absolute ovf=hidden
+        <div> 28,15428 334x67 pos=absolute
+          <canvas> 28,15428 334x67 ovf=clip
+    <div [Newsletter + Links Wrapper]> 28,15506 334x436 flex(column,gap=28,jc=center,ai=flex-start) pad=0 0 40 ovf=clip
+      <div [Newsletter + Links]> 28,15506 334x396 flex(column,gap=56,jc=center,ai=flex-start)
+        <div [Title + Form]> 28,15506 334x194 flex(column,gap=48,jc=center,ai=flex-start)
+          <div> 28,15506 334x58 flex(column,gap=normal,jc=flex-start,ai=normal)
+            <h6> 28,15506 334x58 "San Francisco’s premier AI summit for founders, builders, and industry expert level leaders." [Clash Grotesk Variable Variable Bold 16px/19.2px w700 ls=normal rgb(255, 255, 255) left]
+          <div [Newsletter Form]> 28,15612 334x88 flex(column,gap=16,jc=center,ai=flex-start)
+            <div> 28,15612 334x22 flex(column,gap=normal,jc=flex-start,ai=normal) op=0.9
+              <p> 28,15612 334x22 "Get summit updates" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(255, 255, 255) left]
+            <form> 28,15651 343x50 flex(row,gap=20,jc=flex-start,ai=flex-start) ovf=hidden
+              <label> 28,15651 199x50 flex(column,gap=10,jc=flex-start,ai=flex-start)
+                <div> 28,15651 199x50 flex(row,gap=normal,jc=normal,ai=center) pad=12 bg=rgb(17, 17, 20) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=hidden
+                  <input> 40,15663 175x26 ovf=clip
+              <div> 247,15651 124x49
+                <button [Default]> 247,15651 124x49 flex(row,gap=0,jc=center,ai=center) pad=16 24 bg=rgb(10, 28, 10) ::after-border=1px solid rgba(255, 255, 255, 0.2) inset=0px shadow=rgba(32, 179, 147, 0.73) 0px 0px 8px 4px inset ptr
+                  <div> 281,15664 55x22 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                    <p> 281,15664 55x22 ptr "Submit" [Be Vietnam Pro 16px/22.4px w400 ls=normal rgb(69, 255, 134) center]
+        <div [Links]> 28,15756 334x146 flex(row,gap=32,jc=flex-start,ai=flex-start) ovf=clip
+          <nav [Navigation Links]> 28,15756 151x146 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+            <div> 28,15756 72x29
+              <a [Light Desktop]> 28,15756 72x29 flex(column,gap=10,jc=center,ai=center) pad=4 16 ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px ovf=hidden ptr href=./about target=
+                <div [BG]> 28,15756 72x29 pos=absolute bg=rgba(0, 0, 0, 0.25) ovf=hidden ptr
+                <div [Label]> 44,15760 40x21 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 44,15760 40x21 ptr "About" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+                <div [BG 2]> 27,15785 74x45 pos=absolute bg=rgb(69, 255, 134) ovf=hidden z=1 ptr
+                <div [Label]> 43,15796 40x21 pos=absolute flex(column,gap=normal,jc=flex-start,ai=normal) tf=matrix(1, 0, 0, 1, -20.0859, 0) z=1 ptr
+                  <p> 43,15796 40x21 ptr "About" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+            <div> 28,15795 92x29
+              <a [Light Desktop]> 28,15795 92x29 flex(column,gap=10,jc=center,ai=center) pad=4 16 ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px ovf=hidden ptr href=./speakers target=
+                <div [BG]> 28,15795 92x29 pos=absolute bg=rgba(0, 0, 0, 0.25) ovf=hidden ptr
+                <div [Label]> 44,15799 60x21 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 44,15799 60x21 ptr "Speakers" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+                <div [BG 2]> 27,15824 94x45 pos=absolute bg=rgb(69, 255, 134) ovf=hidden z=1 ptr
+                <div [Label]> 43,15835 60x21 pos=absolute flex(column,gap=normal,jc=flex-start,ai=normal) tf=matrix(1, 0, 0, 1, -30.0156, 0) z=1 ptr
+                  <p> 43,15835 60x21 ptr "Speakers" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+            <div> 28,15834 72x29
+              <a [Light Desktop]> 28,15834 72x29 flex(column,gap=10,jc=center,ai=center) pad=4 16 ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px ovf=hidden ptr href=./venue target=
+                <div [BG]> 28,15834 72x29 pos=absolute bg=rgba(0, 0, 0, 0.25) ovf=hidden ptr
+                <div [Label]> 44,15838 40x21 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 44,15838 40x21 ptr "Venue" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+                <div [BG 2]> 27,15863 74x45 pos=absolute bg=rgb(69, 255, 134) ovf=hidden z=1 ptr
+                <div [Label]> 43,15874 40x21 pos=absolute flex(column,gap=normal,jc=flex-start,ai=normal) tf=matrix(1, 0, 0, 1, -19.9375, 0) z=1 ptr
+                  <p> 43,15874 40x21 ptr "Venue" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+            <div> 28,15873 86x29
+              <a [Light Desktop]> 28,15873 86x29 flex(column,gap=10,jc=center,ai=center) pad=4 16 ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px ovf=hidden ptr href=./contact target=
+                <div [BG]> 28,15873 86x29 pos=absolute bg=rgba(0, 0, 0, 0.25) ovf=hidden ptr
+                <div [Label]> 44,15877 54x21 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 44,15877 54x21 ptr "Contact" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+                <div [BG 2]> 27,15902 88x45 pos=absolute bg=rgb(69, 255, 134) ovf=hidden z=1 ptr
+                <div [Label]> 43,15913 54x21 pos=absolute flex(column,gap=normal,jc=flex-start,ai=normal) tf=matrix(1, 0, 0, 1, -26.9609, 0) z=1 ptr
+                  <p> 43,15913 54x21 ptr "Contact" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+          <div [Other Pages Links]> 211,15756 151x68 flex(column,gap=10,jc=center,ai=flex-start) ovf=clip
+            <div> 211,15756 81x29
+              <a [Light Desktop]> 211,15756 81x29 flex(column,gap=10,jc=center,ai=center) pad=4 16 ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px ovf=hidden ptr href=./policies target=
+                <div [BG]> 211,15756 81x29 pos=absolute bg=rgba(0, 0, 0, 0.25) ovf=hidden ptr
+                <div [Label]> 227,15760 49x21 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 227,15760 49x21 ptr "Policies" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+                <div [BG 2]> 210,15785 83x45 pos=absolute bg=rgb(69, 255, 134) ovf=hidden z=1 ptr
+                <div [Label]> 226,15796 49x21 pos=absolute flex(column,gap=normal,jc=flex-start,ai=normal) tf=matrix(1, 0, 0, 1, -24.7031, 0) z=1 ptr
+                  <p> 226,15796 49x21 ptr "Policies" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+            <div> 211,15795 60x29
+              <a [Light Desktop]> 211,15795 60x29 flex(column,gap=10,jc=center,ai=center) pad=4 16 ::after-border=1px dashed rgba(255, 255, 255, 0.14) inset=0px ovf=hidden ptr href=./venue target=
+                <div [BG]> 211,15795 60x29 pos=absolute bg=rgba(0, 0, 0, 0.25) ovf=hidden ptr
+                <div [Label]> 227,15799 28x21 flex(column,gap=normal,jc=flex-start,ai=normal) ptr
+                  <p> 227,15799 28x21 ptr "404" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+                <div [BG 2]> 210,15824 62x45 pos=absolute bg=rgb(69, 255, 134) ovf=hidden z=1 ptr
+                <div [Label]> 226,15835 28x21 pos=absolute flex(column,gap=normal,jc=flex-start,ai=normal) tf=matrix(1, 0, 0, 1, -14.0469, 0) z=1 ptr
+                  <p> 226,15835 28x21 ptr "404" [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) start]
+    <div [Rights Wrapper]> 28,15954 334x76 flex(column,gap=28,jc=center,ai=flex-start) pad=14 0 ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+      <div [Rights]> 28,15968 334x48 flex(column,gap=6,jc=center,ai=flex-start)
+        <div> 28,15968 334x21 flex(column,gap=normal,jc=flex-start,ai=normal)
+          <p> 28,15968 334x21 "© 2026 First AI Summit. All rights reserved." [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) center]
+        <div> 28,15995 334x21 flex(column,gap=normal,jc=flex-start,ai=normal)
+          <p> 28,15995 334x21 "Built for the future of AI." [Be Vietnam Pro 14px/21px w400 ls=-0.42px rgba(255, 255, 255, 0.6) center]

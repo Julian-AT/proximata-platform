@@ -1,0 +1,41 @@
+<section [Sponsors Container]> 0,8433 1440x498 flex(row,gap=10,jc=center,ai=center) pad=100 0 ovf=clip
+  <div [Content]> 0,8533 1440x298 flex(column,gap=56,jc=center,ai=center) ovf=clip z=1
+    <div [Tag + Title]> 0,8533 1440x154 flex(column,gap=16,jc=center,ai=center) ovf=clip z=1
+      <div> 0,320 0x0
+        <div> 609,8533 221x22
+          <div [Tag]> 609,8533 221x22 flex(row,gap=10,jc=center,ai=center)
+            <figure [Pattern]> 609,8534 55x20 ovf=clip
+              <div> 609,8534 55x20 pos=absolute
+                <img> 609,8534 55x20 ovf=clip img=GY5GLhNlPMo1EpaduJk0nuQJ6xU.png fit=contain alt=""
+            <div> 674,8533 93x22
+              <p> 674,8533 93x22
+                <span> 674,8534 93x20 op=0 "SPONSORS" [Inter Display 16px/22.4px w500 ls=0.96px rgb(69, 255, 134) left]
+            <figure [Pattern]> 778,8534 53x20 ovf=clip
+              <div> 778,8534 53x20 pos=absolute
+                <img> 778,8534 53x20 ovf=clip img=ot4ExbWeGPVzYrtOfK5g6NrJQ5o.png fit=contain alt=""
+      <div> 440,8581 560x115 flex(column,gap=normal,jc=flex-start,ai=normal) op=0 tf=matrix(1, 0, 0, 1, 0, 10)
+        <h2> 440,8581 560x115
+          <span> 484,8591 78x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "The" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 571,8591 183x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "Partners" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 763,8591 194x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "Powering" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 524,8649 68x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "the" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 600,8649 94x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "First" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 703,8649 41x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "AI" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+          <span> 753,8649 163x58 op=0.001 tf=matrix(1, 0, 0, 1, 0, 10) filter=blur(10px) "Summit" [Clash Grotesk 48px/57.6px w400 ls=normal rgb(255, 255, 255) center]
+    <div> 0,8742 1440x88 pos=sticky flex(row,gap=28,jc=flex-start,ai=center) ovf=clip z=1
+      <ul> -28,8742 1440x88 flex(row,gap=28,jc=flex-start,ai=center) op=0 tf=matrix(1, 0, 0, 1, -28, 0)
+        <li> -28,8742 254x88
+          <div [OpenAI Partner]> -28,8742 254x88 flex(row,gap=0,jc=center,ai=center) pad=28 24 bg=rgba(0, 0, 0, 0.25) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <div [OpenAI]> 83,8770 32x32 bg=rgba(255, 255, 255, 0.82) mask=url("data:image/svg+xml,<svg display=\"block\" role=\"presentation\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 14.745 6.547 C 15.10
+        <li> 254,8742 254x88
+          <div [NVIDIA Partner]> 254,8742 254x88 flex(row,gap=0,jc=center,ai=center) pad=28 24 bg=rgba(0, 0, 0, 0.25) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <div [NVIDIA]> 365,8770 32x32 bg=rgba(255, 255, 255, 0.82) mask=url("data:image/svg+xml,<svg display=\"block\" role=\"presentation\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 5.965 3.157 L 5.965 
+        <li> 536,8742 254x88
+          <div [Microsoft Partner]> 536,8742 254x88 flex(row,gap=0,jc=center,ai=center) pad=28 24 bg=rgba(0, 0, 0, 0.25) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <div [Microsoft]> 647,8770 32x32 bg=rgba(255, 255, 255, 0.82) mask=url("data:image/svg+xml,<svg display=\"block\" role=\"presentation\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 0 0 L 0 6.655 L 6.65
+        <li> 818,8742 254x88
+          <div [IBM Partner]> 818,8742 254x88 flex(row,gap=0,jc=center,ai=center) pad=28 24 bg=rgba(0, 0, 0, 0.25) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <div [IBM]> 908,8770 73x32 bg=rgba(255, 255, 255, 0.82) mask=url("data:image/svg+xml,<svg display=\"block\" role=\"presentation\" viewBox=\"0 0 32 14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 31.392 11.316 C 31.4
+        <li> 1100,8742 254x88
+          <div [Google Partner]> 1100,8742 254x88 flex(row,gap=0,jc=center,ai=center) pad=28 24 bg=rgba(0, 0, 0, 0.25) ::after-border=1px dashed rgba(255, 255, 255, 0.2) inset=0px ovf=clip
+            <div [Google]> 1211,8770 32x32 bg=rgba(255, 255, 255, 0.82) mask=url("data:image/svg+xml,<svg display=\"block\" role=\"presentation\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 0.821 11.083 C 0.299

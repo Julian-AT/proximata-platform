@@ -11,18 +11,39 @@ const HANDS_SRC = "/sites/proximata/images/tracks/hands.png";
 /** Shifts the 4×-wide picture so panel `i` shows its quarter `i`. */
 const QUARTER_OFFSET = ["left-0", "-left-full", "-left-[200%]", "-left-[300%]"] as const;
 
-/** The inner picture is 4 panels wide: phone 1 column, tablet 2, desktop 4. */
-const HANDS_SIZES =
-  "(min-width: 1400px) 1200px, (min-width: 1200px) calc(100vw - 200px), (min-width: 810px) calc(200vw - 280px), calc(400vw - 256px)";
+/** Desktop: the inner picture spans the four cards of the settled row. */
+const HANDS_SIZES = "(min-width: 1400px) 1200px, calc(100vw - 200px)";
 
-/** Brand-blue panel showing quarter `quarter` of the hands picture, so the
- * four cards side by side form the whole image (replaces the template's photo). */
+/** Below desktop: the banner's inner picture is twice the banner width. */
+const BANNER_SIZES = "(min-width: 810px) calc(200vw - 240px), calc(200vw - 128px)";
+
+const panel = "relative overflow-clip bg-brand shadow-[inset_0_0_24px_rgba(200,241,255,0.18)]";
+
+/**
+ * Phone and tablet: the cards stack, so a slice per card would show lone arm
+ * ends. Instead one banner above the cards shows the middle half of the
+ * picture, the two hands reaching with their fingertips about to touch.
+ */
+function HandsBanner() {
+  return (
+    // The middle half of hands.png (1440×535 of 2880×535).
+    <div aria-hidden="true" className={cn(panel, "aspect-[1440/535] w-full desktop:hidden")}>
+      <span className="noise-overlay opacity-[0.11]" />
+      <div className="absolute inset-y-0 -left-1/2 w-[200%]">
+        <Image src={HANDS_SRC} alt="" fill sizes={BANNER_SIZES} className="object-cover" />
+      </div>
+    </div>
+  );
+}
+
+/** Desktop: brand-blue panel showing quarter `quarter` of the hands picture,
+ * so the four settled cards form the whole image (replaces the template's photo). */
 function TrackVisual({ track, quarter }: { track: Track; quarter: number }) {
   return (
     <div
       aria-hidden="true"
       // One quarter of hands.png (2880×535), so neighbouring panels line up.
-      className="relative aspect-[720/535] w-full shrink-0 overflow-clip bg-brand shadow-[inset_0_0_24px_rgba(200,241,255,0.18)]"
+      className={cn(panel, "hidden aspect-[720/535] w-full shrink-0 desktop:block")}
     >
       <span className="noise-overlay opacity-[0.11]" />
       <div className={cn("absolute inset-y-0 w-[400%]", QUARTER_OFFSET[quarter])}>
@@ -45,9 +66,21 @@ function TrackCard({
   className?: string;
 }) {
   return (
-    <article className={cn("frame flex flex-col gap-5 overflow-clip bg-ink pb-6", className)}>
+    <article
+      className={cn(
+        "frame flex flex-col gap-5 overflow-clip bg-ink py-5 desktop:pt-0 desktop:pb-6",
+        className,
+      )}
+    >
       <TrackVisual track={track} quarter={quarter} />
-      <div className="flex w-full flex-1 flex-col gap-[10px] px-6">
+      <div className="flex w-full flex-1 flex-col gap-[10px] px-5 desktop:px-6">
+        {/* On desktop the number sits on the picture panel instead. */}
+        <span
+          aria-hidden="true"
+          className="font-mono text-[12px] leading-[1.4] font-medium text-ice desktop:hidden"
+        >
+          {track.number}
+        </span>
         <h3 className="text-balance font-display text-[18px] leading-[1.2] text-white tablet:text-[22px] desktop:text-[24px]">
           <span className="sr-only">Track {track.number}: </span>
           {track.name}
@@ -77,6 +110,8 @@ export function Learn() {
           <SectionTitle text="Four Tracks. Real Challenges." className="w-full max-w-[720px] text-balance" />
         </div>
 
+        <HandsBanner />
+
         {/* Phone: one column. Tablet: 2×2 grid (rows dissolve via `contents`).
             Desktop: one sticky row per track; each shows its card in its own
             column so the rows settle into a single row of four as they stack.
@@ -85,7 +120,7 @@ export function Learn() {
             the settled row shows the hands picture as one image. A spacer
             after the last row keeps the settled row pinned for a while before
             the section scrolls on, so there is time to read it. */}
-        <div className="grid w-full grid-cols-1 gap-14 tablet:grid-cols-2 tablet:gap-5 desktop:flex desktop:flex-col desktop:gap-14">
+        <div className="-mt-10 grid w-full grid-cols-1 gap-3 tablet:grid-cols-2 tablet:gap-4 desktop:mt-0 desktop:flex desktop:flex-col desktop:gap-14">
           {tracks.map((track, row) => (
             <div
               key={track.number}

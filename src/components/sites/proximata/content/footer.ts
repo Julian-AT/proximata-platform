@@ -3,9 +3,6 @@ import { event, LUMA_URL, proximataLinks } from "./event";
 const { venue } = event;
 
 export const footerCopy = {
-  tagline: event.tagline,
-  about:
-    "Proximata is a Vienna-based builder space and tech agency focusing on the most ambitious technical challenges and enabling top innovation in the EU.",
   ctaNote: "Registration requires host approval. Places are limited.",
   register: { label: "Register on Luma", href: LUMA_URL },
   follow: { label: "Follow Proximata on Luma", href: proximataLinks.luma },

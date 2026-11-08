@@ -47,15 +47,6 @@ export function Footer() {
                 <CoopLockup />
               </div>
 
-              <div className="flex max-w-[460px] flex-col gap-3">
-                <p className="font-display text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
-                  {footerCopy.tagline}
-                </p>
-                <p className="font-mono text-[14px] leading-[1.5] font-medium text-soft tablet:text-[16px]">
-                  {footerCopy.about}
-                </p>
-              </div>
-
               <div className="flex w-full flex-col items-start gap-4">
                 <p className="font-mono text-[14px] leading-[1.5] text-balance text-soft">
                   {footerCopy.ctaNote}

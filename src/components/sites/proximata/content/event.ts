@@ -32,7 +32,6 @@ export const event = {
   teamSize: "2–4 people",
   contactEmail: "contact@proximata.io",
   registerUrl: LUMA_URL,
-  tagline: "A new generation of innovation.",
   description:
     "Proximata's flagship 24-hour hackathon in Vienna, in cooperation with START Vienna. Real cases from real companies, four tracks, one weekend to build something truly disruptive.",
 } as const;

@@ -35,7 +35,7 @@ function TrackVisual({ track }: { track: Track }) {
 
 function TrackCard({ track, className }: { track: Track; className?: string }) {
   return (
-    <article className={cn("dashed-frame flex flex-col gap-5 overflow-clip bg-ink pb-6", className)}>
+    <article className={cn("frame flex flex-col gap-5 overflow-clip bg-ink pb-6", className)}>
       <TrackVisual track={track} />
       <div className="flex w-full flex-1 flex-col gap-[10px] px-6">
         <h3 className="text-balance font-display text-[18px] leading-[1.2] text-white tablet:text-[22px] desktop:text-[24px]">

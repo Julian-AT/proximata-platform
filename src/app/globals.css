@@ -164,15 +164,15 @@
   --breakpoint-desktop: 1200px;
 }
 
-/* Framer-style dashed border drawn as an overlay so it never affects layout. */
-@utility dashed-frame {
+/* Hairline border drawn as an overlay so it never affects layout. */
+@utility frame {
   position: relative;
   &::after {
     content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
-    border: var(--frame-width, 1px) dashed var(--frame-color, rgb(255 255 255 / 0.2));
+    border: var(--frame-width, 1px) solid var(--frame-color, rgb(255 255 255 / 0.1));
     transition: border-color 0.3s var(--ease-framer);
     z-index: 2;
   }

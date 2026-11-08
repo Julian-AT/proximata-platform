@@ -5,7 +5,7 @@ import { SectionTag } from "../section-tag";
 import { MentorsCarousel } from "./speakers-carousel";
 
 /**
- * Every metric cell has a dashed left rule; the cell closing a row also gets a
+ * Every metric cell has a hairline left rule; the cell closing a row also gets a
  * right rule (every second cell in the phone 2×2 grid, the last one otherwise).
  */
 function rightRule(index: number) {
@@ -34,7 +34,7 @@ export function Speakers() {
           <Reveal
             key={metric.label}
             className={cn(
-              "flex min-w-0 flex-col items-center gap-[10px] overflow-clip border-l border-dashed border-rule tablet:flex-1",
+              "flex min-w-0 flex-col items-center gap-[10px] overflow-clip border-l border-rule tablet:flex-1",
               rightRule(i),
             )}
           >

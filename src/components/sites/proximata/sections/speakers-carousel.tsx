@@ -44,7 +44,7 @@ function SocialLink({ href, label, children }: { href: string; label: string; ch
 }
 
 /**
- * Carousel slot with the template's hover state: the dashed frame turns ice
+ * Carousel slot with the template's hover state: the hairline frame turns ice
  * while the card is hovered or holds focus.
  */
 function CardShell({ index, children }: { index: number; children: (active: boolean) => ReactNode }) {
@@ -61,7 +61,7 @@ function CardShell({ index, children }: { index: number; children: (active: bool
           if (!event.currentTarget.contains(event.relatedTarget)) setActive(false);
         }}
         className={cn(
-          "dashed-frame flex flex-col items-center overflow-clip data-[active=true]:[--frame-color:rgb(200_241_255)]",
+          "frame flex flex-col items-center overflow-clip data-[active=true]:[--frame-color:rgb(200_241_255)]",
           CARD_WIDTHS[index % CARD_WIDTHS.length],
         )}
       >

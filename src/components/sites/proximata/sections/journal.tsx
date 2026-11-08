@@ -4,10 +4,10 @@ import { ButtonLink } from "../framer-button";
 import { SectionTitle } from "../motion";
 import { SectionTag } from "../section-tag";
 
-/** Black card with a dashed outline: cover image, then category, title link, and excerpt. */
+/** Card with a hairline outline: cover image, then category, title link, and excerpt. */
 function ArticleCard({ article }: { article: Article }) {
   return (
-    <article className="dashed-frame flex h-full flex-col items-start gap-4 overflow-clip bg-ink pb-6">
+    <article className="frame flex h-full flex-col items-start gap-4 overflow-clip bg-ink pb-6">
       <figure className="relative h-[220px] w-full shrink-0 overflow-clip">
         <Image
           src={article.image}

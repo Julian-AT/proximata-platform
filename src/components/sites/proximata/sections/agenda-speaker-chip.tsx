@@ -21,7 +21,7 @@ export function AgendaSpeakerChip({ speaker }: { speaker: AgendaSpeaker }) {
       </div>
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 border border-dashed border-white/20"
+        className="pointer-events-none absolute inset-0 border border-white/10"
       />
     </div>
   );

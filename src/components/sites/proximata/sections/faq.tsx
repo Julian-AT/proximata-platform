@@ -16,7 +16,7 @@ export function Faq() {
           <SectionTitle text={faqCopy.title} className="w-full [&_h2]:text-balance" />
         </div>
 
-        <div className="flex w-full max-w-[800px] flex-col items-center justify-center gap-[21px] overflow-clip">
+        <div className="flex w-full max-w-[800px] flex-col items-center justify-center overflow-clip border-t border-rule">
           {faqs.map((entry) => (
             <FaqItem key={entry.question} entry={entry} />
           ))}

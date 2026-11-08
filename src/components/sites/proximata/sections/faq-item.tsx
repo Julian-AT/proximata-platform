@@ -52,7 +52,7 @@ export function FaqItem({ entry }: { entry: FaqEntry }) {
       <div
         data-open={open}
         onClick={toggle}
-        className="group dashed-frame flex w-full cursor-pointer flex-col items-start overflow-clip bg-ink/80 px-6 py-4 [--frame-color:rgb(255_255_255/0.2)]"
+        className="group flex w-full cursor-pointer flex-col items-start overflow-clip border-b border-rule py-5"
       >
         <div className="flex w-full items-start gap-[10px]">
           <div className="flex min-h-[30px] min-w-0 flex-1 flex-col justify-center">

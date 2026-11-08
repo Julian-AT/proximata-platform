@@ -7,9 +7,9 @@ import { Reveal } from "../motion";
 import { NavPill } from "../nav-pill";
 import { SCROLL_TARGETS } from "../scroll-targets";
 
-/** Dashed rule along the top edge, drawn as an overlay so it takes no space. */
+/** Hairline along the top edge, drawn as an overlay so it takes no space. */
 const topRule =
-  "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:border-t before:border-dashed before:border-white/20";
+  "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:border-t before:border-white/10";
 
 const rightsText =
   "w-full text-center font-mono text-[14px] leading-[1.5] text-soft tablet:flex-1";

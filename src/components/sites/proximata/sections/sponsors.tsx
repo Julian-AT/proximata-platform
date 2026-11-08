@@ -19,7 +19,7 @@ function PartnerTile({ partner }: { partner: Partner }) {
   const { logo } = partner;
 
   return (
-    <div className="dashed-frame relative flex h-[156px] w-max min-w-[300px] flex-col items-center justify-center gap-3 overflow-clip bg-ink/25 px-6 pt-6 pb-5 [--frame-color:rgb(255_255_255/0.2)]">
+    <div className="frame relative flex h-[156px] w-max min-w-[300px] flex-col items-center justify-center gap-3 overflow-clip bg-ink/25 px-6 pt-6 pb-5 [--frame-color:rgb(255_255_255/0.2)]">
       {partner.role ? (
         <p className={`absolute top-3 left-4 ${roleLabel}`}>{partner.role}</p>
       ) : null}
@@ -53,7 +53,7 @@ const logoSlot = "flex h-11 items-center justify-center tablet:h-[60px]";
 function CoopLockupPanel() {
   return (
     <Reveal className="w-full max-w-[640px] px-8 tablet:px-0">
-      <div className="dashed-frame flex w-full items-start justify-center gap-5 bg-ink/40 px-5 py-8 [--frame-color:rgb(255_255_255/0.14)] tablet:gap-12 tablet:px-12 tablet:py-9">
+      <div className="frame flex w-full items-start justify-center gap-5 bg-ink/40 px-5 py-8 [--frame-color:rgb(255_255_255/0.14)] tablet:gap-12 tablet:px-12 tablet:py-9">
         <figure className="m-0 flex flex-col items-center gap-4">
           <span className={logoSlot}>
             {/* 128px on phones stays above the brand book's 120px minimum. */}

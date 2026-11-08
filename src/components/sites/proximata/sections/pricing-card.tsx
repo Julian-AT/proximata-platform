@@ -72,10 +72,10 @@ export function PricingCard({ prize }: { prize: Prize }) {
   return (
     <motion.div
       className={cn(
-        "dashed-frame relative flex h-full flex-col items-start justify-center gap-8 backdrop-blur-[8px] [--frame-width:2px]",
+        "frame relative flex h-full flex-col items-start justify-center gap-8 backdrop-blur-[8px] [--frame-width:2px]",
         featured
-          ? "bg-brand shadow-[inset_0_0_24px_6px_rgba(200,241,255,0.22)] [--frame-color:rgb(200_241_255/0.35)]"
-          : "bg-ink/40 [--frame-color:rgb(255_255_255/0.2)]",
+          ? "bg-brand shadow-[inset_0_0_24px_6px_rgba(200,241,255,0.22)] [--frame-color:rgb(200_241_255/0.3)]"
+          : "bg-ink/40 [--frame-color:rgb(255_255_255/0.12)]",
       )}
       initial={{ opacity: 0, y: 40 }}
       whileInView={SHOWN}

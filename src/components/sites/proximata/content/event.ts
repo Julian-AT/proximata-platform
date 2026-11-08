@@ -43,9 +43,3 @@ export const proximataLinks = {
   linkedin: "https://linkedin.com/company/proximata",
   luma: "https://luma.com/proximata",
 } as const;
-
-/** "48.1761°N 16.3953°E" style label for HUD micro-copy. */
-export function coordinatesLabel(digits = 4) {
-  const { latitude, longitude } = event.venue;
-  return `${latitude.toFixed(digits)}°N ${longitude.toFixed(digits)}°E`;
-}

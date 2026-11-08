@@ -198,9 +198,3 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-
-@keyframes hud-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}

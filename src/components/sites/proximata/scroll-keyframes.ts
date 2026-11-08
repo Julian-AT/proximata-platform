@@ -10,20 +10,15 @@ export type Keyframe = { target: string; threshold: number; value: number };
  * previous keyframe to the next while the target element crosses the line at
  * `threshold` × viewport height (from its top edge to its bottom edge).
  */
-export function useScrollKeyframes(
-  initial: number,
-  keyframes: Keyframe[],
-  responsive?: (width: number) => Keyframe[],
-): MotionValue<number> {
+export function useScrollKeyframes(initial: number, keyframes: Keyframe[]): MotionValue<number> {
   const value = useMotionValue(initial);
   const keyframesRef = useRef(keyframes);
-  const responsiveRef = useRef(responsive);
 
   useEffect(() => {
     let frame = 0;
     const update = () => {
       frame = 0;
-      const frames = responsiveRef.current?.(window.innerWidth) ?? keyframesRef.current;
+      const frames = keyframesRef.current;
       let current = initial;
       let previous = initial;
       for (const { target, threshold, value: next } of frames) {

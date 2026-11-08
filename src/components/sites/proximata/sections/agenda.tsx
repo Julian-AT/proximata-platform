@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { agenda, agendaSection, type AgendaDay, type AgendaSession } from "../content/agenda";
-import { DottedRingIcon } from "../icons";
 import { Reveal, SectionTitle } from "../motion";
 import { SectionTag } from "../section-tag";
 import { AgendaSpeakerChip } from "./agenda-speaker-chip";
@@ -45,24 +44,20 @@ function SessionTime({ session }: { session: AgendaSession }) {
 }
 
 /**
- * One timetable row. Every row of a day pins at the same offset, so each
- * later row slides over the one before it.
+ * One timetable row, divided from the one above by a hairline. Every row of a
+ * day pins at the same offset, so each later row slides over the one before it.
  */
-function SessionRow({ session, last }: { session: AgendaSession; last: boolean }) {
+function SessionRow({ session }: { session: AgendaSession }) {
   const speakers = session.speakers ?? [];
   const beside = speakers.length > 0 && session.layout !== "column";
 
   return (
-    <article className="sticky top-[200px] z-[1] flex w-full flex-col overflow-clip bg-ink tablet:flex-row tablet:items-start tablet:pl-6">
-      <div className="flex w-full shrink-0 flex-col py-3 pl-6 tablet:w-[150px] tablet:pt-6 tablet:pb-0 tablet:pl-0 desktop:w-[226px]">
+    <article className="sticky top-[200px] z-[1] flex w-full flex-col overflow-clip border-t border-rule bg-ink tablet:flex-row tablet:items-start">
+      <div className="flex w-full shrink-0 flex-col pt-6 tablet:w-[150px] desktop:w-[226px]">
         <SessionTime session={session} />
       </div>
 
-      <div className="relative flex w-full min-w-0 flex-col p-6 tablet:flex-1 tablet:self-stretch">
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 border-t border-dashed border-rule tablet:border-t-0 tablet:border-l"
-        />
+      <div className="relative flex w-full min-w-0 flex-col pt-3 pb-8 tablet:flex-1 tablet:pt-6">
         <div className={cn("flex w-full flex-col items-start gap-8", beside && "desktop:flex-row")}>
           <div className={cn("flex w-full flex-col gap-[10px]", beside && "desktop:min-w-0 desktop:flex-1")}>
             <h4
@@ -93,15 +88,6 @@ function SessionRow({ session, last }: { session: AgendaSession; last: boolean }
           ) : null}
         </div>
       </div>
-
-      <span
-        aria-hidden="true"
-        className={cn(
-          "pointer-events-none absolute inset-0 z-[2] border border-dashed",
-          // The source's very last row uses the lighter card border.
-          last ? "border-white/20" : "border-rule",
-        )}
-      />
     </article>
   );
 }
@@ -123,27 +109,20 @@ export function Agenda() {
         </div>
 
         <div className="flex w-full flex-col gap-[72px]">
-          {agenda.map((day, d) => (
+          {agenda.map((day) => (
             <div key={day.date} className="flex w-full flex-col">
               <DayPill day={day} />
-              <div className="flex w-full flex-col gap-6">
-                {day.sessions.map((session, s) => (
-                  <SessionRow
-                    key={session.title}
-                    session={session}
-                    last={d === agenda.length - 1 && s === day.sessions.length - 1}
-                  />
+              <div className="mt-6 flex w-full flex-col border-b border-rule">
+                {day.sessions.map((session) => (
+                  <SessionRow key={session.title} session={session} />
                 ))}
               </div>
             </div>
           ))}
         </div>
 
-        <Reveal className="flex items-center justify-center gap-3">
-          <DottedRingIcon className="size-5 shrink-0 text-ice motion-safe:animate-[hud-spin_8s_linear_infinite]" />
-          <p className="font-mono text-[16px] leading-[1.4] font-medium text-soft">
-            {agendaSection.note}
-          </p>
+        <Reveal>
+          <p className="text-center font-mono text-[14px] leading-[1.4] text-soft">{agendaSection.note}</p>
         </Reveal>
       </div>
     </section>

@@ -100,15 +100,21 @@ export function ChevronIcon({
 }
 
 // ---------------------------------------------------------------------------
-// Proximata HUD glyphs (brand book, section 07 "Visual elements").
+// Proximata brand glyphs.
 // ---------------------------------------------------------------------------
 
-/** "[+]" bracketed plus. */
-export function BracketPlusIcon(props: IconProps) {
+/**
+ * Plus cut from the Proximata mark: the long blade of the mark's upper-right
+ * cross (tapered neck, slanted tip), mirrored across the diagonal and turned
+ * 180° for the other two arms, so it keeps the mark's diagonal lean.
+ */
+export function ProximataPlusIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 34 20" fill="none" aria-hidden="true" {...props}>
-      <path d="M6 2H2v16h4M28 2h4v16h-4" stroke="currentColor" strokeWidth={2.2} />
-      <path d="M17 5v10M12 10h10" stroke="currentColor" strokeWidth={2.6} />
+    <svg viewBox="-400 -400 800 800" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M-27.5 -43L-54 -116L-54 -287L54 -386L54 -116L27.5 -43Z" />
+      <path d="M43 27.5L116 54L287 54L386 -54L116 -54L43 -27.5Z" />
+      <path d="M27.5 43L54 116L54 287L-54 386L-54 116L-27.5 43Z" />
+      <path d="M-43 -27.5L-116 -54L-287 -54L-386 54L-116 54L-43 27.5Z" />
     </svg>
   );
 }

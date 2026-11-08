@@ -4,29 +4,23 @@ import { AnimatePresence, motion } from "motion/react";
 import { useId, useState } from "react";
 import { cn } from "@/lib/utils";
 import type { FaqEntry } from "../content/faq";
+import { ProximataPlusIcon } from "../icons";
 import { EASE_OUT, Reveal } from "../motion";
 
 /** Variant change tween used by the source accordion (0.4s ease-out). */
 const TOGGLE = { duration: 0.4, ease: EASE_OUT } as const;
 
-/**
- * The brand's "[+]" glyph (same geometry as BracketPlusIcon) with only the
- * plus turning 45° when open, so it reads as "[×]" while the brackets stay put.
- */
+/** The plus from the Proximata mark; it turns 45° into an × while open. */
 function ToggleGlyph({ open }: { open: boolean }) {
   return (
-    <svg viewBox="0 0 34 20" fill="none" aria-hidden="true" className="h-5 w-[34px]">
-      <path d="M6 2H2v16h4M28 2h4v16h-4" stroke="currentColor" strokeWidth={2.2} />
-      <motion.path
-        d="M17 5v10M12 10h10"
-        stroke="currentColor"
-        strokeWidth={2.6}
-        style={{ transformBox: "fill-box", transformOrigin: "center" }}
-        initial={false}
-        animate={{ rotate: open ? 45 : 0 }}
-        transition={TOGGLE}
-      />
-    </svg>
+    <motion.span
+      className="block size-5"
+      initial={false}
+      animate={{ rotate: open ? 45 : 0 }}
+      transition={TOGGLE}
+    >
+      <ProximataPlusIcon className="size-full" />
+    </motion.span>
   );
 }
 
@@ -86,9 +80,7 @@ export function FaqItem({ entry }: { entry: FaqEntry }) {
                       <ul className="m-0 flex flex-col gap-[6px] p-0">
                         {points.map((point) => (
                           <li key={point} className="flex gap-3">
-                            <span aria-hidden="true" className="shrink-0 text-ice/60">
-                              +
-                            </span>
+                            <ProximataPlusIcon className="mt-[5px] size-3 shrink-0 text-ice/60" />
                             <span className="text-pretty">{point}</span>
                           </li>
                         ))}

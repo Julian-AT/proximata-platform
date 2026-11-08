@@ -1,9 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { coordinatesLabel, event } from "./content/event";
 import { Countdown } from "./event-clock";
-import { CrosshairIcon } from "./icons";
 import { EASE_OUT } from "./motion";
 import { useScrollKeyframes } from "./scroll-keyframes";
 import { SCROLL_TARGETS } from "./scroll-targets";
@@ -12,15 +10,11 @@ const pill =
   "pointer-events-auto rounded-none bg-ink/70 px-3 py-2 text-ice/80 backdrop-blur-[6px] frame [--frame-color:rgb(200_241_255/0.14)]";
 
 /**
- * Fixed HUD micro-copy in the bottom corners (desktop only; on narrower
- * screens the stacked hero puts its buttons in the corners' way): venue
- * coordinates while the hero is in view, and a persistent countdown.
- * Two elements per composition, per the brand book; hidden over the footer.
+ * Fixed countdown in the bottom-right corner (desktop only; on narrower
+ * screens the stacked hero puts its buttons in the corner's way). Hidden
+ * over the footer.
  */
 export function Hud() {
-  const coordinatesOpacity = useScrollKeyframes(1, [
-    { target: SCROLL_TARGETS.aboutTitle, threshold: 1, value: 0 },
-  ]);
   // Fade the whole HUD out as the footer (with its own Register CTA) scrolls in,
   // so the countdown never covers the footer's bottom row.
   const hudOpacity = useScrollKeyframes(1, [
@@ -33,22 +27,11 @@ export function Hud() {
       className="pointer-events-none fixed inset-x-0 bottom-5 z-[6] hidden px-16 desktop:block"
     >
       <motion.div
-        className="flex items-end justify-between"
+        className="flex justify-end"
         initial={{ opacity: 0.001, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6, ease: EASE_OUT }}
       >
-        <motion.a
-          href={event.venue.mapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ opacity: coordinatesOpacity }}
-          className={`${pill} flex items-center gap-2 font-mono text-[11px] leading-none font-medium uppercase`}
-          aria-label={`${event.venue.name} on the map`}
-        >
-          <CrosshairIcon className="size-3 text-ice/70" />
-          <span>{`${event.poweredBy.short} // ${coordinatesLabel()}`}</span>
-        </motion.a>
         <Countdown className={pill} />
       </motion.div>
     </motion.div>

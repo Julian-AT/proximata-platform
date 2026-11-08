@@ -84,13 +84,13 @@ export function Hero() {
 
       <div
         id={SCROLL_TARGETS.heroInfo}
-        className="relative flex w-full justify-center desktop:after:pointer-events-none desktop:after:absolute desktop:after:inset-0 desktop:after:border desktop:after:border-white/10 desktop:after:content-['']"
+        className="relative flex w-full justify-center"
       >
         <ul className="flex w-full flex-col items-center gap-3 tablet:w-[940px] tablet:gap-5 desktop:flex-row desktop:justify-center">
           {facts.map((fact, i) => (
             <motion.li
               key={fact.label}
-              className="frame w-full bg-ink/80 p-4 backdrop-blur-[5px] [--frame-color:rgb(255_255_255/0.1)] desktop:w-[300px] desktop:after:hidden"
+              className="frame w-full bg-ink/80 p-4 backdrop-blur-[5px] [--frame-color:rgb(255_255_255/0.1)] desktop:w-[300px]"
               initial={cardEntrance[i]}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.4, ease: EASE_FRAMER }}

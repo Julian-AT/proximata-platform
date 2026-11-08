@@ -19,8 +19,8 @@ export const footerCopy = {
 /** Image credits for the About cut-outs (licence terms in assets/source/about/CREDITS.md). */
 export const imageCredits = [
   {
-    label: "Pallas Athene photo: Viennpixelart, CC BY-SA 4.0, cropped and recoloured",
-    href: "https://commons.wikimedia.org/wiki/File:Pallas_Athene-Kopf,Vienna.jpg",
+    label: "Pallas Athene photo: Manfred Werner (Tsui), CC BY-SA 3.0, cropped, mirrored and recoloured",
+    href: "https://commons.wikimedia.org/wiki/File:Pallas_Athene_Parlament_Wien_2015_nachts_a.jpg",
   },
   {
     label: "Robonaut 2 photo: NASA / Robert Markowitz",

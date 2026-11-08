@@ -82,7 +82,9 @@ export function Learn() {
             column so the rows settle into a single row of four as they stack.
             The invisible copies in the other columns give every row the same
             height, so the settled cards line up. The columns have no gap, so
-            the settled row shows the hands picture as one image. */}
+            the settled row shows the hands picture as one image. A spacer
+            after the last row keeps the settled row pinned for a while before
+            the section scrolls on, so there is time to read it. */}
         <div className="grid w-full grid-cols-1 gap-14 tablet:grid-cols-2 tablet:gap-5 desktop:flex desktop:flex-col desktop:gap-14">
           {tracks.map((track, row) => (
             <div
@@ -103,6 +105,7 @@ export function Learn() {
               )}
             </div>
           ))}
+          <div aria-hidden="true" className="hidden desktop:block desktop:h-[70vh]" />
         </div>
       </div>
     </section>

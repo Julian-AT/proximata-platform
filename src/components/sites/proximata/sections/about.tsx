@@ -7,6 +7,7 @@ import {
   useTransform,
   type MotionValue,
 } from "motion/react";
+import Image from "next/image";
 import { useRef } from "react";
 import { about } from "../content/about";
 import { SectionTitle } from "../motion";
@@ -62,6 +63,43 @@ function ScrollRevealParagraph() {
   );
 }
 
+/**
+ * Classical meets machine, either side of the title (the template's statue
+ * head and helmet): Pallas Athene from Vienna's Parliament on the left, NASA's
+ * Robonaut 2 on the right, both as ice cut-outs (scripts/build-about-art.py)
+ * that fade out towards the paragraph. Credits are in the footer.
+ */
+function AboutFigures() {
+  return (
+    <>
+      <figure
+        aria-hidden="true"
+        className="pointer-events-none absolute top-[-179px] left-[-86px] z-[1] h-[265px] w-[204px] -rotate-3 overflow-clip [mask-image:linear-gradient(#000_0%,transparent_80%)] tablet:top-[-60px] tablet:left-[-55px] tablet:h-[284px] tablet:w-[216px] desktop:top-[-43px] desktop:left-[-51px] desktop:h-[445px] desktop:w-[338px]"
+      >
+        <Image
+          src="/sites/proximata/images/about/athena.png"
+          alt=""
+          fill
+          sizes="(min-width: 1200px) 338px, (min-width: 810px) 216px, 204px"
+          className="object-contain"
+        />
+      </figure>
+      <figure
+        aria-hidden="true"
+        className="pointer-events-none absolute top-[-166px] right-[-76px] z-[1] h-[210px] w-[159px] rotate-[8deg] overflow-clip [mask-image:linear-gradient(#000_0%,transparent_86%)] tablet:top-[-53px] tablet:right-[-48px] tablet:h-[252px] tablet:w-[191px] desktop:top-[-16px] desktop:right-[-63px] desktop:h-[391px] desktop:w-[296px]"
+      >
+        <Image
+          src="/sites/proximata/images/about/robot.png"
+          alt=""
+          fill
+          sizes="(min-width: 1200px) 296px, (min-width: 810px) 191px, 159px"
+          className="object-contain"
+        />
+      </figure>
+    </>
+  );
+}
+
 export function About() {
   return (
     <section
@@ -79,6 +117,8 @@ export function About() {
           >
             <SectionTitle text={about.title} className="w-full max-w-[720px] [&_h2]:text-balance" />
           </div>
+
+          <AboutFigures />
 
           <div className="relative z-[2] w-full max-w-[720px]">
             <ScrollRevealParagraph />

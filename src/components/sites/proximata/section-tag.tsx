@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import { BracketPlusIcon, DotRuleIcon } from "./icons";
 import { EASE_OUT } from "./motion";
 
 const CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:,.<>?~";
@@ -78,7 +77,7 @@ function ScrambleText({ text }: { text: string }) {
   return (
     <p
       ref={ref}
-      className="m-0 whitespace-nowrap font-mono text-[16px] leading-[1.4] font-medium text-soft select-none"
+      className="m-0 whitespace-nowrap font-mono text-[14px] leading-[1.4] font-medium text-soft uppercase select-none"
     >
       <span className="sr-only">{text}</span>
       {centerSegments(text, scrambled, progress).map(([run, kind], i) => {
@@ -106,30 +105,16 @@ function ScrambleText({ text }: { text: string }) {
   );
 }
 
-/**
- * Section label in the brand's HUD style: a bracketed plus, the scrambled
- * label, and a dot-terminated rule, e.g. "[+] ABOUT •——•".
- */
+/** Section label: a small scrambled mono caption, e.g. "ABOUT". */
 export function SectionTag({ label }: { label: string }) {
   return (
-    <div className="flex items-center justify-center gap-[10px]">
-      <motion.span
-        className="block text-ice"
-        initial={{ opacity: 0.001, x: -10 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, ease: EASE_OUT }}
-      >
-        <BracketPlusIcon className="h-[14px] w-6" />
-      </motion.span>
+    <motion.div
+      className="flex items-center justify-center"
+      initial={{ opacity: 0.001, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: EASE_OUT }}
+    >
       <ScrambleText text={label} />
-      <motion.span
-        className="block text-ice/60"
-        initial={{ opacity: 0.001, x: 10 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, ease: EASE_OUT }}
-      >
-        <DotRuleIcon className="h-[6px] w-12" />
-      </motion.span>
-    </div>
+    </motion.div>
   );
 }

@@ -98,8 +98,9 @@ function GlobeLayer() {
  * The Proximata mark at supergraphic scale (as on the brand book's Logo page),
  * one copy just off each edge so only its inner column shows: the lower-left
  * cross's vertical blades on the left, the upper-right cross's on the right.
- * They take the template pillars' place, fade out before the content and
- * slide outward once the About title arrives.
+ * Drawn as thin ice outlines, like a blueprint layer. They take the template
+ * pillars' place, fade out before the content and slide outward once the
+ * About title arrives.
  *
  * Geometry, with the mark 135vh tall (1 source px = 135/1024 vh):
  * - left: source x 340 (desktop) / 395 (tablet) sits on the left edge, and the
@@ -126,12 +127,12 @@ function MarkEdge({ side }: { side: "left" | "right" }) {
         style={{ x }}
         className={
           left
-            ? "absolute -top-[23.85vh] -left-[52.08vh] h-[135vh] w-[133.95vh] fill-brand desktop:-left-[44.82vh]"
-            : "absolute -top-[13.15vh] -right-[51.55vh] h-[135vh] w-[133.95vh] fill-brand desktop:-right-[44.3vh]"
+            ? "absolute -top-[23.85vh] -left-[52.08vh] h-[135vh] w-[133.95vh] fill-none stroke-ice/45 desktop:-left-[44.82vh]"
+            : "absolute -top-[13.15vh] -right-[51.55vh] h-[135vh] w-[133.95vh] fill-none stroke-ice/45 desktop:-right-[44.3vh]"
         }
       >
         {MARK_PATHS.map((d) => (
-          <path key={d} d={d} />
+          <path key={d} d={d} strokeWidth={1} vectorEffect="non-scaling-stroke" />
         ))}
       </motion.svg>
     </motion.div>
@@ -143,7 +144,7 @@ function MarkEdges() {
   return (
     <div
       aria-hidden="true"
-      className="absolute inset-0 hidden opacity-80 [mask-image:linear-gradient(90deg,#000_0,#000_7vw,transparent_15vw,transparent_85vw,#000_93vw,#000_100%)] tablet:block"
+      className="absolute inset-0 hidden [mask-image:linear-gradient(90deg,#000_0,#000_7vw,transparent_15vw,transparent_85vw,#000_93vw,#000_100%)] tablet:block"
     >
       <MarkEdge side="left" />
       <MarkEdge side="right" />

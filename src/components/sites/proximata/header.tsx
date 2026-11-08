@@ -80,7 +80,7 @@ function MenuIcon({ open, onToggle }: { open: boolean; onToggle: () => void }) {
 function DesktopNav() {
   return (
     <nav aria-label="Primary" className="flex justify-center px-10 pb-2">
-      <div className="relative flex items-center justify-center gap-[52px] bg-ink/70 px-4 py-[10px] backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-t-0 after:border-white/10 after:content-['']">
+      <div className="relative flex items-center justify-center gap-[52px] bg-ink/70 px-4 py-[10px] backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-t-0 after:border-dashed after:border-white/[0.14] after:content-['']">
         <Logo width={150} />
         <ul className="flex items-center gap-2">
           {navLinks.map((link) => (
@@ -109,7 +109,7 @@ function CompactNav({ variant }: { variant: "phone" | "tablet" }) {
     >
       <div
         className={cn(
-          "relative flex bg-ink/70 backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-white/10 after:content-['']",
+          "relative flex bg-ink/70 backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-dashed after:border-white/[0.14] after:content-['']",
           open
             ? "w-full flex-col items-start gap-6 px-4 pt-[10px] pb-4"
             : variant === "phone"

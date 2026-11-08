@@ -172,10 +172,15 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    border: var(--frame-width, 1px) solid var(--frame-color, rgb(255 255 255 / 0.1));
+    border: var(--frame-width, 1px) var(--frame-style, solid) var(--frame-color, rgb(255 255 255 / 0.1));
     transition: border-color 0.3s var(--ease-framer);
     z-index: 2;
   }
+}
+
+/* The template's dashed frame, kept for the chrome: header, hero facts, buttons, HUD. */
+@utility frame-dashed {
+  --frame-style: dashed;
 }
 
 /* Tiled grain texture used on buttons, ticker strip, and the pro card. */

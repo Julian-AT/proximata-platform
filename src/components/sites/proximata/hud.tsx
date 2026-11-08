@@ -7,7 +7,7 @@ import { useScrollKeyframes } from "./scroll-keyframes";
 import { SCROLL_TARGETS } from "./scroll-targets";
 
 const pill =
-  "pointer-events-auto rounded-none bg-ink/70 px-3 py-2 text-ice/80 backdrop-blur-[6px] frame [--frame-color:rgb(200_241_255/0.14)]";
+  "pointer-events-auto rounded-none bg-ink/70 px-3 py-2 text-ice/80 backdrop-blur-[6px] frame frame-dashed [--frame-color:rgb(200_241_255/0.18)]";
 
 /**
  * Fixed countdown in the bottom-right corner (desktop only; on narrower

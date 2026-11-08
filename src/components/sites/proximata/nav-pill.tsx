@@ -28,7 +28,7 @@ export function NavPill({
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={cn(
-        "frame group/pill relative inline-flex overflow-hidden px-4 py-1 [--frame-color:rgb(255_255_255/0.1)]",
+        "frame frame-dashed group/pill relative inline-flex overflow-hidden px-4 py-1 [--frame-color:rgb(255_255_255/0.14)]",
         className,
       )}
     >

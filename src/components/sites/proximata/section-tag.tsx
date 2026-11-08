@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 import { EASE_OUT } from "./motion";
 
 const CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:,.<>?~";
@@ -105,16 +106,52 @@ function ScrambleText({ text }: { text: string }) {
   );
 }
 
-/** Section label: a small scrambled mono caption, e.g. "ABOUT". */
-export function SectionTag({ label }: { label: string }) {
+/** One horizontal blade of the Proximata mark (neck at the origin, tip towards +x, 340 long). */
+const BLADE = "M0 -27.5L68 -53L340 -54L233 52L68 52L0 27.5Z";
+
+/** Blades along the sprig: start x, length, lean (degrees) and whether it's mirrored. */
+const SPRIG = [
+  { x: 1, length: 20, lean: -18, mirror: false },
+  { x: 16, length: 17, lean: 18, mirror: true },
+  { x: 30, length: 14, lean: -18, mirror: false },
+] as const;
+
+/**
+ * Laurel-like sprig built from blades of the Proximata mark, alternating up
+ * and down and shrinking outwards (replaces the template's laurel leaves).
+ * Drawn pointing right; the left sprig is mirrored.
+ */
+function BladeSprig({ side }: { side: "left" | "right" }) {
   return (
-    <motion.div
-      className="flex items-center justify-center"
-      initial={{ opacity: 0.001, y: 6 }}
-      animate={{ opacity: 1, y: 0 }}
+    <motion.svg
+      viewBox="0 0 50 24"
+      aria-hidden="true"
+      className={cn("block h-6 w-[50px] fill-ice", side === "left" && "-scale-x-100")}
+      initial={{ opacity: 0.001, x: side === "left" ? -10 : 10 }}
+      animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, ease: EASE_OUT }}
     >
+      {SPRIG.map(({ x, length, lean, mirror }) => {
+        const scale = length / 340;
+        return (
+          <path
+            key={x}
+            d={BLADE}
+            transform={`translate(${x} 12) rotate(${lean}) scale(${scale} ${mirror ? -scale : scale})`}
+          />
+        );
+      })}
+    </motion.svg>
+  );
+}
+
+/** Section label: blade sprigs either side of a small scrambled mono caption. */
+export function SectionTag({ label }: { label: string }) {
+  return (
+    <div className="flex items-center justify-center gap-3">
+      <BladeSprig side="left" />
       <ScrambleText text={label} />
-    </motion.div>
+      <BladeSprig side="right" />
+    </div>
   );
 }

@@ -62,12 +62,15 @@ function Perforation({ featured }: { featured: boolean }) {
 }
 
 /**
- * One podium ticket. The featured (1st place) card is a flat brand-blue panel
- * with grain and an ice inset glow, so its copy follows the blue pairing
- * (white + ice); the others sit on translucent ink (white + ice).
+ * One podium ticket, used once prizes are announced. The featured (1st place)
+ * card is a flat brand-blue panel with grain and an ice inset glow, so its copy
+ * follows the blue pairing (white + ice); the others sit on translucent ink
+ * (white + ice). A prize still without details shows the pending line and
+ * skips the perforation and feature list.
  */
 export function PricingCard({ prize }: { prize: Prize }) {
-  const featured = prize.featured;
+  const { featured, details } = prize;
+  const features = details?.features ?? [];
 
   return (
     <motion.div
@@ -101,47 +104,51 @@ export function PricingCard({ prize }: { prize: Prize }) {
               {prize.title}
             </h3>
             <p className={cn("font-mono text-[16px] leading-[1.4]", featured ? "text-ice" : "text-soft")}>
-              {prize.description}
+              {details?.description ?? prizesSection.pending}
             </p>
           </FadeUp>
         </div>
 
-        <Perforation featured={featured} />
+        {features.length > 0 ? (
+          <>
+            <Perforation featured={featured} />
 
-        <div className="flex w-full flex-col items-start gap-5 px-6">
-          <FadeUp y={40} transition={{ duration: 0.7, ease: EASE_OUT }}>
-            <p
-              className={cn(
-                "font-mono text-[16px] leading-[1.4] desktop:text-[18px]",
-                featured ? "text-ice" : "text-soft",
-              )}
-            >
-              {prizesSection.featuresLabel}
-            </p>
-          </FadeUp>
-          <ul className="flex w-full flex-col items-start gap-4">
-            {prize.features.map((feature, i) => (
-              <FadeUp
-                key={feature}
-                as="li"
-                y={40}
-                amount={1}
-                className="flex min-h-6 w-full items-start gap-3"
-                transition={{ delay: 0.05 * i, duration: 0.7, ease: EASE_OUT }}
-              >
-                <CheckIcon className="size-6 shrink-0 text-ice" />
-                <span
+            <div className="flex w-full flex-col items-start gap-5 px-6">
+              <FadeUp y={40} transition={{ duration: 0.7, ease: EASE_OUT }}>
+                <p
                   className={cn(
-                    "font-mono text-[16px] leading-[1.4]",
-                    featured ? "text-white" : "text-white/70",
+                    "font-mono text-[16px] leading-[1.4] desktop:text-[18px]",
+                    featured ? "text-ice" : "text-soft",
                   )}
                 >
-                  {feature}
-                </span>
+                  {prizesSection.featuresLabel}
+                </p>
               </FadeUp>
-            ))}
-          </ul>
-        </div>
+              <ul className="flex w-full flex-col items-start gap-4">
+                {features.map((feature, i) => (
+                  <FadeUp
+                    key={feature}
+                    as="li"
+                    y={40}
+                    amount={1}
+                    className="flex min-h-6 w-full items-start gap-3"
+                    transition={{ delay: 0.05 * i, duration: 0.7, ease: EASE_OUT }}
+                  >
+                    <CheckIcon className="size-6 shrink-0 text-ice" />
+                    <span
+                      className={cn(
+                        "font-mono text-[16px] leading-[1.4]",
+                        featured ? "text-white" : "text-white/70",
+                      )}
+                    >
+                      {feature}
+                    </span>
+                  </FadeUp>
+                ))}
+              </ul>
+            </div>
+          </>
+        ) : null}
       </div>
 
       <div className="relative flex w-full flex-col items-center px-6 pb-6">

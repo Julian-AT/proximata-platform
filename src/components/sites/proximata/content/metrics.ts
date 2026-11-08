@@ -1,8 +1,9 @@
 import { event } from "./event";
 import { tracks } from "./tracks";
 
-// Key figures under the Mentors & Jury carousel. "Builders signed up" is the
-// Luma "going" count at the time of writing; update it before launch.
+// Key figures band in the Mentors section (under the carousel once mentors are
+// announced). "Builders signed up" is the Luma "going" count at the time of
+// writing; update it before launch.
 
 export type Metric = { value: string; label: string };
 

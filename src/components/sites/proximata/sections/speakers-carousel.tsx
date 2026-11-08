@@ -4,16 +4,9 @@ import { animate, motion, useMotionTemplate, useMotionValue } from "motion/react
 import Image from "next/image";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { mentorPlaceholders, mentors, type Mentor, type MentorRole } from "../content/mentors";
-import {
-  ArrowUpRightIcon,
-  ChevronIcon,
-  CrosshairIcon,
-  DottedRingIcon,
-  InstagramIcon,
-  LinkedInIcon,
-} from "../icons";
-import { EASE_FRAMER, Reveal } from "../motion";
+import { mentors, type Mentor } from "../content/mentors";
+import { ArrowUpRightIcon, ChevronIcon, InstagramIcon, LinkedInIcon } from "../icons";
+import { Reveal } from "../motion";
 
 /** Socials bar rests 72px below the photo and springs to 12px above its bottom edge. */
 const SOCIALS_RISE = 84;
@@ -111,56 +104,6 @@ function MentorCard({ mentor, index }: { mentor: Mentor; index: number }) {
   );
 }
 
-/** Unannounced slot: a HUD reticle on a panel instead of a portrait. */
-function PlaceholderCard({ kind, number, index }: { kind: MentorRole; number: number; index: number }) {
-  const code = String(number).padStart(2, "0");
-
-  return (
-    <CardShell index={index}>
-      {(active) => (
-        <>
-          <div aria-hidden="true" className="relative aspect-[319/291.5] w-full overflow-clip bg-panel">
-            <span className="noise-overlay opacity-[0.08]" />
-            <motion.span
-              className="absolute top-1/2 left-1/2 block size-[112px]"
-              style={{ x: "-50%", y: "-50%" }}
-              initial={false}
-              animate={{ rotate: active ? 30 : 0, opacity: active ? 0.75 : 0.4 }}
-              transition={{ duration: 0.6, ease: EASE_FRAMER }}
-            >
-              <DottedRingIcon className="size-full text-ice" />
-            </motion.span>
-            <CrosshairIcon className="absolute top-1/2 left-1/2 size-[184px] -translate-1/2 text-ice/30 [&_path]:[vector-effect:non-scaling-stroke]" />
-          </div>
-          <div className="flex w-full flex-col items-center gap-1 bg-ink/80 p-6 text-center">
-            <p className="font-display text-[16px] leading-[1.2] text-white tablet:text-[19px] desktop:text-[24px]">
-              Announced soon
-            </p>
-            <p className="font-mono text-[14px] leading-[1.4] font-medium text-soft uppercase">
-              <span aria-hidden="true">
-                {`${kind} // ${code}`}
-              </span>
-              <span className="sr-only">
-                {kind} {number}
-              </span>
-            </p>
-          </div>
-        </>
-      )}
-    </CardShell>
-  );
-}
-
-/** Placeholder slots numbered per role: MENTOR // 01–04, JURY // 01–02. */
-function placeholderSlots() {
-  const counts = new Map<MentorRole, number>();
-  return mentorPlaceholders.map(({ kind }) => {
-    const number = (counts.get(kind) ?? 0) + 1;
-    counts.set(kind, number);
-    return { kind, number };
-  });
-}
-
 function ArrowButton({
   direction,
   hidden,
@@ -191,8 +134,9 @@ function ArrowButton({
 
 /**
  * Horizontally scrolling, snap-centred list of mentors and jury with edge
- * fades and paging arrows (Framer "Carousel"). Renders placeholder slots
- * until real people are added to `content/mentors.ts`.
+ * fades and paging arrows (Framer "Carousel"). Lists the people in
+ * `content/mentors.ts`; the Mentors section only mounts it once that list has
+ * entries.
  */
 export function MentorsCarousel() {
   const listRef = useRef<HTMLUListElement>(null);
@@ -244,11 +188,9 @@ export function MentorsCarousel() {
         className="flex w-full snap-x snap-mandatory items-center gap-10 overflow-x-auto overflow-y-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         style={{ maskImage: mask, WebkitMaskImage: mask }}
       >
-        {mentors.length > 0
-          ? mentors.map((mentor, i) => <MentorCard key={mentor.name} mentor={mentor} index={i} />)
-          : placeholderSlots().map((slot, i) => (
-              <PlaceholderCard key={`${slot.kind}-${slot.number}`} {...slot} index={i} />
-            ))}
+        {mentors.map((mentor, i) => (
+          <MentorCard key={mentor.name} mentor={mentor} index={i} />
+        ))}
       </motion.ul>
       <div className="pointer-events-none absolute inset-0 flex items-center justify-between p-[72px]">
         <ArrowButton direction="left" hidden={edges.start} onClick={() => page(-1)} />

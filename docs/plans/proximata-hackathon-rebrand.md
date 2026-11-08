@@ -12,8 +12,8 @@ The pixel clone is tagged `confer-clone-baseline` for reference.
 - Registration on Luma, host approval required. 135 going at time of writing.
 
 ## Brand rules that drive the work
-- **Colours:** ink `#23201E` (body text / dark bg), paper `#F4F7F8` (main light bg), blue `#202D85` (main accent), ice `#C8F1FF` (secondary accent), white, green `#9DE146` (small highlights only), red `#D82434` (signals/icons only).
-- **Approved pairings:** ink bg → white primary + green secondary · blue bg → white + ice · ice bg → blue + black.
+- **Colours:** ink `#23201E` (body text / dark bg), paper `#F4F7F8` (main light bg), blue `#202D85` (main accent), ice `#C8F1FF` (secondary accent), white, red `#D82434` (signals/icons only).
+- **Approved pairings:** ink bg → white primary + soft white / ice secondary (green dropped 2026-11-08) · blue bg → white + ice · ice bg → blue + black.
 - **Type:** Archivo Black for headlines only; JetBrains Mono Regular/Medium for everything else. No loosened letter-spacing, no text strokes, no gradients or outlines on the logo.
 - **Logo:** wordmark ≥ 120×32 px, mark ≥ 40 px; clear space = height of the "o" (wordmark) / one blade (mark); never over busy backgrounds; never rotated, recoloured outside the palette, or split.
 - **Visual language:** HUD / technical micro-elements (`[+]`, crosshairs, dotted rings, status micro-copy). At most two per composition, small, in corners or as a subtle background layer.
@@ -53,6 +53,14 @@ The pixel clone is tagged `confer-clone-baseline` for reference.
 - **START Vienna:** "in cooperation with START Vienna" lockups in the hero and footer, START first among partners, and in the page title / link preview. The nav stays Proximata-only.
 - **Missing content:** on-brand "Announced soon" / "TBA" placeholders for mentors, agenda and prizes; gallery and aftermovie hidden until media exist; Journal kept in code but not rendered. No fictional people or facts from the confer template on the live site.
 - **Implementation plan:** phased task list approved on 2026-11-07 (branch `feat/proximata-hackathon`).
+
+## Decisions (2026-11-08): calmer, cleaner pass
+- **No green:** the organisers dropped the green highlight, overriding the brand book's ink + green pairing. Labels use soft white (white/60); ice is the only accent (small active states, dots, icons); red stays for live signals only.
+- **Hairlines:** solid 1px hairlines replace the template's dashed frames; agenda and FAQ become open rows divided by single lines.
+- **Less decoration:** edge rulers removed, the globe only behind the hero, HUD reduced to the countdown, section tags without glyphs, About without side marks, a slimmer ticker band.
+- **Tracks:** the template's hands touching return, recoloured to ice on brand blue and split across the four track cards so they form one picture when the cards settle.
+- **Placeholders:** hidden or condensed. Mentor cards are hidden until names exist (the stats band stays), prizes become one slim podium with a single Register button, and challenge-partner lines appear only once a partner is set.
+- **Partners:** real logos in white for the public Luma partners plus the sponsors in the organisers' marketing doc (n8n, techbold, Maritime, Rhomberg, Biscuit, EWOR, WU Crypto Club).
 
 ## Still needed from the organisers
 - Logo files as SVG: Proximata wordmark and mark (the brand book only embeds raster versions; tracing them is the fallback).

@@ -53,7 +53,7 @@ export const faqs: readonly FaqEntry[] = [
   },
   {
     question: "Is it in person?",
-    answer: `Yes. We build together at ${venue.name}, ${venue.street}, ${venue.city}, from Friday 13 November, 14:00 to Saturday 14 November, 18:00 (CET). Online participation is only arranged in exceptional cases.`,
+    answer: `Yes. We build together at ${venue.name}, ${venue.street}, ${venue.postcode} ${venue.city}, from Friday 13 November, 14:00 to Saturday 14 November, 18:00 (CET). Online participation is only arranged in exceptional cases.`,
   },
   {
     question: "How do I register?",

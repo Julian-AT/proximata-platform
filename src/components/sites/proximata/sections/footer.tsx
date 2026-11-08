@@ -1,4 +1,4 @@
-import { footerCopy, footerExternalLinks } from "../content/footer";
+import { footerCopy, footerExternalLinks, imageCredits } from "../content/footer";
 import { navLinks } from "../content/navigation";
 import { ButtonLink } from "../framer-button";
 import { CoopLockup, ProximataWordmark } from "../logo";
@@ -125,6 +125,22 @@ export function Footer() {
             <p className={`${rightsText} tablet:text-right`}>{footerCopy.poweredBy}</p>
           </div>
         </div>
+
+        <p className="flex w-full max-w-[1200px] flex-wrap justify-center gap-x-2 pb-6 text-center font-mono text-[11px] leading-[1.5] text-white/35 tablet:justify-start desktop:px-0">
+          {imageCredits.map((credit, i) => (
+            <span key={credit.href}>
+              {i > 0 ? <span aria-hidden="true">· </span> : null}
+              <a
+                href={credit.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-white/15 underline-offset-2 transition-colors hover:text-white/60"
+              >
+                {credit.label}
+              </a>
+            </span>
+          ))}
+        </p>
       </div>
     </footer>
   );

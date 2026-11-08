@@ -20,8 +20,9 @@ export const event = {
   city: "Vienna",
   venue: {
     name: "HOIV – Home of InnoVation",
-    // Postcode intentionally omitted until the organisers confirm 1030 vs 1100.
     street: "Arsenalstraße 11",
+    // Per the venue's own contact page (homeofinnovationx.com/contact).
+    postcode: "1030",
     city: "Vienna",
     country: "Austria",
     latitude: 48.1761,

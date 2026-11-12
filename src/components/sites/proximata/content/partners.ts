@@ -99,12 +99,6 @@ export const partners: readonly Partner[] = [
     logo: { src: `${dir}/wu-crypto-club.png`, width: 432, height: 96, scale: 0.95 },
   },
   {
-    name: "Kicks Vienna",
-    group: "partner",
-    url: "https://kicks-vie.com",
-    logo: { src: `${dir}/kicks-vienna.png`, width: 347, height: 96, scale: 1.05 },
-  },
-  {
     name: "Hackathonhub",
     group: "partner",
     url: "https://hackathonhub.eu",

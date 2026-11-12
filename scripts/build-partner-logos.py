@@ -114,8 +114,6 @@ LOGOS: tuple[Logo, ...] = (
         url="https://cryptoclubvienna.com/wp-content/uploads/2026/02/CCV-2-scaled.png",
         levels=(110, 220),
     ),
-    # No file online; the doc's white horizontal lockup (stick figure + "kicks").
-    Logo("kicks-vienna", doc_image="image11.png"),
     # Icon only; the site sets the name next to it.
     Logo("hackathonhub", url="https://hackathonhub.eu/assets/logo-dark-DSApMUkW.png"),
 )

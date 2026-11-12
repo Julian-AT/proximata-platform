@@ -2,15 +2,21 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 // Logo stand-ins: white rasters extracted from the brand book (see
-// scripts/build-brand-assets.py) and START Vienna's own white navbar logo.
-// Swap the files for SVG originals once the organisers send them.
+// scripts/build-brand-assets.py), START Vienna's own white navbar logo and the
+// flat white HOIV logo from scripts/build-partner-logos.py. Swap the files for
+// SVG originals once the organisers send them.
 const WORDMARK = { src: "/sites/proximata/images/brand/proximata-wordmark.png", w: 865, h: 147 };
 const MARK = { src: "/sites/proximata/images/brand/proximata-mark.png", w: 1016, h: 1024 };
 const START = { src: "/sites/proximata/images/partners/start-vienna-white.png", w: 222, h: 90 };
+const HOIV = { src: "/sites/proximata/images/partners/hoiv.png", w: 302, h: 96 };
 
-type LogoProps = {
-  /** Rendered width in px; height follows the artwork's aspect ratio. */
-  width: number;
+/**
+ * Rendered size in px: give either side and the other follows the artwork's
+ * aspect ratio. Height suits logos that sit side by side at one height.
+ */
+type LogoSize = { width: number; height?: never } | { height: number; width?: never };
+
+type LogoProps = LogoSize & {
   className?: string;
   priority?: boolean;
 };
@@ -18,16 +24,26 @@ type LogoProps = {
 type Art = { src: string; w: number; h: number };
 
 /**
- * Logo artwork in a box sized from `width` and the artwork's aspect ratio.
- * Using `fill` avoids next/image warnings when the height is fractional.
+ * Logo artwork in a box sized from the given width or height and the
+ * artwork's aspect ratio. Using `fill` avoids next/image warnings when a side
+ * is fractional.
  */
-function LogoImage({ art, alt, width, className, priority }: LogoProps & { art: Art; alt: string }) {
+function LogoImage({ art, alt, className, priority, ...size }: LogoProps & { art: Art; alt: string }) {
+  const width = size.height !== undefined ? (size.height * art.w) / art.h : size.width;
+
   return (
     <span
       className={cn("relative block shrink-0 select-none", className)}
       style={{ width, aspectRatio: `${art.w} / ${art.h}` }}
     >
-      <Image src={art.src} alt={alt} fill sizes={`${width}px`} priority={priority} className="object-contain" />
+      <Image
+        src={art.src}
+        alt={alt}
+        fill
+        sizes={`${Math.ceil(width)}px`}
+        priority={priority}
+        className="object-contain"
+      />
     </span>
   );
 }
@@ -49,12 +65,28 @@ export function StartViennaLogo(props: LogoProps) {
   return <LogoImage art={START} alt="START Vienna" {...props} />;
 }
 
-/** "in cooperation with [START Vienna]" lockup for the hero and footer. */
-export function CoopLockup({ className, logoWidth = 89 }: { className?: string; logoWidth?: number }) {
+export function HoivLogo(props: LogoProps) {
+  return <LogoImage art={HOIV} alt="HOIV – Home of InnoVation" {...props} />;
+}
+
+/**
+ * "in cooperation with [START Vienna] [HOIV]" lockup for the hero and footer.
+ * Both co-organiser logos share one height and the lockup's own gap. On narrow
+ * screens the logo pair wraps under the label as one unit.
+ */
+export function CoopLockup({ className, logoHeight = 36 }: { className?: string; logoHeight?: number }) {
   return (
-    <p className={cn("flex items-center gap-3 font-mono text-[14px] leading-none text-soft", className)}>
+    <p
+      className={cn(
+        "flex flex-wrap items-center gap-3 font-mono text-[14px] leading-none text-soft",
+        className,
+      )}
+    >
       <span>in cooperation with</span>
-      <StartViennaLogo width={logoWidth} />
+      <span className="flex items-center gap-3">
+        <StartViennaLogo height={logoHeight} />
+        <HoivLogo height={logoHeight} />
+      </span>
     </p>
   );
 }

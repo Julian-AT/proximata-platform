@@ -78,7 +78,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5, ease: EASE_FRAMER }}
         >
-          <CoopLockup />
+          <CoopLockup className="justify-center" />
         </motion.div>
       </div>
 

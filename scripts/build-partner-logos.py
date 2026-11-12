@@ -11,7 +11,9 @@ where none is online, from the organisers' marketing doc in brand-book/
   is rendered pure white, trimmed to its bounds and scaled to OUT_HEIGHT.
 
 Downloads are untrusted data: they go to a cache directory outside the repo
-and are only parsed, never executed. Run with an isolated interpreter:
+and are only parsed, never executed. Some hosts (redbull.com) refuse scripted
+requests; save that file from a browser to <cache>/<name>/source and pass the
+same --cache. Run with an isolated interpreter:
 
 Usage: python3 -I scripts/build-partner-logos.py [--cache DIR] [name ...]
 Output: public/sites/proximata/images/partners/<name>.svg|png
@@ -62,6 +64,8 @@ class Logo:
     """SVG elements to remove, e.g. background boxes behind the letters."""
     levels: tuple[int, int] | None = None
     """PNG: mask values at or below the first become 0, at or above the second 255."""
+    prepare: Callable[[bytes], bytes] | None = None
+    """Rebuilds the source before whitening, e.g. a colour logo as one colour."""
 
 
 def biscuit_wordmark(url: str) -> bytes:
@@ -207,6 +211,56 @@ def quad_extremes(p0: float, p1: float, p2: float) -> list[float]:
     return values
 
 
+def arc_extremes(
+    start: tuple[float, float],
+    radii: tuple[float, float],
+    rotation: float,
+    large: bool,
+    sweep: bool,
+    end: tuple[float, float],
+) -> list[tuple[float, float]]:
+    """Points bounding an SVG arc: its ends plus the ellipse extremes it passes
+    through (centre parameterisation from SVG 1.1, appendix F.6.5)."""
+    (x1, y1), (x2, y2) = start, end
+    rx, ry = abs(radii[0]), abs(radii[1])
+    if rx == 0 or ry == 0 or start == end:
+        return [start, end]
+    phi = math.radians(rotation)
+    cos_p, sin_p = math.cos(phi), math.sin(phi)
+    dx, dy = (x1 - x2) / 2, (y1 - y2) / 2
+    x1p, y1p = cos_p * dx + sin_p * dy, -sin_p * dx + cos_p * dy
+    grow = (x1p / rx) ** 2 + (y1p / ry) ** 2
+    if grow > 1:  # radii too small for the chord: scale up, as renderers do
+        rx, ry = rx * math.sqrt(grow), ry * math.sqrt(grow)
+    num = (rx * ry) ** 2 - (rx * y1p) ** 2 - (ry * x1p) ** 2
+    den = (rx * y1p) ** 2 + (ry * x1p) ** 2
+    coef = math.sqrt(max(0.0, num / den)) * (-1 if large == sweep else 1)
+    cxp, cyp = coef * rx * y1p / ry, -coef * ry * x1p / rx
+    cx = cos_p * cxp - sin_p * cyp + (x1 + x2) / 2
+    cy = sin_p * cxp + cos_p * cyp + (y1 + y2) / 2
+
+    theta = math.atan2((y1p - cyp) / ry, (x1p - cxp) / rx)
+    delta = math.atan2((-y1p - cyp) / ry, (-x1p - cxp) / rx) - theta
+    if sweep and delta < 0:
+        delta += 2 * math.pi
+    elif not sweep and delta > 0:
+        delta -= 2 * math.pi
+
+    points = [start, end]
+    # Angles where x(t), then y(t), of the rotated ellipse turn around.
+    for base in (math.atan2(-ry * sin_p, rx * cos_p), math.atan2(ry * cos_p, rx * sin_p)):
+        for t in (base, base + math.pi):
+            travelled = (t - theta) % (2 * math.pi) if delta > 0 else (theta - t) % (2 * math.pi)
+            if travelled <= abs(delta):
+                points.append(
+                    (
+                        cx + rx * cos_p * math.cos(t) - ry * sin_p * math.sin(t),
+                        cy + rx * sin_p * math.cos(t) + ry * cos_p * math.sin(t),
+                    )
+                )
+    return points
+
+
 def path_points(d: str) -> Iterator[tuple[float, float]]:
     """Points that bound a path: segment ends plus curve extremes."""
     tokens = PATH_TOKEN.findall(d)
@@ -275,8 +329,13 @@ def path_points(d: str) -> Iterator[tuple[float, float]]:
             for py in quad_extremes(y, y1, y3):
                 yield x3, py
             ctrl, x, y = (x1, y1), x3, y3
-        else:
-            raise NotImplementedError("arc commands are not supported; add them if a logo needs them")
+        elif kind == "A":
+            rx, ry, rotation, large, sweep, x2, y2 = take(7)
+            if large not in (0, 1) or sweep not in (0, 1):
+                raise ValueError("arc flags must be written apart, e.g. 'a1 1 0 0 1 2 0'")
+            x2, y2 = x2 + ox, y2 + oy
+            yield from arc_extremes((x, y), (rx, ry), rotation, bool(large), bool(sweep), (x2, y2))
+            x, y = x2, y2
         prev = kind
 
 
@@ -324,7 +383,7 @@ def whiten_style(el: ET.Element) -> bool:
     return True
 
 
-def clean(el: ET.Element, drop_tags: tuple[str, ...]) -> None:
+def clean(el: ET.Element, drop_tags: tuple[str, ...], whiten: bool = True) -> None:
     for child in list(el):
         tag = local(child.tag)
         if tag in UNSAFE or tag in drop_tags or not whiten_style(child):
@@ -337,9 +396,10 @@ def clean(el: ET.Element, drop_tags: tuple[str, ...]) -> None:
             href = name == "href" and not child.get(key, "").startswith("#")
             if name in dropped or name.startswith("on") or href:
                 del child.attrib[key]
-            elif name in ("fill", "stroke", "stop-color") and child.get(key) != "none":
+            elif whiten and name in ("fill", "stroke", "stop-color") and child.get(key) != "none":
                 child.set(key, WHITE)
-        clean(child, drop_tags)
+        # A mask's colours say what shows (white) and what is cut (black): keep them.
+        clean(child, drop_tags, whiten and tag != "mask")
 
 
 def white_svg(data: bytes, logo: Logo) -> tuple[bytes, tuple[float, float]]:
@@ -418,6 +478,8 @@ def white_png(data: bytes, logo: Logo) -> tuple[bytes, tuple[float, float]]:
 
 def build(logo: Logo, cache: pathlib.Path) -> None:
     data, origin = load_source(logo, cache)
+    if logo.prepare:
+        data = logo.prepare(data)
     is_svg = data.lstrip().startswith((b"<svg", b"<?xml"))
     output, (width, height) = white_svg(data, logo) if is_svg else white_png(data, logo)
     extension, stale = (".svg", ".png") if is_svg else (".png", ".svg")

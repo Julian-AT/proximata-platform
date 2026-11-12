@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { agenda, agendaSection, type AgendaDay, type AgendaSession } from "../content/agenda";
-import { Reveal, SectionTitle } from "../motion";
+import { SectionTitle } from "../motion";
 import { SectionTag } from "../section-tag";
 import { AgendaSpeakerChip } from "./agenda-speaker-chip";
 
@@ -22,23 +22,11 @@ function DayPill({ day }: { day: AgendaDay }) {
   );
 }
 
-/** Time column: confirmed times in white, everything else "TBA". */
+/** Time column: every session has a confirmed time. */
 function SessionTime({ session }: { session: AgendaSession }) {
-  const className = "font-mono text-[16px] leading-[1.4] font-medium text-balance";
-
-  if (!session.time) {
-    return (
-      <p className={cn(className, "text-soft")}>
-        <abbr title="To be announced" className="no-underline">
-          TBA
-        </abbr>
-      </p>
-    );
-  }
-
   return (
-    <p className={cn(className, "text-white")}>
-      {session.dateTime ? <time dateTime={session.dateTime}>{session.time}</time> : session.time}
+    <p className="font-mono text-[16px] leading-[1.4] font-medium text-balance text-white">
+      <time dateTime={session.dateTime}>{session.time}</time>
     </p>
   );
 }
@@ -120,10 +108,6 @@ export function Agenda() {
             </div>
           ))}
         </div>
-
-        <Reveal>
-          <p className="text-center font-mono text-[14px] leading-[1.4] text-soft">{agendaSection.note}</p>
-        </Reveal>
       </div>
     </section>
   );

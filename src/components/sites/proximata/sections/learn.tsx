@@ -68,26 +68,31 @@ function TrackCard({
   return (
     <article
       className={cn(
-        "frame flex flex-col gap-5 overflow-clip bg-ink py-5 desktop:pt-0 desktop:pb-6",
+        // The card's rows (picture on desktop, heading, body) are a subgrid of
+        // the track grid, so cards side by side share row heights: every rule
+        // and description starts at the same height, however long the title.
+        "frame row-span-2 grid grid-rows-subgrid gap-0 overflow-clip bg-ink desktop:row-span-3",
         className,
       )}
     >
       <TrackVisual track={track} quarter={quarter} />
-      <div className="flex w-full flex-1 flex-col gap-[10px] px-5 desktop:px-6">
+      <div className="flex flex-col gap-3 px-5 pt-5 pb-5 desktop:px-6 desktop:pt-6">
         {/* On desktop the number sits on the picture panel instead. */}
         <span
           aria-hidden="true"
-          className="font-mono text-[12px] leading-[1.4] font-medium text-ice desktop:hidden"
+          className="font-mono text-[12px] leading-none font-medium tracking-[0.12em] text-ice uppercase desktop:hidden"
         >
-          {track.number}
+          Track {track.number}
         </span>
         <h3 className="text-balance font-display text-[18px] leading-[1.2] text-white tablet:text-[22px] desktop:text-[24px]">
           <span className="sr-only">Track {track.number}: </span>
           {track.name}
         </h3>
-        <p className="font-mono text-[16px] leading-[1.4] text-soft">{track.description}</p>
+      </div>
+      <div className="mx-5 flex flex-col gap-4 border-t border-rule pt-4 pb-5 desktop:mx-6 desktop:pb-6">
+        <p className="font-mono text-[14px] leading-[1.5] text-soft">{track.description}</p>
         {track.partner && (
-          <p className="mt-auto flex items-start gap-2 pt-[6px] font-mono text-[12px] leading-[1.4] font-medium text-soft uppercase">
+          <p className="mt-auto flex items-start gap-2 font-mono text-[12px] leading-[1.4] font-medium text-soft uppercase">
             <span aria-hidden="true" className="mt-[5.5px] size-[6px] shrink-0 rounded-full bg-signal" />
             <span>Challenge partner: {track.partner}</span>
           </p>
@@ -134,7 +139,7 @@ export function Learn() {
                     key={slot.number}
                     track={slot}
                     quarter={column}
-                    className="pointer-events-none invisible hidden desktop:flex"
+                    className="pointer-events-none invisible hidden desktop:grid"
                   />
                 ),
               )}

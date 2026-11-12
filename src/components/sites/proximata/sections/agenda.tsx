@@ -22,16 +22,10 @@ function DayPill({ day }: { day: AgendaDay }) {
   );
 }
 
-/**
- * Time column: the session's start as a small chip, a quieter echo of the
- * day pill (ice hairline frame on a faint brand-blue fill). Tabular figures
- * keep every time the same width, so the chips line up down the column.
- * From tablet up the chip is centred in its column; on phones it sits
- * left-aligned above the title.
- */
+/** Time column: the session's start in plain white; tabular figures keep every time the same width. */
 function SessionTime({ session }: { session: AgendaSession }) {
   return (
-    <p className="frame inline-flex self-start bg-brand/35 tablet:self-center px-3 py-[6px] font-mono text-[15px] leading-[1.3] font-medium text-ice tabular-nums [--frame-color:rgb(200_241_255/0.28)] tablet:text-[16px]">
+    <p className="font-mono text-[16px] leading-[1.4] font-medium text-white tabular-nums">
       <time dateTime={session.dateTime}>{session.time}</time>
     </p>
   );
@@ -47,7 +41,10 @@ function SessionRow({ session }: { session: AgendaSession }) {
 
   return (
     <article className="sticky top-[200px] z-[1] flex w-full flex-col overflow-clip border-t border-rule bg-ink tablet:flex-row tablet:items-start">
-      <div className="flex w-full shrink-0 flex-col pt-6 tablet:w-[140px] desktop:w-[180px]">
+      {/* Phones: the time sits above the title. From tablet up it is centred
+          both ways against the title and description; the column's padding
+          matches the copy's so the centre is the copy's, not the row's. */}
+      <div className="flex w-full shrink-0 flex-col pt-6 tablet:w-[140px] tablet:items-center tablet:justify-center tablet:self-stretch tablet:pb-8 desktop:w-[180px]">
         <SessionTime session={session} />
       </div>
 

@@ -4,7 +4,7 @@ import { event } from "@/components/sites/proximata/content/event";
 import { fontVariables } from "@/components/sites/proximata/fonts";
 import "./globals.css";
 
-const title = `${event.fullName} · Proximata × START Vienna`;
+const title = `${event.fullName} · proximata × START Vienna × HOIV`;
 
 /** Absolute base for link previews; set NEXT_PUBLIC_SITE_URL once the domain is known. */
 const siteUrl =

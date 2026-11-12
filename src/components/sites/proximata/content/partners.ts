@@ -1,9 +1,7 @@
-// Sponsors and partners for the logo wall. START Vienna co-organises the
-// hackathon, so it sits in the organiser lockup, not in this list. Logos are
-// flat white files built by scripts/build-partner-logos.py from each
-// organisation's own artwork.
-
-import { event } from "./event";
+// Sponsors and partners for the logo wall. START Vienna and HOIV co-organise
+// the hackathon (HOIV is also the venue), so they sit in the organiser cards,
+// not in this list. Logos are flat white files built by
+// scripts/build-partner-logos.py from each organisation's own artwork.
 
 export type PartnerGroup = "sponsor" | "partner";
 
@@ -34,9 +32,10 @@ export type Partner = {
 
 export const partnersCopy = {
   tag: "PARTNERS",
-  title: "In Cooperation With START Vienna",
+  title: "In Cooperation With START Vienna & HOIV",
   organiser: "Organiser",
   coOrganiser: "Co-organiser",
+  coOrganiserVenue: "Co-organiser & Venue",
 } as const;
 
 /** Logo rows in display order, each with its heading. */
@@ -81,13 +80,6 @@ export const partners: readonly Partner[] = [
     logo: { src: `${dir}/biscuit.svg`, width: 3338.61, height: 732.86 },
   },
   // Partners
-  {
-    name: event.poweredBy.name,
-    group: "partner",
-    role: "Venue",
-    url: "https://homeofinnovationx.com",
-    logo: { src: `${dir}/hoiv.png`, width: 302, height: 96, scale: 1.25 },
-  },
   {
     name: "EWOR",
     group: "partner",

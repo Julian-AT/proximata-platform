@@ -26,10 +26,12 @@ function DayPill({ day }: { day: AgendaDay }) {
  * Time column: the session's start as a small chip, a quieter echo of the
  * day pill (ice hairline frame on a faint brand-blue fill). Tabular figures
  * keep every time the same width, so the chips line up down the column.
+ * From tablet up the chip is centred in its column; on phones it sits
+ * left-aligned above the title.
  */
 function SessionTime({ session }: { session: AgendaSession }) {
   return (
-    <p className="frame inline-flex self-start bg-brand/35 px-3 py-[6px] font-mono text-[15px] leading-[1.3] font-medium text-ice tabular-nums [--frame-color:rgb(200_241_255/0.28)] tablet:text-[16px]">
+    <p className="frame inline-flex self-start bg-brand/35 tablet:self-center px-3 py-[6px] font-mono text-[15px] leading-[1.3] font-medium text-ice tabular-nums [--frame-color:rgb(200_241_255/0.28)] tablet:text-[16px]">
       <time dateTime={session.dateTime}>{session.time}</time>
     </p>
   );

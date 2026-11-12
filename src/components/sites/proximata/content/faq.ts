@@ -38,7 +38,7 @@ export const faqs: readonly FaqEntry[] = [
     points: [
       "Systems for built space",
       "Robotics and embodied AI",
-      "AI systems and agents",
+      "Agentic AI and infrastructure",
       "Fintech, crypto and payments",
     ],
   },

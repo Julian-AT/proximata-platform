@@ -29,7 +29,9 @@ export const tracks: readonly Track[] = [
   },
   {
     number: "03",
-    name: "AI systems and agents",
+    // Non-breaking spaces keep "Agentic AI and" on the first line, so the
+    // title always breaks before "infrastructure" (both lines nearly full).
+    name: "Agentic AI and infrastructure",
     description: "The models, agents and plumbing that let software reason and act on its own.",
     partner: null,
   },

@@ -48,7 +48,7 @@ export const winnerPrizes: readonly WinnerPrize[] = [
 
 /** Block B: what every participant gets, in display order. */
 export const participantPerks: readonly string[] = [
-  "1,250 Adaption credits (1 credit = $1) when signing up through our referral link",
+  "$1,250 in Adaption credits via our referral link",
   "3 months of Maritime Growth",
   "1 month of n8n Cloud Pro",
   "Lovable Pro Plan 1 (100 credits), free during the event",

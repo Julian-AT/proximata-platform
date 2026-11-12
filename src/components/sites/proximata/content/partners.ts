@@ -1,6 +1,6 @@
-// Sponsors and partners for the logo wall. START Vienna and HOIV co-organise
-// the hackathon (HOIV is also the venue), so they sit in the organiser cards,
-// not in this list. Logos are flat white files built by
+// Sponsors and partners for the logo wall. HOIV co-hosts the hackathon (and is
+// the venue) and START Vienna cooperates on it, so both sit in the organiser
+// cards, not in this list. Logos are flat white files built by
 // scripts/build-partner-logos.py from each organisation's own artwork.
 
 export type PartnerGroup = "sponsor" | "partner";
@@ -32,7 +32,7 @@ export type Partner = {
 
 export const partnersCopy = {
   tag: "PARTNERS",
-  title: "In Cooperation With START Vienna & HOIV",
+  title: "In Cooperation With START Vienna",
   organiser: "Organiser",
   coOrganiser: "Co-organiser",
   coOrganiserVenue: "Co-organiser & Venue",

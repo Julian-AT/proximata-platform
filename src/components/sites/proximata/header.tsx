@@ -6,16 +6,25 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { navLinks, registerLink } from "./content/navigation";
 import { ButtonLink } from "./framer-button";
-import { ProximataWordmark } from "./logo";
+import { HostLockup, ProximataWordmark } from "./logo";
 import { EASE_FRAMER } from "./motion";
 import { NavPill } from "./nav-pill";
 
-/** Wordmark home link; widths stay at or above the brand book's 120px minimum. */
+/**
+ * The wordmark as the home link with HOIV, the co-host, right beside it.
+ * Widths stay at or above the brand book's 120px minimum.
+ */
 function Logo({ width }: { width: number }) {
   return (
-    <Link href="/" aria-label="Proximata home" className="block shrink-0">
-      <ProximataWordmark width={width} priority />
-    </Link>
+    <HostLockup
+      wordmarkWidth={width}
+      priority
+      wordmark={
+        <Link href="/" aria-label="Proximata home" className="block shrink-0">
+          <ProximataWordmark width={width} priority />
+        </Link>
+      }
+    />
   );
 }
 
@@ -77,11 +86,17 @@ function MenuIcon({ open, onToggle }: { open: boolean; onToggle: () => void }) {
   );
 }
 
-function DesktopNav() {
+/** `compact` (tablets once scrolled) tightens the bar so it fits from 810px up. */
+function DesktopNav({ compact = false }: { compact?: boolean }) {
   return (
     <nav aria-label="Primary" className="flex justify-center px-10 pb-2">
-      <div className="relative flex items-center justify-center gap-[52px] bg-ink/70 px-4 py-[10px] backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-t-0 after:border-dashed after:border-white/[0.14] after:content-['']">
-        <Logo width={150} />
+      <div
+        className={cn(
+          "relative flex items-center justify-center bg-ink/70 px-4 py-[10px] backdrop-blur-[10px] after:pointer-events-none after:absolute after:inset-0 after:border after:border-t-0 after:border-dashed after:border-white/[0.14] after:content-['']",
+          compact ? "gap-8" : "gap-[52px]",
+        )}
+      >
+        <Logo width={compact ? 130 : 150} />
         <ul className="flex items-center gap-2">
           {navLinks.map((link) => (
             <li key={link.label}>
@@ -172,7 +187,7 @@ export function Header() {
         <DesktopNav />
       </div>
       <div className={cn("hidden tablet:max-desktop:block", atTop && "tablet:max-desktop:hidden")}>
-        <DesktopNav />
+        <DesktopNav compact />
       </div>
       <div className={cn("hidden", atTop && "tablet:max-desktop:block")}>
         <CompactNav variant="tablet" />

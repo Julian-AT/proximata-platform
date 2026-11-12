@@ -4,7 +4,7 @@ import { event } from "@/components/sites/proximata/content/event";
 import { fontVariables } from "@/components/sites/proximata/fonts";
 import "./globals.css";
 
-const title = `${event.fullName} · Proximata × START Vienna`;
+const title = `${event.fullName} · proximata × START Vienna × HOIV`;
 
 /** Absolute base for link previews; set NEXT_PUBLIC_SITE_URL once the domain is known. */
 const siteUrl =
@@ -17,7 +17,7 @@ const ogImage = {
   url: "/sites/proximata/images/og/building-better-worlds.jpg",
   width: 1200,
   height: 630,
-  alt: "Building Better Worlds hackathon poster: Proximata jointly with START Vienna, powered by HOIV",
+  alt: "Building Better Worlds: a 24h hackathon in Vienna, 13–14 Nov 2026, by proximata × START Vienna × HOIV",
 };
 
 export const metadata: Metadata = {

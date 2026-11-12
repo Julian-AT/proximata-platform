@@ -38,14 +38,14 @@ export const faqs: readonly FaqEntry[] = [
     points: [
       "Systems for built space",
       "Robotics and embodied AI",
-      "AI systems and agentic infrastructure",
-      "Fintech and crypto",
+      "Agentic AI and infrastructure",
+      "Fintech, crypto and payments",
     ],
   },
   {
     question: "How does it work?",
     answer:
-      "Teams pick their case preferences and we match them. Then it's 24 hours of hacking. Each case partner picks a Track Winner, and the Track Winners pitch in front of an external jury of VCs, founders and tech leads.",
+      "Teams pick their case preferences and we match them. Then it's 24 hours of hacking. Each case partner picks a Track Winner, and the Track Winners pitch in front of an external jury of VCs, founders and tech leads. Every project becomes a public GitHub portfolio piece, MIT-licensed (except the Talona track, where the work belongs to Talona).",
   },
   {
     question: "How big are the teams?",
@@ -62,18 +62,20 @@ export const faqs: readonly FaqEntry[] = [
   },
   {
     question: "What do I get?",
-    answer: "Everything you need to build for 24 hours:",
+    answer:
+      "Every participant gets 1,250 Adaption credits (1 credit = $1) when signing up through our referral link, 3 months of Maritime Growth, 1 month of n8n Cloud Pro, Lovable Pro Plan 1 (100 credits) free during the event, Biscuit credits and support, and a 30-minute workshop with an Adaption engineer on training a model from your own data. On top of that:",
     points: [
       "Real challenges from real companies",
       "Live mentoring from case partners and industry experts",
-      "Premium tool access with credits and compute from partners",
       "24h catering: food, coffee and drinks",
-      "A public GitHub portfolio piece (MIT-licensed)",
+      "A public GitHub portfolio piece, MIT-licensed (except the Talona track, where the work belongs to Talona)",
     ],
   },
   {
     question: "What can I win?",
-    answer: "Prize details will be announced soon.",
+    // Talona's prize is always in US dollars (agreed with Talona).
+    answer:
+      "Prizes go to track winners and sponsor challenges, not to overall places. The Rhomberg Track Winner wins €1,500 and the Talona Track Winner US$1,000, and the best use of Adaption, open to every track, earns each team member $1,000 in Adaption credits plus Adaption's Builder tier and swag. Maritime gives its top 3 teams $100, $50 and $50 in LLM credits, and the proximata, techbold and HOIV track prizes will be announced soon.",
   },
   {
     question: "I have another question.",

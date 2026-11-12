@@ -1,15 +1,16 @@
-// Agenda for the two event days. Only confirmed anchors from the organisers'
-// copy; rows without a confirmed time render "TBA" in the time column.
+// Agenda for the two event days, taken from the "Key info" schedule in the
+// Luma event description (the single source of truth for times). Every row has
+// a confirmed time.
 
 import { event } from "./event";
 
 export type AgendaSpeaker = { name: string; role: string; image: string };
 
 export type AgendaSession = {
-  /** Time column label, e.g. "14:00". Omit while unconfirmed (shows "TBA"). */
-  time?: string;
-  /** Machine-readable value for `<time>` when `time` is a confirmed moment. */
-  dateTime?: string;
+  /** Time column label, e.g. "14:00". */
+  time: string;
+  /** Machine-readable value for the time column's `<time>`. */
+  dateTime: string;
   title: string;
   description: string;
   /** "row": single speaker beside the copy; "column": speakers below the copy. */
@@ -30,7 +31,6 @@ export type AgendaDay = {
 export const agendaSection = {
   tag: "AGENDA",
   title: "Two Days. One Build.",
-  note: "Full schedule announced soon",
 } as const;
 
 export const agenda: readonly AgendaDay[] = [
@@ -40,20 +40,16 @@ export const agenda: readonly AgendaDay[] = [
     theme: "Kick-off & build",
     sessions: [
       {
+        time: "12:00",
+        dateTime: "2026-11-13T12:00:00+01:00",
+        title: "Keynote panel with Hubert Rhomberg, CEO of Rhomberg",
+        description: `Hubert Rhomberg, CEO of Rhomberg, gives a panel talk at ${event.poweredBy.short} before the build starts.`,
+      },
+      {
         time: "14:00",
         dateTime: event.startsAt,
-        title: `Doors open & kick-off at ${event.poweredBy.short}`,
-        description: `We open the doors at ${event.venue.name} in ${event.city} and kick off the hackathon.`,
-      },
-      {
-        title: "Teams pick case preferences — we match you to a case",
-        description:
-          "Teams pick their case preferences. We match every team to a real case from a real company.",
-      },
-      {
-        time: "Fri → Sat",
-        title: "24h of hacking",
-        description: "24 hours to build something truly disruptive on your case, in person.",
+        title: "Hackathon start",
+        description: `24 hours to build something truly disruptive, in person at ${event.venue.name} in ${event.city}.`,
       },
     ],
   },
@@ -63,7 +59,22 @@ export const agenda: readonly AgendaDay[] = [
     theme: "Pitch & award",
     sessions: [
       {
-        title: "Track winners pitch to an external jury of VCs, founders & tech leads",
+        time: "11:00",
+        dateTime: "2026-11-14T11:00:00+01:00",
+        title: "n8n & Adaption workshops",
+        description:
+          "An n8n workshop, plus a 30-minute online session with an Adaption engineer on training a model from your own data.",
+      },
+      {
+        time: "15:00",
+        dateTime: "2026-11-14T15:00:00+01:00",
+        title: "Code freeze",
+        description: "Building stops and every team submits its project.",
+      },
+      {
+        time: "16:00",
+        dateTime: "2026-11-14T16:00:00+01:00",
+        title: "Winner announcement & demos",
         description:
           "Each case partner picks a Track Winner. The Track Winners pitch in front of an external jury of VCs, founders, and tech leads.",
       },
@@ -71,7 +82,7 @@ export const agenda: readonly AgendaDay[] = [
         time: "18:00",
         dateTime: event.endsAt,
         title: "Closing",
-        description: "The hackathon wraps up on Saturday at 18:00.",
+        description: "The hackathon wraps up on Saturday at 18:00, followed by networking.",
       },
     ],
   },

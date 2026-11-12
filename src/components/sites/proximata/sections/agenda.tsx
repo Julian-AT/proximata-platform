@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { agenda, agendaSection, type AgendaDay, type AgendaSession } from "../content/agenda";
-import { Reveal, SectionTitle } from "../motion";
+import { SectionTitle } from "../motion";
 import { SectionTag } from "../section-tag";
 import { AgendaSpeakerChip } from "./agenda-speaker-chip";
 
@@ -22,23 +22,11 @@ function DayPill({ day }: { day: AgendaDay }) {
   );
 }
 
-/** Time column: confirmed times in white, everything else "TBA". */
+/** Time column: the session's start in plain white; tabular figures keep every time the same width. */
 function SessionTime({ session }: { session: AgendaSession }) {
-  const className = "font-mono text-[16px] leading-[1.4] font-medium text-balance";
-
-  if (!session.time) {
-    return (
-      <p className={cn(className, "text-soft")}>
-        <abbr title="To be announced" className="no-underline">
-          TBA
-        </abbr>
-      </p>
-    );
-  }
-
   return (
-    <p className={cn(className, "text-white")}>
-      {session.dateTime ? <time dateTime={session.dateTime}>{session.time}</time> : session.time}
+    <p className="font-mono text-[16px] leading-[1.4] font-medium text-white tabular-nums">
+      <time dateTime={session.dateTime}>{session.time}</time>
     </p>
   );
 }
@@ -53,7 +41,10 @@ function SessionRow({ session }: { session: AgendaSession }) {
 
   return (
     <article className="sticky top-[200px] z-[1] flex w-full flex-col overflow-clip border-t border-rule bg-ink tablet:flex-row tablet:items-start">
-      <div className="flex w-full shrink-0 flex-col pt-6 tablet:w-[150px] desktop:w-[226px]">
+      {/* Phones: the time sits above the title. From tablet up it is centred
+          both ways against the title and description; the column's padding
+          matches the copy's so the centre is the copy's, not the row's. */}
+      <div className="flex w-full shrink-0 flex-col pt-6 tablet:w-[140px] tablet:items-center tablet:justify-center tablet:self-stretch tablet:pb-8 desktop:w-[180px]">
         <SessionTime session={session} />
       </div>
 
@@ -120,10 +111,6 @@ export function Agenda() {
             </div>
           ))}
         </div>
-
-        <Reveal>
-          <p className="text-center font-mono text-[14px] leading-[1.4] text-soft">{agendaSection.note}</p>
-        </Reveal>
       </div>
     </section>
   );

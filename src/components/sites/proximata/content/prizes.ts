@@ -1,40 +1,58 @@
-// Prize podium. Amounts are not approved for publishing: every prize keeps
-// `details: null` until the organisers confirm it. While no prize has details
-// the section shows a slim "announced soon" podium; once one does, the full
-// prize cards replace it.
+// Prizes and perks from the organisers' prizes brief (12 Nov 2026). Prizes go
+// to track winners and sponsor challenges, not to overall 1st/2nd/3rd places.
+// Most of the headline value is credits every participant gets, so never call
+// the whole amount "prizes" or a "prize pool".
+//
+// Never add discount codes, referral links or redemption steps here (that
+// includes the Lovable code): registered participants get them on Discord.
 
-export type PrizeDetails = {
-  description: string;
-  /** Listed under "What you win:". */
-  features: readonly string[];
-};
-
-export type Prize = {
-  /** Podium label set in Archivo, e.g. "1st". */
-  place: string;
+export type WinnerPrize = {
   title: string;
-  /** Highlighted middle card (brand-blue panel). */
-  featured: boolean;
-  /** Confirmed prize contents, or `null` while still unannounced. */
-  details: PrizeDetails | null;
+  /** Who can win it, shown above the title, e.g. "Open to every track". */
+  eligibility?: string;
+  /** Headline amount in the prize's own currency; `null` for a text-only tile. */
+  amount: string | null;
+  /** What the amount is or comes with. */
+  detail?: string;
 };
 
 export const prizesSection = {
   tag: "PRIZES",
-  title: "Exceptional Prizes.",
+  title: "€290,000+ in prizes, credits and tools",
   /** In-page anchor; the section root keeps the "ticket" scroll target id. */
   anchor: "prizes",
-  featuresLabel: "What you win:",
-  /** Shown in place of a prize's details while they are unannounced. */
-  pending: "Announced soon",
-  // Confirmed: track winners pitch to the jury. Who decides the places is not.
+  winnersLabel: "Winner prizes",
+  perksLabel: "Every participant gets",
   note: "Track winners pitch to an external jury.",
   cta: "Register on Luma",
 } as const;
 
-/** In place order (1st, 2nd, 3rd); the desktop layout reorders them into a podium. */
-export const prizes: readonly Prize[] = [
-  { place: "1st", title: "First place", featured: true, details: null },
-  { place: "2nd", title: "Second place", featured: false, details: null },
-  { place: "3rd", title: "Third place", featured: false, details: null },
+/** Block A, in display order. */
+export const winnerPrizes: readonly WinnerPrize[] = [
+  { title: "Rhomberg Track Winner", amount: "€1,500" },
+  // Always in US dollars, even next to euro amounts (agreed with Talona).
+  { title: "Talona Track Winner", amount: "US$1,000" },
+  {
+    title: "Best use of Adaption",
+    eligibility: "Open to every track",
+    amount: "$1,000",
+    detail: "in Adaption credits for each team member, plus Adaption's Builder tier and swag",
+  },
+  { title: "Maritime, top 3 teams", amount: "$100 / $50 / $50", detail: "in LLM credits" },
+  {
+    title: "More track prizes",
+    amount: null,
+    detail: "proximata, techbold and HOIV track prizes announced soon",
+  },
+];
+
+/** Block B: what every participant gets, in display order. */
+export const participantPerks: readonly string[] = [
+  "$1,250 in Adaption credits via our referral link",
+  "3 months of Maritime Growth",
+  "1 month of n8n Cloud Pro",
+  "Biscuit credits and support",
+  // The two longest perks sit last, so in the two-column ticket they share the bottom row.
+  "Lovable Pro Plan 1 (100 credits), free during the event",
+  "A 30-minute workshop with an Adaption engineer on training a model from your own data",
 ];

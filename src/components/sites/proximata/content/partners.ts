@@ -1,9 +1,7 @@
-// Sponsors and partners for the logo wall. START Vienna co-organises the
-// hackathon, so it sits in the organiser lockup, not in this list. Logos are
-// flat white files built by scripts/build-partner-logos.py from each
-// organisation's own artwork.
-
-import { event } from "./event";
+// Sponsors and partners for the logo wall. START Vienna and HOIV co-organise
+// the hackathon (HOIV is also the venue), so they sit in the organiser cards,
+// not in this list. Logos are flat white files built by
+// scripts/build-partner-logos.py from each organisation's own artwork.
 
 export type PartnerGroup = "sponsor" | "partner";
 
@@ -34,9 +32,10 @@ export type Partner = {
 
 export const partnersCopy = {
   tag: "PARTNERS",
-  title: "In Cooperation With START Vienna",
+  title: "In Cooperation With START Vienna & HOIV",
   organiser: "Organiser",
   coOrganiser: "Co-organiser",
+  coOrganiserVenue: "Co-organiser & Venue",
 } as const;
 
 /** Logo rows in display order, each with its heading. */
@@ -48,7 +47,8 @@ export const partnerGroups: readonly { id: PartnerGroup; label: string }[] = [
 const dir = "/sites/proximata/images/partners";
 
 export const partners: readonly Partner[] = [
-  // Sponsors
+  // Sponsors, in the organisers' order. Talona and Strock follow Adaption and
+  // Red Bull once their links are confirmed.
   {
     name: "n8n",
     group: "sponsor",
@@ -62,6 +62,18 @@ export const partners: readonly Partner[] = [
     logo: { src: `${dir}/techbold.png`, width: 482, height: 96 },
   },
   {
+    name: "Rhomberg",
+    group: "sponsor",
+    url: "https://www.rhomberg.com",
+    logo: { src: `${dir}/rhomberg.svg`, width: 477.81, height: 93.51, scale: 1.1 },
+  },
+  {
+    name: "Adaption",
+    group: "sponsor",
+    url: "https://adaptionlabs.ai",
+    logo: { src: `${dir}/adaption.svg`, width: 101.81, height: 23.9 },
+  },
+  {
     name: "Maritime",
     group: "sponsor",
     url: "https://maritime.sh",
@@ -69,10 +81,10 @@ export const partners: readonly Partner[] = [
     label: "maritime",
   },
   {
-    name: "Rhomberg",
+    name: "Lovable",
     group: "sponsor",
-    url: "https://www.rhomberg.com",
-    logo: { src: `${dir}/rhomberg.svg`, width: 477.81, height: 93.51, scale: 1.1 },
+    url: "https://lovable.dev",
+    logo: { src: `${dir}/lovable.svg`, width: 949.23, height: 172.52 },
   },
   {
     name: "Biscuit",
@@ -80,14 +92,13 @@ export const partners: readonly Partner[] = [
     url: "https://www.biscuit.so",
     logo: { src: `${dir}/biscuit.svg`, width: 3338.61, height: 732.86 },
   },
-  // Partners
   {
-    name: event.poweredBy.name,
-    group: "partner",
-    role: "Venue",
-    url: "https://homeofinnovationx.com",
-    logo: { src: `${dir}/hoiv.png`, width: 302, height: 96, scale: 1.25 },
+    name: "Red Bull",
+    group: "sponsor",
+    url: "https://www.redbull.com",
+    logo: { src: `${dir}/redbull.svg`, width: 224.19, height: 36 },
   },
+  // Partners
   {
     name: "EWOR",
     group: "partner",
@@ -105,12 +116,6 @@ export const partners: readonly Partner[] = [
     group: "partner",
     url: "https://cryptoclubvienna.com",
     logo: { src: `${dir}/wu-crypto-club.png`, width: 432, height: 96, scale: 0.95 },
-  },
-  {
-    name: "Kicks Vienna",
-    group: "partner",
-    url: "https://kicks-vie.com",
-    logo: { src: `${dir}/kicks-vienna.png`, width: 347, height: 96, scale: 1.05 },
   },
   {
     name: "Hackathonhub",

@@ -11,7 +11,9 @@ where none is online, from the organisers' marketing doc in brand-book/
   is rendered pure white, trimmed to its bounds and scaled to OUT_HEIGHT.
 
 Downloads are untrusted data: they go to a cache directory outside the repo
-and are only parsed, never executed. Run with an isolated interpreter:
+and are only parsed, never executed. Some hosts (redbull.com) refuse scripted
+requests; save that file from a browser to <cache>/<name>/source and pass the
+same --cache. Run with an isolated interpreter:
 
 Usage: python3 -I scripts/build-partner-logos.py [--cache DIR] [name ...]
 Output: public/sites/proximata/images/partners/<name>.svg|png
@@ -62,6 +64,8 @@ class Logo:
     """SVG elements to remove, e.g. background boxes behind the letters."""
     levels: tuple[int, int] | None = None
     """PNG: mask values at or below the first become 0, at or above the second 255."""
+    prepare: Callable[[bytes], bytes] | None = None
+    """Rebuilds the source before whitening, e.g. a colour logo as one colour."""
 
 
 def biscuit_wordmark(url: str) -> bytes:
@@ -84,6 +88,70 @@ def biscuit_wordmark(url: str) -> bytes:
     raise RuntimeError("Biscuit wordmark paths not found")
 
 
+def adaption_wordmark(url: str) -> bytes:
+    """adaptionlabs.ai has no static logo file; its footer draws the
+    "adaption" wordmark (102x24, light grey) inline. Take that SVG."""
+    html = fetch(url).decode("utf-8", "replace")
+    for svg in re.findall(r"<svg\b[^>]*>.*?</svg>", html, re.S):
+        if 'viewBox="0 0 102 24"' in svg and "h-[54px]" in svg:
+            paths = re.findall(r'\bd="([^"]+)"', svg)
+            if not paths or not all(re.fullmatch(r"[MmLlHhVvCcSsQqTtZz\d.,\se+-]+", d) for d in paths):
+                raise RuntimeError("unexpected Adaption wordmark path data")
+            return svg.encode()
+    raise RuntimeError("Adaption wordmark not found")
+
+
+def path_bounds(d: str) -> tuple[float, float, float, float]:
+    xs, ys = zip(*path_points(d))
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def redbull_one_colour(data: bytes) -> bytes:
+    """Red Bull's header logo is in colour: a yellow sun, a yellow silhouette
+    of the bulls that rims them, red bulls on top and the red name. Red Bull's
+    one-colour version keeps the sun and bulls solid and cuts the rim away, so
+    the bulls stay apart from the sun. Rebuild that with a mask: sun and bulls
+    show, the rim between them is cut."""
+    svg = data.decode("utf-8")
+    view_box = re.search(r'viewBox="([\d. ]+)"', svg)
+    paths = [
+        (fill.lower(), d, re.findall(r'(fill-rule|clip-rule)="([^"]+)"', tag))
+        for tag, fill, d in (
+            (m.group(0), m.group(1), m.group(2))
+            for m in re.finditer(r'<path\b(?=[^>]*\bfill="(#[0-9a-fA-F]{3,6})")(?=[^>]*\bd="([^"]+)")[^>]*/>', svg)
+        )
+    ]
+    yellow = [p for p in paths if p[0] == "#fc0"]
+    red = [p for p in paths if p[0] == "#d2003c"]
+    if not view_box or len(yellow) != 2 or not red:
+        raise RuntimeError("unexpected Red Bull logo structure")
+
+    def area(path: tuple[str, str, list[tuple[str, str]]]) -> float:
+        left, top, right, bottom = path_bounds(path[1])
+        return (right - left) * (bottom - top)
+
+    sun, rim = sorted(yellow, key=area)
+    left, top, right, bottom = path_bounds(rim[1])
+    bulls = [p for p in red if path_bounds(p[1])[2] <= right + 1]
+    name = [p for p in red if p not in bulls]
+    if not bulls or not name:
+        raise RuntimeError("could not tell the Red Bull bulls from the name")
+
+    def draw(path: tuple[str, str, list[tuple[str, str]]], fill: str) -> str:
+        rules = "".join(f' {key}="{value}"' for key, value in path[2])
+        return f'<path{rules} fill="{fill}" d="{path[1]}"/>'
+
+    emblem = [sun, rim, *bulls]
+    region = f'x="{fmt(left - 1)}" y="{fmt(top - 1)}" width="{fmt(right - left + 2)}" height="{fmt(bottom - top + 2)}"'
+    mask = draw(sun, "#fff") + draw(rim, "#000") + "".join(draw(p, "#fff") for p in bulls)
+    return (
+        f'<svg xmlns="{SVG_NS}" viewBox="{view_box.group(1)}">'
+        f'<defs><mask id="redbull-emblem" maskUnits="userSpaceOnUse" {region}>{mask}</mask></defs>'
+        f'<g mask="url(#redbull-emblem)">{"".join(draw(p, WHITE) for p in emblem)}</g>'
+        f'{"".join(draw(p, WHITE) for p in name)}</svg>'
+    ).encode()
+
+
 LOGOS: tuple[Logo, ...] = (
     # Sponsors
     Logo("n8n", url="https://guidelines.n8n.design/downloads/logo/lockup/n8n-logo-white.svg"),
@@ -93,6 +161,15 @@ LOGOS: tuple[Logo, ...] = (
     # White letters on a red and a slate box: keep the letters, drop the boxes.
     Logo("rhomberg", url="https://www.rhomberg.com/rhomberg/images/logos/horizontal.svg", drop_tags=("rect",)),
     Logo("biscuit", url="https://www.biscuit.so", extract=biscuit_wordmark, doc_image="image18.png"),
+    Logo("adaption", url="https://adaptionlabs.ai", extract=adaption_wordmark),
+    # Brand hub's "Full Logo — White" (heart mark + wordmark).
+    Logo("lovable", url="https://lovablebrand.lovable.app/logos/full-white-pure.svg"),
+    # Header logo (double bulls, sun, name); redbull.com rejects scripted requests.
+    Logo(
+        "redbull",
+        url="https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg",
+        prepare=redbull_one_colour,
+    ),
     # Partners
     Logo(
         "hoiv",
@@ -110,8 +187,6 @@ LOGOS: tuple[Logo, ...] = (
         url="https://cryptoclubvienna.com/wp-content/uploads/2026/02/CCV-2-scaled.png",
         levels=(110, 220),
     ),
-    # No file online; the doc's white horizontal lockup (stick figure + "kicks").
-    Logo("kicks-vienna", doc_image="image11.png"),
     # Icon only; the site sets the name next to it.
     Logo("hackathonhub", url="https://hackathonhub.eu/assets/logo-dark-DSApMUkW.png"),
 )
@@ -207,6 +282,56 @@ def quad_extremes(p0: float, p1: float, p2: float) -> list[float]:
     return values
 
 
+def arc_extremes(
+    start: tuple[float, float],
+    radii: tuple[float, float],
+    rotation: float,
+    large: bool,
+    sweep: bool,
+    end: tuple[float, float],
+) -> list[tuple[float, float]]:
+    """Points bounding an SVG arc: its ends plus the ellipse extremes it passes
+    through (centre parameterisation from SVG 1.1, appendix F.6.5)."""
+    (x1, y1), (x2, y2) = start, end
+    rx, ry = abs(radii[0]), abs(radii[1])
+    if rx == 0 or ry == 0 or start == end:
+        return [start, end]
+    phi = math.radians(rotation)
+    cos_p, sin_p = math.cos(phi), math.sin(phi)
+    dx, dy = (x1 - x2) / 2, (y1 - y2) / 2
+    x1p, y1p = cos_p * dx + sin_p * dy, -sin_p * dx + cos_p * dy
+    grow = (x1p / rx) ** 2 + (y1p / ry) ** 2
+    if grow > 1:  # radii too small for the chord: scale up, as renderers do
+        rx, ry = rx * math.sqrt(grow), ry * math.sqrt(grow)
+    num = (rx * ry) ** 2 - (rx * y1p) ** 2 - (ry * x1p) ** 2
+    den = (rx * y1p) ** 2 + (ry * x1p) ** 2
+    coef = math.sqrt(max(0.0, num / den)) * (-1 if large == sweep else 1)
+    cxp, cyp = coef * rx * y1p / ry, -coef * ry * x1p / rx
+    cx = cos_p * cxp - sin_p * cyp + (x1 + x2) / 2
+    cy = sin_p * cxp + cos_p * cyp + (y1 + y2) / 2
+
+    theta = math.atan2((y1p - cyp) / ry, (x1p - cxp) / rx)
+    delta = math.atan2((-y1p - cyp) / ry, (-x1p - cxp) / rx) - theta
+    if sweep and delta < 0:
+        delta += 2 * math.pi
+    elif not sweep and delta > 0:
+        delta -= 2 * math.pi
+
+    points = [start, end]
+    # Angles where x(t), then y(t), of the rotated ellipse turn around.
+    for base in (math.atan2(-ry * sin_p, rx * cos_p), math.atan2(ry * cos_p, rx * sin_p)):
+        for t in (base, base + math.pi):
+            travelled = (t - theta) % (2 * math.pi) if delta > 0 else (theta - t) % (2 * math.pi)
+            if travelled <= abs(delta):
+                points.append(
+                    (
+                        cx + rx * cos_p * math.cos(t) - ry * sin_p * math.sin(t),
+                        cy + rx * sin_p * math.cos(t) + ry * cos_p * math.sin(t),
+                    )
+                )
+    return points
+
+
 def path_points(d: str) -> Iterator[tuple[float, float]]:
     """Points that bound a path: segment ends plus curve extremes."""
     tokens = PATH_TOKEN.findall(d)
@@ -275,8 +400,13 @@ def path_points(d: str) -> Iterator[tuple[float, float]]:
             for py in quad_extremes(y, y1, y3):
                 yield x3, py
             ctrl, x, y = (x1, y1), x3, y3
-        else:
-            raise NotImplementedError("arc commands are not supported; add them if a logo needs them")
+        elif kind == "A":
+            rx, ry, rotation, large, sweep, x2, y2 = take(7)
+            if large not in (0, 1) or sweep not in (0, 1):
+                raise ValueError("arc flags must be written apart, e.g. 'a1 1 0 0 1 2 0'")
+            x2, y2 = x2 + ox, y2 + oy
+            yield from arc_extremes((x, y), (rx, ry), rotation, bool(large), bool(sweep), (x2, y2))
+            x, y = x2, y2
         prev = kind
 
 
@@ -324,7 +454,7 @@ def whiten_style(el: ET.Element) -> bool:
     return True
 
 
-def clean(el: ET.Element, drop_tags: tuple[str, ...]) -> None:
+def clean(el: ET.Element, drop_tags: tuple[str, ...], whiten: bool = True) -> None:
     for child in list(el):
         tag = local(child.tag)
         if tag in UNSAFE or tag in drop_tags or not whiten_style(child):
@@ -337,9 +467,10 @@ def clean(el: ET.Element, drop_tags: tuple[str, ...]) -> None:
             href = name == "href" and not child.get(key, "").startswith("#")
             if name in dropped or name.startswith("on") or href:
                 del child.attrib[key]
-            elif name in ("fill", "stroke", "stop-color") and child.get(key) != "none":
+            elif whiten and name in ("fill", "stroke", "stop-color") and child.get(key) != "none":
                 child.set(key, WHITE)
-        clean(child, drop_tags)
+        # A mask's colours say what shows (white) and what is cut (black): keep them.
+        clean(child, drop_tags, whiten and tag != "mask")
 
 
 def white_svg(data: bytes, logo: Logo) -> tuple[bytes, tuple[float, float]]:
@@ -418,6 +549,8 @@ def white_png(data: bytes, logo: Logo) -> tuple[bytes, tuple[float, float]]:
 
 def build(logo: Logo, cache: pathlib.Path) -> None:
     data, origin = load_source(logo, cache)
+    if logo.prepare:
+        data = logo.prepare(data)
     is_svg = data.lstrip().startswith((b"<svg", b"<?xml"))
     output, (width, height) = white_svg(data, logo) if is_svg else white_png(data, logo)
     extension, stale = (".svg", ".png") if is_svg else (".png", ".svg")

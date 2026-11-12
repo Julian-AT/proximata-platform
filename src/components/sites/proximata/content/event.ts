@@ -8,8 +8,14 @@ export const event = {
   name: "Building Better Worlds",
   fullName: "Building Better Worlds Hackathon",
   organiser: "Proximata",
-  /** Co-organiser; shown as "in cooperation with START Vienna". */
-  coHost: { name: "START Vienna", url: "https://www.start-vienna.com/" },
+  /**
+   * The two co-organisers, shown as "in cooperation with START Vienna & HOIV".
+   * HOIV also hosts the event as the venue.
+   */
+  coOrganisers: [
+    { name: "START Vienna", short: "START Vienna", url: "https://www.start-vienna.com/" },
+    { name: "HOIV – Home of InnoVation", short: "HOIV", url: "https://homeofinnovationx.com" },
+  ],
   poweredBy: { name: "HOIV – Home of InnoVation", short: "HOIV" },
   /** CET (UTC+1) on both days. */
   startsAt: "2026-11-13T14:00:00+01:00",
@@ -34,7 +40,7 @@ export const event = {
   contactEmail: "contact@proximata.io",
   registerUrl: LUMA_URL,
   description:
-    "Proximata's flagship 24-hour hackathon in Vienna, in cooperation with START Vienna. Real cases from real companies, four tracks, one weekend to build something truly disruptive.",
+    "Proximata's flagship 24-hour hackathon in Vienna, organised with START Vienna and HOIV – Home of InnoVation. Real cases from real companies, four tracks, one weekend to build something truly disruptive.",
 } as const;
 
 export const proximataLinks = {

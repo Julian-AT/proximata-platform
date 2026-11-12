@@ -1,7 +1,8 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
+import { event } from "../content/event";
 import { partnerGroups, partners, partnersCopy, type Partner } from "../content/partners";
-import { ProximataWordmark, StartViennaLogo } from "../logo";
+import { HoivLogo, ProximataWordmark, StartViennaLogo } from "../logo";
 import { Reveal, SectionTitle } from "../motion";
 import { SectionTag } from "../section-tag";
 
@@ -10,30 +11,57 @@ const caption = "font-mono text-[12px] leading-none text-soft";
 /** Desktop logo height at optical scale 1; also sizes next/image's srcset. */
 const LOGO_HEIGHT = 30;
 
-/** Equal-height slots so both organiser captions sit on one line. */
+/** Equal-height slots so all organiser captions sit on one line. */
 const organiserSlot = "flex h-10 items-center justify-center tablet:h-12";
 
-/** Proximata × START Vienna, the hackathon's two organisers. */
+/** START Vienna and HOIV share one height, so neither reads larger. */
+const CO_ORGANISER_LOGO_HEIGHT = 40;
+
+const [, hoiv] = event.coOrganisers;
+
+function Divider() {
+  return (
+    <span aria-hidden="true" className={`${organiserSlot} hidden text-soft tablet:flex`}>
+      <svg viewBox="0 0 16 16" fill="none" className="size-3.5">
+        <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" strokeWidth={1.5} />
+      </svg>
+    </span>
+  );
+}
+
+/**
+ * Proximata × START Vienna × HOIV, the hackathon's three organisers. Phones
+ * give Proximata its own row with the two co-organisers side by side below;
+ * from tablet up all three sit in one row with × dividers.
+ */
 function Organisers() {
   return (
-    <Reveal className="flex items-start justify-center gap-6 tablet:gap-12">
-      <figure className="m-0 flex flex-col items-center gap-4">
+    <Reveal className="flex flex-wrap items-start justify-center gap-x-6 gap-y-8 tablet:flex-nowrap tablet:gap-12">
+      <figure className="m-0 flex basis-full flex-col items-center gap-4 tablet:basis-auto">
         <span className={organiserSlot}>
           {/* Above the brand book's 120px minimum on every screen. */}
           <ProximataWordmark width={148} />
         </span>
         <figcaption className={caption}>{partnersCopy.organiser}</figcaption>
       </figure>
-      <span aria-hidden="true" className={`${organiserSlot} text-soft`}>
-        <svg viewBox="0 0 16 16" fill="none" className="size-3.5">
-          <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" strokeWidth={1.5} />
-        </svg>
-      </span>
+      <Divider />
       <figure className="m-0 flex flex-col items-center gap-4">
         <span className={organiserSlot}>
-          <StartViennaLogo width={100} />
+          <StartViennaLogo height={CO_ORGANISER_LOGO_HEIGHT} />
         </span>
         <figcaption className={caption}>{partnersCopy.coOrganiser}</figcaption>
+      </figure>
+      <Divider />
+      <figure className="m-0 flex flex-col items-center gap-4">
+        <a
+          href={hoiv.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${organiserSlot} focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ice`}
+        >
+          <HoivLogo height={CO_ORGANISER_LOGO_HEIGHT} />
+        </a>
+        <figcaption className={caption}>{partnersCopy.coOrganiserVenue}</figcaption>
       </figure>
     </Reveal>
   );

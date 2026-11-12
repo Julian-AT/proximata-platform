@@ -51,7 +51,8 @@ export const participantPerks: readonly string[] = [
   "$1,250 in Adaption credits via our referral link",
   "3 months of Maritime Growth",
   "1 month of n8n Cloud Pro",
-  "Lovable Pro Plan 1 (100 credits), free during the event",
   "Biscuit credits and support",
+  // The two longest perks sit last, so in the two-column ticket they share the bottom row.
+  "Lovable Pro Plan 1 (100 credits), free during the event",
   "A 30-minute workshop with an Adaption engineer on training a model from your own data",
 ];

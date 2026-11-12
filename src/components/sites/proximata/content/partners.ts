@@ -47,7 +47,8 @@ export const partnerGroups: readonly { id: PartnerGroup; label: string }[] = [
 const dir = "/sites/proximata/images/partners";
 
 export const partners: readonly Partner[] = [
-  // Sponsors
+  // Sponsors, in the organisers' order. Talona and Strock follow Adaption and
+  // Red Bull once their links are confirmed.
   {
     name: "n8n",
     group: "sponsor",
@@ -61,6 +62,18 @@ export const partners: readonly Partner[] = [
     logo: { src: `${dir}/techbold.png`, width: 482, height: 96 },
   },
   {
+    name: "Rhomberg",
+    group: "sponsor",
+    url: "https://www.rhomberg.com",
+    logo: { src: `${dir}/rhomberg.svg`, width: 477.81, height: 93.51, scale: 1.1 },
+  },
+  {
+    name: "Adaption",
+    group: "sponsor",
+    url: "https://adaptionlabs.ai",
+    logo: { src: `${dir}/adaption.svg`, width: 101.81, height: 23.9 },
+  },
+  {
     name: "Maritime",
     group: "sponsor",
     url: "https://maritime.sh",
@@ -68,16 +81,22 @@ export const partners: readonly Partner[] = [
     label: "maritime",
   },
   {
-    name: "Rhomberg",
+    name: "Lovable",
     group: "sponsor",
-    url: "https://www.rhomberg.com",
-    logo: { src: `${dir}/rhomberg.svg`, width: 477.81, height: 93.51, scale: 1.1 },
+    url: "https://lovable.dev",
+    logo: { src: `${dir}/lovable.svg`, width: 949.23, height: 172.52 },
   },
   {
     name: "Biscuit",
     group: "sponsor",
     url: "https://www.biscuit.so",
     logo: { src: `${dir}/biscuit.svg`, width: 3338.61, height: 732.86 },
+  },
+  {
+    name: "Red Bull",
+    group: "sponsor",
+    url: "https://www.redbull.com",
+    logo: { src: `${dir}/redbull.svg`, width: 224.19, height: 36 },
   },
   // Partners
   {

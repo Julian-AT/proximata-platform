@@ -88,6 +88,70 @@ def biscuit_wordmark(url: str) -> bytes:
     raise RuntimeError("Biscuit wordmark paths not found")
 
 
+def adaption_wordmark(url: str) -> bytes:
+    """adaptionlabs.ai has no static logo file; its footer draws the
+    "adaption" wordmark (102x24, light grey) inline. Take that SVG."""
+    html = fetch(url).decode("utf-8", "replace")
+    for svg in re.findall(r"<svg\b[^>]*>.*?</svg>", html, re.S):
+        if 'viewBox="0 0 102 24"' in svg and "h-[54px]" in svg:
+            paths = re.findall(r'\bd="([^"]+)"', svg)
+            if not paths or not all(re.fullmatch(r"[MmLlHhVvCcSsQqTtZz\d.,\se+-]+", d) for d in paths):
+                raise RuntimeError("unexpected Adaption wordmark path data")
+            return svg.encode()
+    raise RuntimeError("Adaption wordmark not found")
+
+
+def path_bounds(d: str) -> tuple[float, float, float, float]:
+    xs, ys = zip(*path_points(d))
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def redbull_one_colour(data: bytes) -> bytes:
+    """Red Bull's header logo is in colour: a yellow sun, a yellow silhouette
+    of the bulls that rims them, red bulls on top and the red name. Red Bull's
+    one-colour version keeps the sun and bulls solid and cuts the rim away, so
+    the bulls stay apart from the sun. Rebuild that with a mask: sun and bulls
+    show, the rim between them is cut."""
+    svg = data.decode("utf-8")
+    view_box = re.search(r'viewBox="([\d. ]+)"', svg)
+    paths = [
+        (fill.lower(), d, re.findall(r'(fill-rule|clip-rule)="([^"]+)"', tag))
+        for tag, fill, d in (
+            (m.group(0), m.group(1), m.group(2))
+            for m in re.finditer(r'<path\b(?=[^>]*\bfill="(#[0-9a-fA-F]{3,6})")(?=[^>]*\bd="([^"]+)")[^>]*/>', svg)
+        )
+    ]
+    yellow = [p for p in paths if p[0] == "#fc0"]
+    red = [p for p in paths if p[0] == "#d2003c"]
+    if not view_box or len(yellow) != 2 or not red:
+        raise RuntimeError("unexpected Red Bull logo structure")
+
+    def area(path: tuple[str, str, list[tuple[str, str]]]) -> float:
+        left, top, right, bottom = path_bounds(path[1])
+        return (right - left) * (bottom - top)
+
+    sun, rim = sorted(yellow, key=area)
+    left, top, right, bottom = path_bounds(rim[1])
+    bulls = [p for p in red if path_bounds(p[1])[2] <= right + 1]
+    name = [p for p in red if p not in bulls]
+    if not bulls or not name:
+        raise RuntimeError("could not tell the Red Bull bulls from the name")
+
+    def draw(path: tuple[str, str, list[tuple[str, str]]], fill: str) -> str:
+        rules = "".join(f' {key}="{value}"' for key, value in path[2])
+        return f'<path{rules} fill="{fill}" d="{path[1]}"/>'
+
+    emblem = [sun, rim, *bulls]
+    region = f'x="{fmt(left - 1)}" y="{fmt(top - 1)}" width="{fmt(right - left + 2)}" height="{fmt(bottom - top + 2)}"'
+    mask = draw(sun, "#fff") + draw(rim, "#000") + "".join(draw(p, "#fff") for p in bulls)
+    return (
+        f'<svg xmlns="{SVG_NS}" viewBox="{view_box.group(1)}">'
+        f'<defs><mask id="redbull-emblem" maskUnits="userSpaceOnUse" {region}>{mask}</mask></defs>'
+        f'<g mask="url(#redbull-emblem)">{"".join(draw(p, WHITE) for p in emblem)}</g>'
+        f'{"".join(draw(p, WHITE) for p in name)}</svg>'
+    ).encode()
+
+
 LOGOS: tuple[Logo, ...] = (
     # Sponsors
     Logo("n8n", url="https://guidelines.n8n.design/downloads/logo/lockup/n8n-logo-white.svg"),
@@ -97,6 +161,15 @@ LOGOS: tuple[Logo, ...] = (
     # White letters on a red and a slate box: keep the letters, drop the boxes.
     Logo("rhomberg", url="https://www.rhomberg.com/rhomberg/images/logos/horizontal.svg", drop_tags=("rect",)),
     Logo("biscuit", url="https://www.biscuit.so", extract=biscuit_wordmark, doc_image="image18.png"),
+    Logo("adaption", url="https://adaptionlabs.ai", extract=adaption_wordmark),
+    # Brand hub's "Full Logo — White" (heart mark + wordmark).
+    Logo("lovable", url="https://lovablebrand.lovable.app/logos/full-white-pure.svg"),
+    # Header logo (double bulls, sun, name); redbull.com rejects scripted requests.
+    Logo(
+        "redbull",
+        url="https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg",
+        prepare=redbull_one_colour,
+    ),
     # Partners
     Logo(
         "hoiv",

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 // Logo stand-ins: white rasters extracted from the brand book (see
@@ -70,10 +71,33 @@ export function HoivLogo(props: LogoProps) {
 }
 
 /**
- * "in cooperation with [START Vienna] [HOIV]" lockup for the hero and footer.
- * Both co-organiser logos share one height and the lockup's own gap. On narrow
- * screens the logo pair wraps under the label as one unit.
+ * proximata and HOIV, the event's two hosts, side by side: HOIV at the
+ * wordmark's height after a hairline. Pass `wordmark` to wrap the wordmark,
+ * e.g. in the header's home link.
  */
+export function HostLockup({
+  wordmarkWidth,
+  wordmark,
+  priority,
+  className,
+}: {
+  wordmarkWidth: number;
+  wordmark?: ReactNode;
+  priority?: boolean;
+  className?: string;
+}) {
+  const height = (wordmarkWidth * WORDMARK.h) / WORDMARK.w;
+
+  return (
+    <span className={cn("flex shrink-0 items-center gap-3", className)}>
+      {wordmark ?? <ProximataWordmark width={wordmarkWidth} priority={priority} />}
+      <span aria-hidden="true" className="w-px self-stretch bg-white/25" />
+      <HoivLogo height={height} priority={priority} />
+    </span>
+  );
+}
+
+/** "in cooperation with [START Vienna]" lockup for the hero and footer. */
 export function CoopLockup({ className, logoHeight = 36 }: { className?: string; logoHeight?: number }) {
   return (
     <p
@@ -83,10 +107,7 @@ export function CoopLockup({ className, logoHeight = 36 }: { className?: string;
       )}
     >
       <span>in cooperation with</span>
-      <span className="flex items-center gap-3">
-        <StartViennaLogo height={logoHeight} />
-        <HoivLogo height={logoHeight} />
-      </span>
+      <StartViennaLogo height={logoHeight} />
     </p>
   );
 }

@@ -8,14 +8,10 @@ export const event = {
   name: "Building Better Worlds",
   fullName: "Building Better Worlds Hackathon",
   organiser: "Proximata",
-  /**
-   * The two co-organisers, shown as "in cooperation with START Vienna & HOIV".
-   * HOIV also hosts the event as the venue.
-   */
-  coOrganisers: [
-    { name: "START Vienna", short: "START Vienna", url: "https://www.start-vienna.com/" },
-    { name: "HOIV – Home of InnoVation", short: "HOIV", url: "https://homeofinnovationx.com" },
-  ],
+  /** Hosts the event with Proximata and is the venue; shown right beside the Proximata wordmark. */
+  coHost: { name: "HOIV – Home of InnoVation", short: "HOIV", url: "https://homeofinnovationx.com" },
+  /** Shown as "in cooperation with START Vienna". */
+  cooperation: { name: "START Vienna", url: "https://www.start-vienna.com/" },
   poweredBy: { name: "HOIV – Home of InnoVation", short: "HOIV" },
   /** CET (UTC+1) on both days. */
   startsAt: "2026-11-13T14:00:00+01:00",

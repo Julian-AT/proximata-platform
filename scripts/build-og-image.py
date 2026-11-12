@@ -3,8 +3,8 @@
 
 The card mirrors the hero: the hero glow at the page's 22% over ink, the
 site's grain, "BUILDING BETTER WORLDS" in Archivo Black and brand ice, the
-"24h hackathon" line, and the organiser lockup proximata × START Vienna ×
-HOIV as on the partners section. It names no sponsors, so it stays correct
+"24h hackathon" line, and the organiser lockup proximata × HOIV × START
+Vienna as on the partners section. It names no sponsors, so it stays correct
 when the sponsor list changes.
 
 Usage: python3 -I scripts/build-og-image.py
@@ -49,8 +49,8 @@ WORDMARK_WIDTH = round(148 * CO_LOGO_HEIGHT / 40)
 LOCKUP_GAP = 36
 LOGOS = (
     IMAGES / "brand/proximata-wordmark.png",
-    IMAGES / "partners/start-vienna-white.png",
     IMAGES / "partners/hoiv.png",
+    IMAGES / "partners/start-vienna-white.png",
 )
 
 

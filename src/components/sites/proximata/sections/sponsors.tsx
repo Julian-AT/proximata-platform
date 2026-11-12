@@ -14,10 +14,10 @@ const LOGO_HEIGHT = 30;
 /** Equal-height slots so all organiser captions sit on one line. */
 const organiserSlot = "flex h-10 items-center justify-center tablet:h-12";
 
-/** START Vienna and HOIV share one height, so neither reads larger. */
+/** HOIV and START Vienna share one height, so neither reads larger. */
 const CO_ORGANISER_LOGO_HEIGHT = 40;
 
-const [, hoiv] = event.coOrganisers;
+const hoiv = event.coHost;
 
 function Divider() {
   return (
@@ -30,9 +30,10 @@ function Divider() {
 }
 
 /**
- * Proximata × START Vienna × HOIV, the hackathon's three organisers. Phones
- * give Proximata its own row with the two co-organisers side by side below;
- * from tablet up all three sit in one row with × dividers.
+ * Proximata × HOIV × START Vienna, the hackathon's three organisers: HOIV
+ * co-hosts beside Proximata, START Vienna cooperates. Phones give Proximata
+ * its own row with the other two side by side below; from tablet up all three
+ * sit in one row with × dividers.
  */
 function Organisers() {
   return (
@@ -46,13 +47,6 @@ function Organisers() {
       </figure>
       <Divider />
       <figure className="m-0 flex flex-col items-center gap-4">
-        <span className={organiserSlot}>
-          <StartViennaLogo height={CO_ORGANISER_LOGO_HEIGHT} />
-        </span>
-        <figcaption className={caption}>{partnersCopy.coOrganiser}</figcaption>
-      </figure>
-      <Divider />
-      <figure className="m-0 flex flex-col items-center gap-4">
         <a
           href={hoiv.url}
           target="_blank"
@@ -62,6 +56,13 @@ function Organisers() {
           <HoivLogo height={CO_ORGANISER_LOGO_HEIGHT} />
         </a>
         <figcaption className={caption}>{partnersCopy.coOrganiserVenue}</figcaption>
+      </figure>
+      <Divider />
+      <figure className="m-0 flex flex-col items-center gap-4">
+        <span className={organiserSlot}>
+          <StartViennaLogo height={CO_ORGANISER_LOGO_HEIGHT} />
+        </span>
+        <figcaption className={caption}>{partnersCopy.coOrganiser}</figcaption>
       </figure>
     </Reveal>
   );

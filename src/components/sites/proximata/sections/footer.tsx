@@ -1,7 +1,7 @@
 import { footerCopy, footerExternalLinks, imageCredits } from "../content/footer";
 import { navLinks } from "../content/navigation";
 import { ButtonLink } from "../framer-button";
-import { CoopLockup, ProximataWordmark } from "../logo";
+import { CoopLockup, HostLockup } from "../logo";
 import { LogoGlass } from "../logo-glass";
 import { Reveal } from "../motion";
 import { NavPill } from "../nav-pill";
@@ -43,7 +43,7 @@ export function Footer() {
             <div className="flex w-full flex-col items-start gap-10 tablet:flex-1">
               {/* Wordmark clear space (height of its "o") is kept by the gaps around it. */}
               <div className="flex flex-col items-start gap-6">
-                <ProximataWordmark width={180} />
+                <HostLockup wordmarkWidth={180} />
                 <CoopLockup />
               </div>
 

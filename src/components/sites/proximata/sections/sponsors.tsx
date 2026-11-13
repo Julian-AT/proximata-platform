@@ -68,8 +68,11 @@ function Organisers() {
   );
 }
 
+/** Logo row item box; links add the hover and focus states on top. */
+const logoBox = "flex items-center gap-[0.4em] text-[length:var(--logo-h)] opacity-70";
+
 /**
- * One logo, linked to the organisation. Height comes from the row's
+ * One logo, linked to the organisation when it has a URL. Height comes from the row's
  * `--logo-h` times the logo's optical scale; width follows the artwork.
  * The box + `fill` keeps next/image quiet when the height is fractional.
  */
@@ -77,34 +80,44 @@ function PartnerLogo({ partner }: { partner: Partner }) {
   const { logo, label, role } = partner;
   const scale = logo?.scale ?? 1;
 
+  const content = (
+    <>
+      {logo ? (
+        <span
+          className="relative block h-[calc(var(--logo-h)*var(--logo-scale))] shrink-0 select-none"
+          style={{ "--logo-scale": scale, aspectRatio: `${logo.width} / ${logo.height}` } as CSSProperties}
+        >
+          <Image
+            src={logo.src}
+            alt={label ? "" : partner.name}
+            fill
+            sizes={`${Math.ceil((LOGO_HEIGHT * scale * logo.width) / logo.height)}px`}
+            className="object-contain"
+          />
+        </span>
+      ) : null}
+      {label || !logo ? (
+        <span className="font-mono text-[0.72em] leading-none font-semibold tracking-[-0.02em] whitespace-nowrap text-white">
+          {label ?? partner.name}
+        </span>
+      ) : null}
+    </>
+  );
+
   return (
     <li className="relative flex flex-col items-center">
-      <a
-        href={partner.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-[0.4em] text-[length:var(--logo-h)] opacity-70 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ice"
-      >
-        {logo ? (
-          <span
-            className="relative block h-[calc(var(--logo-h)*var(--logo-scale))] shrink-0 select-none"
-            style={{ "--logo-scale": scale, aspectRatio: `${logo.width} / ${logo.height}` } as CSSProperties}
-          >
-            <Image
-              src={logo.src}
-              alt={label ? "" : partner.name}
-              fill
-              sizes={`${Math.ceil((LOGO_HEIGHT * scale * logo.width) / logo.height)}px`}
-              className="object-contain"
-            />
-          </span>
-        ) : null}
-        {label || !logo ? (
-          <span className="font-mono text-[0.72em] leading-none font-semibold tracking-[-0.02em] whitespace-nowrap text-white">
-            {label ?? partner.name}
-          </span>
-        ) : null}
-      </a>
+      {partner.url ? (
+        <a
+          href={partner.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${logoBox} transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ice`}
+        >
+          {content}
+        </a>
+      ) : (
+        <span className={logoBox}>{content}</span>
+      )}
       {role ? <span className={`absolute top-full mt-2.5 ${caption}`}>{role}</span> : null}
     </li>
   );

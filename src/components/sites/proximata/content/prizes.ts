@@ -29,9 +29,10 @@ export const prizesSection = {
 
 /** Block A, in display order. */
 export const winnerPrizes: readonly WinnerPrize[] = [
+  { title: "DB tech Prize", amount: "€2,500" },
   { title: "Rhomberg Track Winner", amount: "€1,500" },
-  // Always in US dollars, even next to euro amounts (agreed with Talona).
-  { title: "Talona Track Winner", amount: "US$1,000" },
+  // In US dollars, even next to euro amounts (agreed with Talona).
+  { title: "Talona Track Winner", amount: "$1,000" },
   {
     title: "Best use of Adaption",
     eligibility: "Open to every track",

@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { navLinks, registerLink } from "./content/navigation";
+import { loginLink, navLinks, registerLink } from "./content/navigation";
 import { ButtonLink } from "./framer-button";
 import { HostLockup, ProximataWordmark } from "./logo";
 import { EASE_FRAMER } from "./motion";
@@ -38,6 +38,14 @@ function RegisterButton({ className, onClick }: { className: string; onClick?: (
       onClick={onClick}
     >
       {registerLink.label}
+    </ButtonLink>
+  );
+}
+
+function LoginButton({ className, onClick }: { className: string; onClick?: () => void }) {
+  return (
+    <ButtonLink href={loginLink.href} variant="unfilled" className={className} onClick={onClick}>
+      {loginLink.label}
     </ButtonLink>
   );
 }
@@ -104,7 +112,12 @@ function DesktopNav({ compact = false }: { compact?: boolean }) {
             </li>
           ))}
         </ul>
-        <RegisterButton className="h-10 w-[138px] px-0" />
+        <div className="flex items-center gap-2">
+          {/* The tablet bar only has room for Login from 920px; below that it
+              stays in the hero and in the menu shown at the top of the page. */}
+          <LoginButton className={cn("h-10 w-[96px] px-0", compact && "max-[920px]:hidden")} />
+          <RegisterButton className="h-10 w-[138px] px-0" />
+        </div>
       </div>
     </nav>
   );
@@ -158,7 +171,10 @@ function CompactNav({ variant }: { variant: "phone" | "tablet" }) {
                   </li>
                 ))}
               </ul>
-              <RegisterButton className="h-[54px] w-full" onClick={() => setOpen(false)} />
+              <div className="flex w-full flex-col gap-3">
+                <RegisterButton className="h-[54px] w-full" onClick={() => setOpen(false)} />
+                <LoginButton className="h-[54px] w-full" onClick={() => setOpen(false)} />
+              </div>
             </motion.div>
           ) : null}
         </AnimatePresence>

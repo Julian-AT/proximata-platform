@@ -4,6 +4,9 @@
 /** Public Luma page. Never use a personal `?tk=` invite link here. */
 export const LUMA_URL = "https://luma.com/rrnm4pul";
 
+/** Sign-in for registered participants on the hackathon platform. */
+export const LOGIN_URL = "https://proximata.boldhack.at/auth";
+
 export const event = {
   name: "Building Better Worlds",
   fullName: "Building Better Worlds Hackathon",

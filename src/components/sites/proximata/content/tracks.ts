@@ -18,7 +18,8 @@ export const tracks: readonly Track[] = [
   {
     number: "01",
     name: "Systems for built space",
-    description: "Tools and intelligence for how we design, build and run physical spaces.",
+    description:
+      "Tools and intelligence for how we design, build and run physical spaces, including developing a tool for an industry leader like DB tech.",
     partner: null,
   },
   {

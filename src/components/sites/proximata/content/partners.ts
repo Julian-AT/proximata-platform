@@ -23,7 +23,8 @@ export type Partner = {
   group: PartnerGroup;
   /** Small caption under the logo, e.g. "Venue". */
   role?: string;
-  url: string;
+  /** The organisation's site; without one the logo is shown unlinked. */
+  url?: string;
   /** Without a logo the name renders as text. */
   logo?: PartnerLogo;
   /** Name set as text next to an icon-only logo. */
@@ -47,8 +48,7 @@ export const partnerGroups: readonly { id: PartnerGroup; label: string }[] = [
 const dir = "/sites/proximata/images/partners";
 
 export const partners: readonly Partner[] = [
-  // Sponsors, in the organisers' order. Talona and Strock follow Adaption and
-  // Red Bull once their links are confirmed.
+  // Sponsors, in the organisers' order.
   {
     name: "n8n",
     group: "sponsor",
@@ -97,6 +97,19 @@ export const partners: readonly Partner[] = [
     group: "sponsor",
     url: "https://www.redbull.com",
     logo: { src: `${dir}/redbull.svg`, width: 224.19, height: 36 },
+  },
+  // DB tech and Talona: the organisers' own white files, not built by
+  // scripts/build-partner-logos.py. DB tech has no link on the organisers' page.
+  {
+    name: "DB tech",
+    group: "sponsor",
+    logo: { src: `${dir}/dbtech.png`, width: 441, height: 333, scale: 1.7 },
+  },
+  {
+    name: "Talona",
+    group: "sponsor",
+    url: "https://talona.ai",
+    logo: { src: `${dir}/talona.png`, width: 881, height: 192, scale: 0.9 },
   },
   // Partners
   {

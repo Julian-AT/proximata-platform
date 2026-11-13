@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { useSyncExternalStore } from "react";
 import { event } from "../content/event";
+import { loginLink } from "../content/navigation";
 import { ButtonLink } from "../framer-button";
 import { CoopLockup } from "../logo";
 import { LogoGlass } from "../logo-glass";
@@ -126,6 +127,13 @@ export function Hero() {
           className="h-[54px] w-full tablet:w-auto tablet:px-10"
         >
           Explore the tracks
+        </ButtonLink>
+        <ButtonLink
+          href={loginLink.href}
+          variant="unfilled"
+          className="h-[54px] w-full tablet:w-auto tablet:px-10"
+        >
+          {loginLink.label}
         </ButtonLink>
       </motion.div>
     </header>

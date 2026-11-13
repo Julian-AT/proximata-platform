@@ -73,9 +73,9 @@ export const faqs: readonly FaqEntry[] = [
   },
   {
     question: "What can I win?",
-    // Talona's prize is always in US dollars (agreed with Talona).
+    // Talona's prize is in US dollars (agreed with Talona).
     answer:
-      "Prizes go to track winners and sponsor challenges, not to overall places. The Rhomberg Track Winner wins €1,500 and the Talona Track Winner US$1,000, and the best use of Adaption, open to every track, earns each team member $1,000 in Adaption credits plus Adaption's Builder tier and swag. Maritime gives its top 3 teams $100, $50 and $50 in LLM credits, and the proximata, techbold and HOIV track prizes will be announced soon.",
+      "Prizes go to track winners and sponsor challenges, not to overall places. The Rhomberg Track Winner wins €1,500 and the Talona Track Winner $1,000, and the best use of Adaption, open to every track, earns each team member $1,000 in Adaption credits plus Adaption's Builder tier and swag. Maritime gives its top 3 teams $100, $50 and $50 in LLM credits, and the proximata, techbold and HOIV track prizes will be announced soon.",
   },
   {
     question: "I have another question.",

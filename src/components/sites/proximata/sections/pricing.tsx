@@ -6,6 +6,16 @@ import { SCROLL_TARGETS } from "../scroll-targets";
 import { SectionTag } from "../section-tag";
 import { PerksTicket, PrizeTile } from "./prize-cards";
 
+/**
+ * Stretches the last tile over the columns left in its row (two on tablet,
+ * three on desktop), so a short last row is never ragged.
+ */
+function lastTileSpan(count: number) {
+  const tablet = (count - 1) % 2 === 0 ? "tablet:col-span-2" : "tablet:col-span-1";
+  const desktop = ["desktop:col-span-3", "desktop:col-span-2", "desktop:col-span-1"][(count - 1) % 3];
+  return `${tablet} ${desktop}`;
+}
+
 const groupLabel = "font-mono text-[12px] leading-none font-medium tracking-[0.12em] text-soft uppercase";
 
 /**
@@ -34,14 +44,13 @@ export function Pricing() {
 
         <div className="flex w-full max-w-[1200px] flex-col items-center gap-8">
           <h3 className={groupLabel}>{prizesSection.winnersLabel}</h3>
-          {/* The last tile spans the row's remaining columns, so no row is left ragged. */}
           <ul className="grid w-full grid-cols-1 gap-4 tablet:grid-cols-2 tablet:gap-6 desktop:grid-cols-3">
             {winnerPrizes.map((prize, i) => (
               <PrizeTile
                 key={prize.title}
                 prize={prize}
                 index={i}
-                className={i === winnerPrizes.length - 1 ? "tablet:col-span-2" : undefined}
+                className={i === winnerPrizes.length - 1 ? lastTileSpan(winnerPrizes.length) : undefined}
               />
             ))}
           </ul>

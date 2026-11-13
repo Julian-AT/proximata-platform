@@ -98,8 +98,14 @@ export const partners: readonly Partner[] = [
     url: "https://www.redbull.com",
     logo: { src: `${dir}/redbull.svg`, width: 224.19, height: 36 },
   },
-  // DB tech and Talona: the organisers' own white files, not built by
+  // FEODOS, DB tech and Talona: the organisers' own white files, not built by
   // scripts/build-partner-logos.py. DB tech has no link on the organisers' page.
+  {
+    name: "FEODOS",
+    group: "sponsor",
+    url: "https://www.feodos.at",
+    logo: { src: `${dir}/feodos.png`, width: 356, height: 96, scale: 1.15 },
+  },
   {
     name: "DB tech",
     group: "sponsor",
